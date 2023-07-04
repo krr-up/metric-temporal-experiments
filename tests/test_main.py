@@ -5,9 +5,9 @@ import logging
 from io import StringIO
 from unittest import TestCase
 
-from fillname.utils.logger import setup_logger
-from fillname.utils.parser import get_parser
-
+from memelingo.utils.logger import setup_logger
+from memelingo.utils.parser import get_parser
+from memelingo import run_meta_clingcon, reify
 
 class TestMain(TestCase):
     """
@@ -18,7 +18,7 @@ class TestMain(TestCase):
         """
         Test the logger.
         """
-        log = setup_logger("global", logging.INFO)
+        log = setup_logger("main", logging.DEBUG)
         sio = StringIO()
         for handler in log.handlers:
             handler.setStream(sio)
@@ -32,3 +32,12 @@ class TestMain(TestCase):
         parser = get_parser()
         ret = parser.parse_args(["--log", "info"])
         self.assertEqual(ret.log, logging.INFO)
+
+    def test_meta(self):
+        """
+        Test the parser.
+        """
+        log = setup_logger("main", logging.DEBUG)
+        prg = reify(prg= "a:-initially. #external initially.")
+        run_meta_clingcon(prg,clambda=2)
+        # run_meta([])
