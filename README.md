@@ -7,11 +7,23 @@
 ```shell
 pip install memelingo
 ```
+### During development
+
+```shell
+pip install -e .
+```
 
 ## Usage
 
+Memelingo extends the application class
+
 ```shell
 memelingo -h
+```
+### Traffic lights example
+
+```shell
+memelingo 0  -c lambda=3 examples/traffic-lights.lp
 ```
 
 ## Development

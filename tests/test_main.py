@@ -4,10 +4,13 @@ Test cases for main application functionality.
 import logging
 from io import StringIO
 from unittest import TestCase
-
+from clingo import Control
 from memelingo.utils.logger import setup_logger
 from memelingo.utils.parser import get_parser
 from memelingo import run_meta_clingcon, reify
+
+def print_model(mdl):
+    print(mdl.symbols(theory=True,shown=True))
 
 class TestMain(TestCase):
     """
@@ -39,5 +42,6 @@ class TestMain(TestCase):
         """
         log = setup_logger("main", logging.DEBUG)
         prg = reify(prg= "a:-initially. #external initially.")
-        run_meta_clingcon(prg,clambda=2)
+        ctl = Control(["--warn=none","20",f"-c lambda=2"])
+        run_meta_clingcon(ctl,prg,on_model=print_model)
         # run_meta([])
