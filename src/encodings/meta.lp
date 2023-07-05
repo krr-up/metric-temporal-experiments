@@ -1,4 +1,7 @@
-% Meta encoding
+%================================================
+% General meta-encoding
+%================================================
+
 conjunction(B,T) :- literal_tuple(B), time(T),
         hold(L,T) : literal_tuple(B, L), L > 0;
     not hold(L,T) : literal_tuple(B,-L), L > 0.
