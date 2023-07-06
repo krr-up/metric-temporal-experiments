@@ -15,15 +15,23 @@ pip install -e .
 
 ## Usage
 
+### As an Application
+
 Memelingo extends the application class
 
 ```shell
 memelingo -h
 ```
-### Traffic lights example
+#### Traffic lights example
 
 ```shell
 memelingo 0  -c lambda=3 examples/traffic-lights.lp
+```
+
+### Via command line
+
+```shell
+python -m clingo examples/traffic-lights.lp --output=reify | python -m clingcon 0 - src/encodings/{meta-melingo,meta-clingcon-interval,meta}.lp -c lambda=3
 ```
 
 ## Development

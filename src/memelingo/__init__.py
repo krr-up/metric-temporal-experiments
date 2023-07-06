@@ -66,15 +66,15 @@ def run_meta_clingcon(
         for key, val in thy.assignment(mdl.thread_id):
             f = Function("t", [key.arguments[0], Number(val)])
             mdl.extend([f])
-            if on_model is not None:
-                on_model(mdl)
+        if on_model is not None:
+            on_model(mdl)
 
     ctl.solve(on_model=clingcon_on_model)
 
 
 def run_meta_clingodl(
     ctl: Control, reified_prg: str, on_model: Optional[Callable] = None
-) -> None:
+) -> None:  # nocoverage
     """
     Runs the meta encodings for clingodl with the given control object and reified program
     """
@@ -100,7 +100,7 @@ def run_meta_clingodl(
         for key, val in thy.assignment(mdl.thread_id):
             f = Function("t", [key.arguments[0], Number(val)])
             mdl.extend([f])
-            if on_model is not None:
-                on_model(mdl)
+        if on_model is not None:
+            on_model(mdl)
 
     ctl.solve(on_model=clingodl_on_model)

@@ -7,17 +7,11 @@ from unittest import TestCase
 
 from clingo import Control
 
-from memelingo import reify, run_meta_clingcon, run_meta_clingodl
+from memelingo import reify, run_meta_clingcon
 from memelingo.utils.logger import setup_logger
 from memelingo.utils.parser import get_parser
 
-
-def print_model(mdl):
-    """
-    Prints the model
-    """
-
-    print(mdl.symbols(theory=True, shown=True))
+from . import _ClingoRes
 
 
 class TestMain(TestCase):
@@ -44,36 +38,53 @@ class TestMain(TestCase):
         ret = parser.parse_args(["--log", "info"])
         self.assertEqual(ret.log, logging.INFO)
 
-    def test_meta(self):
+    def test_lights(self):
         """
         Test the parser.
         """
-        prg = reify(prg="a:-initially. #external initially.")
-        ctl = Control(["--warn=none", "20", "-c lambda=2"])
-        run_meta_clingcon(ctl, prg, on_model=print_model)
-        # run_meta([])
+        res = _ClingoRes()
+        rprg = reify(files=["examples/traffic-lights.lp"])
+        ctl = Control(["--warn=none", "0", "-c lambda=3"])
+        run_meta_clingcon(ctl, rprg, on_model=res.on_model)
+        self.assertEqual(res.n_models, 14)
 
-    def test_meta_file(self):
+    def test_initially(self):
         """
         Test the parser.
         """
-        prg = reify(files=["examples/traffic-lights.lp"])
-        ctl = Control(["--warn=none", "20", "-c lambda=2"])
-        run_meta_clingcon(ctl, prg, on_model=print_model)
 
-    def test_meta_dl(self):
+        prg = """
+        a:-initially.
+        #external initially.
         """
-        Test the parser.
-        """
-        prg = reify(prg="a:-initially. #external initially.")
-        ctl = Control(["--warn=none", "20", "-c lambda=2"])
-        run_meta_clingodl(ctl, prg, on_model=print_model)
-        # run_meta([])
+        length = 2
+        models = 4
 
-    def test_meta_file_dl(self):
+        res = _ClingoRes()
+        ctl = Control(["--warn=none", str(models), f"-c lambda={length}"])
+        run_meta_clingcon(ctl, reify(prg=prg), on_model=res.on_model)
+        self.assertTrue(res.atom_all(["(a,0)", "t(0,0)", "(initially,0)"]))
+        for i in range(1, 3):
+            self.assertTrue(res.atom_some([f"t(1,{i})"]))
+
+    def test_eventually(self):
         """
         Test the parser.
         """
-        prg = reify(files=["examples/traffic-lights.lp"])
-        ctl = Control(["--warn=none", "20", "-c lambda=2"])
-        run_meta_clingodl(ctl, prg, on_model=print_model)
+
+        prg = """
+        eventually((1,4),a):-initially.
+        #external initially.
+        #external a.
+        """
+        length = 2
+        models = 0
+
+        res = _ClingoRes()
+        ctl = Control(["--warn=none", str(models), f"-c lambda={length}"])
+        run_meta_clingcon(ctl, reify(prg=prg), on_model=res.on_model)
+        self.assertEqual(res.n_models, 3)
+        self.assertTrue(res.atom_all(["(a,1)"]))
+        self.assertTrue(res.atom_some(["t(1,1)"]))
+        self.assertTrue(res.atom_some(["t(1,2)"]))
+        self.assertTrue(res.atom_some(["t(1,3)"]))
