@@ -1,23 +1,24 @@
 """
 The memelingo project.
 """
+import logging
 import os
+from typing import Callable, List
+
 import clingo
 from clingcon import ClingconTheory
-from clingodl import ClingoDLTheory
-from clingo import Control, Symbol, Number, Function
+from clingo import Control, Function, Number, Symbol
 from clingo.ast import ProgramBuilder, parse_string
-from clingox.reify import Reifier, ReifiedTheory, ReifiedTheoryTerm
-from typing import List, Callable
+from clingodl import ClingoDLTheory
+from clingox.reify import ReifiedTheory, ReifiedTheoryTerm, Reifier
 
-import logging
+log = logging.getLogger("main")
+ENCODINGS_PATH = os.path.join(".", os.path.join("src", "encodings"))
 
-log = logging.getLogger('main')
-ENCODINGS_PATH = os.path.join('.',os.path.join('src','encodings'))
 
-def reify(prg:str=None, files:List =None):
+def reify(prg: str = None, files: List = None):
     if files is None:
-        files=[]
+        files = []
     symbols: List[Symbol] = []
 
     ctl = Control(["--warn=none"])
@@ -27,36 +28,36 @@ def reify(prg:str=None, files:List =None):
         ctl.add("base", [], prg)
     for f in files:
         ctl.load(f)
-    ctl.ground([('base', [])])
-    rprg = "\n".join([str(s)+"." for s in symbols])
-    log.debug("\n------ Reified Program ------\n"+rprg)
+    ctl.ground([("base", [])])
+    rprg = "\n".join([str(s) + "." for s in symbols])
+    log.debug("\n------ Reified Program ------\n" + rprg)
     return rprg
 
 
-def run_meta_clingcon(ctl:Control,reified_prg:str, on_model:Callable=None):
+def run_meta_clingcon(ctl: Control, reified_prg: str, on_model: Callable = None):
     thy = ClingconTheory()
     thy.register(ctl)
 
-    meta_prg= ""
-    files = ['meta.lp','meta-melingo.lp','meta-clingcon-interval.lp']
+    meta_prg = ""
+    files = ["meta.lp", "meta-melingo.lp", "meta-clingcon-interval.lp"]
     for file in files:
-        with open(os.path.join(ENCODINGS_PATH,file)) as f:
+        with open(os.path.join(ENCODINGS_PATH, file)) as f:
             meta_prg += "\n".join(f.readlines())
 
     # load program
     with ProgramBuilder(ctl) as pb:
-        parse_string(meta_prg, lambda ast : thy.rewrite_ast(ast, pb.add))
-
+        parse_string(meta_prg, lambda ast: thy.rewrite_ast(ast, pb.add))
 
     # ground base
-    ctl.add("base",[],reified_prg)
+    ctl.add("base", [], reified_prg)
     ctl.ground([("base", [])])
     thy.prepare(ctl)
 
     models = []
+
     def clingcon_on_model(mdl):
         for key, val in thy.assignment(mdl.thread_id):
-            f = Function('t',[key.arguments[0],Number(val)])
+            f = Function("t", [key.arguments[0], Number(val)])
             mdl.extend([f])
             if on_model is not None:
                 on_model(mdl)
@@ -65,30 +66,30 @@ def run_meta_clingcon(ctl:Control,reified_prg:str, on_model:Callable=None):
     return models
 
 
-def run_meta_clingodl(ctl:Control,reified_prg:str, on_model:Callable=None):
+def run_meta_clingodl(ctl: Control, reified_prg: str, on_model: Callable = None):
     thy = ClingoDLTheory()
     thy.register(ctl)
 
-    meta_prg= ""
-    files = ['meta.lp','meta-melingo.lp','meta-clingodl-interval.lp']
+    meta_prg = ""
+    files = ["meta.lp", "meta-melingo.lp", "meta-clingodl-interval.lp"]
     for file in files:
-        with open(os.path.join(ENCODINGS_PATH,file)) as f:
+        with open(os.path.join(ENCODINGS_PATH, file)) as f:
             meta_prg += "\n".join(f.readlines())
 
     # load program
     with ProgramBuilder(ctl) as pb:
-        parse_string(meta_prg, lambda ast : thy.rewrite_ast(ast, pb.add))
-
+        parse_string(meta_prg, lambda ast: thy.rewrite_ast(ast, pb.add))
 
     # ground base
-    ctl.add("base",[],reified_prg)
+    ctl.add("base", [], reified_prg)
     ctl.ground([("base", [])])
     thy.prepare(ctl)
 
     models = []
+
     def clingodl_on_model(mdl):
         for key, val in thy.assignment(mdl.thread_id):
-            f = Function('t',[key.arguments[0],Number(val)])
+            f = Function("t", [key.arguments[0], Number(val)])
             mdl.extend([f])
             if on_model is not None:
                 on_model(mdl)

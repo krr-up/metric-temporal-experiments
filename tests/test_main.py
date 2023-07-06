@@ -4,13 +4,17 @@ Test cases for main application functionality.
 import logging
 from io import StringIO
 from unittest import TestCase
+
 from clingo import Control
+
+from memelingo import reify, run_meta_clingcon, run_meta_clingodl
 from memelingo.utils.logger import setup_logger
 from memelingo.utils.parser import get_parser
-from memelingo import run_meta_clingcon, run_meta_clingodl, reify
+
 
 def print_model(mdl):
-    print(mdl.symbols(theory=True,shown=True))
+    print(mdl.symbols(theory=True, shown=True))
+
 
 class TestMain(TestCase):
     """
@@ -40,37 +44,36 @@ class TestMain(TestCase):
         """
         Test the parser.
         """
-        log = setup_logger("main", logging.DEBUG)
-        prg = reify(prg= "a:-initially. #external initially.")
-        ctl = Control(["--warn=none","20",f"-c lambda=2"])
-        run_meta_clingcon(ctl,prg,on_model=print_model)
+        setup_logger("main", logging.DEBUG)
+        prg = reify(prg="a:-initially. #external initially.")
+        ctl = Control(["--warn=none", "20", f"-c lambda=2"])
+        run_meta_clingcon(ctl, prg, on_model=print_model)
         # run_meta([])
 
     def test_meta_file(self):
         """
         Test the parser.
         """
-        log = setup_logger("main", logging.DEBUG)
+        setup_logger("main", logging.DEBUG)
         prg = reify(files=["examples/traffic-lights.lp"])
-        ctl = Control(["--warn=none","20",f"-c lambda=2"])
-        run_meta_clingcon(ctl,prg,on_model=print_model)
-
+        ctl = Control(["--warn=none", "20", f"-c lambda=2"])
+        run_meta_clingcon(ctl, prg, on_model=print_model)
 
     def test_meta_dl(self):
         """
         Test the parser.
         """
-        log = setup_logger("main", logging.DEBUG)
-        prg = reify(prg= "a:-initially. #external initially.")
-        ctl = Control(["--warn=none","20",f"-c lambda=2"])
-        run_meta_clingodl(ctl,prg,on_model=print_model)
+        setup_logger("main", logging.DEBUG)
+        prg = reify(prg="a:-initially. #external initially.")
+        ctl = Control(["--warn=none", "20", f"-c lambda=2"])
+        run_meta_clingodl(ctl, prg, on_model=print_model)
         # run_meta([])
 
     def test_meta_file_dl(self):
         """
         Test the parser.
         """
-        log = setup_logger("main", logging.DEBUG)
+        setup_logger("main", logging.DEBUG)
         prg = reify(files=["examples/traffic-lights.lp"])
-        ctl = Control(["--warn=none","20",f"-c lambda=2"])
-        run_meta_clingodl(ctl,prg,on_model=print_model)
+        ctl = Control(["--warn=none", "20", f"-c lambda=2"])
+        run_meta_clingodl(ctl, prg, on_model=print_model)
