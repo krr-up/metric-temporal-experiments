@@ -10,7 +10,7 @@ from clingo.application import ApplicationOptions, Flag, Application
 import logging
 log = logging.getLogger('main')
 from .utils.logger import setup_logger
-from . import reify, run_meta_clingcon
+from . import reify, run_meta_clingcon, run_meta_clingodl
 
 
 class MemelingoApp(Application):
@@ -64,8 +64,8 @@ class MemelingoApp(Application):
         if input_lambda is None:
             log.warning(textwrap.dedent('''The constant `lambda` is required for the metric meta-encoding.
                 Provided with the argument `-c lambda=X` By default is set to 10 (9 steps).'''))
-        log.debug(f"Files: {files}")
         reified_prg = reify(files=files)
         run_meta_clingcon(ctl,reified_prg,on_model=None)
+        # run_meta_clingodl(ctl,reified_prg,on_model=None)
 
 

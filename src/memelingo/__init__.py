@@ -4,6 +4,7 @@ The memelingo project.
 import os
 import clingo
 from clingcon import ClingconTheory
+from clingodl import ClingoDLTheory
 from clingo import Control, Symbol, Number, Function
 from clingo.ast import ProgramBuilder, parse_string
 from clingox.reify import Reifier, ReifiedTheory, ReifiedTheoryTerm
@@ -42,7 +43,6 @@ def run_meta_clingcon(ctl:Control,reified_prg:str, on_model:Callable=None):
         with open(os.path.join(ENCODINGS_PATH,file)) as f:
             meta_prg += "\n".join(f.readlines())
 
-    print(meta_prg)
     # load program
     with ProgramBuilder(ctl) as pb:
         parse_string(meta_prg, lambda ast : thy.rewrite_ast(ast, pb.add))
@@ -62,4 +62,36 @@ def run_meta_clingcon(ctl:Control,reified_prg:str, on_model:Callable=None):
                 on_model(mdl)
 
     ctl.solve(on_model=clingcon_on_model)
+    return models
+
+
+def run_meta_clingodl(ctl:Control,reified_prg:str, on_model:Callable=None):
+    thy = ClingoDLTheory()
+    thy.register(ctl)
+
+    meta_prg= ""
+    files = ['meta.lp','meta-melingo.lp','meta-clingodl-interval.lp']
+    for file in files:
+        with open(os.path.join(ENCODINGS_PATH,file)) as f:
+            meta_prg += "\n".join(f.readlines())
+
+    # load program
+    with ProgramBuilder(ctl) as pb:
+        parse_string(meta_prg, lambda ast : thy.rewrite_ast(ast, pb.add))
+
+
+    # ground base
+    ctl.add("base",[],reified_prg)
+    ctl.ground([("base", [])])
+    thy.prepare(ctl)
+
+    models = []
+    def clingodl_on_model(mdl):
+        for key, val in thy.assignment(mdl.thread_id):
+            f = Function('t',[key.arguments[0],Number(val)])
+            mdl.extend([f])
+            if on_model is not None:
+                on_model(mdl)
+
+    ctl.solve(on_model=clingodl_on_model)
     return models

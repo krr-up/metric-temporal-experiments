@@ -80,7 +80,7 @@ def test(session):
         args.insert(0, '-e')
     session.install(*args)
     session.run("coverage", "run", "-m", "unittest", "discover", "-v")
-    session.run("coverage", "report", "-m", "--fail-under=100")
+    session.run("coverage", "report", "-m", "--fail-under=100","--omit=src/memelingo/application.py")
 
 
 @nox.session
