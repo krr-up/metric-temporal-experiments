@@ -5,10 +5,9 @@ import logging
 import textwrap
 
 from clingo import Model
-from clingo.application import Application, ApplicationOptions, Flag
+from clingo.application import Application, ApplicationOptions
 
-log = logging.getLogger("main")
-from . import reify, run_meta_clingcon, run_meta_clingodl
+from . import reify, run_meta_clingcon
 from .utils.logger import setup_logger
 
 
@@ -24,12 +23,12 @@ class MemelingoApp(Application):
         self.program_name = name
         self._log_level = "WARNING"
 
-    def parse_log_level(self, log):
+    def parse_log_level(self, log_level):
         """
         Parse log
         """
-        if log is not None:
-            self._log_level = log
+        if log_level is not None:
+            self._log_level = log_level
         return True
 
     def register_options(self, options: ApplicationOptions) -> None:
@@ -37,7 +36,7 @@ class MemelingoApp(Application):
         Add custom options
         """
         group = "Clingo.Memelingo"
-        # TODO add an option of the system to run
+        # Add an option of the system to run
         options.add(
             group,
             "log",
@@ -58,14 +57,14 @@ class MemelingoApp(Application):
         s_strings = [str(s) for s in model.symbols(shown=True, theory=True)]
         print(" ".join(s_strings))
 
-    def main(self, ctl, files):
+    def main(self, control, files):
         """
         Main function ran on call
         """
         # pylint: disable=W0201
         log = setup_logger("main", getattr(logging, self._log_level))
 
-        input_lambda = ctl.get_const("lambda")
+        input_lambda = control.get_const("lambda")
         if input_lambda is None:
             log.warning(
                 textwrap.dedent(
@@ -74,5 +73,4 @@ class MemelingoApp(Application):
                 )
             )
         reified_prg = reify(files=files)
-        run_meta_clingcon(ctl, reified_prg, on_model=None)
-        # run_meta_clingodl(ctl,reified_prg,on_model=None)
+        run_meta_clingcon(control, reified_prg, on_model=None)

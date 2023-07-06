@@ -6,11 +6,12 @@ import sys
 from clingo.application import clingo_main
 
 from .application import MemelingoApp
-from .utils.logger import setup_logger
-from .utils.parser import get_parser
 
 
 def main():
+    """
+    Main function calling the application class
+    """
     clingo_main(MemelingoApp(sys.argv[0]), sys.argv[1:])
     sys.exit()
 

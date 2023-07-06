@@ -3,20 +3,24 @@ The memelingo project.
 """
 import logging
 import os
-from typing import Callable, List
+from typing import Callable, List, Optional
 
-import clingo
 from clingcon import ClingconTheory
 from clingo import Control, Function, Number, Symbol
 from clingo.ast import ProgramBuilder, parse_string
 from clingodl import ClingoDLTheory
-from clingox.reify import ReifiedTheory, ReifiedTheoryTerm, Reifier
+from clingox.reify import Reifier
 
 log = logging.getLogger("main")
 ENCODINGS_PATH = os.path.join(".", os.path.join("src", "encodings"))
 
 
-def reify(prg: str = None, files: List = None):
+def reify(prg: Optional[str] = None, files: Optional[List] = None) -> str:
+    """
+    Reifies the program and files provided
+
+        Returns: a string representing the reified program
+    """
     if files is None:
         files = []
     symbols: List[Symbol] = []
@@ -30,18 +34,23 @@ def reify(prg: str = None, files: List = None):
         ctl.load(f)
     ctl.ground([("base", [])])
     rprg = "\n".join([str(s) + "." for s in symbols])
-    log.debug("\n------ Reified Program ------\n" + rprg)
+    log.debug("\n------ Reified Program ------\n %s", rprg)
     return rprg
 
 
-def run_meta_clingcon(ctl: Control, reified_prg: str, on_model: Callable = None):
+def run_meta_clingcon(
+    ctl: Control, reified_prg: str, on_model: Optional[Callable] = None
+) -> None:
+    """
+    Runs the meta encodings for clingcon with the given control object and reified program
+    """
     thy = ClingconTheory()
     thy.register(ctl)
 
     meta_prg = ""
     files = ["meta.lp", "meta-melingo.lp", "meta-clingcon-interval.lp"]
     for file in files:
-        with open(os.path.join(ENCODINGS_PATH, file)) as f:
+        with open(os.path.join(ENCODINGS_PATH, file), "r", encoding="utf8") as f:
             meta_prg += "\n".join(f.readlines())
 
     # load program
@@ -52,8 +61,6 @@ def run_meta_clingcon(ctl: Control, reified_prg: str, on_model: Callable = None)
     ctl.add("base", [], reified_prg)
     ctl.ground([("base", [])])
     thy.prepare(ctl)
-
-    models = []
 
     def clingcon_on_model(mdl):
         for key, val in thy.assignment(mdl.thread_id):
@@ -63,17 +70,21 @@ def run_meta_clingcon(ctl: Control, reified_prg: str, on_model: Callable = None)
                 on_model(mdl)
 
     ctl.solve(on_model=clingcon_on_model)
-    return models
 
 
-def run_meta_clingodl(ctl: Control, reified_prg: str, on_model: Callable = None):
+def run_meta_clingodl(
+    ctl: Control, reified_prg: str, on_model: Optional[Callable] = None
+) -> None:
+    """
+    Runs the meta encodings for clingodl with the given control object and reified program
+    """
     thy = ClingoDLTheory()
     thy.register(ctl)
 
     meta_prg = ""
     files = ["meta.lp", "meta-melingo.lp", "meta-clingodl-interval.lp"]
     for file in files:
-        with open(os.path.join(ENCODINGS_PATH, file)) as f:
+        with open(os.path.join(ENCODINGS_PATH, file), "r", encoding="utf8") as f:
             meta_prg += "\n".join(f.readlines())
 
     # load program
@@ -85,8 +96,6 @@ def run_meta_clingodl(ctl: Control, reified_prg: str, on_model: Callable = None)
     ctl.ground([("base", [])])
     thy.prepare(ctl)
 
-    models = []
-
     def clingodl_on_model(mdl):
         for key, val in thy.assignment(mdl.thread_id):
             f = Function("t", [key.arguments[0], Number(val)])
@@ -95,4 +104,3 @@ def run_meta_clingodl(ctl: Control, reified_prg: str, on_model: Callable = None)
                 on_model(mdl)
 
     ctl.solve(on_model=clingodl_on_model)
-    return models
