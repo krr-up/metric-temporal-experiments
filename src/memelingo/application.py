@@ -4,12 +4,19 @@ Clingo application extended to include automata
 import logging
 import textwrap
 
-from clingo import Model
-from clingo.application import Application, ApplicationOptions
+from clingo import Model, Symbol
+from clingo.application import Application, ApplicationOptions, Flag
+from typing import List
 
 from . import reify, run_meta_clingcon
 from .utils.logger import setup_logger
+from .utils.visualizer import visualize
 
+def _sym_to_prg(symbols:List[Symbol]):
+    '''
+    Turns symbols into a program
+    '''
+    return "\n".join([f"{str(s)}." for s in symbols])
 
 class MemelingoApp(Application):
     """
@@ -22,6 +29,8 @@ class MemelingoApp(Application):
         """
         self.program_name = name
         self._log_level = "WARNING"
+        self._view = Flag()
+
 
     def parse_log_level(self, log_level):
         """
@@ -49,6 +58,9 @@ class MemelingoApp(Application):
             self.parse_log_level,
             argument="<level>",
         )
+        options.add_flag(group, 'view', 'Visualize the timed trace using clingraph', self._view)
+
+
 
     def print_model(self, model: Model, _) -> None:
         """
@@ -56,6 +68,8 @@ class MemelingoApp(Application):
         """
         s_strings = [str(s) for s in model.symbols(shown=True, theory=True)]
         print(" ".join(s_strings))
+        if self._view:
+            visualize(_sym_to_prg(model.symbols(atoms=True, theory=True)),name_format=f"timed_trace_{model.number}")
 
     def main(self, control, files):
         """
