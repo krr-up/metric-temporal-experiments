@@ -1,22 +1,37 @@
-# fillname
+# memelingo
 
-This project template is configured to ease collaboration. Linters, formatters,
-and actions are already configured and ready to use.
 
-To use the project template, run the `init.py` script to give the project a
-name and some metadata. The script can then be removed afterward and the
-`setup.cfg` file adjusted.
 
 ## Installation
 
 ```shell
-pip install fillname
+pip install memelingo
+```
+### During development
+
+```shell
+pip install -e .
 ```
 
 ## Usage
 
+### As an Application
+
+Memelingo extends the application class
+
 ```shell
-fillname -h
+memelingo -h
+```
+#### Traffic lights example
+
+```shell
+memelingo 0  -c lambda=3 examples/traffic-lights.lp
+```
+
+### Via command line
+
+```shell
+python -m clingo examples/traffic-lights.lp --output=reify | python -m clingcon 0 - src/encodings/{meta-melingo,meta-clingcon-interval,meta}.lp -c lambda=3
 ```
 
 ## Development

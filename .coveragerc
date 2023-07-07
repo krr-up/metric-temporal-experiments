@@ -1,7 +1,10 @@
 [run]
-source = fillname
+source = memelingo
        tests
-omit = */fillname/__main__.py
+omit =
+       */memelingo/__main__.py
+       */memelingo/application.py
+       */tests/__init__.py
 [report]
 exclude_lines =
     assert

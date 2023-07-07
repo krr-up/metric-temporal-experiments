@@ -5,8 +5,8 @@ import logging
 from io import StringIO
 from unittest import TestCase
 
-from fillname.utils.logger import setup_logger
-from fillname.utils.parser import get_parser
+from memelingo.utils.logger import setup_logger
+from memelingo.utils.parser import get_parser
 
 
 class TestMain(TestCase):
@@ -18,7 +18,7 @@ class TestMain(TestCase):
         """
         Test the logger.
         """
-        log = setup_logger("global", logging.INFO)
+        log = setup_logger("main", logging.DEBUG)
         sio = StringIO()
         for handler in log.handlers:
             handler.setStream(sio)

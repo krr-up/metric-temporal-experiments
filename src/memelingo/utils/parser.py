@@ -15,7 +15,7 @@ if sys.version_info[1] < 8:
 else:
     from importlib import metadata  # nocoverage
 
-VERSION = metadata.version("fillname")
+VERSION = metadata.version("memelingo")
 
 
 def get_parser() -> ArgumentParser:
@@ -23,10 +23,10 @@ def get_parser() -> ArgumentParser:
     Return the parser for command line options.
     """
     parser = ArgumentParser(
-        prog="fillname",
+        prog="memelingo",
         description=dedent(
             """\
-            fillname
+            memelingo
             filldescription
             """
         ),
