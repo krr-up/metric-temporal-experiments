@@ -7,6 +7,14 @@
 ```shell
 pip install memelingo
 ```
+
+Note that for visualizations using clingraph, Graphviz must be locally
+installed.
+
+```shell
+sudo apt install graphviz
+```
+
 ### During development
 
 ```shell
@@ -25,7 +33,7 @@ memelingo -h
 #### Traffic lights example
 
 ```shell
-memelingo 0  -c lambda=3 examples/traffic-lights.lp
+memelingo 0  -c lambda=3 examples/traffic-lights.lp --view
 ```
 
 ### Via command line
