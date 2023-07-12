@@ -47,6 +47,14 @@ class CommonTestCases:
             input_files = ["examples/traffic-lights.lp"]
             res = self.run_system(input_prog=input_files, n_models=0, horizon=3)
             self.assertEqual(res.n_models, 14)
+            self.assertTrue(res.atom_all(["(green,2)"]))
+            self.assertTrue(res.atom_all(["(red,1)"]))
+            self.assertTrue(res.atom_all(["(red,0)"]))
+            self.assertTrue(res.atom_all(["(push,1)"]))
+            self.assertTrue(res.atom_all(["t(1,5)"]))
+            self.assertTrue(res.atom_all(["t(0,0)"]))
+            for i in range(6, 19):
+                self.assertTrue(res.atom_some([f"t(2,{i})"]))
 
         def test_initially(self):
             """
