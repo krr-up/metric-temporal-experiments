@@ -44,13 +44,13 @@ def lbl(mel_f):
     if name == "always":
         return "◻︎"+interval_str+lbl(args[1])
     if name == "until":
-        return lbl(args[1])+" 𝕌 "+lbl(args[2])
+        return lbl(args[1])+" 𝕌" +interval_str +lbl(args[2])
     if name == "release":
-        return lbl(args[1])+" ℝ "+lbl(args[2])
+        return lbl(args[1])+" ℝ" +interval_str +lbl(args[2])
     if name == "since":
-        return lbl(args[1])+" 𝗦 "+lbl(args[2])
+        return lbl(args[1])+" 𝗦" +interval_str +lbl(args[2])
     if name == "trigger":
-        return lbl(args[1])+" 𝗧 "+lbl(args[2])
+        return lbl(args[1])+" 𝗧" +interval_str +lbl(args[2])
     else:
         return '<I>' + name +"</I>"
 

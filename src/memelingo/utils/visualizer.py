@@ -22,7 +22,7 @@ def visualize(trace: str, name_format: str = "{graph_name}", view: bool = True) 
     """
     args = []
     args.append("--warn=none")
-    fb = Factbase()
+    fb = Factbase(default_graph="trace")
     ctl = Control(args)
     ctx = ClingraphContext()
     log.debug(trace)

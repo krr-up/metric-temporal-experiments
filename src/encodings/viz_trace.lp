@@ -1,5 +1,9 @@
 #include "viz_base.lp".
 
+graph(trace).
+attr(graph,trace,overlap, prism).
+% attr(graph,trace,overlap_scaling, -30).
+attr(graph,trace,sep, "+20,10").
 node(X):-t(X,T).
 node(f(X)):-t(X,T).
 
@@ -9,7 +13,7 @@ attr(node,X,(label,t), T):-t(X,T).
 attr(node,X,shape, circle):-t(X,T).
 attr(node,X,style, filled):-t(X,T).
 attr(node,X,penwidth, "0.2"):-t(X,T).
-attr(node,X,pos, @pos(X,2)):-t(X,T).
+attr(node,X,pos, @pos(X,1)):-t(X,T).
 attr(node,X,fontsize, "8"):-t(X,T).
 attr(node,X,width, "0.3"):-t(X,T).
 attr(node,X,margin, "0"):-t(X,T).

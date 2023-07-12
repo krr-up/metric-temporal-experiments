@@ -12,6 +12,8 @@ from . import reify, run_meta_clingcon
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
+log = logging.getLogger("main")
+
 
 def _sym_to_prg(symbols: Sequence[Symbol]):
     """
@@ -67,6 +69,7 @@ class MemelingoApp(Application):
         """
         Print a model on the console
         """
+        log.debug([str(s) for s in model.symbols(atoms=True, shown=True, theory=True)])
         s_strings = [str(s) for s in model.symbols(shown=True, theory=True)]
         print(" ".join(s_strings))
         if self._view:
@@ -80,11 +83,11 @@ class MemelingoApp(Application):
         Main function ran on call
         """
         # pylint: disable=W0201
-        log = setup_logger("main", getattr(logging, self._log_level))
+        local_log = setup_logger("main", getattr(logging, self._log_level))
 
         input_lambda = control.get_const("lambda")
         if input_lambda is None:
-            log.warning(
+            local_log.warning(
                 textwrap.dedent(
                     """The constant `lambda` is required for the metric meta-encoding.
                 Provided with the argument `-c lambda=X` By default is set to 10 (9 steps)."""

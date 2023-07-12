@@ -3,7 +3,7 @@
 %================================================
 interval(I):- formula(next(I,_)).
 interval(I):- formula(previous(I,_)).
-interval(I):- formula(relase(I,_,_)).
+interval(I):- formula(release(I,_,_)).
 interval(I):- formula(until(I,_,_)).
 interval(I):- formula(since(I,_,_)).
 interval(I):- formula(trigger(I,_,_)).
@@ -76,40 +76,40 @@ true(finally,X)    :- #false : time(Y), Y=X+1; time(X), formula(finally).
 
 %--------- next
           :- true(next(I,A),X), not time(Y), Y=X+1, time(X), formula(next(I,A)).
-selected(Y,X,next(I,A)) :- true(next(I,A),X),  time(Y), Y=X+1, time(X), formula(next(I,A)).
-true(A,Y) :- selected(Y,X,next(I,A)).
-in_interval(X,Y,I) :- selected(Y,X,next(I,A)).
+selected(X,Y,next(I,A)) :- true(next(I,A),X),  time(Y), Y=X+1, time(X), formula(next(I,A)).
+true(A,Y) :- selected(X,Y,next(I,A)).
+in_interval(X,Y,I) :- selected(X,Y,next(I,A)).
 
 true(next(I,A),X) :- true(A,Y),     time(Y), Y=X+1, time(X),
                 in_interval(X,Y,I),
                 formula(next(I,A)).
 
 %--------- until
-selected(Y,X,until(I,A,B)) : time(Y), X<=Y :- true(until(I,A,B),X), time(X), formula(until(I,A,B)).
-true(until(I,A,B),X) :- selected(Y,X,until(I,A,B)).
+selected(X,Y,until(I,A,B)) : time(Y), X<=Y :- true(until(I,A,B),X), time(X), formula(until(I,A,B)).
+true(until(I,A,B),X) :- selected(X,Y,until(I,A,B)).
 %
-true(B,Y):- selected(Y,X,until(I,A,B)).
-in_interval(X,Y,I):- selected(Y,X,until(I,A,B)).
-true(A,Z):- selected(Y,X,until(I,A,B)), time(Z), X<=Z, Z<Y.
-selected(Y,X,until(I,A,B)):- formula(until(I,A,B)),
+true(B,Y):- selected(X,Y,until(I,A,B)).
+in_interval(X,Y,I):- selected(X,Y,until(I,A,B)).
+true(A,Z):- selected(X,Y,until(I,A,B)), time(Z), X<=Z, Z<Y.
+selected(X,Y,until(I,A,B)):- formula(until(I,A,B)),
                                 true(B,Y),
                                 time(X), time(Y),
                                 in_interval(X,Y,I),
                                 true(A,Z) : time(Z), X<=Z, Z<Y.
 
 %--------- release
-selected(Y,X,release(I,A,B)) :- true(release(I,A,B),X),
+selected(X,Y,release(I,A,B)) :- true(release(I,A,B),X),
                                 time(Y), X<=Y.
-true(release(I,A,B),X) :- selected(Y,X,release(I,A,B)):
+true(release(I,A,B),X) :- selected(X,Y,release(I,A,B)):
                                 time(Y), X<=Y;
                           time(X), formula(release(I,A,B)).
 %
-true(B,Y) | true(A,Z): time(Z), X<=Z, Z<Y :- selected(Y,X,release(I,A,B)), in_interval(X,Y,I).
-selected(Y,X,release(I,A,B)):- formula(release(I,A,B)), time(X), time(Y), X<=Y,
+true(B,Y) | true(A,Z): time(Z), X<=Z, Z<Y :- selected(X,Y,release(I,A,B)), in_interval(X,Y,I).
+selected(X,Y,release(I,A,B)):- formula(release(I,A,B)), time(X), time(Y), X<=Y,
                                 true(B,Y).
-selected(Y,X,release(I,A,B)):- formula(release(I,A,B)), time(X), time(Y), X<=Y,
+selected(X,Y,release(I,A,B)):- formula(release(I,A,B)), time(X), time(Y), X<=Y,
                                 time(Z),  X<=Z, Z<Y, true(A,Z).
-selected(Y,X,release(I,A,B)):- formula(release(I,A,B)), time(X), time(Y), X<=Y,
+selected(X,Y,release(I,A,B)):- formula(release(I,A,B)), time(X), time(Y), X<=Y,
                                not in_interval(X,Y,I).
 
 
@@ -119,38 +119,38 @@ selected(Y,X,release(I,A,B)):- formula(release(I,A,B)), time(X), time(Y), X<=Y,
 
 %--------- previous
           :- true(previous(I,A),X), not time(Y), Y=X-1, time(X), formula(previous(I,A)).
-selected(Y,X,previous(I,A)) :- true(previous(I,A),X),  time(Y), Y=X-1, time(X), formula(previous(I,A)).
-true(A,Y) :- selected(Y,X,previous(I,A)).
-in_interval(Y,X,I) :- selected(Y,X,previous(I,A)).
+selected(X,Y,previous(I,A)) :- true(previous(I,A),X),  time(Y), Y=X-1, time(X), formula(previous(I,A)).
+true(A,Y) :- selected(X,Y,previous(I,A)).
+in_interval(Y,X,I) :- selected(X,Y,previous(I,A)).
 true(previous(I,A),X) :- true(A,Y),     time(Y), Y=X-1, time(X),
                 in_interval(Y,X,I),
                 formula(previous(I,A)).
 
 
 %--------- since
-selected(Y,X,since(I,A,B)) : time(Y), Y<=X :- true(since(I,A,B),X), time(X), formula(since(I,A,B)).
-true(since(I,A,B),X) :- selected(Y,X,since(I,A,B)).
-true(B,Y):- selected(Y,X,since(I,A,B)).
-in_interval(Y,X,I):- selected(Y,X,since(I,A,B)).
-true(A,Z):- selected(Y,X,since(I,A,B)), time(Z), Y<Z, Z<=X.
-selected(Y,X,since(I,A,B)):- formula(since(I,A,B)),
+selected(X,Y,since(I,A,B)) : time(Y), Y<=X :- true(since(I,A,B),X), time(X), formula(since(I,A,B)).
+true(since(I,A,B),X) :- selected(X,Y,since(I,A,B)).
+true(B,Y):- selected(X,Y,since(I,A,B)).
+in_interval(Y,X,I):- selected(X,Y,since(I,A,B)).
+true(A,Z):- selected(X,Y,since(I,A,B)), time(Z), Y<Z, Z<=X.
+selected(X,Y,since(I,A,B)):- formula(since(I,A,B)),
                                 true(B,Y),
                                 time(X), time(Y),
                                 in_interval(Y,X,I),
                                 true(A,Z) : time(Z), Y<Z, Z<=X.
 
 %--------- trigger
-selected(Y,X,trigger(I,A,B)) :- true(trigger(I,A,B),X),
+selected(X,Y,trigger(I,A,B)) :- true(trigger(I,A,B),X),
                                 time(Y), Y<=X.
-true(trigger(I,A,B),X) :- selected(Y,X,trigger(I,A,B)):
+true(trigger(I,A,B),X) :- selected(X,Y,trigger(I,A,B)):
                                 time(Y), Y<=X;
                           time(X), formula(trigger(I,A,B)).
-true(B,Y) | true(A,Z): time(Z), Y<=Z, Z<X :- selected(Y,X,trigger(I,A,B)), in_interval(Y,X,I).
-selected(Y,X,trigger(I,A,B)):- formula(trigger(I,A,B)), time(X), time(Y), Y<=X,
+true(B,Y) | true(A,Z): time(Z), Y<=Z, Z<X :- selected(X,Y,trigger(I,A,B)), in_interval(Y,X,I).
+selected(X,Y,trigger(I,A,B)):- formula(trigger(I,A,B)), time(X), time(Y), Y<=X,
                                 true(B,Y).
-selected(Y,X,trigger(I,A,B)):- formula(trigger(I,A,B)), time(X), time(Y), Y<=X,
+selected(X,Y,trigger(I,A,B)):- formula(trigger(I,A,B)), time(X), time(Y), Y<=X,
                                 time(Z),  Y<=Z, Z<X, true(A,Z).
-selected(Y,X,trigger(I,A,B)):- formula(trigger(I,A,B)), time(X), time(Y), Y<=X,
+selected(X,Y,trigger(I,A,B)):- formula(trigger(I,A,B)), time(X), time(Y), Y<=X,
                                not in_interval(Y,X,I).
 
 

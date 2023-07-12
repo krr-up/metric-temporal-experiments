@@ -78,6 +78,19 @@ class CommonTestCases:
             self.assertTrue(res.atom_some(["t(1,2)"]))
             self.assertTrue(res.atom_some(["t(1,3)"]))
 
+        def test_always(self):
+            """
+            Test occurrence of always in the head of a rule.
+            """
+
+            prg = """
+            always((0,4),a):-initially.
+            #external initially.
+            """
+            res = self.run_system(input_prog=prg, n_models=10, horizon=2)
+            self.assertEqual(res.n_models, 10)
+            self.assertTrue(res.atom_all(["(a,0)"]))
+
 
 class TestClingcon(CommonTestCases.TestCommonModels):
     """Test expected models produced by clingcon MEL implementation."""
