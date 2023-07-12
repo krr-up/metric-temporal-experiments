@@ -8,6 +8,8 @@ def clear_directory(directory):
     """
     Remove all files in a directory
     """
+    if not os.path.exists(directory):
+        os.makedirs(directory)
 
     for f in os.listdir(directory):
         os.remove(os.path.join(directory, f))
