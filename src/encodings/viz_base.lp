@@ -9,36 +9,16 @@
 #const color_purple="#9b9bc7".
 #const color_organge="#BC7933".
 #const color_lightorgange="#F3BD70".
+#const color_lightgray="#E8E8E8".
 
 #script (python)
 from clingo.symbol import String, Number
 def join(base,*args):
     return String(str(base).strip('"').join([str(x).strip('"') for x in args]))
 
-def q2texlbl(mel_f):
-    print(mel_f)
-    args = mel_f.arguments
-    name = mel_f.name
-    if len(args)>0:
-        interval = args[0]
-
-    if name == "top":
-        return r"\top"
-    if name == "bottom":
-        return r"\bot"
-    if name == "initially":
-        return r"\bm{\mathsf{I}}"
-    if name == "evetually":
-        return r"\Diamond"+q2texlbl(args[1])
-    if name == "always":
-        return r"\square"+q2texlbl(args[1])
-    if name == "until":
-        return q2texlbl(args[1])+r"\mathsf{U}"+q2texlbl(args[2])
-    else:
-        return name
+operators = ["top","bottom","initially","finally","next","previous","eventually","always","until","release","since","trigger"]
 
 def lbl(mel_f):
-    print(mel_f)
     args = mel_f.arguments
     name = mel_f.name
     if len(args)>0:
@@ -53,16 +33,32 @@ def lbl(mel_f):
         return "⊥"
     if name == "initially":
         return "𝗜"
-    if name == "evetually":
+    if name == "finally":
+        return "𝔽"
+    if name == "next":
+        return "○"+interval_str+lbl(args[1])
+    if name == "previous":
+        return "●"+interval_str+lbl(args[1])
+    if name == "eventually":
         return "◇"+interval_str+lbl(args[1])
     if name == "always":
         return "◻︎"+interval_str+lbl(args[1])
     if name == "until":
-        return lbl(args[1])+"𝕌"+lbl(args[2])
+        return lbl(args[1])+" 𝕌 "+lbl(args[2])
+    if name == "release":
+        return lbl(args[1])+" ℝ "+lbl(args[2])
+    if name == "since":
+        return lbl(args[1])+" 𝗦 "+lbl(args[2])
+    if name == "trigger":
+        return lbl(args[1])+" 𝗧 "+lbl(args[2])
     else:
-        return name
+        return '<I>' + name +"</I>"
 
 def get_lbl(mel_f):
-    return String(str(lbl(mel_f)+"<br/>"))
+    l = str(lbl(mel_f))
+    if not mel_f.name in operators:
+        l = '<FONT COLOR="#5985AF">' + l + "</FONT>"
+
+    return String(l+"<br/>")
 
 #end.
