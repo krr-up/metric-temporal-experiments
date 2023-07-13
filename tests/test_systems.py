@@ -99,6 +99,21 @@ class CommonTestCases:
             self.assertEqual(res.n_models, 10)
             self.assertTrue(res.atom_all(["(a,0)"]))
 
+        def test_next_omega(self):
+            """
+            Test occurrence of always in the head of a rule.
+            """
+
+            prg = """
+            next((0,w),a):-initially.
+            #external initially.
+            """
+            res = self.run_system(input_prog=prg, n_models=10, horizon=2)
+            self.assertEqual(res.n_models, 10)
+            self.assertTrue(res.atom_all(["(a,1)"]))
+            for i in range(1, 9):
+                self.assertTrue(res.atom_some([f"t(1,{i})"]))
+
 
 class TestClingcon(CommonTestCases.TestCommonModels):
     """Test expected models produced by clingcon MEL implementation."""
