@@ -8,7 +8,7 @@
 pip install memelingo
 ```
 
-Note that for visualizations using clingraph, Graphviz must be locally
+Note that for visualizing the traces using clingraph, Graphviz must be locally
 installed.
 
 ```shell

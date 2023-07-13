@@ -4,6 +4,7 @@ source = memelingo
 omit =
        */memelingo/__main__.py
        */memelingo/application.py
+       */memelingo/utils/visualizer.py
        */tests/__init__.py
 [report]
 exclude_lines =

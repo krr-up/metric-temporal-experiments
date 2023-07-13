@@ -18,7 +18,7 @@ hold(L,T) :- output(O,B), time(T), true(O,T),  literal_tuple(B,L).
 
 
 %================================================
-% Subformulas lables
+% Subformulas
 %================================================
 
 formula(O) :- output(O,_).
@@ -34,7 +34,7 @@ formula(A) :- formula(since(I,A,B)).    formula(B) :- formula(since(I,A,B)).
 formula(A) :- formula(trigger(I,A,B)).  formula(B) :- formula(trigger(I,A,B)).
 
 %================================================
-% Definitions df(mu,x)
+% Definitions n(mu,x)
 %================================================
 
 %++++++++++++++++++++++++++++

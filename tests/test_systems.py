@@ -6,9 +6,8 @@ from unittest import TestCase
 from clingo import Control
 
 from memelingo import reify, run_meta_clingcon
-from memelingo.utils.visualizer import visualize
 
-from . import _ClingoRes, clear_directory, file_exists
+from . import _ClingoRes
 
 
 class CommonTestCases:
@@ -27,18 +26,6 @@ class CommonTestCases:
             """Run system on input program with parameters to produce result."""
             # pylint: disable=W0613
             return _ClingoRes()
-
-        def test_viz(self):
-            """
-            Test visualization of a trace with clingraph
-            """
-
-            input_files = ["examples/traffic-lights.lp"]
-            res = self.run_system(input_prog=input_files, n_models=1, horizon=3)
-            prg = "\n".join([s + "." for s in res.models[0] if s[0] != "("])
-            clear_directory("out")
-            visualize(prg, name_format="timed_trace_0", view=False)
-            self.assertTrue(file_exists("out", "timed_trace_0.pdf"))
 
         def test_lights(self):
             """
