@@ -1,21 +1,41 @@
 %================================================
+% Operators and Alphabet
+% metric_formula(FORMULA,ARGUMENTS,INTERVAL)
+%================================================
+% Boolean
+metric_formula(and(A,B),(A,B), ()):- formula(and(A,B)).
+metric_formula(or(A,B),(A,B), ()):- formula(or(A,B)).
+metric_formula(if(A,B),(A,B), ()):- formula(if(A,B)).
+metric_formula(bot, (), ()):- formula(bot).
+metric_formula(top, (), ()):- formula(top).
+% Metric
+metric_formula(next(I,A),(A,),I):- formula(next(I,A)).
+metric_formula(previous(I,A),(A,),I):- formula(previous(I,A)).
+metric_formula(release(I,A,B),(A,B),I):- formula(release(I,A,B)).
+metric_formula(until(I,A,B),(A,B),I):- formula(until(I,A,B)).
+metric_formula(since(I,A,B),(A,B),I):- formula(since(I,A,B)).
+metric_formula(trigger(I,A,B),(A,B),I):- formula(trigger(I,A,B)).
+% Derived
+metric_formula(initially,(),()):- formula(initially).
+metric_formula(finally,(),()):- formula(finally).
+metric_formula(always(I,A),(A,),I):- formula(always(I,A)).
+metric_formula(always_before(I,A),(A,),I):- formula(always_before(I,A)).
+metric_formula(eventually(I,A),(A,),I):- formula(eventually(I,A)).
+metric_formula(eventually_before(I,A),(A,),I):- formula(eventually_before(I,A)).
+% Propositions
+prop_formula(F):- formula(F), not metric_formula(F,_,_).
+
+%================================================
 % INTERVALS
 %================================================
-interval(I):- formula(next(I,_)).
-interval(I):- formula(previous(I,_)).
-interval(I):- formula(release(I,_,_)).
-interval(I):- formula(until(I,_,_)).
-interval(I):- formula(since(I,_,_)).
-interval(I):- formula(trigger(I,_,_)).
+interval((M,N)):- metric_formula(_,_,(M,N)).
 
 %================================================
 % Connect true/2 with hold/2
 %================================================
 
-
 true(O,T) :- output(O,B), time(T), hold(L,T) : literal_tuple(B,L).
 hold(L,T) :- output(O,B), time(T), true(O,T),  literal_tuple(B,L).
-
 
 %================================================
 % Subformulas
@@ -23,15 +43,16 @@ hold(L,T) :- output(O,B), time(T), true(O,T),  literal_tuple(B,L).
 
 formula(O) :- output(O,_).
 formula(bot).
-formula(A) :- formula(and(A,B)).        formula(B) :- formula(and(A,B)).
-formula(A) :- formula(or(A,B)).         formula(B) :- formula(or(A,B)).
-formula(A) :- formula(if(A,B)).         formula(B) :- formula(if(A,B)).
-formula(A) :- formula(next(I,A)).
-formula(A) :- formula(until(I,A,B)).    formula(B) :- formula(until(I,A,B)).
-formula(A) :- formula(release(I,A,B)).  formula(B) :- formula(release(I,A,B)).
-formula(A) :- formula(previous(I,A)).
-formula(A) :- formula(since(I,A,B)).    formula(B) :- formula(since(I,A,B)).
-formula(A) :- formula(trigger(I,A,B)).  formula(B) :- formula(trigger(I,A,B)).
+% Operators
+formula(A) :-metric_formula(_,(A,),_).
+formula(A) :-metric_formula(_,(A,B),_).  formula(B) :-metric_formula(_,(A,B),_).
+% Derived
+formula(release(I,bot,A)) :- formula(always(I,A)).
+formula(trigger(I,bot,A)) :- formula(always_before(I,A)).
+formula(until(I,top,A)) :- formula(eventually(I,A)).
+formula(since(I,top,A)) :- formula(eventually_before(I,A)).
+
+
 
 %================================================
 % Definitions n(mu,x)
@@ -163,22 +184,18 @@ selected(X,Y,trigger(I,A,B)):- formula(trigger(I,A,B)), time(X), time(Y), Y<=X,
 %--------- wprevious
 
 %--------- always
-formula(release(I,bot,A)) :- formula(always(I,A)).
 true(release(I,bot,A),T) :- true(always(I,A),T), time(T).
 true(always(I,A),T) :- true(release(I,bot,A),T), time(T).
 
 %--------- always_before
-formula(trigger(I,bot,A)) :- formula(always_before(I,A)).
 true(trigger(I,bot,A),T) :- true(always_before(I,A),T), time(T).
 true(always_before(I,A),T) :- true(trigger(I,bot,A),T), time(T).
 
 %--------- eventually
-formula(until(I,top,A)) :- formula(eventually(I,A)).
 true(until(I,top,A),T) :- true(eventually(I,A),T), time(T).
 true(eventually(I,A),T) :- true(until(I,top,A),T), time(T).
 
 %--------- eventually_before
-formula(since(I,top,A)) :- formula(eventually_before(I,A)).
 true(since(I,top,A),T) :- true(eventually_before(I,A),T), time(T).
 true(eventually_before(I,A),T) :- true(since(I,top,A),T), time(T).
 

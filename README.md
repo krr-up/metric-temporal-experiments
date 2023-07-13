@@ -33,7 +33,13 @@ memelingo -h
 #### Traffic lights example
 
 ```shell
-memelingo 0  -c lambda=3 examples/traffic-lights.lp --view
+memelingo 0  -c lambda=3 examples/traffic-lights.lp
+```
+
+To visualize the timed traces obtained using clingraph  you can add the argument `--view`
+
+```shell
+memelingo 1  -c lambda=3 examples/traffic-lights.lp --view
 ```
 
 ### Via command line

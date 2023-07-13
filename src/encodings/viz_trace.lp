@@ -1,4 +1,5 @@
 #include "viz_base.lp".
+#defined view_subformulas/0.
 
 graph(trace).
 attr(graph,trace,overlap, prism).
@@ -25,7 +26,8 @@ attr(node,f(X),penwidth, "0.3"):-t(X,T).
 attr(node,f(X),color, gray):-t(X,T).
 attr(node,f(X),pos, @pos(X,0)):-t(X,T).
 attr(node,f(X),fontsize, "8"):-t(X,T).
-attr(node,f(X),(label,f,F),@get_lbl(F)):-true(F,X).
+attr(node,f(X),(label,f,F),@get_lbl(F)):-true(F,X), prop_formula(F).
+attr(node,f(X),(label,f,F),@get_lbl(F)):-true(F,X), view_subformulas, not prop_formula(F).
 
 
 edge((f(X),X)):-true(F,X).

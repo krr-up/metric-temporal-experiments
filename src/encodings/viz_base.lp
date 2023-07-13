@@ -56,9 +56,6 @@ def lbl(mel_f):
 
 def get_lbl(mel_f):
     l = str(lbl(mel_f))
-    if not mel_f.name in operators:
-        l = '<FONT COLOR="#5985AF">' + l + "</FONT>"
-
     return String(l+"<br/>")
 
 #end.

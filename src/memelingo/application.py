@@ -34,6 +34,7 @@ class MemelingoApp(Application):
         self.program_name = name
         self._log_level = "WARNING"
         self._view = Flag()
+        self._view_subformulas = Flag()
 
     def parse_log_level(self, log_level):
         """
@@ -64,6 +65,12 @@ class MemelingoApp(Application):
         options.add_flag(
             group, "view", "Visualize the timed trace using clingraph", self._view
         )
+        options.add_flag(
+            group,
+            "view-subformulas",
+            "Visualize the timed trace using clingraph and show all the subformulas that hold in each state",
+            self._view_subformulas,
+        )
 
     def print_model(self, model: Model, _) -> None:
         """
@@ -72,10 +79,11 @@ class MemelingoApp(Application):
         log.debug([str(s) for s in model.symbols(atoms=True, shown=True, theory=True)])
         s_strings = [str(s) for s in model.symbols(shown=True, theory=True)]
         print(" ".join(s_strings))
-        if self._view:
+        if self._view or self._view_subformulas:
             visualize(
                 _sym_to_prg(model.symbols(atoms=True, theory=True)),
                 name_format=f"timed_trace_{model.number}",
+                view_subformulas=self._view_subformulas.flag,
             )
 
     def main(self, control, files):

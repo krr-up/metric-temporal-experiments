@@ -16,7 +16,12 @@ log = logging.getLogger("main")
 ENCODINGS_PATH = os.path.join(".", os.path.join("src", "encodings"))
 
 
-def visualize(trace: str, name_format: str = "{graph_name}", view: bool = True) -> None:
+def visualize(
+    trace: str,
+    name_format: str = "{graph_name}",
+    view: bool = True,
+    view_subformulas: bool = False,
+) -> None:
     """
     Visualize the automata using clingraph
     """
@@ -27,6 +32,8 @@ def visualize(trace: str, name_format: str = "{graph_name}", view: bool = True) 
     ctx = ClingraphContext()
     log.debug(trace)
     ctl.add("base", [], trace)
+    if view_subformulas:
+        ctl.add("base", [], "view_subformulas.")
     log.debug("File")
     log.debug(os.path.join(ENCODINGS_PATH, "viz_trace.lp"))
     ctl.load(os.path.join(ENCODINGS_PATH, "viz_trace.lp"))
