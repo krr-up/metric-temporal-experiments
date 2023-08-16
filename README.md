@@ -7,6 +7,14 @@
 ```shell
 pip install memelingo
 ```
+
+Note that for visualizing the traces using clingraph, Graphviz must be locally
+installed.
+
+```shell
+sudo apt install graphviz
+```
+
 ### During development
 
 ```shell
@@ -26,6 +34,12 @@ memelingo -h
 
 ```shell
 memelingo 0  -c lambda=3 examples/traffic-lights.lp
+```
+
+To visualize the timed traces obtained using clingraph  you can add the argument `--view`
+
+```shell
+memelingo 1  -c lambda=3 examples/traffic-lights.lp --view
 ```
 
 ### Via command line

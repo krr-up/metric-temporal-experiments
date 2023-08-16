@@ -1,6 +1,26 @@
 """
 Tests utils
 """
+import os
+
+
+def clear_directory(directory):
+    """
+    Remove all files in a directory
+    """
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    for f in os.listdir(directory):
+        os.remove(os.path.join(directory, f))
+
+
+def file_exists(directory, filename):
+    """
+    Check if a file exists
+    """
+    file_path = os.path.join(directory, filename)
+    return os.path.exists(file_path)
 
 
 class _ClingoRes:
@@ -40,7 +60,7 @@ class _ClingoRes:
         Passed on the on_model callback
         """
         model = []
-        for sym in m.symbols(shown=True, theory=True):
+        for sym in m.symbols(shown=True, theory=True, atoms=True):
             model.append(str(sym))
         model.sort()
         self.models.append(set(model))

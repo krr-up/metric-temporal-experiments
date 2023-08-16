@@ -34,6 +34,14 @@ class CommonTestCases:
             input_files = ["examples/traffic-lights.lp"]
             res = self.run_system(input_prog=input_files, n_models=0, horizon=3)
             self.assertEqual(res.n_models, 14)
+            self.assertTrue(res.atom_all(["(green,2)"]))
+            self.assertTrue(res.atom_all(["(red,1)"]))
+            self.assertTrue(res.atom_all(["(red,0)"]))
+            self.assertTrue(res.atom_all(["(push,1)"]))
+            self.assertTrue(res.atom_all(["t(1,5)"]))
+            self.assertTrue(res.atom_all(["t(0,0)"]))
+            for i in range(6, 19):
+                self.assertTrue(res.atom_some([f"t(2,{i})"]))
 
         def test_initially(self):
             """
@@ -64,6 +72,34 @@ class CommonTestCases:
             self.assertTrue(res.atom_some(["t(1,1)"]))
             self.assertTrue(res.atom_some(["t(1,2)"]))
             self.assertTrue(res.atom_some(["t(1,3)"]))
+
+        def test_always(self):
+            """
+            Test occurrence of always in the head of a rule.
+            """
+
+            prg = """
+            always((0,4),a):-initially.
+            #external initially.
+            """
+            res = self.run_system(input_prog=prg, n_models=10, horizon=2)
+            self.assertEqual(res.n_models, 10)
+            self.assertTrue(res.atom_all(["(a,0)"]))
+
+        def test_next_omega(self):
+            """
+            Test occurrence of always in the head of a rule.
+            """
+
+            prg = """
+            next((0,w),a):-initially.
+            #external initially.
+            """
+            res = self.run_system(input_prog=prg, n_models=10, horizon=2)
+            self.assertEqual(res.n_models, 10)
+            self.assertTrue(res.atom_all(["(a,1)"]))
+            for i in range(1, 9):
+                self.assertTrue(res.atom_some([f"t(1,{i})"]))
 
 
 class TestClingcon(CommonTestCases.TestCommonModels):

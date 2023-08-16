@@ -3,12 +3,23 @@ Clingo application extended to include automata
 """
 import logging
 import textwrap
+from typing import Sequence
 
-from clingo import Model
-from clingo.application import Application, ApplicationOptions
+from clingo import Model, Symbol
+from clingo.application import Application, ApplicationOptions, Flag
 
 from . import reify, run_meta_clingcon
 from .utils.logger import setup_logger
+from .utils.visualizer import visualize
+
+log = logging.getLogger("main")
+
+
+def _sym_to_prg(symbols: Sequence[Symbol]):
+    """
+    Turns symbols into a program
+    """
+    return "\n".join([f"{str(s)}." for s in symbols])
 
 
 class MemelingoApp(Application):
@@ -22,6 +33,8 @@ class MemelingoApp(Application):
         """
         self.program_name = name
         self._log_level = "WARNING"
+        self._view = Flag()
+        self._view_subformulas = Flag()
 
     def parse_log_level(self, log_level):
         """
@@ -49,24 +62,40 @@ class MemelingoApp(Application):
             self.parse_log_level,
             argument="<level>",
         )
+        options.add_flag(
+            group, "view", "Visualize the timed trace using clingraph", self._view
+        )
+        options.add_flag(
+            group,
+            "view-subformulas",
+            "Visualize the timed trace using clingraph and show all the subformulas that hold in each state",
+            self._view_subformulas,
+        )
 
     def print_model(self, model: Model, _) -> None:
         """
         Print a model on the console
         """
+        log.debug([str(s) for s in model.symbols(atoms=True, shown=True, theory=True)])
         s_strings = [str(s) for s in model.symbols(shown=True, theory=True)]
         print(" ".join(s_strings))
+        if self._view or self._view_subformulas:
+            visualize(
+                _sym_to_prg(model.symbols(atoms=True, theory=True)),
+                name_format=f"timed_trace_{model.number}",
+                view_subformulas=self._view_subformulas.flag,
+            )
 
     def main(self, control, files):
         """
         Main function ran on call
         """
         # pylint: disable=W0201
-        log = setup_logger("main", getattr(logging, self._log_level))
+        local_log = setup_logger("main", getattr(logging, self._log_level))
 
         input_lambda = control.get_const("lambda")
         if input_lambda is None:
-            log.warning(
+            local_log.warning(
                 textwrap.dedent(
                     """The constant `lambda` is required for the metric meta-encoding.
                 Provided with the argument `-c lambda=X` By default is set to 10 (9 steps)."""
