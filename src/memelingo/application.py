@@ -8,7 +8,8 @@ from typing import Sequence
 from clingo import Model, Symbol
 from clingo.application import Application, ApplicationOptions, Flag
 
-from . import reify, run_meta_clingcon
+from . import reify
+from .approaches.clingcon import ClinconApproach
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
@@ -35,13 +36,27 @@ class MemelingoApp(Application):
         self._log_level = "WARNING"
         self._view = Flag()
         self._view_subformulas = Flag()
+        self._approach_class = ClinconApproach
 
     def parse_log_level(self, log_level):
         """
         Parse log
         """
         if log_level is not None:
-            self._log_level = log_level
+            self._log_level = log_level.upper()
+            return self._log_level in ["INFO", "WARNING", "DEBUG", "ERROR"]
+
+        return True
+
+    def parse_approach(self, approach):
+        """
+        Parse approach
+        """
+        if approach == "clingcon":
+            self._approach_class = ClinconApproach
+        else:
+            return False
+
         return True
 
     def register_options(self, options: ApplicationOptions) -> None:
@@ -62,6 +77,17 @@ class MemelingoApp(Application):
             self.parse_log_level,
             argument="<level>",
         )
+        options.add(
+            group,
+            "approach",
+            textwrap.dedent(
+                """\
+                Metric Approach used for calculating models
+                    <clingcon> """
+            ),
+            self.parse_approach,
+            argument="<approach>",
+        )
         options.add_flag(
             group, "view", "Visualize the timed trace using clingraph", self._view
         )
@@ -76,8 +102,17 @@ class MemelingoApp(Application):
         """
         Print a model on the console
         """
-        log.debug([str(s) for s in model.symbols(atoms=True, shown=True, theory=True)])
-        s_strings = [str(s) for s in model.symbols(shown=True, theory=True)]
+        log.debug("------- Full model -----")
+        log.debug(
+            "\n".join(
+                [str(s) for s in model.symbols(atoms=True, shown=True, theory=True)]
+            )
+        )
+        s_strings = [
+            str(s)
+            for s in model.symbols(shown=True, theory=True)
+            if s.name in ["", "t"]
+        ]
         print(" ".join(s_strings))
         if self._view or self._view_subformulas:
             visualize(
@@ -102,4 +137,7 @@ class MemelingoApp(Application):
                 )
             )
         reified_prg = reify(files=files)
-        run_meta_clingcon(control, reified_prg, on_model=None)
+        app = self._approach_class(control)
+        app.load(reified_prg)
+        app.ground()
+        app.solve(on_model=None)

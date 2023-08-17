@@ -26,5 +26,5 @@ time(0..lambda-1).
 #defined output/2.
 
 % Shown atoms
-#show.
+% #show.
 #show (S,T) : true(S,T).
