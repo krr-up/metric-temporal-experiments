@@ -1,7 +1,7 @@
 """
 The Approach using clingcon
 """
-from typing import Any, Callable
+from typing import Any, Callable, Optional
 
 from clingcon import ClingconTheory
 from clingo import Control, Function, Model, Number
@@ -22,7 +22,9 @@ class ClinconApproach(CApproach):
         """
         super().__init__(ctl, ClingconTheory, ["meta-clingcon-interval.lp"])
 
-    def custom_on_model(self, on_model: Callable[..., Any] | None = None) -> Callable:
+    def custom_on_model(
+        self, on_model: Optional[Callable[..., Any]] = None
+    ) -> Callable:
         """
         Custom on_model that takes care of assignments
         Args:
