@@ -1,11 +1,14 @@
 """Test cases for various systems that implement MEL (Metric
 Equilibrium Logic)."""
+import logging
 from typing import List, Union
 from unittest import TestCase
 
 from clingo import Control
 
-from memelingo import reify, run_meta_clingcon
+from memelingo import reify
+from memelingo.approaches.clingcon import ClinconApproach
+from memelingo.utils.logger import setup_logger
 
 from . import _ClingoRes
 
@@ -117,5 +120,9 @@ class TestClingcon(CommonTestCases.TestCommonModels):
             reified = reify(files=input_prog)
         else:
             raise RuntimeError("Should not happen")  # nocoverage
-        run_meta_clingcon(ctl, reified, on_model=res.on_model)
+        app = ClinconApproach(ctl)
+        setup_logger("main", getattr(logging, "WARNING"))
+        app.load(reified)
+        app.ground()
+        app.solve(on_model=res.on_model)
         return res
