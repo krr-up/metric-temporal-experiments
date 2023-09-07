@@ -4,7 +4,7 @@
 %================================================
 
 &sum{t(0)}=0 :- time(0).
-&sum{-t(T+1) ; t(T)}<=0:- time(T), time(T+1). % Strict semantics
+&sum{-t(T+1) ; t(T)}<0:- time(T), time(T+1). % Strict semantics
 
 %------- Intervals
 in_interval(X,Y,(M,N)):- interval((M,N)), time(X), time(Y),

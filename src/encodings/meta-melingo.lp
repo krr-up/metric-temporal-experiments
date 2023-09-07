@@ -65,6 +65,9 @@ formula(since(I,top,A)) :- formula(eventually_before(I,A)).
 %---------  bot
 :- true(bot,X).
 
+%---------  top
+true(top,X):- time(X).
+
 %--------- and
 true(and(A,B),X) :- true(A,X), true(B,X), time(X), formula(and(A,B)).
 true(A,X)            :- true(and(A,B),X), time(X), formula(and(A,B)).

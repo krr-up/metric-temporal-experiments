@@ -24,7 +24,7 @@ class CommonTestCases:
         implementation. Will be run for multiple system implementations."""
 
         def run_system(
-            self, input_prog: Union[str, List[str]], n_models: int, horizon: int
+            self, input_prog: Union[str, List[str]], n_models: int, horizon: int, enum: str = 'auto'
         ) -> _ClingoRes:  # nocoverage
             """Run system on input program with parameters to produce result."""
             # pylint: disable=W0613
@@ -104,16 +104,37 @@ class CommonTestCases:
             for i in range(1, 9):
                 self.assertTrue(res.atom_some([f"t(1,{i})"]))
 
+        def test_evetually_start(self):
+            """
+            Eventually holds in step 0
+            """
+
+            prg = """
+            next((2,3),a):-initially.
+            b:-eventually((1,4),a).
+            #external initially.
+            #external eventually((1,4),a).
+            """
+            res = self.run_system(input_prog=prg, n_models=10, horizon=3,enum='cautious')
+            self.assertTrue(res.atom_last(["(a,1)"]))
+            self.assertTrue(res.atom_last(["(b,0)"]))
+
+
+
 
 class TestClingcon(CommonTestCases.TestCommonModels):
     """Test expected models produced by clingcon MEL implementation."""
 
     def run_system(
-        self, input_prog: Union[str, List[str]], n_models: int, horizon: int
+        self, input_prog: Union[str, List[str]], n_models: int, horizon: int, enum:str = 'auto'
     ) -> _ClingoRes:
         """Run clingcon MEL implementation."""
         res = _ClingoRes()
-        ctl = Control(["--warn=none", str(n_models), f"-c lambda={horizon}"])
+        if enum == 'auto':
+            ctl = Control(["--warn=none", str(n_models), f"-c lambda={horizon}"])
+        else: 
+            ctl = Control(["--warn=none", f"-c lambda={horizon}"])
+            ctl.configuration.solve.enum_mode = enum
         if isinstance(input_prog, str):
             reified = reify(prg=input_prog)
         elif isinstance(input_prog, list):

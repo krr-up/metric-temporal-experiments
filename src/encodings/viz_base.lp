@@ -16,25 +16,32 @@ from clingo.symbol import String, Number
 def join(base,*args):
     return String(str(base).strip('"').join([str(x).strip('"') for x in args]))
 
-operators = ["top","bottom","initially","finally","next","previous","eventually","always","until","release","since","trigger"]
+interval_operators = ["next","previous","eventually","always","until","release","since","trigger"]
+boolean_operators = ["top","bot","initially","finally","if","or","and"]
 
 def lbl(mel_f):
+    
     args = mel_f.arguments
     name = mel_f.name
-    if len(args)>0:
+    if name in interval_operators:
         interval = args[0]
         m = interval.arguments[0]
         n = interval.arguments[1]
         interval_str= f'<FONT POINT-SIZE="5">[{m},{n}]</FONT>'
-
     if name == "top":
         return "⊤"
-    if name == "bottom":
+    if name == "bot":
         return "⊥"
     if name == "initially":
         return "𝗜"
     if name == "finally":
         return "𝔽"
+    if name == "if":
+        return lbl(args[0]) + " → " + lbl(args[1])
+    if name == "or":
+        return lbl(args[0]) + " | " + lbl(args[1])
+    if name == "and":
+        return lbl(args[0]) + " & " + lbl(args[1])
     if name == "next":
         return "○"+interval_str+lbl(args[1])
     if name == "previous":

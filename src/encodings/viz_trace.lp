@@ -20,7 +20,7 @@ attr(node,X,width, "0.3"):-t(X,T).
 attr(node,X,margin, "0"):-t(X,T).
 attr(node,X,fillcolor, color_lightgray):-t(X,T).
 
-attr(node,f(X),label, "<{% for k, n in f.items() %}{{n}} {% endfor %}>"):-t(X,T).
+attr(node,f(X),label, "<{% set f = f|default({}) %}{% for k, n in f.items() %}{{n}} {% endfor %}>"):-t(X,T).
 attr(node,f(X),shape, square):-t(X,T).
 attr(node,f(X),penwidth, "0.3"):-t(X,T).
 attr(node,f(X),color, gray):-t(X,T).
