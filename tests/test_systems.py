@@ -60,7 +60,7 @@ class CommonTestCases:
             for i in range(1, 3):
                 self.assertTrue(res.atom_some([f"t(1,{i})"]))
 
-        def test_eventually(self):
+        def test_eventually_head(self):
             """
             Test occurrence of eventually in the head of a rule.
             """
@@ -75,6 +75,21 @@ class CommonTestCases:
             self.assertTrue(res.atom_some(["t(1,1)"]))
             self.assertTrue(res.atom_some(["t(1,2)"]))
             self.assertTrue(res.atom_some(["t(1,3)"]))
+
+        def test_eventually_body(self):
+            """
+            Test occurrence of eventually in the body of a rule.
+            """
+
+            prg = """
+            next((2,3),a):-initially.
+            b:-eventually((1,4),a).
+            #external initially.
+            #external eventually((1,4),a).
+            """
+            res = self.run_system(input_prog=prg, n_models=10, horizon=3,enum='cautious')
+            self.assertTrue(res.atom_last(["(a,1)"]))
+            self.assertTrue(res.atom_last(["(b,0)"]))
 
         def test_always(self):
             """
@@ -103,21 +118,6 @@ class CommonTestCases:
             self.assertTrue(res.atom_all(["(a,1)"]))
             for i in range(1, 9):
                 self.assertTrue(res.atom_some([f"t(1,{i})"]))
-
-        def test_evetually_start(self):
-            """
-            Eventually holds in step 0
-            """
-
-            prg = """
-            next((2,3),a):-initially.
-            b:-eventually((1,4),a).
-            #external initially.
-            #external eventually((1,4),a).
-            """
-            res = self.run_system(input_prog=prg, n_models=10, horizon=3,enum='cautious')
-            self.assertTrue(res.atom_last(["(a,1)"]))
-            self.assertTrue(res.atom_last(["(b,0)"]))
 
 
 

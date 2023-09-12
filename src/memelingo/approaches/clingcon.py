@@ -34,7 +34,6 @@ class ClinconApproach(CApproach):
             _type_: A function that can be passed to the on_model in solve
         """
         super_f = super().custom_on_model(on_model)
-
         def on_model_function(mdl: Model) -> None:
             
             for key, val in self.theory.assignment(mdl.thread_id):

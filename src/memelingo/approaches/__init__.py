@@ -14,7 +14,7 @@ log = logging.getLogger("main")
 ENCODINGS_PATH = os.path.join(".", os.path.join("src", "encodings"))
 
 
-class MeApproach:
+class MyApproach:
     """
     Basic class for a approach to meta metric logic
     """
@@ -58,7 +58,7 @@ class MeApproach:
         self.ctl.solve(on_model=on_model)  # nocoverage
 
 
-class CApproach(MeApproach):
+class CApproach(MyApproach):
     """
     Approach that uses a Theory (Clingcon, ClingoDL and fClingo)
     """
@@ -77,6 +77,24 @@ class CApproach(MeApproach):
         self.theory: Theory
         self.interval_files = interval_files
 
+    @property
+    def files(self):
+        files = ["meta.lp", "meta-melingo.lp"] + self.interval_files
+
+        return [os.path.join(ENCODINGS_PATH, file) for file in files]
+
+
+    def parse_load_files(self):
+        """
+        Parses and loads the files
+        """
+    
+        with ProgramBuilder(self.ctl) as pb:
+            parse_files(
+                self.files,
+                lambda ast: self.theory.rewrite_ast(ast, pb.add),
+            )
+
     def load(self, reified_prg: str):
         """
         Loads the files and the reified program
@@ -85,15 +103,10 @@ class CApproach(MeApproach):
             reified_prg (str): The reified program as a string
         """
         log.debug("Loading...")
-        files = ["meta.lp", "meta-melingo.lp"] + self.interval_files
 
         self.theory = self.theory_class()
         self.theory.register(self.ctl)
-        with ProgramBuilder(self.ctl) as pb:
-            parse_files(
-                [os.path.join(ENCODINGS_PATH, file) for file in files],
-                lambda ast: self.theory.rewrite_ast(ast, pb.add),
-            )
+        self.parse_load_files()
         super().load(reified_prg)
 
     def custom_on_model(self, on_model: Optional[Callable] = None) -> Callable:
@@ -105,7 +118,6 @@ class CApproach(MeApproach):
         Returns:
             : A function that can be passed to the on_model in solve
         """
-
         def on_model_function(mdl: Model):
             if on_model is not None:
                 on_model(mdl)
