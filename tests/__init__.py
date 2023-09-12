@@ -42,7 +42,7 @@ class _ClingoRes:
         if self.is_unsat:
             return False
         return self.models[-1]
-    
+
     @property
     def is_sat(self):
         """
@@ -93,7 +93,7 @@ class _ClingoRes:
         if not set(atoms).issubset(last):
             return False
         return True
-    
+
     def atom_some(self, atoms):
         """
         The atoms must appear together in some model

@@ -79,16 +79,18 @@ class CApproach(MyApproach):
 
     @property
     def files(self):
+        """
+        List of files needed
+        """
         files = ["meta.lp", "meta-melingo.lp"] + self.interval_files
 
         return [os.path.join(ENCODINGS_PATH, file) for file in files]
-
 
     def parse_load_files(self):
         """
         Parses and loads the files
         """
-    
+
         with ProgramBuilder(self.ctl) as pb:
             parse_files(
                 self.files,
@@ -118,6 +120,7 @@ class CApproach(MyApproach):
         Returns:
             : A function that can be passed to the on_model in solve
         """
+
         def on_model_function(mdl: Model):
             if on_model is not None:
                 on_model(mdl)

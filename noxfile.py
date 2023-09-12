@@ -13,7 +13,7 @@ if "GITHUB_ACTIONS" in os.environ:
 
 @nox.session
 def format(session):
-    session.install("-e", ".[format]")
+    session.install("-e", ".[format]", "-r", "requirements.txt")
     check = "check" in session.posargs
 
     autoflake_args = [
@@ -50,32 +50,32 @@ def doc(session):
         target = session.posargs[0]
         options = session.posargs[1:]
 
-    session.install("-e", ".[doc]")
+    session.install("-e", ".[doc]", "-r", "requirements.txt")
     session.cd("doc")
     session.run("sphinx-build", "-M", target, ".", "_build", *options)
 
 
 @nox.session
 def lint_flake8(session):
-    session.install("-e", ".[lint_flake8]")
+    session.install("-e", ".[lint_flake8]", "-r", "requirements.txt")
     session.run("flake8", "src", "tests")
 
 
 @nox.session
 def lint_pylint(session):
-    session.install("-e", ".[lint_pylint]")
+    session.install("-e", ".[lint_pylint]", "-r", "requirements.txt")
     session.run("pylint", "memelingo", "tests")
 
 
 @nox.session
 def typecheck(session):
-    session.install("-e", ".[typecheck]")
+    session.install("-e", ".[typecheck]", "-r", "requirements.txt")
     session.run("mypy", "-p", "memelingo", "-p", "tests")
 
 
 @nox.session(python=PYTHON_VERSIONS)
 def test(session):
-    args = ['.[test]']
+    args = ['.[test]', "-r", "requirements.txt"]
     if EDITABLE_TESTS:
         args.insert(0, '-e')
     session.install(*args)
@@ -85,4 +85,4 @@ def test(session):
 
 @nox.session
 def dev(session):
-    session.install("-e", ".[dev]")
+    session.install("-e", ".[dev]", "-r", "requirements.txt")
