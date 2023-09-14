@@ -35,6 +35,15 @@ class _ClingoRes:
         self.models = []
 
     @property
+    def last_model(self):
+        """
+        The last model. Used in brave and cautious
+        """
+        if self.is_unsat:
+            return False
+        return self.models[-1]
+
+    @property
     def is_sat(self):
         """
         True if SAT
@@ -72,6 +81,17 @@ class _ClingoRes:
         for model in self.models:
             if not set(atoms).issubset(model):
                 return False
+        return True
+
+    def atom_last(self, atoms):
+        """
+        The atoms must appear in the last model
+        """
+        last = self.last_model
+        if not last:
+            return False
+        if not set(atoms).issubset(last):
+            return False
         return True
 
     def atom_some(self, atoms):

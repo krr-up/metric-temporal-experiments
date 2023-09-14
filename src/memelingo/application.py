@@ -10,6 +10,7 @@ from clingo.application import Application, ApplicationOptions, Flag
 
 from . import reify
 from .approaches.clingcon import ClinconApproach
+from .approaches.fclingo import FclingoApproach
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
@@ -54,6 +55,8 @@ class MemelingoApp(Application):
         """
         if approach == "clingcon":
             self._approach_class = ClinconApproach
+        elif approach == "fclingo":
+            self._approach_class = FclingoApproach
         else:
             return False
 
