@@ -12,3 +12,6 @@ in_interval(X,Y,(M,N)):- interval((M,N)), time(X), time(Y),
 
 &diff{t(Y) -t(X)}<N :- in_interval(X,Y,(M,N)).
 &diff{t(X) -t(Y)}<= -M :- in_interval(X,Y,(M,N)).
+
+% TODO:
+% Maybe this could be restrictied ro X<Y????

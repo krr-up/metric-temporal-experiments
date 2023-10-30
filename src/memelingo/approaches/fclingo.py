@@ -14,18 +14,20 @@ from fclingo.translator import ConstraintAtom
 from . import CApproach
 
 log = logging.getLogger("main")
+DEF = "__def"
 
 
 class Config:
     """
-    Fclingo configuraton
+    Class for application specific options.
     """
-
-    # pylint: disable=too-few-public-methods
-    def __init__(self, max_int, min_int, print_trans) -> None:
-        self.max_int = max_int
+    # pylint: disable=R0903
+    def __init__(self, min_int, max_int, print_translation, print_auxiliary):
+        self.print_aux = print_auxiliary
+        self.print_trans = print_translation
         self.min_int = min_int
-        self.print_trans = print_trans
+        self.max_int = max_int
+        self.defined = DEF
 
 
 class FclingoApproach(CApproach):
@@ -41,7 +43,7 @@ class FclingoApproach(CApproach):
         """
         super().__init__(ctl, ClingconTheory, ["meta-fclingo-interval.lp"])
         ctl.add("base", [], THEORY)
-        self.translator = Translator(ctl, Config(0, 10, False))
+        self.translator = Translator(ctl, Config(0, 10, False, False))
 
     def parse_load_files(self):
         """

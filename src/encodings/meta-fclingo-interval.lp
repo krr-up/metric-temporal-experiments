@@ -17,3 +17,7 @@ in_interval(X,Y,(M,w)):- interval((M,w)), time(X), time(Y),
 
 &fsum{t(Y); -t(X)}<N :- in_interval(X,Y,(_,N)), N!=w.
 &fsum{t(X); -t(Y)}<= -M :- in_interval(X,Y,(M,_)).
+
+
+% TODO:
+% Maybe this could be restrictied ro X<Y????

@@ -111,6 +111,21 @@ class CommonTestCases:
             self.assertEqual(res.n_models, 10)
             self.assertTrue(res.atom_all(["(a,0)"]))
 
+        def test_previous(self):
+            """
+            Test occurrence of always in the head of a rule.
+            """
+
+            prg = """
+            next((0,w),previous((2,3),a)):-initially.
+            #external initially.
+            """
+            res = self.run_system(input_prog=prg, n_models=10, horizon=2)
+            self.assertEqual(res.n_models, 1)
+            self.assertTrue(res.atom_all(["(a,0)"]))
+            self.assertTrue(res.atom_all(["t(0,0)"]))
+            self.assertTrue(res.atom_all(["t(1,2)"]))
+
         def test_next_omega(self):
             """
             Test occurrence of always in the head of a rule.
