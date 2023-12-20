@@ -7,9 +7,9 @@ from unittest import TestCase
 from clingo import Control
 
 from memelingo import reify
+from memelingo.approaches.asp import ASPApproach
 from memelingo.approaches.clingcon import ClingconApproach
 from memelingo.approaches.fclingo import FclingoApproach
-from memelingo.approaches.asp import ASPApproach
 from memelingo.utils.logger import setup_logger
 
 from . import _ClingoRes
@@ -94,9 +94,7 @@ class CommonTestCases:
             #external initially.
             #external eventually((1,4),a).
             """
-            res = self.run_system(
-                input_prog=prg, n_models=10, lmbd=3, enum="cautious"
-            )
+            res = self.run_system(input_prog=prg, n_models=10, lmbd=3, enum="cautious")
             self.assertTrue(res.atom_last(["(a,1)"]))
             self.assertTrue(res.atom_last(["(b,0)"]))
 
@@ -158,6 +156,7 @@ class CommonTestCases:
             self.assertEqual(res.n_models, 2)
             self.assertTrue(res.atom_all(["(a,1)"]))
 
+
 class TestASP(CommonTestCases.TestCommonModels):
     """Test expected models produced by ASP MEL implementation."""
 
@@ -167,7 +166,7 @@ class TestASP(CommonTestCases.TestCommonModels):
         n_models: int,
         lmbd: int,
         enum: str = "auto",
-        timepoint_limit: int = 40
+        timepoint_limit: int = 40,
     ) -> _ClingoRes:
         """Run clingcon MEL implementation."""
         res = _ClingoRes()
@@ -188,7 +187,7 @@ class TestASP(CommonTestCases.TestCommonModels):
         app.ground()
         app.solve(on_model=res.on_model)
         return res
-    
+
     def test_next_omega(self):
         """
         Overwrite!
@@ -207,6 +206,7 @@ class TestASP(CommonTestCases.TestCommonModels):
         self.assertEqual(res.n_models, 10)
         self.assertTrue(res.atom_all(["(a,1)"]))
 
+
 class TestClingcon(CommonTestCases.TestCommonModels):
     """Test expected models produced by clingcon MEL implementation."""
 
@@ -216,7 +216,7 @@ class TestClingcon(CommonTestCases.TestCommonModels):
         n_models: int,
         lmbd: int,
         enum: str = "auto",
-        timepoint_limit: int = 40
+        timepoint_limit: int = 40,
     ) -> _ClingoRes:
         """Run clingcon MEL implementation."""
         res = _ClingoRes()
@@ -248,7 +248,7 @@ class TestFclingo(CommonTestCases.TestCommonModels):
         n_models: int,
         lmbd: int,
         enum: str = "auto",
-        timepoint_limit: int = 40
+        timepoint_limit: int = 40,
     ) -> _ClingoRes:
         """Run clingcon MEL implementation."""
         res = _ClingoRes()
@@ -277,22 +277,22 @@ class TestFclingo(CommonTestCases.TestCommonModels):
 
         IMPORTANT!!: This test only works when assignments can be left undefined:
         meaning that the rule
-        
+
         &fsum{t(T)} = t(T) :- time(T).
 
         needs to be commented out
         """
         return
-        prg = """
-        always((0,4),a) :- initially.
+        # prg = """
+        # always((0,4),a) :- initially.
 
-        #external initially.
-        #external a.
-        """
-        res = self.run_system(input_prog=prg, n_models=10, lmbd=5)
-        self.assertEqual(res.n_models, 1)
-        self.assertTrue(res.atom_all(["(a,0)"]))
-        self.assertTrue(res.atom_all(["t(0,0)"]))
+        # #external initially.
+        # #external a.
+        # """
+        # res = self.run_system(input_prog=prg, n_models=10, lmbd=5)
+        # self.assertEqual(res.n_models, 1)
+        # self.assertTrue(res.atom_all(["(a,0)"]))
+        # self.assertTrue(res.atom_all(["t(0,0)"]))
 
     # overwrite
     def test_initially(self):
@@ -301,16 +301,16 @@ class TestFclingo(CommonTestCases.TestCommonModels):
 
         IMPORTANT!!: This test only works when assignments can be left undefined:
         meaning that the rule
-        
+
         &fsum{t(T)} = t(T) :- time(T).
 
         needs to be commented out
         """
         return
-        prg = """
-        a:-initially.
-        #external initially.
-        """
-        res = self.run_system(input_prog=prg, n_models=4, lmbd=2)
-        self.assertEqual(res.n_models, 1)
-        self.assertTrue(res.atom_all(["(a,0)", "t(0,0)", "(initially,0)"]))
+        # prg = """
+        # a:-initially.
+        # #external initially.
+        # """
+        # res = self.run_system(input_prog=prg, n_models=4, lmbd=2)
+        # self.assertEqual(res.n_models, 1)
+        # self.assertTrue(res.atom_all(["(a,0)", "t(0,0)", "(initially,0)"]))

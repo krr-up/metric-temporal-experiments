@@ -20,7 +20,9 @@ class ClingconApproach(CApproach):
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, timepoint_limit, ["meta-clingcon-interval.lp"], ClingconTheory)
+        super().__init__(
+            ctl, timepoint_limit, ["meta-clingcon-interval.lp"], ClingconTheory
+        )
 
     def custom_on_model(
         self, on_model: Optional[Callable[..., Any]] = None

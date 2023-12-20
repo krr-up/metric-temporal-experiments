@@ -21,6 +21,7 @@ class Config:
     """
     Class for application specific options.
     """
+
     # pylint: disable=R0903
     def __init__(self, min_int, max_int, print_translation, print_auxiliary):
         self.print_aux = print_auxiliary
@@ -41,7 +42,9 @@ class FclingoApproach(CApproach):
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, timepoint_limit, ["meta-fclingo-interval.lp"], ClingconTheory)
+        super().__init__(
+            ctl, timepoint_limit, ["meta-fclingo-interval.lp"], ClingconTheory
+        )
         ctl.add("base", [], THEORY)
         self.translator = Translator(ctl, Config(0, 10, False, timepoint_limit))
 

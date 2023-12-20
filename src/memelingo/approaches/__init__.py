@@ -19,7 +19,7 @@ class MyApproach:
     Basic class for a approach to meta metric logic
     """
 
-    def __init__(self, ctl: Control, timepoint_limit:int, interval_files: List[str]):
+    def __init__(self, ctl: Control, timepoint_limit: int, interval_files: List[str]):
         """
         Creates an approach with a control
         Args:
@@ -30,7 +30,6 @@ class MyApproach:
         self.ctl = ctl
         self.timepoint_limit = timepoint_limit
         self.interval_files = interval_files
-
 
     def load(self, reified_prg: str):
         """
@@ -50,7 +49,7 @@ class MyApproach:
         files = ["meta.lp", "meta-melingo.lp"] + self.interval_files
 
         return [os.path.join(ENCODINGS_PATH, file) for file in files]
-    
+
     def ground(self):
         """
         Grounds the base program and adds a program observer to print such program
@@ -79,7 +78,13 @@ class CApproach(MyApproach):
     Approach that uses a Theory (Clingcon, ClingoDL and fClingo)
     """
 
-    def __init__(self, ctl: Control, timepoint_limit:int, interval_files: List[str], theory_class):
+    def __init__(
+        self,
+        ctl: Control,
+        timepoint_limit: int,
+        interval_files: List[str],
+        theory_class,
+    ):
         """
         Creates an approach
 
@@ -126,7 +131,6 @@ class CApproach(MyApproach):
         self.theory.register(self.ctl)
         self.parse_load_files()
         self.ctl.add("base", [], reified_prg)
-
 
     def custom_on_model(self, on_model: Optional[Callable] = None) -> Callable:
         """

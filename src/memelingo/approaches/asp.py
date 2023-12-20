@@ -6,7 +6,6 @@ from clingo import Control
 
 from . import MyApproach
 
-from . import CApproach
 
 class ASPApproach(MyApproach):
     """

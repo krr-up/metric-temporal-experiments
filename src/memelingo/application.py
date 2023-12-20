@@ -5,13 +5,13 @@ import logging
 import textwrap
 from typing import Sequence
 
-from clingo import Model, Symbol, Function
+from clingo import Model, Symbol
 from clingo.application import Application, ApplicationOptions, Flag
 
 from . import reify
+from .approaches.asp import ASPApproach
 from .approaches.clingcon import ClingconApproach
 from .approaches.fclingo import FclingoApproach
-from .approaches.asp import ASPApproach
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
@@ -70,9 +70,9 @@ class MemelingoApp(Application):
         """
         Parse timepoint limit
         """
-        self._timepoint_limit=timepoint
+        self._timepoint_limit = timepoint
         return True
-    
+
     def register_options(self, options: ApplicationOptions) -> None:
         """
         Add custom options
@@ -161,7 +161,7 @@ class MemelingoApp(Application):
                 )
             )
         reified_prg = reify(files=files)
-        app = self._approach_class(control,timepoint_limit=self._timepoint_limit)
+        app = self._approach_class(control, timepoint_limit=self._timepoint_limit)
         app.load(reified_prg)
         app.ground()
         app.solve(on_model=None)
