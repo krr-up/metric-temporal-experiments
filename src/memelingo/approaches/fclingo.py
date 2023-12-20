@@ -1,5 +1,5 @@
 """
-The Approach using clingcon
+The Approach using fclingo
 """
 import logging
 from typing import Any, Callable, Optional
@@ -32,18 +32,18 @@ class Config:
 
 class FclingoApproach(CApproach):
     """
-    Clincon approach for metric logic
+    Clingcon approach for metric logic
     """
 
-    def __init__(self, ctl: Control):
+    def __init__(self, ctl: Control, timepoint_limit: int):
         """
         Creates the approach
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, ClingconTheory, ["meta-fclingo-interval.lp"])
+        super().__init__(ctl, timepoint_limit, ["meta-fclingo-interval.lp"], ClingconTheory)
         ctl.add("base", [], THEORY)
-        self.translator = Translator(ctl, Config(0, 10, False, False))
+        self.translator = Translator(ctl, Config(0, 10, False, timepoint_limit))
 
     def parse_load_files(self):
         """

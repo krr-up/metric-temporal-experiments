@@ -9,18 +9,18 @@ from clingo import Control, Function, Model, Number
 from . import CApproach
 
 
-class ClinconApproach(CApproach):
+class ClingconApproach(CApproach):
     """
-    Clincon approach for metric logic
+    Clingcon approach for metric logic
     """
 
-    def __init__(self, ctl: Control):
+    def __init__(self, ctl: Control, timepoint_limit: int):
         """
         Creates the approach
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, ClingconTheory, ["meta-clingcon-interval.lp"])
+        super().__init__(ctl, timepoint_limit, ["meta-clingcon-interval.lp"], ClingconTheory)
 
     def custom_on_model(
         self, on_model: Optional[Callable[..., Any]] = None

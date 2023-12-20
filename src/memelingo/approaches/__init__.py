@@ -19,13 +19,18 @@ class MyApproach:
     Basic class for a approach to meta metric logic
     """
 
-    def __init__(self, ctl: Control):
+    def __init__(self, ctl: Control, timepoint_limit:int, interval_files: List[str]):
         """
         Creates an approach with a control
         Args:
             ctl (Control): The clingo control
+            timepoint_limit: Limit for the timepoints
+            interval_files (List[str]): The list of additional files needed to calculate the intervals
         """
         self.ctl = ctl
+        self.timepoint_limit = timepoint_limit
+        self.interval_files = interval_files
+
 
     def load(self, reified_prg: str):
         """
@@ -33,8 +38,19 @@ class MyApproach:
         Args:
             reified_prg (str): The reified program as a string
         """
+        for f in self.files:
+            self.ctl.load(f)
         self.ctl.add("base", [], reified_prg)
 
+    @property
+    def files(self):
+        """
+        List of files needed
+        """
+        files = ["meta.lp", "meta-melingo.lp"] + self.interval_files
+
+        return [os.path.join(ENCODINGS_PATH, file) for file in files]
+    
     def ground(self):
         """
         Grounds the base program and adds a program observer to print such program
@@ -63,19 +79,19 @@ class CApproach(MyApproach):
     Approach that uses a Theory (Clingcon, ClingoDL and fClingo)
     """
 
-    def __init__(self, ctl: Control, theory_class, interval_files: List[str]):
+    def __init__(self, ctl: Control, timepoint_limit:int, interval_files: List[str], theory_class):
         """
         Creates an approach
 
         Args:
             ctl (Control): The clingo control
             theory_class (_type_): The theory class used
+            timepoint_limit: Limit for the timepoints
             interval_files (List[str]): The list of additional files needed to calculate the intervals
         """
-        super().__init__(ctl)
+        super().__init__(ctl, timepoint_limit, interval_files)
         self.theory_class = theory_class
         self.theory: Theory
-        self.interval_files = interval_files
 
     @property
     def files(self):
@@ -109,7 +125,8 @@ class CApproach(MyApproach):
         self.theory = self.theory_class()
         self.theory.register(self.ctl)
         self.parse_load_files()
-        super().load(reified_prg)
+        self.ctl.add("base", [], reified_prg)
+
 
     def custom_on_model(self, on_model: Optional[Callable] = None) -> Callable:
         """

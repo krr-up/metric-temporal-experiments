@@ -4,13 +4,16 @@
 %================================================
 
 &diff{t(0)}=0 :- time(0).
-:- time(T), time(T'), T'>T, &diff{t(T) -t(T')}>0 . % Strict semantics
+:- time(T), time(T'), T'=T+1, &diff{t(T) -t(T')}>0 . % Strict semantics
 
 %------- Intervals
 in_interval(X,Y,(M,N)):- interval((M,N)), time(X), time(Y),
-    &diff{t(Y) -t(X)}<N, &diff{t(X) -t(Y)}<= -M.
+    &diff{t(Y) -t(X)}<N, &diff{t(X) -t(Y)}<= -M, N!=w.
 
-&diff{t(Y) -t(X)}<N :- in_interval(X,Y,(M,N)).
+in_interval(X,Y,(M,w)):- interval((M,w)), time(X), time(Y),
+    &diff{t(X) -t(Y)}<= -M.
+
+&diff{t(Y) -t(X)}<N :- in_interval(X,Y,(M,N)), N!=w.
 &diff{t(X) -t(Y)}<= -M :- in_interval(X,Y,(M,N)).
 
 % TODO:

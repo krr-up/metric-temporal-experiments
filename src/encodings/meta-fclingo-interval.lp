@@ -4,6 +4,9 @@
 %================================================
 
 &fsum{t(0)} = 0 :- time(0).
+
+&fsum{t(T)} = t(T) :- time(T). % This is needed for test.next_derived to work, the value must be defined for the interval to be created
+
 :- time(T), time(T'), T'=T+1, 
     &fsum{t(T')}=t(T'), 
     &fsum{t(T)}=t(T), 

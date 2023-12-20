@@ -20,7 +20,6 @@ interval_operators = ["next","previous","eventually","always","until","release",
 boolean_operators = ["top","bot","initially","finally","if","or","and"]
 
 def lbl(mel_f):
-    
     args = mel_f.arguments
     name = mel_f.name
     if name in interval_operators:
@@ -59,10 +58,10 @@ def lbl(mel_f):
     if name == "trigger":
         return lbl(args[1])+" 𝗧" +interval_str +lbl(args[2])
     else:
-        return '<I>' + name +"</I>"
+        return '<I>' + str(mel_f) +"</I>"
 
 def get_lbl(mel_f):
     l = str(lbl(mel_f))
-    return String(l+"<br/>")
+    return String(l+"<br ALIGN='LEFT'/>")
 
 #end.
