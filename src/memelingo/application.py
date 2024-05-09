@@ -1,6 +1,7 @@
 """
 Clingo application extended to include automata
 """
+
 import logging
 import textwrap
 from typing import Sequence
@@ -12,6 +13,8 @@ from . import reify
 from .approaches.asp import ASPApproach
 from .approaches.clingcon import ClingconApproach
 from .approaches.fclingo import FclingoApproach
+from .approaches.mlp import MLPht, MLPhtE
+from .approaches.mlp_htc import MLPhtc, MLPhtcE
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
@@ -61,6 +64,14 @@ class MemelingoApp(Application):
             self._approach_class = FclingoApproach
         elif approach == "asp":
             self._approach_class = ASPApproach
+        elif approach == "mlp":
+            self._approach_class = MLPht
+        elif approach == "mlp-e":
+            self._approach_class = MLPhtE
+        elif approach == "mlp-htc":
+            self._approach_class = MLPhtc
+        elif approach == "mlp-htc-e":
+            self._approach_class = MLPhtcE
         else:
             return False
 

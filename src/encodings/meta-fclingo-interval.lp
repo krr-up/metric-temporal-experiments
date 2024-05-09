@@ -10,7 +10,7 @@
 :- time(T), time(T'), T'=T+1, 
     &fsum{t(T')}=t(T'), 
     &fsum{t(T)}=t(T), 
-    &fsum{-t(T') ; t(T)}>0. % Strict semantics (founded)
+    &fsum{-t(T') ; t(T)}>=0. % Strict semantics (founded)
 
 %------- Intervals
 in_interval(X,Y,(M,N)):- interval((M,N)), time(X), time(Y),

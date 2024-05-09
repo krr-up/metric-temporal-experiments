@@ -28,8 +28,9 @@ attr(node,f(X),penwidth, "0.3"):-t(X,T).
 attr(node,f(X),color, gray):-t(X,T).
 attr(node,f(X),pos, @pos(X,0)):-t(X,T).
 attr(node,f(X),fontsize, "8"):-t(X,T).
-attr(node,f(X),(label,f,F),@get_lbl(F)):-_show(F,X), prop_formula(F), t(X,_).
-attr(node,f(X),(label,f,F),@get_lbl(F)):-_show(F,X), view_subformulas, not prop_formula(F), t(X,_).
+attr(node,f(X),(label,f,F),@get_lbl(F)):-_show(F,X), t(X,_).
+% attr(node,f(X),(label,f,F),@get_lbl(F)):-_show(F,X), prop_formula(F), t(X,_).
+% attr(node,f(X),(label,f,F),@get_lbl(F)):-_show(F,X), view_subformulas, not prop_formula(F), t(X,_).
 
 
 edge((f(X),X)):-_show(F,X),t(X,_).

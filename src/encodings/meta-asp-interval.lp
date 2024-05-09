@@ -5,7 +5,8 @@
 
 % #const tplimit=100. Passed in python
 
-timepoint(0..100).
+timepoint(0..tplimit).
+% timepoint(0..100).
 
 1{t(T,TP):timepoint(TP)}1:- time(T).
 
