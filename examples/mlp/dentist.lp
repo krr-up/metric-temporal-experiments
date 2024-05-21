@@ -36,11 +36,7 @@ next((D,D+1),at(ram,L')) :- at(ram,L), go(ram,L'), distance(L,L',D).
 next((0,w),has(ram,I)) :- has(ram,I), not finally.
 next((0,w),at(I,L)) :- at(I,L), item(I), not has(_,I), not finally.
 
-% Goal
-goal :- at(ram,dentist), has(ram,icard), has(ram,cash).
 
-% Represent the goal!
-:- not eventually((0,60*size),goal), initially.
 
 
 _show(has(P,I)):-has(P,I).
@@ -54,4 +50,3 @@ _show(goal).
 #external at(ram,L): loc(L).
 #external at(I,L): item(I), loc(L).
 #external has(ram,I): item(I).
-#external eventually((0,60*size),goal).
