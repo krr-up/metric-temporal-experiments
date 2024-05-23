@@ -36,7 +36,7 @@ true(finally,lambda-1).
 %--------- next is treated as different rules
 :- true(next(_,_),K), time(K), K=lambda-1.
 true(V,K+1) :- true(next(I,V),K).
-s(K,I) :- true(next(I,V),K).
+:- true(next(I,V),K), not s(K,I).
 
 %--------- top and bot, are not expicitly used so they are ignored
 
