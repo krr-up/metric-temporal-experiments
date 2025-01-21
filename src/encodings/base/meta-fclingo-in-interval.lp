@@ -4,10 +4,13 @@
 %================================================
 
 &fsum{t(0)} = 0 :- time(0).
+
+&fsum{t(T)} = t(T) :- time(T). % This is needed for test.next_derived to work, the value must be defined for the interval to be created
+
 :- time(T), time(T'), T'=T+1, 
     &fsum{t(T')}=t(T'), 
     &fsum{t(T)}=t(T), 
-    &fsum{-t(T') ; t(T)}>0. % Strict semantics (founded)
+    &fsum{-t(T') ; t(T)}>=0. % Strict semantics (founded)
 
 %------- Intervals
 in_interval(X,Y,(M,N)):- interval((M,N)), time(X), time(Y),
@@ -17,3 +20,7 @@ in_interval(X,Y,(M,w)):- interval((M,w)), time(X), time(Y),
 
 &fsum{t(Y); -t(X)}<N :- in_interval(X,Y,(_,N)), N!=w.
 &fsum{t(X); -t(Y)}<= -M :- in_interval(X,Y,(M,_)).
+
+
+% TODO:
+% Maybe this could be restrictied ro X<Y????

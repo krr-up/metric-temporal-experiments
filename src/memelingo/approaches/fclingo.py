@@ -1,6 +1,7 @@
 """
-The Approach using clingcon
+The Approach using fclingo
 """
+
 import logging
 from typing import Any, Callable, Optional
 
@@ -14,34 +15,41 @@ from fclingo.translator import ConstraintAtom
 from . import CApproach
 
 log = logging.getLogger("main")
+DEF = "__def"
 
 
 class Config:
     """
-    Fclingo configuraton
+    Class for application specific options.
     """
 
-    # pylint: disable=too-few-public-methods
-    def __init__(self, max_int, min_int, print_trans) -> None:
-        self.max_int = max_int
+    # pylint: disable=R0903
+    def __init__(self, min_int, max_int, print_translation, print_auxiliary):
+        self.print_aux = print_auxiliary
+        self.print_trans = print_translation
         self.min_int = min_int
-        self.print_trans = print_trans
+        self.max_int = max_int
+        self.defined = DEF
 
 
 class FclingoApproach(CApproach):
     """
-    Clincon approach for metric logic
+    Clingcon approach for metric logic
     """
 
-    def __init__(self, ctl: Control):
+    system_name = "fclingo"
+
+    def __init__(self, ctl: Control, timepoint_limit: int):
         """
         Creates the approach
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, ClingconTheory, ["meta-fclingo-interval.lp"])
+        super().__init__(
+            ctl, timepoint_limit, ["tseiten-htc-founded.lp"], ClingconTheory
+        )
         ctl.add("base", [], THEORY)
-        self.translator = Translator(ctl, Config(0, 10, False))
+        self.translator = Translator(ctl, Config(0, 10, False, timepoint_limit))
 
     def parse_load_files(self):
         """

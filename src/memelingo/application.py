@@ -1,6 +1,7 @@
 """
 Clingo application extended to include automata
 """
+
 import logging
 import textwrap
 from typing import Sequence
@@ -9,8 +10,11 @@ from clingo import Model, Symbol
 from clingo.application import Application, ApplicationOptions, Flag
 
 from . import reify
-from .approaches.clingcon import ClinconApproach
+from .approaches.asp import ASPApproach
+from .approaches.clingcon import ClingconApproach
 from .approaches.fclingo import FclingoApproach
+from .approaches.mlp import MLPht
+from .approaches.mlp_htc import MLPhtc, MLPhtcExtended
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
@@ -37,7 +41,8 @@ class MemelingoApp(Application):
         self._log_level = "WARNING"
         self._view = Flag()
         self._view_subformulas = Flag()
-        self._approach_class = ClinconApproach
+        self._approach_class = ClingconApproach
+        self._timepoint_limit = 1000
 
     def parse_log_level(self, log_level):
         """
@@ -54,12 +59,27 @@ class MemelingoApp(Application):
         Parse approach
         """
         if approach == "clingcon":
-            self._approach_class = ClinconApproach
+            self._approach_class = ClingconApproach
         elif approach == "fclingo":
             self._approach_class = FclingoApproach
+        elif approach == "asp":
+            self._approach_class = ASPApproach
+        elif approach == "mlp":
+            self._approach_class = MLPht
+        elif approach == "mlp-htc":
+            self._approach_class = MLPhtc
+        elif approach == "mlp-htc-extended":
+            self._approach_class = MLPhtcExtended
         else:
             return False
 
+        return True
+
+    def parse_timepoint_limit(self, timepoint):
+        """
+        Parse timepoint limit
+        """
+        self._timepoint_limit = timepoint
         return True
 
     def register_options(self, options: ApplicationOptions) -> None:
@@ -99,6 +119,16 @@ class MemelingoApp(Application):
             "view-subformulas",
             "Visualize the timed trace using clingraph and show all the subformulas that hold in each state",
             self._view_subformulas,
+        )
+        options.add(
+            group,
+            "timepoint-limit",
+            textwrap.dedent(
+                """\
+                Limit for the timepoint"""
+            ),
+            self.parse_timepoint_limit,
+            argument="<timepoint>",
         )
 
     def print_model(self, model: Model, _) -> None:
@@ -140,7 +170,10 @@ class MemelingoApp(Application):
                 )
             )
         reified_prg = reify(files=files)
-        app = self._approach_class(control)
+        app = self._approach_class(control, timepoint_limit=self._timepoint_limit)
+        files_str = " ".join(files)
+        reify_command = f"python -m clingo {files_str} --output=reify"
+        log.info(reify_command + " | " + app.command_line)
         app.load(reified_prg)
         app.ground()
         app.solve(on_model=None)

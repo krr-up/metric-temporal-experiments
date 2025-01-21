@@ -1,6 +1,7 @@
 """
 The Approach utils
 """
+
 import logging
 import os
 from typing import Callable, List, Optional
@@ -19,13 +20,19 @@ class MyApproach:
     Basic class for a approach to meta metric logic
     """
 
-    def __init__(self, ctl: Control):
+    system_name = "clingo"
+
+    def __init__(self, ctl: Control, timepoint_limit: int, asp_files: List[str]):
         """
         Creates an approach with a control
         Args:
             ctl (Control): The clingo control
+            timepoint_limit: Limit for the timepoints
+            asp_files (List[str]): The list of additional files needed to calculate the intervals
         """
         self.ctl = ctl
+        self.timepoint_limit = timepoint_limit
+        self.asp_files = asp_files
 
     def load(self, reified_prg: str):
         """
@@ -33,13 +40,33 @@ class MyApproach:
         Args:
             reified_prg (str): The reified program as a string
         """
+        for f in self.files:
+            self.ctl.load(f)
         self.ctl.add("base", [], reified_prg)
+
+    @property
+    def files(self):
+        """
+        List of files needed
+        """
+        files = self.asp_files
+
+        return [os.path.join(ENCODINGS_PATH, file) for file in files]
+
+    @property
+    def command_line(self):
+        """
+        Command line to run the program
+        """
+        l = self.ctl.get_const("lambda")
+        files = " ".join(self.files)
+        return f"python -m {self.__class__.system_name} 0 - {files} -c lambda={l}"
 
     def ground(self):
         """
         Grounds the base program and adds a program observer to print such program
         """
-        log.debug("Grounding...")
+        log.info("Grounding...")
         prg_printer = Program()
         self.ctl.register_observer(ProgramObserver(prg_printer))
 
@@ -55,6 +82,7 @@ class MyApproach:
         Args:
             on_model (Optional[Callable], optional): A possible callback. Defaults to None.
         """
+        log.info("Solving...")
         self.ctl.solve(on_model=on_model)  # nocoverage
 
 
@@ -63,26 +91,32 @@ class CApproach(MyApproach):
     Approach that uses a Theory (Clingcon, ClingoDL and fClingo)
     """
 
-    def __init__(self, ctl: Control, theory_class, interval_files: List[str]):
+    def __init__(
+        self,
+        ctl: Control,
+        timepoint_limit: int,
+        asp_files: List[str],
+        theory_class,
+    ):
         """
         Creates an approach
 
         Args:
             ctl (Control): The clingo control
             theory_class (_type_): The theory class used
-            interval_files (List[str]): The list of additional files needed to calculate the intervals
+            timepoint_limit: Limit for the timepoints
+            asp_files (List[str]): The list of additional files needed to calculate the intervals
         """
-        super().__init__(ctl)
+        super().__init__(ctl, timepoint_limit, asp_files)
         self.theory_class = theory_class
         self.theory: Theory
-        self.interval_files = interval_files
 
     @property
     def files(self):
         """
         List of files needed
         """
-        files = ["meta.lp", "meta-melingo.lp"] + self.interval_files
+        files = self.asp_files
 
         return [os.path.join(ENCODINGS_PATH, file) for file in files]
 
@@ -109,7 +143,7 @@ class CApproach(MyApproach):
         self.theory = self.theory_class()
         self.theory.register(self.ctl)
         self.parse_load_files()
-        super().load(reified_prg)
+        self.ctl.add("base", [], reified_prg)
 
     def custom_on_model(self, on_model: Optional[Callable] = None) -> Callable:
         """
@@ -133,7 +167,7 @@ class CApproach(MyApproach):
         Args:
             on_model (Optional[Callable], optional): A possible callback. Defaults to None.
         """
-        log.debug("Solving...")
+        log.info("Solving...")
         self.theory.prepare(self.ctl)
 
         self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
