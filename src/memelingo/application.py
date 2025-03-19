@@ -13,7 +13,7 @@ from . import reify
 from .approaches.asp import ASPApproach
 from .approaches.clingcon import ClingconApproach
 from .approaches.fclingo import FclingoApproach
-from .approaches.mlp import MLPht
+from .approaches.mlp import MLPht, MLPhtExtended
 from .approaches.mlp_htc import MLPhtc, MLPhtcExtended
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
@@ -68,8 +68,10 @@ class MemelingoApp(Application):
             self._approach_class = MLPht
         elif approach == "mlp-htc":
             self._approach_class = MLPhtc
-        elif approach == "mlp-htc-extended":
+        elif approach == "mlp-tplp-htc":
             self._approach_class = MLPhtcExtended
+        elif approach == "mlp-tplp-ht":
+            self._approach_class = MLPhtExtended
         else:
             return False
 

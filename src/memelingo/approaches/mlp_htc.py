@@ -65,7 +65,7 @@ class MLPhtcExtended(CApproach):
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, timepoint_limit, ["mlp-extended-htc.lp"], ClingconTheory)
+        super().__init__(ctl, timepoint_limit, ["mlp-tplp-htc.lp"], ClingconTheory)
 
     def custom_on_model(
         self, on_model: Optional[Callable[..., Any]] = None

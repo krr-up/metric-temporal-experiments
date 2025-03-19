@@ -47,6 +47,6 @@ true(V,K'):-_e(V,I,(K,K')).
 _u(V,I,(K,K')):-true(V,K'),aux_alphabet(_u(V,I,(K,K'))).
 
 
-:- _e(V,I,(K,K')), _invalid(I,(K,K')).
-_e(V,I,(K,K')) :- true(V,K'), aux_alphabet(_e(V,I,(K,K'))), not _invalid(I,(K,K')).
-_u(V,I,(K,K')) :- _invalid(I,(K,K')), aux_alphabet(_u(V,I,(K,K'))).
+:- _e(V,I,(K,K')), _outside(I,(K,K')).
+_e(V,I,(K,K')) :- true(V,K'), aux_alphabet(_e(V,I,(K,K'))), not _outside(I,(K,K')).
+_u(V,I,(K,K')) :- _outside(I,(K,K')), aux_alphabet(_u(V,I,(K,K'))).
