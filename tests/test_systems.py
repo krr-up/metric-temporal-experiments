@@ -1,5 +1,6 @@
 """Test cases for various systems that implement MEL (Metric
 Equilibrium Logic)."""
+
 import logging
 from typing import List, Union
 from unittest import TestCase
@@ -9,6 +10,8 @@ from clingo import Control
 from memelingo import reify
 from memelingo.approaches.asp import ASPApproach
 from memelingo.approaches.clingcon import ClingconApproach
+from memelingo.approaches.mlp_htc import MLPhtcExtended
+from memelingo.approaches.mlp import MLPhtExtended
 from memelingo.approaches.fclingo import FclingoApproach
 from memelingo.utils.logger import setup_logger
 
@@ -62,7 +65,9 @@ class CommonTestCases:
             a:-initially.
             #external initially.
             """
-            res = self.run_system(input_prog=prg, n_models=4, lmbd=2)
+            res = self.run_system(
+                input_prog=prg, n_models=100, lmbd=2, timepoint_limit=10
+            )
             self.assertTrue(res.atom_all(["(a,0)", "t(0,0)", "(initially,0)"]))
             for i in range(1, 3):
                 self.assertTrue(res.atom_some([f"t(1,{i})"]))
@@ -92,6 +97,7 @@ class CommonTestCases:
             next((2,3),a):-initially.
             b:-eventually((1,4),a).
             #external initially.
+            #external a.
             #external eventually((1,4),a).
             """
             res = self.run_system(input_prog=prg, n_models=10, lmbd=3, enum="cautious")
@@ -135,7 +141,9 @@ class CommonTestCases:
             next((0,w),a):-initially.
             #external initially.
             """
-            res = self.run_system(input_prog=prg, n_models=10, lmbd=2)
+            res = self.run_system(
+                input_prog=prg, n_models=10, lmbd=2, timepoint_limit=10
+            )
             self.assertEqual(res.n_models, 10)
             self.assertTrue(res.atom_all(["(a,1)"]))
             for i in range(1, 9):
@@ -314,3 +322,75 @@ class TestFclingo(CommonTestCases.TestCommonModels):
         # res = self.run_system(input_prog=prg, n_models=4, lmbd=2)
         # self.assertEqual(res.n_models, 1)
         # self.assertTrue(res.atom_all(["(a,0)", "t(0,0)", "(initially,0)"]))
+
+
+class TestClingconTPLP(CommonTestCases.TestCommonModels):
+    """Test expected models produced by clingcon MEL implementation."""
+
+    def run_system(
+        self,
+        input_prog: Union[str, List[str]],
+        n_models: int,
+        lmbd: int,
+        enum: str = "auto",
+        timepoint_limit: int = 40,
+    ) -> _ClingoRes:
+        """Run clingcon MEL implementation."""
+        res = _ClingoRes()
+        if enum == "auto":
+            ctl = Control(["--warn=none", str(n_models), f"-c lambda={lmbd}"])
+        else:
+            ctl = Control(["--warn=none", f"-c lambda={lmbd}"])
+            ctl.configuration.solve.enum_mode = enum  # type: ignore
+        if isinstance(input_prog, str):
+            reified = reify(prg=input_prog)
+        elif isinstance(input_prog, list):
+            reified = reify(files=input_prog)
+        else:
+            raise RuntimeError("Should not happen")  # nocoverage
+        app = MLPhtcExtended(ctl, timepoint_limit)
+        setup_logger("main", getattr(logging, "WARNING"))
+        app.load(reified)
+        app.ground()
+        app.solve(on_model=res.on_model)
+        return res
+
+    def test_previous(self):
+        # Only future operators are supported
+        pass
+
+
+class TestASPTPLP(CommonTestCases.TestCommonModels):
+    """Test expected models produced by ASP MEL implementation."""
+
+    def run_system(
+        self,
+        input_prog: Union[str, List[str]],
+        n_models: int,
+        lmbd: int,
+        enum: str = "auto",
+        timepoint_limit: int = 40,
+    ) -> _ClingoRes:
+        """Run clingcon MEL implementation."""
+        res = _ClingoRes()
+        if enum == "auto":
+            ctl = Control(["--warn=none", str(n_models), f"-c lambda={lmbd}"])
+        else:
+            ctl = Control(["--warn=none", f"-c lambda={lmbd}"])
+            ctl.configuration.solve.enum_mode = enum  # type: ignore
+        if isinstance(input_prog, str):
+            reified = reify(prg=input_prog)
+        elif isinstance(input_prog, list):
+            reified = reify(files=input_prog)
+        else:
+            raise RuntimeError("Should not happen")  # nocoverage
+        app = MLPhtExtended(ctl, timepoint_limit)
+        setup_logger("main", getattr(logging, "WARNING"))
+        app.load(reified)
+        app.ground()
+        app.solve(on_model=res.on_model)
+        return res
+
+    def test_previous(self):
+        # Only future operators are supported
+        pass

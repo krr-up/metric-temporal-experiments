@@ -1,6 +1,7 @@
 """
 Tests utils
 """
+
 import os
 
 
@@ -89,6 +90,7 @@ class _ClingoRes:
         """
         last = self.last_model
         if not last:
+            print("Not last")
             return False
         if not set(atoms).issubset(last):
             return False
