@@ -14,7 +14,7 @@ from .approaches.asp import ASPApproach
 from .approaches.clingcon import ClingconApproach
 from .approaches.fclingo import FclingoApproach
 from .approaches.mlp import MLPht, MLPhtExtended
-from .approaches.mlp_htc import MLPhtc, MLPhtcExtended
+from .approaches.mlp_htc import MLPhtc, MLPhtcExtended, MLPhtcExtendedDL
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
@@ -70,6 +70,8 @@ class MemelingoApp(Application):
             self._approach_class = MLPhtc
         elif approach == "mlp-tplp-htc":
             self._approach_class = MLPhtcExtended
+        elif approach == "mlp-tplp-htc-dl":
+            self._approach_class = MLPhtcExtendedDL
         elif approach == "mlp-tplp-ht":
             self._approach_class = MLPhtExtended
         else:
@@ -162,7 +164,6 @@ class MemelingoApp(Application):
         """
         # pylint: disable=W0201
         local_log = setup_logger("main", getattr(logging, self._log_level))
-
         input_lambda = control.get_const("lambda")
         if input_lambda is None:
             local_log.warning(

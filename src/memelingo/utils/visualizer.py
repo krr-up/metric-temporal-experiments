@@ -26,6 +26,7 @@ def visualize(
     """
     Visualize the automata using clingraph
     """
+    log.info("Visualizing trace...")
     args = []
     args.append("--warn=none")
     fb = Factbase(default_graph="trace")
@@ -33,15 +34,22 @@ def visualize(
     ctx = ClingraphContext()
     log.debug(trace)
     ctl.add("base", [], trace)
+    print(trace)
     if view_subformulas:
         ctl.add("base", [], "view_subformulas.")
     log.debug("File")
     log.debug(os.path.join(ENCODINGS_PATH, "viz/viz-trace.lp"))
     ctl.load(os.path.join(ENCODINGS_PATH, "viz/viz-trace.lp"))
     enable_python()
-
+    print("Will ground")
     ctl.ground([("base", [])], context=ctx)
+    print("Grounded")
     ctl.solve(on_model=fb.add_model)
+    print("Solved")
     graphs = compute_graphs(fb)
-    files = render(graphs, view=view, name_format=name_format, engine="neato")
+    print("Computed graphs")
+    files = render(
+        graphs, view=view, name_format=name_format, engine="neato", format="svg"
+    )
+    print("Rendered graphs")
     log.info("Render saved in %s", files)

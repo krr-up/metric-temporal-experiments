@@ -6,3 +6,5 @@
 #include "./base/mlp-tplp/intervals.lp".
 #include "./base/mlp-tplp/htc-dl-interval.lp".
 #include "./base/mlp-tplp/htc-dl-time.lp".
+
+% #include "./base/continuous.lp".

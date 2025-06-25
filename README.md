@@ -157,3 +157,7 @@ This blackens the source code whenever `git commit` is used.
 [pre]: https://pre-commit.com/
 [black]: https://black.readthedocs.io/en/stable/
 [editable]: https://setuptools.pypa.io/en/latest/userguide/development_mode.html
+
+## HELP
+
+- Cairo out of memory error, it is probably the redering of symbols.
