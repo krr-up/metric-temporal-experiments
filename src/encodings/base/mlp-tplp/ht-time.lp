@@ -8,4 +8,4 @@ t(0,0).
 
 t(K+1,D'):D<D',timepoint(D'):- t(K,D), time(K+1).
 
-#show t/2.
+% #show t/2.

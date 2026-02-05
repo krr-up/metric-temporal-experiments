@@ -1,6 +1,7 @@
 """
 The memelingo project.
 """
+
 import logging
 import os
 from typing import List, Optional
@@ -12,7 +13,11 @@ log = logging.getLogger("main")
 ENCODINGS_PATH = os.path.join(".", os.path.join("src", "encodings"))
 
 
-def reify(prg: Optional[str] = None, files: Optional[List] = None) -> str:
+def reify(
+    prg: Optional[str] = None,
+    files: Optional[List] = None,
+    constants: Optional[dict[str, str]] = None,
+) -> str:
     """
     Reifies the program and files provided
 
@@ -22,7 +27,9 @@ def reify(prg: Optional[str] = None, files: Optional[List] = None) -> str:
         files = []
     symbols: List[Symbol] = []
 
-    ctl = Control(["--warn=none"])
+    ctl = Control(
+        ["--warn=none"] + [f"-c {k}={v}" for k, v in (constants or {}).items()]
+    )
     reifier = Reifier(symbols.append, reify_steps=False)
     ctl.register_observer(reifier)
     if prg is not None:

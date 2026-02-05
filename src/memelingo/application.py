@@ -5,8 +5,8 @@ Clingo application extended to include automata
 import logging
 import textwrap
 from typing import Sequence
-
-from clingo import Model, Symbol
+import sys
+from clingo import Model, Symbol, SymbolType
 from clingo.application import Application, ApplicationOptions, Flag
 
 from . import reify
@@ -14,7 +14,7 @@ from .approaches.asp import ASPApproach
 from .approaches.clingcon import ClingconApproach
 from .approaches.fclingo import FclingoApproach
 from .approaches.mlp import MLPht, MLPhtExtended
-from .approaches.mlp_htc import MLPhtc, MLPhtcExtended
+from .approaches.mlp_htc import MLPhtc, MLPhtcExtended, MLPhtcExtendedDL
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
@@ -33,7 +33,7 @@ class MemelingoApp(Application):
     Application class extending clingo
     """
 
-    def __init__(self, name):
+    def __init__(self, name, constants=None):
         """
         Create application
         """
@@ -42,7 +42,8 @@ class MemelingoApp(Application):
         self._view = Flag()
         self._view_subformulas = Flag()
         self._approach_class = ClingconApproach
-        self._timepoint_limit = 1000
+        self._timepoint_limit = None
+        self._constants = {} if constants is None else constants
 
     def parse_log_level(self, log_level):
         """
@@ -70,6 +71,8 @@ class MemelingoApp(Application):
             self._approach_class = MLPhtc
         elif approach == "mlp-tplp-htc":
             self._approach_class = MLPhtcExtended
+        elif approach == "mlp-tplp-htc-dl":
+            self._approach_class = MLPhtcExtendedDL
         elif approach == "mlp-tplp-ht":
             self._approach_class = MLPhtExtended
         else:
@@ -107,8 +110,7 @@ class MemelingoApp(Application):
             "approach",
             textwrap.dedent(
                 """\
-                Metric Approach used for calculating models
-                    <clingcon> """
+                Metric Approach used for calculating models """
             ),
             self.parse_approach,
             argument="<approach>",
@@ -133,22 +135,51 @@ class MemelingoApp(Application):
             argument="<timepoint>",
         )
 
+    def print_model1(self, model: Model, _) -> None:
+        """
+        Prints the model as in telingo, separating the states.
+
+        Args:
+            model (Model): The clingo model to be printed.
+        """
+        for s in model.symbols(shown=True):
+            print(f"{s}\n")
+
     def print_model(self, model: Model, _) -> None:
         """
-        Print a model on the console
+        Prints the model as in telingo, separating the states.
+
+        Args:
+            model (Model): The clingo model to be printed.
         """
-        log.debug("------- Full model -----")
-        log.debug(
-            "\n".join(
-                [str(s) for s in model.symbols(atoms=True, shown=True, theory=True)]
-            )
-        )
-        s_strings = [
-            str(s)
-            for s in model.symbols(shown=True, theory=True)
-            if s.name in ["", "t"]
-        ]
-        print(" ".join(s_strings))
+        l = int(self._constants.get("lambda", 10))
+        table = {}
+        extra_shown = []
+        for sym in model.symbols(shown=True, theory=True):
+            if (
+                sym.type == SymbolType.Function
+                and len(sym.arguments) > 0
+                and sym.name == ""
+            ):
+                table.setdefault(sym.arguments[-1].number, []).append(sym.arguments[0])
+            else:
+                extra_shown.append(sym)
+        if len(extra_shown) > 0:
+            sys.stdout.write(" Other shown symbols:\n")
+            for sym in extra_shown:
+                sys.stdout.write(" {}".format(sym))
+            sys.stdout.write("\n\n")
+        for step in range(l):
+            symbols = table.get(step, [])
+            sys.stdout.write(" State {}:".format(step))
+            sig = None
+            for sym in sorted(symbols):
+                # if (sym.name, len(sym.arguments), sym.positive) != sig:
+                sys.stdout.write("\n ")
+                # sig = (sym.name, len(sym.arguments), sym.positive)
+                sys.stdout.write(" {}".format(sym))
+            sys.stdout.write("\n")
+        sys.stdout.write("\n")
         if self._view or self._view_subformulas:
             visualize(
                 _sym_to_prg(model.symbols(atoms=True, theory=True)),
@@ -161,6 +192,8 @@ class MemelingoApp(Application):
         Main function ran on call
         """
         # pylint: disable=W0201
+        if self._timepoint_limit is not None:
+            self._constants["timepoint_limit"] = int(self._timepoint_limit)
         local_log = setup_logger("main", getattr(logging, self._log_level))
 
         input_lambda = control.get_const("lambda")
@@ -171,7 +204,7 @@ class MemelingoApp(Application):
                 Provided with the argument `-c lambda=X` By default is set to 10 (9 steps)."""
                 )
             )
-        reified_prg = reify(files=files)
+        reified_prg = reify(files=files, constants=self._constants)
         app = self._approach_class(control, timepoint_limit=self._timepoint_limit)
         files_str = " ".join(files)
         reify_command = f"python -m clingo {files_str} --output=reify"
