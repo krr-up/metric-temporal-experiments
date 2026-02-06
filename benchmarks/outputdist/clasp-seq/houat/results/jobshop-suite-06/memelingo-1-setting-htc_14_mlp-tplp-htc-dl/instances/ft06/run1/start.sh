@@ -10,7 +10,7 @@ runner=( "../../../../../../../../../programs/runlim" \
   --space-limit=20000 \
   --output-file=runsolver.watcher \
   --real-time-limit=1200 \
-  "../../../../../../../../../programs/memelingo-1" --project=show --stats -c lambda=14 --approach=mlp-tplp-htc-dl)
+  "../../../../../../../../../programs/memelingo-1" --project=show --stats -c lambda=14 --approach=mlp-tplp-htcdl)
 
 input=( "../../../../../../../../../../examples/benchmarks/job-shop/instances/ft06.lp" "../../../../../../../../../../examples/benchmarks/job-shop/job-shop.lp" )
 

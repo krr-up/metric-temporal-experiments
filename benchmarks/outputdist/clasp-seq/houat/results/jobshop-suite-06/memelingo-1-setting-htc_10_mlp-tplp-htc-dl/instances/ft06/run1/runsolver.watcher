@@ -8,7 +8,7 @@
 [runlim] argv[2]:		--stats
 [runlim] argv[3]:		-c
 [runlim] argv[4]:		lambda=10
-[runlim] argv[5]:		--approach=mlp-tplp-htc-dl
+[runlim] argv[5]:		--approach=mlp-tplp-htcdl
 [runlim] argv[6]:		../../../../../../../../../../examples/benchmarks/job-shop/instances/ft06.lp
 [runlim] argv[7]:		../../../../../../../../../../examples/benchmarks/job-shop/job-shop.lp
 [runlim] start:			Fri Feb  6 20:23:55 2026

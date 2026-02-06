@@ -1,2 +1,2 @@
-#include "./htc-dl-interval.lp".
-#include "./htc-dl-time.lp".
+#include "./htcdl-interval.lp".
+#include "./htcdl-time.lp".

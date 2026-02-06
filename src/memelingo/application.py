@@ -68,7 +68,7 @@ class MemelingoApp(Application):
             self._approach_class = MLPhtc
         elif approach == "mlp-tplp-htc":
             self._approach_class = MLPhtcExtended
-        elif approach == "mlp-tplp-htc-dl":
+        elif approach == "mlp-tplp-htcdl":
             self._approach_class = MLPhtcExtendedDL
         elif approach == "mlp-tplp-ht":
             self._approach_class = MLPhtExtended

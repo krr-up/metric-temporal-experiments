@@ -26,17 +26,17 @@ run_benchmark() {
 
 # # Plain
 # run_benchmark "HTC clingcon" "./src/encodings/mlp-lpnmr-htc.lp" "clingcon" "benchmark-results/plain.txt" 1 5 7 10
-# run_benchmark "HTC clingodl" "./src/encodings/mlp-lpnmr-htc-dl.lp" "clingodl" "benchmark-results/plain.txt" 1 5 7 10
+# run_benchmark "HTC clingodl" "./src/encodings/mlp-lpnmr-htcdl.lp" "clingodl" "benchmark-results/plain.txt" 1 5 7 10
 # run_benchmark "HT" "./src/encodings/mlp-lpnmr-ht.lp" "clingo" "benchmark-results/plain.txt" 1 5 7 10
 
 
 # # General
 # run_benchmark "HTC clingcon" "./src/encodings/mlp-tplp-htc.lp" "clingcon" "benchmark-results/general.txt" 1 5 7 10
-# run_benchmark "HTC clingodl" "./src/encodings/mlp-tplp-htc-dl.lp" "clingodl" "benchmark-results/general.txt" 1 5 7 10
+# run_benchmark "HTC clingodl" "./src/encodings/mlp-tplp-htcdl.lp" "clingodl" "benchmark-results/general.txt" 1 5 7 10
 # run_benchmark "HT" "./src/encodings/mlp-tplp-ht.lp" "clingo" "benchmark-results/general.txt" 1 5 7 10
 
 
 # General-goal
 run_benchmark "HTC clingcon" "./src/encodings/mlp-tplp-htc.lp" "clingcon" "benchmark-results/general-goal.txt" 1 5 7 10
-run_benchmark "HTC clingodl" "./src/encodings/mlp-tplp-htc-dl.lp" "clingodl" "benchmark-results/general-goal.txt" 1 5 7 10
+run_benchmark "HTC clingodl" "./src/encodings/mlp-tplp-htcdl.lp" "clingodl" "benchmark-results/general-goal.txt" 1 5 7 10
 run_benchmark "HT" "./src/encodings/mlp-tplp-ht.lp" "clingo" "benchmark-results/general-goal.txt" 1 5 7 10

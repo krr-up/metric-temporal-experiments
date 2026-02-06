@@ -102,7 +102,7 @@ class MLPhtcExtendedDL(CApproach):
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, timepoint_limit, ["mlp-tplp-htc-dl.lp"], ClingoDLTheory)
+        super().__init__(ctl, timepoint_limit, ["mlp-tplp-htcdl.lp"], ClingoDLTheory)
 
     def custom_on_model(
         self, on_model: Optional[Callable[..., Any]] = None

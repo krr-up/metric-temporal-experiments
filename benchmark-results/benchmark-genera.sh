@@ -26,5 +26,5 @@ run_benchmark() {
 
 # Run benchmarks
 run_benchmark "HTC clingcon" "./src/encodings/mlp-lpnmr-htc.lp" "clingcon" 1 5 7 10
-run_benchmark "HTC clingodl" "./src/encodings/mlp-lpnmr-htc-dl.lp" "clingodl" 1 5 7 10
+run_benchmark "HTC clingodl" "./src/encodings/mlp-lpnmr-htcdl.lp" "clingodl" 1 5 7 10
 run_benchmark "HT" "./src/encodings/mlp-lpnmr-ht.lp" "clingo" 1 5 7 10
