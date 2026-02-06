@@ -1,0 +1,50 @@
+<runscript output="outputdist">
+
+	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB" />
+
+	<config name="seq-generic" template="templates/seq-generic.sh" />
+
+
+	<system name="memelingo" version="1" measures="clasp"
+		config="seq-generic"
+		cmdline="--project=show --stats">
+		<setting name="setting-htc" tag="basic">
+			<variable cmd="-c lambda={}" value="15;20" />
+			<variable cmd="--approach={}" value="mlp-tplp-htc;mlp-tplp-htc-dl" />
+		</setting>
+		<setting name="setting-ht6" cmdline="--timepoint-limit=55" tag="06">
+			<variable cmd="-c lambda={}" value="15;20" />
+			<variable cmd="--approach={}" value="mlp-tplp-ht" />
+		</setting>
+		<setting name="setting-ht10" cmdline="--timepoint-limit=930" tag="10">
+			<variable cmd="-c lambda={}" value="15;20" />
+			<variable cmd="--approach={}" value="mlp-tplp-ht" />
+		</setting>
+	</system>
+
+	<seqjob name="seq-generic"
+		timeout="120s" runs="1" memout="1000" parallel="8" />
+
+	<benchmark name="jobshop-suite-06">
+		<files path="../examples/benchmarks/job-shop">
+			<encoding file="examples/benchmarks/job-shop/job-shop.lp" />
+			<add file="instances/ft06.lp" />
+		</files>
+	</benchmark>
+
+	<benchmark name="jobshop-suite-10">
+		<files path="../examples/benchmarks/job-shop">
+			<encoding file="examples/benchmarks/job-shop/job-shop.lp" />
+			<add file="instances/ft10.lp" />
+		</files>
+	</benchmark>
+
+
+	<project
+		name="clasp-seq" job="seq-generic">
+		<runtag machine="houat" benchmark="jobshop-suite-06" tag="06 | basic" />
+		<!-- <runtag machine="houat" benchmark="jobshop-suite-10" tag="10 | basic" /> -->
+	</project>
+
+
+</runscript>
