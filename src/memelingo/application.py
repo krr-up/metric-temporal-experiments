@@ -12,7 +12,6 @@ from clingo.application import Application, ApplicationOptions, Flag
 from . import reify
 from .approaches.asp import ASPApproach
 from .approaches.clingcon import ClingconApproach
-from .approaches.fclingo import FclingoApproach
 from .approaches.mlp import MLPht, MLPhtExtended
 from .approaches.mlp_htc import MLPhtc, MLPhtcExtended, MLPhtcExtendedDL
 from .utils.logger import setup_logger
@@ -61,8 +60,6 @@ class MemelingoApp(Application):
         """
         if approach == "clingcon":
             self._approach_class = ClingconApproach
-        elif approach == "fclingo":
-            self._approach_class = FclingoApproach
         elif approach == "asp":
             self._approach_class = ASPApproach
         elif approach == "mlp":

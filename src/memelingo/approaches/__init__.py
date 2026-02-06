@@ -12,8 +12,22 @@ from clingo.theory import Theory
 from clingox.program import Program, ProgramObserver
 
 log = logging.getLogger("main")
-ENCODINGS_PATH = os.path.join(".", os.path.join("src", "encodings"))
+import importlib.resources
 
+def get_encodings_path():
+    """
+    Returns the path to the encodings directory using the installed package resources.
+    """
+    try:
+        # Try to get the path from the installed package
+        with importlib.resources.path("memelingo", "encodings") as p:
+            return str(p)
+    except (ImportError, FileNotFoundError):
+        # Fallback to the local path if not installed as a package
+        raise FileNotFoundError("Encodings directory not found. Please ensure the package is installed correctly.")
+        return os.path.join(".", "src", "encodings")
+
+ENCODINGS_PATH = get_encodings_path()
 
 class MyApproach:
     """

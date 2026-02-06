@@ -1,1 +1,1 @@
-exec melingo "$@"
+exec memelingo "$@"

@@ -27,14 +27,14 @@
 
 	<benchmark name="jobshop-suite-06">
 		<files path="../examples/benchmarks/job-shop">
-			<encoding file="examples/benchmarks/job-shop/job-shop.lp" />
+			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
 			<add file="instances/ft06.lp" />
 		</files>
 	</benchmark>
 
 	<benchmark name="jobshop-suite-10">
 		<files path="../examples/benchmarks/job-shop">
-			<encoding file="examples/benchmarks/job-shop/job-shop.lp" />
+			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
 			<add file="instances/ft10.lp" />
 		</files>
 	</benchmark>
