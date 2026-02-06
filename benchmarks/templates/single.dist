@@ -11,6 +11,9 @@ set -e
 
 # Load environment modules for your application here.
 source ~/.bashrc
+source ~/miniconda3/bin/activate
+source activate memelingo
+
 
 # Run jobs
 jobs="{jobs}"

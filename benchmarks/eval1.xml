@@ -1,0 +1,82 @@
+<result>
+	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB"/>
+	<config name="seq-generic" template="templates/seq-generic.sh"/>
+	<system name="memelingo" version="1" measures="clasp" config="seq-generic">
+		<setting name="setting-htc_15_mlp-tplp-htc" cmdline="--project=show --stats -c lambda=15 --approach=mlp-tplp-htc" tag="basic" dist_template="templates/single.dist">
+		</setting>
+		<setting name="setting-htc_15_mlp-tplp-htc-dl" cmdline="--project=show --stats -c lambda=15 --approach=mlp-tplp-htc-dl" tag="basic" dist_template="templates/single.dist">
+		</setting>
+		<setting name="setting-ht6_15_mlp-tplp-ht" cmdline="--project=show --stats --timepoint-limit=55 -c lambda=15 --approach=mlp-tplp-ht" tag="06" dist_template="templates/single.dist">
+		</setting>
+	</system>
+	<distjob name="dist-generic" timeout="1200" memout="20000" runs="1" template_options="--single" script_mode="timeout" walltime="86399" cpt="4" partition="kr"/>
+	<benchmark name="jobshop-suite-06">
+		<class name="instances" id="0">
+			<instance name="ft06" id="0">
+				<file name="ft06.lp"/>
+			</instance>
+		</class>
+	</benchmark>
+	<project name="clasp-seq" job="dist-generic">
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="setting-htc_15_mlp-tplp-htc">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="choices" type="float" val="66864.0"/>
+						<measure name="conflicts" type="float" val="13581.0"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="182.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="14.83"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="time" type="float" val="14.83"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="setting-htc_15_mlp-tplp-htc-dl">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="choices" type="float" val="1421040.0"/>
+						<measure name="conflicts" type="float" val="8238.0"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="176.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="18.5"/>
+						<measure name="restarts" type="float" val="45.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="time" type="float" val="18.5"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="setting-ht6_15_mlp-tplp-ht">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="choices" type="float" val="4445841.0"/>
+						<measure name="conflicts" type="float" val="171293.0"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="1964.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="204.52"/>
+						<measure name="restarts" type="float" val="509.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="time" type="float" val="204.52"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+	</project>
+</result>
