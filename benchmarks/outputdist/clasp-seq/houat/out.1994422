@@ -1,7 +1,0 @@
-running jobs@kr-node10...
-
-jobs: results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc-dl/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-setting-ht6_15_mlp-tplp-ht/instances/ft06/run1/start.sh
-
-running  results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc/instances/ft06/run1/start.sh
-running  results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc-dl/instances/ft06/run1/start.sh
-running  results/jobshop-suite-06/memelingo-1-setting-ht6_15_mlp-tplp-ht/instances/ft06/run1/start.sh

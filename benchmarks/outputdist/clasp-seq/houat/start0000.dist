@@ -16,9 +16,42 @@ source activate memelingo
 
 
 # Run jobs
-jobs="results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc/instances/ft06/run1/start.sh
+jobs="results/jobshop-suite-06/memelingo-1-setting-htc_10_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_10_mlp-tplp-htc/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_10_mlp-tplp-htc-dl/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_10_mlp-tplp-htc-dl/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_11_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_11_mlp-tplp-htc/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_11_mlp-tplp-htc-dl/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_11_mlp-tplp-htc-dl/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_12_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_12_mlp-tplp-htc/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_12_mlp-tplp-htc-dl/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_12_mlp-tplp-htc-dl/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_13_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_13_mlp-tplp-htc/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_13_mlp-tplp-htc-dl/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_13_mlp-tplp-htc-dl/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_14_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_14_mlp-tplp-htc/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_14_mlp-tplp-htc-dl/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_14_mlp-tplp-htc-dl/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc/instances/ft06/run2/start.sh
 results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc-dl/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-htc_15_mlp-tplp-htc-dl/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_10_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_10_mlp-tplp-ht/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_11_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_11_mlp-tplp-ht/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_12_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_12_mlp-tplp-ht/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_13_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_13_mlp-tplp-ht/instances/ft06/run2/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_14_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_14_mlp-tplp-ht/instances/ft06/run2/start.sh
 results/jobshop-suite-06/memelingo-1-setting-ht6_15_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-setting-ht6_15_mlp-tplp-ht/instances/ft06/run2/start.sh
 "
 echo running jobs@$(hostname)...
 echo ""

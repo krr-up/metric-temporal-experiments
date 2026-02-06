@@ -9,15 +9,15 @@
 		config="seq-generic"
 		cmdline="--project=show --stats">
 		<setting name="setting-htc" tag="basic">
-			<variable cmd="-c lambda={}" value="15" />
+			<variable cmd="-c lambda={}" value="10;11;12;13;14;15" />
 			<variable cmd="--approach={}" value="mlp-tplp-htc;mlp-tplp-htc-dl" />
 		</setting>
 		<setting name="setting-ht6" cmdline="--timepoint-limit=55" tag="06">
-			<variable cmd="-c lambda={}" value="15" />
+			<variable cmd="-c lambda={}" value="10;11;12;13;14;15" />
 			<variable cmd="--approach={}" value="mlp-tplp-ht" />
 		</setting>
 		<setting name="setting-ht10" cmdline="--timepoint-limit=930" tag="10">
-			<variable cmd="-c lambda={}" value="15;20" />
+			<variable cmd="-c lambda={}" value="10;11;12;13;14;15" />
 			<variable cmd="--approach={}" value="mlp-tplp-ht" />
 		</setting>
 	</system>
@@ -25,7 +25,7 @@
 	<!-- <seqjob name="seq-generic"
 		timeout="120s" runs="1" memout="1000" parallel="8" /> -->
 
-	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4"/>
+	<distjob name="dist-generic" timeout="1200s" runs="2" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4"/>
 
 	<benchmark name="jobshop-suite-06">
 		<files path="../examples/benchmarks/job-shop">

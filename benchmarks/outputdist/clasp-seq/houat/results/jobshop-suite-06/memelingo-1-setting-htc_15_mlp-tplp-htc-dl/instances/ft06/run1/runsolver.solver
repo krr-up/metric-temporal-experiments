@@ -1,7 +1,7 @@
 /mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
 Reading from .../benchmarks/job-shop/instances/ft06.lp ...
 Solving...
-Answer: 1 (Time: 12.160s)
+Answer: 1 (Time: 12.883s)
  Other shown symbols:
  t(0,0) t(1,1) t(2,5) t(3,9) t(4,12) t(5,15) t(6,21) t(7,22) t(8,28) t(9,29) t(10,38) t(11,41) t(12,44) t(13,48) t(14,54)
 
@@ -61,8 +61,8 @@ SATISFIABLE
 
 Models       : 1+
 Calls        : 1
-Time         : 12.163s (Solving: 10.74s 1st Model: 10.73s Unsat: 0.00s)
-CPU Time     : 12.009s
+Time         : 12.886s (Solving: 11.43s 1st Model: 11.42s Unsat: 0.00s)
+CPU Time     : 12.729s
 
 Choices      : 1421040 
 Conflicts    : 8238     (Analyzed: 8238)

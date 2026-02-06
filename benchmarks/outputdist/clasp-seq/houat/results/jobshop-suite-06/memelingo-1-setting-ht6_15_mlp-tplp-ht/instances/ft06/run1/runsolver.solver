@@ -1,7 +1,7 @@
 /mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
 Reading from .../benchmarks/job-shop/instances/ft06.lp ...
 Solving...
-Answer: 1 (Time: 197.938s)
+Answer: 1 (Time: 199.261s)
  State 0:
   start_run(12,2)
   start_run(30,1)
@@ -58,8 +58,8 @@ SATISFIABLE
 
 Models       : 1+
 Calls        : 1
-Time         : 197.943s (Solving: 171.49s 1st Model: 171.49s Unsat: 0.00s)
-CPU Time     : 197.792s
+Time         : 199.265s (Solving: 172.87s 1st Model: 172.87s Unsat: 0.00s)
+CPU Time     : 199.126s
 
 Choices      : 4445841 
 Conflicts    : 171293   (Analyzed: 171293)
