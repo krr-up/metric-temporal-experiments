@@ -9,12 +9,12 @@
 		config="seq-generic"
 		cmdline="--project=show --stats">
 		<setting name="lambda-small" tag="lambdasmall">
-			<variable cmd="-c lambda={}" value="10;13;15" />
+			<variable cmd="-c lambda={}" value="10;13;15;20" />
 			<!-- <variable cmd="-c lambda={}" value="10;11;12;13;14;15" /> -->
 			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 		<setting name="lambda-large" tag="lambdalarge">
-			<variable cmd="-c lambda={}" value="20;30;40" />
+			<variable cmd="-c lambda={}" value="30;40;50;60" />
 			<!-- <variable cmd="-c lambda={}" value="20;25;30;35;40;45" /> -->
 			<variable cmd="--approach={}" value="mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
@@ -37,34 +37,10 @@
 		<files path="../examples/benchmarks/job-shop">
 			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
 			<add file="instances/ft10.lp" />
-		</files>
-	</benchmark>
-
-	<benchmark name="jobshop-suite-const1">
-		<files path="../examples/benchmarks/job-shop">
-			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft10const.lp" cmdline="-c const_size=1" />
-		</files>
-	</benchmark>
-
-	<benchmark name="jobshop-suite-const5">
-		<files path="../examples/benchmarks/job-shop">
-			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft10const.lp" cmdline="-c const_size=5" />
-		</files>
-	</benchmark>
-
-	<benchmark name="jobshop-suite-const8">
-		<files path="../examples/benchmarks/job-shop">
-			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft10const.lp" cmdline="-c const_size=8" />
-		</files>
-	</benchmark>
-
-	<benchmark name="jobshop-suite-const10">
-		<files path="../examples/benchmarks/job-shop">
-			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft10const.lp" cmdline="-c const_size=10" />
+			<add file="instances/ft10const2.lp" />
+			<add file="instances/ft10const5.lp" />
+			<add file="instances/ft10const10.lp" />
+			<add file="instances/ft10const15.lp" />
 		</files>
 	</benchmark>
 
@@ -73,10 +49,6 @@
 		name="clasp-seq" job="dist-generic">
 		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
 		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
-		<runtag machine="houat" benchmark="jobshop-suite-const1" tag="lambdalarge" />
-		<runtag machine="houat" benchmark="jobshop-suite-const5" tag="lambdalarge" />
-		<!-- <runtag machine="houat" benchmark="jobshop-suite-const8" tag="lambdalarge" /> -->
-		<!-- <runtag machine="houat" benchmark="jobshop-suite-const10" tag="lambdalarge" /> -->
 	</project>
 
 
