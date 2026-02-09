@@ -27,26 +27,37 @@
 	<benchmark name="jobshop-suite-06">
 		<files path="../examples/benchmarks/job-shop">
 			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft06.lp" cmdline="--timepoint-limit=55"/>
+			<add file="instances/ft06.lp" cmdline="--timepoint-limit=55" />
 		</files>
 	</benchmark>
 
 	<benchmark name="jobshop-suite-10">
 		<files path="../examples/benchmarks/job-shop">
 			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft10.lp"/>
-			<add file="instances/ft10const.lp" cmdline="-c const_size=1"/>
-			<add file="instances/ft10const.lp" cmdline="-c const_size=5"/>
-			<add file="instances/ft10const.lp" cmdline="-c const_size=8"/>
-			<add file="instances/ft10const.lp" cmdline="-c const_size=10"/>
+			<add file="instances/ft10.lp" />
 		</files>
 	</benchmark>
 
+	<benchmark name="jobshop-suite-const1">
+		<files path="../examples/benchmarks/job-shop">
+			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
+			<add file="instances/ft10const.lp" cmdline="-c const_size=1" />
+		</files>
+	</benchmark>
+
+	<benchmark name="jobshop-suite-const5">
+		<files path="../examples/benchmarks/job-shop">
+			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
+			<add file="instances/ft10const.lp" cmdline="-c const_size=5" />
+		</files>
+	</benchmark>
 
 	<project
 		name="clasp-seq" job="dist-generic">
 		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
 		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
+		<runtag machine="houat" benchmark="jobshop-suite-const1" tag="lambdalarge" />
+		<runtag machine="houat" benchmark="jobshop-suite-const5" tag="lambdalarge" />
 	</project>
 
 
