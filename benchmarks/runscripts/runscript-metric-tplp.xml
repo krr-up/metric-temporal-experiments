@@ -9,11 +9,13 @@
 		config="seq-generic"
 		cmdline="--project=show --stats">
 		<setting name="lambda-small" tag="lambdasmall">
-			<variable cmd="-c lambda={}" value="10;11;12;13;14;15" />
+			<variable cmd="-c lambda={}" value="10;13;15" />
+			<!-- <variable cmd="-c lambda={}" value="10;11;12;13;14;15" /> -->
 			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 		<setting name="lambda-large" tag="lambdalarge">
-			<variable cmd="-c lambda={}" value="20;25;30;35;40;45;50;55" />
+			<variable cmd="-c lambda={}" value="20;30;40" />
+			<!-- <variable cmd="-c lambda={}" value="20;25;30;35;40;45" /> -->
 			<variable cmd="--approach={}" value="mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 	</system>
@@ -21,7 +23,7 @@
 	<!-- <seqjob name="seq-generic"
 		timeout="120s" runs="1" memout="1000" parallel="8" /> -->
 
-	<distjob name="dist-generic" timeout="1200s" runs="3" template_options="--single"
+	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
 		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
 
 	<benchmark name="jobshop-suite-06">
@@ -52,12 +54,29 @@
 		</files>
 	</benchmark>
 
+	<benchmark name="jobshop-suite-const8">
+		<files path="../examples/benchmarks/job-shop">
+			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
+			<add file="instances/ft10const.lp" cmdline="-c const_size=8" />
+		</files>
+	</benchmark>
+
+	<benchmark name="jobshop-suite-const10">
+		<files path="../examples/benchmarks/job-shop">
+			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
+			<add file="instances/ft10const.lp" cmdline="-c const_size=10" />
+		</files>
+	</benchmark>
+
+
 	<project
 		name="clasp-seq" job="dist-generic">
 		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
 		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
 		<runtag machine="houat" benchmark="jobshop-suite-const1" tag="lambdalarge" />
 		<runtag machine="houat" benchmark="jobshop-suite-const5" tag="lambdalarge" />
+		<!-- <runtag machine="houat" benchmark="jobshop-suite-const8" tag="lambdalarge" /> -->
+		<!-- <runtag machine="houat" benchmark="jobshop-suite-const10" tag="lambdalarge" /> -->
 	</project>
 
 

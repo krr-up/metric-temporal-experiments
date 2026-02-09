@@ -11,10 +11,10 @@ runner=( "../../../../../../../../../programs/runlim" \
   --output-file=runsolver.watcher \
   --real-time-limit=1200 \
   "../../../../../../../../../programs/memelingo-1" \
-  --project=show --stats -c lambda=10 --approach=mlp-tplp-ht --timepoint-limit=55 \
+  --project=show --stats -c lambda=40 --approach=mlp-tplp-htcdl -c const_size=5 \
      )
 
-input=( "../../../../../../../../../../examples/benchmarks/job-shop/instances/ft06.lp" "../../../../../../../../../../examples/benchmarks/job-shop/job-shop.lp" )
+input=( "../../../../../../../../../../examples/benchmarks/job-shop/instances/ft10const.lp" "../../../../../../../../../../examples/benchmarks/job-shop/job-shop.lp" )
 
 if [[ ! -e .finished ]]; then
   {

@@ -1,0 +1,54 @@
+#!/bin/bash
+#SBATCH --output=out.%j
+#SBATCH --error=err.%j
+#SBATCH --time=00-23:59:59        # walltime
+#SBATCH --cpus-per-task=4    # number of processor cores (i.e. tasks)
+#SBATCH --partition=kr
+                  # additional dist options (specified via runscript setting)
+
+# Good Idea to stop operation on first error.
+set -e
+
+# Load environment modules for your application here.
+source ~/.bashrc
+source ~/miniconda3/bin/activate
+source activate memelingo
+
+# Run jobs
+jobs="results/jobshop-suite-06/memelingo-1-lambda-small_10_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-lambda-small_10_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-lambda-small_10_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-lambda-small_13_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-lambda-small_13_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-lambda-small_13_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-lambda-small_15_mlp-tplp-ht/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-lambda-small_15_mlp-tplp-htc/instances/ft06/run1/start.sh
+results/jobshop-suite-06/memelingo-1-lambda-small_15_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+results/jobshop-suite-10/memelingo-1-lambda-large_20_mlp-tplp-htc/instances/ft10/run1/start.sh
+results/jobshop-suite-10/memelingo-1-lambda-large_20_mlp-tplp-htcdl/instances/ft10/run1/start.sh
+results/jobshop-suite-10/memelingo-1-lambda-large_30_mlp-tplp-htc/instances/ft10/run1/start.sh
+results/jobshop-suite-10/memelingo-1-lambda-large_30_mlp-tplp-htcdl/instances/ft10/run1/start.sh
+results/jobshop-suite-10/memelingo-1-lambda-large_40_mlp-tplp-htc/instances/ft10/run1/start.sh
+results/jobshop-suite-10/memelingo-1-lambda-large_40_mlp-tplp-htcdl/instances/ft10/run1/start.sh
+results/jobshop-suite-const1/memelingo-1-lambda-large_20_mlp-tplp-htc/instances/ft10const/run1/start.sh
+results/jobshop-suite-const1/memelingo-1-lambda-large_20_mlp-tplp-htcdl/instances/ft10const/run1/start.sh
+results/jobshop-suite-const1/memelingo-1-lambda-large_30_mlp-tplp-htc/instances/ft10const/run1/start.sh
+results/jobshop-suite-const1/memelingo-1-lambda-large_30_mlp-tplp-htcdl/instances/ft10const/run1/start.sh
+results/jobshop-suite-const1/memelingo-1-lambda-large_40_mlp-tplp-htc/instances/ft10const/run1/start.sh
+results/jobshop-suite-const1/memelingo-1-lambda-large_40_mlp-tplp-htcdl/instances/ft10const/run1/start.sh
+results/jobshop-suite-const5/memelingo-1-lambda-large_20_mlp-tplp-htc/instances/ft10const/run1/start.sh
+results/jobshop-suite-const5/memelingo-1-lambda-large_20_mlp-tplp-htcdl/instances/ft10const/run1/start.sh
+results/jobshop-suite-const5/memelingo-1-lambda-large_30_mlp-tplp-htc/instances/ft10const/run1/start.sh
+results/jobshop-suite-const5/memelingo-1-lambda-large_30_mlp-tplp-htcdl/instances/ft10const/run1/start.sh
+results/jobshop-suite-const5/memelingo-1-lambda-large_40_mlp-tplp-htc/instances/ft10const/run1/start.sh
+results/jobshop-suite-const5/memelingo-1-lambda-large_40_mlp-tplp-htcdl/instances/ft10const/run1/start.sh
+"
+echo running jobs@$(hostname)...
+echo ""
+echo "jobs:" $jobs
+echo ""
+for i in $jobs
+do
+    echo "running " $i
+    $i
+done

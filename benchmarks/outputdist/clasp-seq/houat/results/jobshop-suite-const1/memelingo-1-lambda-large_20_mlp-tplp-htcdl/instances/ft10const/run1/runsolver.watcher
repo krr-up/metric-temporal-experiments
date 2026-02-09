@@ -1,0 +1,30 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node1
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		--project=show
+[runlim] argv[2]:		--stats
+[runlim] argv[3]:		-c
+[runlim] argv[4]:		lambda=20
+[runlim] argv[5]:		--approach=mlp-tplp-htcdl
+[runlim] argv[6]:		-c
+[runlim] argv[7]:		const_size=1
+[runlim] argv[8]:		../../../../../../../../../../examples/benchmarks/job-shop/instances/ft10const.lp
+[runlim] argv[9]:		../../../../../../../../../../examples/benchmarks/job-shop/job-shop.lp
+[runlim] start:			Mon Feb  9 22:15:26 2026
+[runlim] child:			1779
+[runlim] sample:		3.72 time, 10.01 real, 395 MB, 0.89 load
+[runlim] sample:		13.71 time, 20.01 real, 591 MB, 0.99 load
+[runlim] sample:		23.71 time, 30.01 real, 591 MB, 0.99 load
+[runlim] end:			Mon Feb  9 22:15:57 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			30.57 seconds
+[runlim] time:			24.21 seconds
+[runlim] space:			591 MB
+[runlim] load:			0.99 maximum
+[runlim] samples:		306

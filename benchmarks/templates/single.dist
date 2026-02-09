@@ -14,7 +14,6 @@ source ~/.bashrc
 source ~/miniconda3/bin/activate
 source activate memelingo
 
-
 # Run jobs
 jobs="{jobs}"
 echo running jobs@$(hostname)...
