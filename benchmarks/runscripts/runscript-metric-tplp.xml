@@ -8,17 +8,13 @@
 	<system name="memelingo" version="1" measures="rp_tmp"
 		config="seq-generic"
 		cmdline="--project=show --stats">
-		<setting name="setting-htc" tag="basic">
+		<setting name="lambda-small" tag="lambdasmall">
 			<variable cmd="-c lambda={}" value="10;11;12;13;14;15" />
+			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
+		</setting>
+		<setting name="lambda-large" tag="lambdalarge">
+			<variable cmd="-c lambda={}" value="20;25;30;35;40;45;50;55" />
 			<variable cmd="--approach={}" value="mlp-tplp-htc;mlp-tplp-htcdl" />
-		</setting>
-		<setting name="setting-ht6" cmdline="--timepoint-limit=55" tag="06">
-			<variable cmd="-c lambda={}" value="10;11;12;13;14;15" />
-			<variable cmd="--approach={}" value="mlp-tplp-ht" />
-		</setting>
-		<setting name="setting-ht10" cmdline="--timepoint-limit=930" tag="10">
-			<variable cmd="-c lambda={}" value="10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25" />
-			<variable cmd="--approach={}" value="mlp-tplp-ht" />
 		</setting>
 	</system>
 
@@ -31,22 +27,26 @@
 	<benchmark name="jobshop-suite-06">
 		<files path="../examples/benchmarks/job-shop">
 			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft06.lp" />
+			<add file="instances/ft06.lp" cmdline="--timepoint-limit=55"/>
 		</files>
 	</benchmark>
 
 	<benchmark name="jobshop-suite-10">
 		<files path="../examples/benchmarks/job-shop">
 			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft10.lp" />
+			<add file="instances/ft10.lp"/>
+			<add file="instances/ft10const.lp" cmdline="-c const_size=1"/>
+			<add file="instances/ft10const.lp" cmdline="-c const_size=5"/>
+			<add file="instances/ft10const.lp" cmdline="-c const_size=8"/>
+			<add file="instances/ft10const.lp" cmdline="-c const_size=10"/>
 		</files>
 	</benchmark>
 
 
 	<project
 		name="clasp-seq" job="dist-generic">
-		<runtag machine="houat" benchmark="jobshop-suite-06" tag="06 | basic" />
-		<runtag machine="houat" benchmark="jobshop-suite-10" tag="10" />
+		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
+		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
 	</project>
 
 
