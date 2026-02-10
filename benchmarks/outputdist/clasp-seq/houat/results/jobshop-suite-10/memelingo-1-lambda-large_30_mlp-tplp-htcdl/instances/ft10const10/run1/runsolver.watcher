@@ -1,0 +1,39 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node1
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		--project=show
+[runlim] argv[2]:		--stats
+[runlim] argv[3]:		-c
+[runlim] argv[4]:		lambda=30
+[runlim] argv[5]:		--approach=mlp-tplp-htcdl
+[runlim] argv[6]:		../../../../../../../../../../examples/benchmarks/job-shop/instances/ft10const10.lp
+[runlim] argv[7]:		../../../../../../../../../../examples/benchmarks/job-shop/job-shop.lp
+[runlim] start:			Tue Feb 10 01:02:40 2026
+[runlim] child:			2608
+[runlim] sample:		1.96 time, 10.01 real, 128 MB, 0.92 load
+[runlim] sample:		11.96 time, 20.01 real, 1028 MB, 0.93 load
+[runlim] sample:		21.96 time, 30.01 real, 1113 MB, 0.94 load
+[runlim] sample:		31.96 time, 40.01 real, 1113 MB, 0.95 load
+[runlim] sample:		41.96 time, 50.01 real, 1113 MB, 0.96 load
+[runlim] sample:		51.96 time, 60.01 real, 1113 MB, 0.97 load
+[runlim] sample:		61.96 time, 70.01 real, 1113 MB, 0.97 load
+[runlim] sample:		71.96 time, 80.01 real, 1113 MB, 0.98 load
+[runlim] sample:		81.96 time, 90.01 real, 1113 MB, 0.98 load
+[runlim] sample:		91.96 time, 100.01 real, 1113 MB, 0.98 load
+[runlim] sample:		101.96 time, 110.01 real, 1113 MB, 0.99 load
+[runlim] sample:		111.96 time, 120.01 real, 1113 MB, 0.99 load
+[runlim] sample:		121.96 time, 130.01 real, 1113 MB, 0.99 load
+[runlim] sample:		131.96 time, 140.01 real, 1113 MB, 0.99 load
+[runlim] end:			Tue Feb 10 01:05:04 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			144.26 seconds
+[runlim] time:			136.15 seconds
+[runlim] space:			1114 MB
+[runlim] load:			0.99 maximum
+[runlim] samples:		1443

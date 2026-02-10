@@ -1,0 +1,272 @@
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.088 seconds
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.058 seconds
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.092 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.064 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.271 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.093 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.206 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.087 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.100 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.102 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.086 seconds
+pure virtual method called
+terminate called without an active exception
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Sending shutdown signal...
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/application.py", line 377, in _pyclingo_application_main
+    app.main(Control(control), [_to_str(files[i]) for i in range(size)])
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/application.py", line 211, in main
+    app.solve(on_model=None)
+  File "/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/approaches/__init__.py", line 187, in solve
+    self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/control.py", line 1081, in solve
+    ret = handle.get()
+          ^^^^^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/solving.py", line 583, in get
+    res = _c_call(
+          ^^^^^^^^
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 50, in _c_call
+    _handle_error(c_fun(*args, p_ret), handler)
+  File "/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/lib/python3.11/site-packages/clingo/_internal.py", line 81, in _handle_error
+    raise RuntimeError(msg)
+RuntimeError: solving stopped by signal
+*** ERROR: (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): solving stopped by signal
+*** Info : (/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo): Shutdown completed in 0.092 seconds
+pure virtual method called
+terminate called without an active exception

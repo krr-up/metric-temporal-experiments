@@ -1,0 +1,36 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...marks/job-shop/instances/ft10const5.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1192.223s (Solving: 1148.78s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1192.006s
+
+Choices      : 35782753
+Conflicts    : 10554    (Analyzed: 10554)
+Restarts     : 62       (Average: 170.23 Last: 514 Blocked: 0)
+Stab. Tests  : 100      (Full: 0 Partial: 100)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 69785    (Deleted: 29022)
+  Binary     : 1283     (Ratio:   1.84%)
+  Ternary    : 455      (Ratio:   0.65%)
+  Conflict   : 10554    (Average Length:   46.5 Ratio:  15.12%) 
+  Loop       : 59231    (Average Length:   42.3 Ratio:  84.88%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 10554    (Average: 3390.39 Max: 21270 Sum: 35782172)
+  Executed   : 4133     (Average: 3389.78 Max: 21270 Sum: 35775751 Ratio:  99.98%)
+  Bounded    : 6421     (Average:  1.00 Max:   1 Sum:   6421 Ratio:   0.02%)
+
+Rules        : 3692174 
+  Choice     : 6000    
+Atoms        : 1367977 
+Disjunctions : 11800    (Original: 11859)
+Bodies       : 2364499  (Original: 1998699)
+Equivalences : 2377648  (Atom=Atom: 272001 Body=Body: 182822 Other: 1922825)
+Tight        : No       (SCCs: 300 Non-Hcfs: 100 Nodes: 1988260 Gammas: 365800)
+Variables    : 1995765  (Eliminated:    0 Frozen: 1617965)
+Constraints  : 18232425 (Binary:  90.0% Ternary:   5.9% Other:   4.1%)
+
