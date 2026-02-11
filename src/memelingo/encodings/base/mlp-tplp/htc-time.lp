@@ -5,3 +5,5 @@
 &sum{t(0)} = 0 :- time(0).
 
 &sum{t(K) ; -t(K+1)} <= -1:- time(K), time(K+1).
+
+&sum{t(K)} <= L:- time(K), timepoint_limit(L).

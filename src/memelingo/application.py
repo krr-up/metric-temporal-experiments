@@ -10,10 +10,11 @@ from clingo import Model, Symbol, SymbolType
 from clingo.application import Application, ApplicationOptions, Flag
 
 from . import reify
-from .approaches.asp import ASPApproach
-from .approaches.clingcon import ClingconApproach
-from .approaches.mlp import MLPht, MLPhtExtended
-from .approaches.mlp_htc import MLPhtc, MLPhtcExtended, MLPhtcExtendedDL
+
+# from .approaches.asp import ASPApproach
+# from .approaches.clingcon import ClingconApproach
+from .approaches.mlp import MLPhtExtended
+from .approaches.mlp_htc import MLPhtcExtended, MLPhtcExtendedDL
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
@@ -40,7 +41,7 @@ class MemelingoApp(Application):
         self._log_level = "WARNING"
         self._view = Flag()
         self._view_subformulas = Flag()
-        self._approach_class = ClingconApproach
+        self._approach_class = MLPhtcExtended
         self._timepoint_limit = None
         self._constants = {} if constants is None else constants
 
@@ -58,15 +59,15 @@ class MemelingoApp(Application):
         """
         Parse approach
         """
-        if approach == "clingcon":
-            self._approach_class = ClingconApproach
-        elif approach == "asp":
-            self._approach_class = ASPApproach
-        elif approach == "mlp":
-            self._approach_class = MLPht
-        elif approach == "mlp-htc":
-            self._approach_class = MLPhtc
-        elif approach == "mlp-tplp-htc":
+        # if approach == "clingcon":
+        #     self._approach_class = ClingconApproach
+        # elif approach == "asp":
+        #     self._approach_class = ASPApproach
+        # elif approach == "mlp":
+        #     self._approach_class = MLPht
+        # elif approach == "mlp-htc":
+        #     self._approach_class = MLPhtc
+        if approach == "mlp-tplp-htc":
             self._approach_class = MLPhtcExtended
         elif approach == "mlp-tplp-htcdl":
             self._approach_class = MLPhtcExtendedDL

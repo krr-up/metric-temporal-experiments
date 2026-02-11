@@ -14,6 +14,7 @@ from clingox.program import Program, ProgramObserver
 log = logging.getLogger("main")
 import importlib.resources
 
+
 def get_encodings_path():
     """
     Returns the path to the encodings directory using the installed package resources.
@@ -24,10 +25,14 @@ def get_encodings_path():
             return str(p)
     except (ImportError, FileNotFoundError):
         # Fallback to the local path if not installed as a package
-        raise FileNotFoundError("Encodings directory not found. Please ensure the package is installed correctly.")
+        raise FileNotFoundError(
+            "Encodings directory not found. Please ensure the package is installed correctly."
+        )
         return os.path.join(".", "src", "encodings")
 
+
 ENCODINGS_PATH = get_encodings_path()
+
 
 class MyApproach:
     """
@@ -56,6 +61,11 @@ class MyApproach:
         """
         for f in self.files:
             self.ctl.load(f)
+        self.ctl.add("base", [], f"#const v={self.timepoint_limit}.")
+        if self.timepoint_limit is not None:
+            self.ctl.add("base", [], f"timepoint_limit({self.timepoint_limit}).")
+        else:
+            log.info("No timepoint limit provided, using unbounded timepoints.")
         self.ctl.add("base", [], reified_prg)
 
     @property
@@ -74,7 +84,7 @@ class MyApproach:
         """
         l = self.ctl.get_const("lambda")
         files = " ".join(self.files)
-        return f"python -m {self.__class__.system_name} 0 - {files} -c lambda={l}"
+        return f"python -m {self.__class__.system_name} 0 - {files} -c lambda={l} -c v={self.timepoint_limit}"
 
     def ground(self):
         """
@@ -86,9 +96,9 @@ class MyApproach:
 
         self.ctl.ground([("base", [])])
 
-        log.debug("------The grounded program ----")
-        log.debug(prg_printer.pretty_str())
-        log.debug("------------------------------")
+        # log.debug("------The grounded program ----")
+        # log.debug(prg_printer.pretty_str())
+        # log.debug("------------------------------")
 
     def solve(self, on_model: Optional[Callable] = None):
         """
@@ -158,6 +168,10 @@ class CApproach(MyApproach):
         self.theory.register(self.ctl)
         self.parse_load_files()
         self.ctl.add("base", [], reified_prg)
+        if self.timepoint_limit is not None:
+            self.ctl.add("base", [], f"timepoint_limit({self.timepoint_limit}).")
+        else:
+            log.info("No timepoint limit provided, using unbounded timepoints.")
 
     def custom_on_model(self, on_model: Optional[Callable] = None) -> Callable:
         """

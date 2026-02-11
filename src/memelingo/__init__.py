@@ -38,5 +38,5 @@ def reify(
         ctl.load(f)
     ctl.ground([("base", [])])
     rprg = "\n".join([str(s) + "." for s in symbols])
-    log.debug("\n------ Reified Program ------\n %s", rprg)
+    # log.debug("\n------ Reified Program ------\n %s", rprg)
     return rprg

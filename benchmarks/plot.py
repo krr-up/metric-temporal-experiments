@@ -12,6 +12,7 @@ def load_xlsx(path: str) -> pd.DataFrame:
 
 
 import pandas as pd
+import sys
 
 
 SUMMARY_ROWS = {"SUM", "AVG", "DEV", "DST", "BEST", "BETTER", "WORSE", "WORST"}
@@ -118,7 +119,7 @@ def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
     """
     Plot all approaches on a single plot with different colors.
     X-axis shows lambda values.
-    Highlights points where timeout is non-zero.
+    Highlights UNKNOWN status points (like timeout) and marks UNSATISFIABLE instances.
     """
     # Extract metadata
     df_meta = df.copy()
@@ -139,9 +140,12 @@ def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
     colors = {"htc": "blue", "ht": "red", "htcdl": "green"}
     markers = {"htc": "o", "ht": "s", "htcdl": "^"}
 
-    plt.figure(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(10, 6))
 
     approaches = sorted(df_meta["approach"].unique())
+
+    # Track UNSAT instances for annotation
+    unsat_lambdas = set()
 
     for approach in approaches:
         mask = df_meta["approach"] == approach
@@ -162,7 +166,7 @@ def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
                 continue
 
             # Plot regular points
-            plt.plot(
+            ax.plot(
                 valid_data["lambda"],
                 valid_data[attr],
                 marker=marker,
@@ -172,38 +176,33 @@ def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
                 markersize=8,
             )
 
-            # Highlight timeout points if timeout column exists
-            if "timeout" in subset.columns:
-                # Convert timeout to numeric as well
-                subset_timeout = subset.copy()
-                subset_timeout["timeout"] = pd.to_numeric(
-                    subset_timeout["timeout"], errors="coerce"
-                )
+            # Handle status column if it exists
+            if "status" in subset.columns:
+                subset_status = subset.copy()
 
-                timeout_mask = (subset_timeout["timeout"] != 0) & (
-                    subset_timeout["timeout"].notna()
-                )
-                timeout_points = subset_timeout[timeout_mask].dropna(
+                # Find UNKNOWN status points (like timeout)
+                unknown_mask = subset_status["status"] == "UNKNOWN"
+                unknown_points = subset_status[unknown_mask].dropna(
                     subset=["lambda", attr]
                 )
 
-                if not timeout_points.empty:
-                    # Draw red X markers over timeout points
-                    plt.scatter(
-                        timeout_points["lambda"],
-                        timeout_points[attr],
+                if not unknown_points.empty:
+                    # Draw red X markers over UNKNOWN points
+                    ax.scatter(
+                        unknown_points["lambda"],
+                        unknown_points[attr],
                         marker="x",
                         s=200,
                         color="red",
                         linewidths=3,
                         zorder=10,
-                        label=f"{approach} - timeout" if attr == attrs[0] else "",
+                        label=f"{approach} - UNKNOWN" if attr == attrs[0] else "",
                     )
 
-                    # Optional: Add a red circle around timeout points
-                    plt.scatter(
-                        timeout_points["lambda"],
-                        timeout_points[attr],
+                    # Add a red circle around UNKNOWN points
+                    ax.scatter(
+                        unknown_points["lambda"],
+                        unknown_points[attr],
                         marker="o",
                         s=300,
                         facecolors="none",
@@ -212,16 +211,36 @@ def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
                         zorder=9,
                     )
 
-    plt.xlabel("Lambda", fontsize=12)
-    plt.ylabel("time (s)", fontsize=12)
-    plt.title(instance, fontsize=14, fontweight="bold")
+                # Track UNSATISFIABLE instances
+                unsat_mask = subset_status["status"] == "UNSATISFIABLE"
+                unsat_points = subset_status[unsat_mask]
+                for _, row in unsat_points.iterrows():
+                    if pd.notna(row["lambda"]):
+                        unsat_lambdas.add(row["lambda"])
+
+    ax.set_xlabel("Lambda", fontsize=12)
+    ax.set_ylabel("time (s)", fontsize=12)
+    ax.set_title(instance, fontsize=14, fontweight="bold")
+
+    if unsat_lambdas:
+        for lambda_val in sorted(unsat_lambdas):
+            # Add a vertical line
+            ax.axvline(
+                x=lambda_val,
+                color="orange",
+                linestyle="--",
+                linewidth=2,
+                alpha=0.7,
+                zorder=0,
+                label="UNSAT" if lambda_val == min(unsat_lambdas) else "",
+            )
 
     # Clean up legend to avoid duplicates
-    handles, labels = plt.gca().get_legend_handles_labels()
+    handles, labels = ax.get_legend_handles_labels()
     by_label = dict(zip(labels, handles))
-    plt.legend(by_label.values(), by_label.keys())
+    ax.legend(by_label.values(), by_label.keys(), loc="best")
 
-    plt.grid(True, alpha=0.3)
+    ax.grid(True, alpha=0.3)
     plt.tight_layout()
     plt.show()
 
@@ -232,12 +251,14 @@ def main():
     df.to_csv("results.csv", index=False)
     df_instances = load_and_clean(df)
 
+    if len(sys.argv) > 1:
+        instance = sys.argv[1]
+    else:
+        raise RuntimeError("Missing instance argument")
     # instance = "instances/ft06"
-    instance = "instances/ft06"
-    title = "ft06"
-    print(df_instances)
-    print(df_instances[instance])
-    plot_instance_single(title, ["time"], df_instances[instance])
+    full_instance = "instances/" + instance
+    title = instance
+    plot_instance_single(title, ["time"], df_instances[full_instance])
     # plot_instance(title, ["time", "stime"], df_instances[instance])
 
 
