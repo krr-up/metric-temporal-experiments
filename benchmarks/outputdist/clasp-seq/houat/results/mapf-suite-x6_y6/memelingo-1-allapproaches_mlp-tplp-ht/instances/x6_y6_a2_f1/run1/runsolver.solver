@@ -1,0 +1,76 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...nchmarks/mapf/instances/x6_y6_a2_f1.lp ...
+Solving...
+Answer: 1 (Time: 3.833s)
+ State 0:
+  at(1,(1,1))
+  at(2,(2,1))
+  move(1,(1,1),(1,2),2)
+  move(2,(2,1),(2,2),4)
+ State 1:
+  moving(1,(1,1),(1,2))
+  moving(2,(2,1),(2,2))
+ State 2:
+  at(1,(1,2))
+  moving(2,(2,1),(2,2))
+ State 3:
+  at(1,(1,2))
+  moving(2,(2,1),(2,2))
+  move(1,(1,2),(2,2),3)
+ State 4:
+  at(2,(2,2))
+  moving(1,(1,2),(2,2))
+  move(2,(2,2),(2,3),1)
+ State 5:
+  at(2,(2,3))
+  moving(1,(1,2),(2,2))
+  move(2,(2,3),(3,3),3)
+ State 6:
+  at(1,(2,2))
+  moving(2,(2,3),(3,3))
+ State 7:
+  at(1,(2,2))
+  at(2,(3,3))
+  move(1,(2,2),(2,3),1)
+  move(2,(3,3),(4,3),3)
+ State 8:
+  at(1,(2,3))
+  moving(2,(3,3),(4,3))
+ State 9:
+  at(1,(2,3))
+  at(2,(4,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 3.837s (Solving: 0.10s 1st Model: 0.10s Unsat: 0.00s)
+CPU Time     : 3.662s
+
+Choices      : 118     
+Conflicts    : 21       (Analyzed: 21)
+Restarts     : 0       
+Stab. Tests  : 4        (Full: 2 Partial: 2)
+Model-Level  : 36.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 1548     (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 231      (Ratio:  14.92%)
+  Conflict   : 21       (Average Length:   47.6 Ratio:   1.36%) 
+  Loop       : 1527     (Average Length:   33.3 Ratio:  98.64%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 21       (Average:  4.00 Max:  38 Sum:     84)
+  Executed   : 20       (Average:  3.95 Max:  38 Sum:     83 Ratio:  98.81%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   1.19%)
+
+Rules        : 380111   (Original: 377648)
+  Choice     : 2400    
+Atoms        : 219367  
+Disjunctions : 1692     (Original: 1769)
+Bodies       : 191634   (Original: 179207)
+  Count      : 0        (Original: 640)
+Equivalences : 352692   (Atom=Atom: 84023 Body=Body: 63003 Other: 205666)
+Tight        : No       (SCCs: 242 Non-Hcfs: 2 Nodes: 94497 Gammas: 9964)
+Variables    : 83845    (Eliminated:    0 Frozen: 69114)
+Constraints  : 377131   (Binary:  78.4% Ternary:  13.6% Other:   8.0%)
+
