@@ -29,13 +29,13 @@ before(O1,O1+1):- operation(J,O1,M1,D1), operation(J,O1+1,M2,D2).
 % GOAL
 all_ran :- has_run(O):operation(O).
 :- not all_ran, finally. %This only makes sense with the rules below
-next((0,1),true):-all_ran, not finally.
+% next((0,1),true):-all_ran, not finally.
 % :- not eventually((0,L), all_ran), timepoint_limit(L).
 % #external eventually((0,L), all_ran):timepoint_limit(L).
 
 % Limit the timepoint_limit to the optimum if known
-:- not eventually((0,L), finally), initially, timepoint_limit(L).
-#external eventually((0,L), finally):timepoint_limit(L).
+% :- not eventually((0,L), finally), initially, timepoint_limit(L).
+% #external eventually((0,L), finally):timepoint_limit(L).
 
 #external initially.
 #external finally.

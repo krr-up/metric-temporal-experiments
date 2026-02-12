@@ -1,6 +1,8 @@
 # btool conv -m time,ctime,csolve,ground0,groundN,timeout,conflicts,choices,domain,vars,cons,mem,error,memout,status,atoms,rules
 import pandas as pd
 import matplotlib.pyplot as plt
+import sys
+import re
 
 
 def load_xlsx(path: str) -> pd.DataFrame:
@@ -11,21 +13,34 @@ def load_xlsx(path: str) -> pd.DataFrame:
     return df
 
 
-import pandas as pd
-import sys
-
-
 SUMMARY_ROWS = {"SUM", "AVG", "DEV", "DST", "BEST", "BETTER", "WORSE", "WORST"}
-
 AGGREGATE_COLUMNS = {"min", "median", "max"}
 
 
-def get_lambda(name):
-    return name.split("_")[1]
+def get_instance_prefix(name):
+    """Extract instance prefix without factor, e.g., 'instances/x6_y6_a1' from 'instances/x6_y6_a1_f10'"""
+    # Remove 'instances/' prefix if present
+    name = name.replace("instances/", "")
+    # Split by '_f' and take the first part
+    if "_f" in name:
+        return name.split("_f")[0]
+    return name
 
 
-def get_approach(name):
-    return name.split("_")[2].replace("mlp-tplp-", "")
+def get_factor(name):
+    """Extract factor number, e.g., '10' from 'instances/x6_y6_a1_f10'"""
+    match = re.search(r"_f(\d+)", name)
+    if match:
+        return int(match.group(1))
+    return None
+
+
+def get_approach(benchmark_name):
+    """Extract approach from benchmark column name"""
+    # e.g., 'memelingo-1/allapproaches_mlp-tplp-ht' -> 'ht'
+    if "mlp-tplp-" in benchmark_name:
+        return benchmark_name.split("mlp-tplp-")[-1]
+    return benchmark_name
 
 
 def load_and_clean(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
@@ -44,11 +59,11 @@ def load_and_clean(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
     # Drop summary rows
     data = data[~data["instance"].isin(SUMMARY_ROWS)]
 
-    col_map = {}  # column_index -> (benchmark, parameter)
+    col_map = {}  # benchmark -> [(attr, param)]
     attrs = []
     benchs = []
 
-    # NEW: Track actual column names for each benchmark/attr pair
+    # Track actual column names for each benchmark/attr pair
     column_lookup = {}  # (benchmark, attr) -> actual_column_name
 
     for col in raw.columns[1:]:  # skip instance column
@@ -72,24 +87,20 @@ def load_and_clean(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
             col_map[current_bench] = []
         col_map[current_bench].append((attrs[-1], param))
 
-        # NEW: Store the actual column name
+        # Store the actual column name
         column_lookup[(current_bench, attrs[-1])] = col
 
     instance_dfs = {}
-    print(col_map)
     for _, row in data.iterrows():
         instance = row["instance"]
-        print(f"Processing instance: {instance}")
         matrix = []
         for bm, vals in col_map.items():
             row_vals = []
             for attr, param in vals:
-                # FIXED: Get actual value from row instead of param
                 actual_col = column_lookup[(bm, attr)]
                 row_vals.append(row[actual_col])
             matrix.append(row_vals)
 
-        print(matrix)
         df_instance = pd.DataFrame(
             matrix, columns=list(attrs[: len(set(attrs))]), index=list(benchs)
         )
@@ -99,42 +110,25 @@ def load_and_clean(raw: pd.DataFrame) -> dict[str, pd.DataFrame]:
     return instance_dfs
 
 
-def plot_instance(
-    instance: str, attrs: list[str], df: pd.DataFrame, join_approaches=False
+def plot_instance_by_factor(
+    instance_prefix: str, attrs: list[str], all_instances: dict[str, pd.DataFrame]
 ):
-    plt.figure()
-    for attr in attrs:
-        plt.scatter(df.index, df[attr], label=attr)
-    plt.xticks(
-        rotation=45,
-        ha="right",
-    )
-    plt.ylabel("time (s)")
-    plt.title(instance)
-    plt.tight_layout()
-    plt.show()
-
-
-def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
     """
-    Plot all approaches on a single plot with different colors.
-    X-axis shows lambda values.
-    Highlights UNKNOWN status points (like timeout) and marks UNSATISFIABLE instances.
+    Plot all approaches for instances matching the prefix, grouped by factor.
+    X-axis shows factor values (f1, f10, f50, etc.)
+    Each approach (column/benchmark) is one line.
     """
-    # Extract metadata
-    df_meta = df.copy()
-    df_meta["lambda"] = df_meta.index.map(get_lambda)
-    df_meta["approach"] = df_meta.index.map(get_approach)
+    # Filter instances matching the prefix
+    matching_instances = {}
+    for inst_name, inst_df in all_instances.items():
+        if get_instance_prefix(inst_name) == instance_prefix:
+            factor = get_factor(inst_name)
+            if factor is not None:
+                matching_instances[factor] = (inst_name, inst_df)
 
-    # Convert lambda to numeric, handling any errors
-    df_meta["lambda"] = pd.to_numeric(df_meta["lambda"], errors="coerce")
-
-    # Drop rows where lambda or approach is NaN
-    df_meta = df_meta.dropna(subset=["lambda", "approach"])
-
-    # Also ensure the attribute columns are numeric
-    for attr in attrs:
-        df_meta[attr] = pd.to_numeric(df_meta[attr], errors="coerce")
+    if not matching_instances:
+        print(f"No instances found matching prefix: {instance_prefix}")
+        return
 
     # Define colors for approaches
     colors = {"htc": "blue", "ht": "red", "htcdl": "green"}
@@ -142,67 +136,76 @@ def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
 
     fig, ax = plt.subplots(figsize=(10, 6))
 
-    approaches = sorted(df_meta["approach"].unique())
+    # Get all approaches (benchmarks/columns in the dataframe)
+    first_df = list(matching_instances.values())[0][1]
+    approaches = [get_approach(bench) for bench in first_df.index]
 
-    # Track UNSAT instances for annotation
-    unsat_lambdas = set()
+    # Track UNKNOWN instances for annotation
+    unknown_factors = {}  # approach -> set of factors with UNKNOWN
 
-    for approach in approaches:
-        mask = df_meta["approach"] == approach
-        subset = df_meta[mask].sort_values("lambda")
+    for idx, benchmark in enumerate(first_df.index):
+        approach = approaches[idx]
+        color = colors.get(approach, "black")
+        marker = markers.get(approach, "o")
 
-        # Skip if subset is empty
-        if subset.empty:
+        # Collect data points for this approach across all factors
+        factors = []
+        values = []
+        statuses = []
+
+        for factor in sorted(matching_instances.keys()):
+            inst_name, inst_df = matching_instances[factor]
+
+            # Get data for this approach
+            for attr in attrs:
+                if attr in inst_df.columns:
+                    value = inst_df.loc[benchmark, attr]
+
+                    # Convert to numeric
+                    value_numeric = pd.to_numeric(value, errors="coerce")
+
+                    if pd.notna(value_numeric):
+                        factors.append(factor)
+                        values.append(value_numeric)
+
+                        # Get status if available
+                        if "status" in inst_df.columns:
+                            status = inst_df.loc[benchmark, "status"]
+                            statuses.append(status)
+                        else:
+                            statuses.append(None)
+
+        if not factors:
             continue
 
-        for attr in attrs:
-            color = colors.get(approach, "black")
-            marker = markers.get(approach, "o")
-
-            # Filter out NaN values for plotting
-            valid_data = subset.dropna(subset=["lambda", attr])
-
-            if valid_data.empty:
-                continue
-
-            # Plot regular points
+        # Plot the line for this approach
+        if approach != "ht":
             ax.plot(
-                valid_data["lambda"],
-                valid_data[attr],
+                factors,
+                values,
                 marker=marker,
-                label=f"{approach} - {attr}",
+                label=f"{approach}",
                 color=color,
                 linewidth=2,
                 markersize=8,
             )
 
-            # Handle status column if it exists
-            if "status" in subset.columns:
-                subset_status = subset.copy()
-
-                # Find UNKNOWN status points (like timeout)
-                unknown_mask = subset_status["status"] == "UNKNOWN"
-                unknown_points = subset_status[unknown_mask].dropna(
-                    subset=["lambda", attr]
-                )
-
-                if not unknown_points.empty:
-                    # Draw red X markers over UNKNOWN points
+            # Mark UNKNOWN points
+            unknown_factors[approach] = set()
+            for i, (f, v, s) in enumerate(zip(factors, values, statuses)):
+                if s == "UNKNOWN":
                     ax.scatter(
-                        unknown_points["lambda"],
-                        unknown_points[attr],
+                        [f],
+                        [v],
                         marker="x",
                         s=200,
                         color="red",
                         linewidths=3,
                         zorder=10,
-                        label=f"{approach} - UNKNOWN" if attr == attrs[0] else "",
                     )
-
-                    # Add a red circle around UNKNOWN points
                     ax.scatter(
-                        unknown_points["lambda"],
-                        unknown_points[attr],
+                        [f],
+                        [v],
                         marker="o",
                         s=300,
                         facecolors="none",
@@ -210,56 +213,41 @@ def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
                         linewidths=2,
                         zorder=9,
                     )
+                    unknown_factors[approach].add(f)
 
-                # Track UNSATISFIABLE instances
-                unsat_mask = subset_status["status"] == "UNSATISFIABLE"
-                unsat_points = subset_status[unsat_mask]
-                for _, row in unsat_points.iterrows():
-                    if pd.notna(row["lambda"]):
-                        unsat_lambdas.add(row["lambda"])
+    # Add legend entry for UNKNOWN
+    if any(unknown_factors.values()):
+        ax.scatter(
+            [], [], marker="x", s=200, color="red", linewidths=3, label="UNKNOWN"
+        )
 
-    ax.set_xlabel("Lambda", fontsize=12)
-    ax.set_ylabel("time (s)", fontsize=12)
-    ax.set_title(instance, fontsize=14, fontweight="bold")
+    ax.set_xlabel("Factor", fontsize=12)
+    ax.set_ylabel("rules", fontsize=12)
+    ax.set_title(f"Instance: {instance_prefix}", fontsize=14, fontweight="bold")
 
-    if unsat_lambdas:
-        for lambda_val in sorted(unsat_lambdas):
-            # Add a vertical line
-            ax.axvline(
-                x=lambda_val,
-                color="orange",
-                linestyle="--",
-                linewidth=2,
-                alpha=0.7,
-                zorder=0,
-                label="UNSAT" if lambda_val == min(unsat_lambdas) else "",
-            )
+    # Set x-axis to show factor values
+    ax.set_xticks(sorted(matching_instances.keys()))
 
-    # Clean up legend to avoid duplicates
-    handles, labels = ax.get_legend_handles_labels()
-    by_label = dict(zip(labels, handles))
-    ax.legend(by_label.values(), by_label.keys(), loc="best")
-
+    ax.legend(loc="best")
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
     plt.show()
 
 
 def main():
-    path = "results.xlsx"  # change this later
+    path = "results-mapf.xlsx"
     df = load_xlsx(path)
-    df.to_csv("results.csv", index=False)
+    df.to_csv("results-mapf.csv", index=False)
     df_instances = load_and_clean(df)
 
     if len(sys.argv) > 1:
-        instance = sys.argv[1]
+        instance_prefix = sys.argv[1]
     else:
-        raise RuntimeError("Missing instance argument")
-    # instance = "instances/ft06"
-    full_instance = "instances/" + instance
-    title = instance
-    plot_instance_single(title, ["time"], df_instances[full_instance])
-    # plot_instance(title, ["time", "stime"], df_instances[instance])
+        raise RuntimeError("Missing instance prefix argument (e.g., 'x6_y6_a1')")
+
+    # Plot by factor for the given instance prefix
+    # plot_instance_by_factor(instance_prefix, ["time"], df_instances)
+    plot_instance_by_factor(instance_prefix, ["rules"], df_instances)
 
 
 if __name__ == "__main__":

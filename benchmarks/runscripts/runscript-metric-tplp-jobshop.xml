@@ -1,4 +1,4 @@
-<runscript output="outputdist">
+<runscript output="outputjobshop">
 
 	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB" />
 
@@ -9,19 +9,15 @@
 		config="seq-generic"
 		cmdline="--project=show --stats">
 		<setting name="lambda-small" tag="lambdasmall">
-			<variable cmd="-c lambda={}" value="10;13;15;20" />
-			<!-- <variable cmd="-c lambda={}" value="10;11;12;13;14;15" /> -->
+			<variable cmd="-c lambda={}" value="10;12;14;16;18;20;22" />
 			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 		<setting name="lambda-large" tag="lambdalarge">
-			<variable cmd="-c lambda={}" value="30;40;50;60" />
-			<!-- <variable cmd="-c lambda={}" value="20;25;30;35;40;45" /> -->
+			<variable cmd="-c lambda={}" value="30;35;40;45;50;55;60" />
 			<variable cmd="--approach={}" value="mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 	</system>
 
-	<!-- <seqjob name="seq-generic"
-		timeout="120s" runs="1" memout="1000" parallel="8" /> -->
 
 	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
 		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
@@ -36,7 +32,6 @@
 	<benchmark name="jobshop-suite-10">
 		<files path="../examples/benchmarks/job-shop">
 			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
-			<add file="instances/ft10.lp" />
 			<add file="instances/ft10const2.lp" />
 			<add file="instances/ft10const5.lp" />
 			<add file="instances/ft10const10.lp" />
