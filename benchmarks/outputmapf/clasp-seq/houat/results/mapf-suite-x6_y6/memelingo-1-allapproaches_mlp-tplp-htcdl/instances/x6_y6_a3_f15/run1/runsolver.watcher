@@ -1,0 +1,45 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node1
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		--project=show
+[runlim] argv[2]:		--stats
+[runlim] argv[3]:		-c
+[runlim] argv[4]:		lambda=10
+[runlim] argv[5]:		--approach=mlp-tplp-htcdl
+[runlim] argv[6]:		--timepoint-limit=225
+[runlim] argv[7]:		../../../../../../../../../../examples/benchmarks/mapf/instances/x6_y6_a3_f15.lp
+[runlim] argv[8]:		../../../../../../../../../../examples/benchmarks/mapf/mapf.lp
+[runlim] start:			Thu Feb 12 05:47:25 2026
+[runlim] child:			9981
+[runlim] sample:		4.24 time, 10.01 real, 338 MB, 1.93 load
+[runlim] sample:		14.25 time, 20.01 real, 509 MB, 1.94 load
+[runlim] sample:		24.25 time, 30.01 real, 509 MB, 1.95 load
+[runlim] sample:		34.25 time, 40.01 real, 509 MB, 1.96 load
+[runlim] sample:		44.25 time, 50.01 real, 509 MB, 1.96 load
+[runlim] sample:		54.25 time, 60.01 real, 509 MB, 1.97 load
+[runlim] sample:		64.25 time, 70.01 real, 509 MB, 1.97 load
+[runlim] sample:		74.25 time, 80.01 real, 509 MB, 1.98 load
+[runlim] sample:		84.25 time, 90.01 real, 509 MB, 1.98 load
+[runlim] sample:		94.25 time, 100.01 real, 509 MB, 1.99 load
+[runlim] sample:		104.25 time, 110.01 real, 509 MB, 1.99 load
+[runlim] sample:		114.25 time, 120.01 real, 509 MB, 1.99 load
+[runlim] sample:		124.25 time, 130.01 real, 509 MB, 1.99 load
+[runlim] sample:		134.25 time, 140.01 real, 509 MB, 1.99 load
+[runlim] sample:		144.25 time, 150.01 real, 509 MB, 2.00 load
+[runlim] sample:		154.25 time, 160.01 real, 509 MB, 2.00 load
+[runlim] sample:		164.25 time, 170.01 real, 510 MB, 2.00 load
+[runlim] sample:		174.25 time, 180.01 real, 510 MB, 2.08 load
+[runlim] sample:		184.25 time, 190.01 real, 510 MB, 2.07 load
+[runlim] end:			Thu Feb 12 05:50:39 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			193.44 seconds
+[runlim] time:			187.64 seconds
+[runlim] space:			527 MB
+[runlim] load:			2.08 maximum
+[runlim] samples:		1935

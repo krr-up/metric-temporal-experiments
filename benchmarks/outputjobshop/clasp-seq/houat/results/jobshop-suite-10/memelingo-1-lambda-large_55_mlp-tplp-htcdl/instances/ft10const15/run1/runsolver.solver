@@ -1,0 +1,196 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...arks/job-shop/instances/ft10const15.lp ...
+Solving...
+Answer: 1 (Time: 755.173s)
+ Other shown symbols:
+ t(0,0) t(1,1) t(2,2) t(3,3) t(4,4) t(5,9) t(6,10) t(7,11) t(8,12) t(9,13) t(10,15) t(11,22) t(12,23) t(13,25) t(14,29) t(15,35) t(16,37) t(17,38) t(18,40) t(19,41) t(20,44) t(21,46) t(22,48) t(23,49) t(24,51) t(25,56) t(26,59) t(27,61) t(28,70) t(29,75) t(30,90) t(31,105) t(32,119) t(33,134) t(34,149) t(35,150) t(36,163) t(37,178) t(38,193) t(39,208) t(40,223) t(41,238) t(42,253) t(43,268) t(44,282) t(45,284) t(46,297) t(47,298) t(48,312) t(49,313) t(50,326) t(51,340) t(52,354) t(53,356) t(54,369)
+
+ State 0:
+ State 1:
+ State 2:
+ State 3:
+ State 4:
+ State 5:
+ State 6:
+ State 7:
+ State 8:
+ State 9:
+ State 10:
+ State 11:
+ State 12:
+ State 13:
+  start_run(0,0)
+ State 14:
+  start_run(1,1)
+ State 15:
+ State 16:
+ State 17:
+ State 18:
+ State 19:
+ State 20:
+ State 21:
+ State 22:
+ State 23:
+ State 24:
+ State 25:
+  start_run(10,0)
+ State 26:
+ State 27:
+  start_run(20,1)
+  start_run(70,2)
+ State 28:
+  start_run(21,0)
+ State 29:
+  start_run(11,2)
+  start_run(30,1)
+ State 30:
+  start_run(12,4)
+  start_run(22,3)
+  start_run(50,2)
+  start_run(60,1)
+  start_run(80,0)
+ State 31:
+  start_run(13,9)
+  start_run(23,2)
+  start_run(61,0)
+  start_run(81,1)
+ State 32:
+  start_run(24,8)
+  start_run(40,2)
+  start_run(51,1)
+  start_run(62,3)
+ State 33:
+  start_run(14,3)
+  start_run(41,0)
+  start_run(52,5)
+  start_run(63,2)
+  start_run(90,1)
+ State 34:
+  start_run(15,1)
+  start_run(25,5)
+  start_run(53,3)
+  start_run(64,6)
+ State 35:
+  start_run(54,8)
+ State 36:
+  start_run(16,6)
+  start_run(31,2)
+  start_run(42,1)
+  start_run(65,5)
+  start_run(82,3)
+  start_run(91,0)
+ State 37:
+  start_run(32,0)
+  start_run(43,5)
+  start_run(55,9)
+  start_run(92,2)
+ State 38:
+  start_run(33,4)
+  start_run(44,3)
+  start_run(56,0)
+  start_run(66,9)
+  start_run(83,5)
+  start_run(93,6)
+ State 39:
+  start_run(17,5)
+  start_run(26,7)
+  start_run(45,4)
+  start_run(57,6)
+  start_run(67,8)
+  start_run(71,0)
+  start_run(84,2)
+ State 40:
+  start_run(2,2)
+  start_run(34,6)
+  start_run(58,4)
+  start_run(68,7)
+  start_run(72,1)
+  start_run(85,9)
+  start_run(94,8)
+ State 41:
+  start_run(18,7)
+  start_run(35,8)
+  start_run(69,4)
+  start_run(73,5)
+  start_run(86,6)
+ State 42:
+  start_run(27,6)
+  start_run(36,7)
+  start_run(46,8)
+  start_run(74,4)
+  start_run(95,9)
+ State 43:
+  start_run(3,3)
+  start_run(75,6)
+  start_run(87,7)
+  start_run(96,5)
+ State 44:
+  start_run(4,4)
+  start_run(47,7)
+  start_run(76,8)
+  start_run(97,3)
+ State 45:
+  start_run(77,9)
+ State 46:
+  start_run(78,7)
+ State 47:
+  start_run(37,3)
+  start_run(98,4)
+ State 48:
+  start_run(5,5)
+  start_run(48,9)
+  start_run(79,3)
+  start_run(88,4)
+  start_run(99,7)
+ State 49:
+  start_run(6,6)
+  start_run(19,8)
+ State 50:
+  start_run(7,7)
+  start_run(38,9)
+ State 51:
+  start_run(8,8)
+  start_run(28,9)
+  start_run(59,7)
+ State 52:
+  start_run(9,9)
+  start_run(29,4)
+  start_run(39,5)
+  start_run(49,6)
+  start_run(89,8)
+ State 53:
+ State 54:
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 755.217s (Solving: 724.64s 1st Model: 724.59s Unsat: 0.00s)
+CPU Time     : 755.017s
+
+Choices      : 46746530
+Conflicts    : 16311    (Analyzed: 16311)
+Restarts     : 85       (Average: 191.89 Last: 3 Blocked: 0)
+Stab. Tests  : 200      (Full: 100 Partial: 100)
+Model-Level  : 7446.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 100995   (Deleted: 66164)
+  Binary     : 4518     (Ratio:   4.47%)
+  Ternary    : 648      (Ratio:   0.64%)
+  Conflict   : 16311    (Average Length:   77.5 Ratio:  16.15%) 
+  Loop       : 84684    (Average Length:   47.3 Ratio:  83.85%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 16311    (Average: 2860.52 Max: 39019 Sum: 46657977)
+  Executed   : 13058    (Average: 2860.32 Max: 39019 Sum: 46654724 Ratio:  99.99%)
+  Bounded    : 3253     (Average:  1.00 Max:   1 Sum:   3253 Ratio:   0.01%)
+
+Rules        : 3149176 
+  Choice     : 5500    
+Atoms        : 1188595 
+Disjunctions : 10800    (Original: 10800)
+Bodies       : 2019176  (Original: 1711376)
+Equivalences : 2079827  (Atom=Atom: 247832 Body=Body: 166641 Other: 1665354)
+Tight        : No       (SCCs: 300 Non-Hcfs: 100 Nodes: 1684680 Gammas: 307800)
+Variables    : 1684419  (Eliminated:    0 Frozen: 1365619)
+Constraints  : 14318452 (Binary:  89.4% Ternary:   6.3% Other:   4.4%)
+

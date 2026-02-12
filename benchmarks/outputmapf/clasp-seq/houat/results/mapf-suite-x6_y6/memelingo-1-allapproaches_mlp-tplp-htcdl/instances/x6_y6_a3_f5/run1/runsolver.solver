@@ -1,0 +1,94 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...nchmarks/mapf/instances/x6_y6_a3_f5.lp ...
+Solving...
+Answer: 1 (Time: 216.943s)
+ Other shown symbols:
+ t(0,0) t(1,5) t(2,25) t(3,30) t(4,35) t(5,50) t(6,55) t(7,80) t(8,90) t(9,105)
+
+ State 0:
+  at(1,(1,1))
+  at(2,(2,1))
+  at(3,(4,4))
+  move(3,(4,4),(5,4),25)
+ State 1:
+  at(1,(1,1))
+  at(2,(2,1))
+  moving(3,(4,4),(5,4))
+  move(1,(1,1),(2,1),20)
+  move(2,(2,1),(2,2),20)
+ State 2:
+  at(1,(2,1))
+  at(2,(2,2))
+  at(3,(5,4))
+  move(2,(2,2),(2,3),5)
+ State 3:
+  at(1,(2,1))
+  at(2,(2,3))
+  at(3,(5,4))
+  move(1,(2,1),(2,2),20)
+  move(3,(5,4),(5,3),20)
+ State 4:
+  at(2,(2,3))
+  moving(1,(2,1),(2,2))
+  moving(3,(5,4),(5,3))
+  move(2,(2,3),(3,3),15)
+ State 5:
+  at(1,(2,2))
+  at(2,(3,3))
+  at(3,(5,3))
+  move(1,(2,2),(2,3),5)
+  move(3,(5,3),(4,3),5)
+ State 6:
+  at(1,(2,3))
+  at(2,(3,3))
+  at(3,(4,3))
+  move(3,(4,3),(4,2),25)
+ State 7:
+  at(1,(2,3))
+  at(2,(3,3))
+  at(3,(4,2))
+  move(3,(4,2),(4,1),10)
+ State 8:
+  at(1,(2,3))
+  at(2,(3,3))
+  at(3,(4,1))
+  move(2,(3,3),(4,3),15)
+ State 9:
+  at(1,(2,3))
+  at(2,(4,3))
+  at(3,(4,1))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 216.949s (Solving: 210.99s 1st Model: 210.98s Unsat: 0.00s)
+CPU Time     : 216.700s
+
+Choices      : 139574  
+Conflicts    : 75648    (Analyzed: 75648)
+Restarts     : 246      (Average: 307.51 Last: 49 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 103.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 386621   (Deleted: 360975)
+  Binary     : 2447     (Ratio:   0.63%)
+  Ternary    : 3590     (Ratio:   0.93%)
+  Conflict   : 75648    (Average Length:  102.6 Ratio:  19.57%) 
+  Loop       : 310973   (Average Length:   46.9 Ratio:  80.43%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 75648    (Average:  1.82 Max: 118 Sum: 137694)
+  Executed   : 75576    (Average:  1.82 Max: 118 Sum: 137622 Ratio:  99.95%)
+  Bounded    : 72       (Average:  1.00 Max:   1 Sum:     72 Ratio:   0.05%)
+
+Rules        : 498829   (Original: 495469)
+  Choice     : 3600    
+Atoms        : 323517  
+Disjunctions : 2538     (Original: 2538)
+Bodies       : 285630   (Original: 267052)
+  Count      : 0        (Original: 960)
+Equivalences : 561559   (Atom=Atom: 134045 Body=Body: 101877 Other: 325637)
+Tight        : No       (SCCs: 363 Non-Hcfs: 3 Nodes: 146420 Gammas: 15218)
+Variables    : 126989   (Eliminated:    0 Frozen: 107469)
+Constraints  : 451524   (Binary:  77.1% Ternary:  14.0% Other:   8.9%)
+

@@ -1,0 +1,24 @@
+running jobs@kr-node3...
+
+jobs: results/jobshop-suite-10/memelingo-1-lambda-large_50_mlp-tplp-htcdl/instances/ft10const15/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_50_mlp-tplp-htcdl/instances/ft10const2/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_50_mlp-tplp-htcdl/instances/ft10const5/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_50_mlp-tplp-htcdl/instances/ft10const10/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htc/instances/ft10const15/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htc/instances/ft10const2/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htc/instances/ft10const5/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htc/instances/ft10const10/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htcdl/instances/ft10const15/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htcdl/instances/ft10const2/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htcdl/instances/ft10const5/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htcdl/instances/ft10const10/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htc/instances/ft10const15/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htc/instances/ft10const2/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htc/instances/ft10const5/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htc/instances/ft10const10/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htcdl/instances/ft10const15/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htcdl/instances/ft10const2/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htcdl/instances/ft10const5/run1/start.sh results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htcdl/instances/ft10const10/run1/start.sh
+
+running  results/jobshop-suite-10/memelingo-1-lambda-large_50_mlp-tplp-htcdl/instances/ft10const15/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_50_mlp-tplp-htcdl/instances/ft10const2/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_50_mlp-tplp-htcdl/instances/ft10const5/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_50_mlp-tplp-htcdl/instances/ft10const10/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htc/instances/ft10const15/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htc/instances/ft10const2/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htc/instances/ft10const5/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htc/instances/ft10const10/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htcdl/instances/ft10const15/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htcdl/instances/ft10const2/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htcdl/instances/ft10const5/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_55_mlp-tplp-htcdl/instances/ft10const10/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htc/instances/ft10const15/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htc/instances/ft10const2/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htc/instances/ft10const5/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htc/instances/ft10const10/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htcdl/instances/ft10const15/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htcdl/instances/ft10const2/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htcdl/instances/ft10const5/run1/start.sh
+running  results/jobshop-suite-10/memelingo-1-lambda-large_60_mlp-tplp-htcdl/instances/ft10const10/run1/start.sh

@@ -1,0 +1,62 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...chmarks/mapf/instances/x6_y6_a1_f15.lp ...
+Solving...
+Answer: 1 (Time: 165.566s)
+ State 0:
+  at(1,(1,1))
+ State 1:
+  at(1,(1,1))
+  move(1,(1,1),(2,1),60)
+ State 2:
+  moving(1,(1,1),(2,1))
+ State 3:
+  moving(1,(1,1),(2,1))
+ State 4:
+  at(1,(2,1))
+  move(1,(2,1),(2,2),60)
+ State 5:
+  moving(1,(2,1),(2,2))
+ State 6:
+  at(1,(2,2))
+ State 7:
+  at(1,(2,2))
+  move(1,(2,2),(2,3),15)
+ State 8:
+  moving(1,(2,2),(2,3))
+ State 9:
+  at(1,(2,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 165.614s (Solving: 64.29s 1st Model: 64.25s Unsat: 0.00s)
+CPU Time     : 165.441s
+
+Choices      : 592205  
+Conflicts    : 8491     (Analyzed: 8491)
+Restarts     : 30       (Average: 283.03 Last: 1766 Blocked: 0)
+Stab. Tests  : 2        (Full: 1 Partial: 1)
+Model-Level  : 412.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 19158    (Deleted: 10915)
+  Binary     : 42       (Ratio:   0.22%)
+  Ternary    : 182      (Ratio:   0.95%)
+  Conflict   : 8491     (Average Length: 32039.2 Ratio:  44.32%) 
+  Loop       : 10667    (Average Length:   55.2 Ratio:  55.68%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 8491     (Average: 51.83 Max: 41824 Sum: 440113)
+  Executed   : 8488     (Average: 51.83 Max: 41824 Sum: 440110 Ratio: 100.00%)
+  Bounded    : 3        (Average:  1.00 Max:   1 Sum:      3 Ratio:   0.00%)
+
+Rules        : 21480818 (Original: 21290265)
+  Choice     : 1200    
+Atoms        : 124358  
+Disjunctions : 846      (Original: 2603)
+Bodies       : 2264662  (Original: 2069127)
+  Count      : 0        (Original: 320)
+Equivalences : 194343   (Atom=Atom: 45332 Body=Body: 33204 Other: 115807)
+Tight        : No       (SCCs: 121 Non-Hcfs: 1 Nodes: 47380 Gammas: 4982)
+Variables    : 2138107  (Eliminated:    0 Frozen: 36268)
+Constraints  : 52331103 (Binary:  95.9% Ternary:   3.7% Other:   0.4%)
+

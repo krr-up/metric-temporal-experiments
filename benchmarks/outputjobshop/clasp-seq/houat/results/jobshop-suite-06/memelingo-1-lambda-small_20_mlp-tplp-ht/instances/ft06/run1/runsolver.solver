@@ -1,0 +1,94 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from .../benchmarks/job-shop/instances/ft06.lp ...
+Solving...
+Answer: 1 (Time: 62.708s)
+ State 0:
+  start_run(0,2)
+  start_run(30,1)
+ State 1:
+  start_run(1,0)
+  start_run(31,3)
+ State 2:
+  start_run(2,1)
+  start_run(32,5)
+ State 3:
+  start_run(3,3)
+  start_run(24,2)
+  start_run(33,0)
+ State 4:
+  start_run(4,5)
+  start_run(12,2)
+  start_run(25,1)
+ State 5:
+ State 6:
+  start_run(18,1)
+  start_run(26,4)
+ State 7:
+  start_run(13,3)
+  start_run(19,0)
+ State 8:
+  start_run(14,5)
+  start_run(20,2)
+ State 9:
+  start_run(6,1)
+  start_run(15,0)
+  start_run(21,3)
+  start_run(34,4)
+ State 10:
+  start_run(7,2)
+  start_run(22,4)
+ State 11:
+  start_run(8,4)
+  start_run(23,5)
+ State 12:
+  start_run(5,4)
+  start_run(27,5)
+  start_run(35,2)
+ State 13:
+  start_run(16,1)
+  start_run(28,0)
+ State 14:
+ State 15:
+  start_run(9,5)
+ State 16:
+  start_run(10,0)
+  start_run(17,4)
+ State 17:
+  start_run(29,3)
+ State 18:
+  start_run(11,3)
+ State 19:
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 62.715s (Solving: 30.71s 1st Model: 30.71s Unsat: 0.00s)
+CPU Time     : 62.580s
+
+Choices      : 50232   
+Conflicts    : 13156    (Analyzed: 13156)
+Restarts     : 61       (Average: 215.67 Last: 914 Blocked: 0)
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 81.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 25944    (Deleted: 17132)
+  Binary     : 831      (Ratio:   3.20%)
+  Ternary    : 254      (Ratio:   0.98%)
+  Conflict   : 13156    (Average Length:  372.1 Ratio:  50.71%) 
+  Loop       : 12788    (Average Length:   34.6 Ratio:  49.29%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 13156    (Average:  3.70 Max: 221 Sum:  48666)
+  Executed   : 13056    (Average:  3.69 Max: 221 Sum:  48566 Ratio:  99.79%)
+  Bounded    : 100      (Average:  1.00 Max:   1 Sum:    100 Ratio:   0.21%)
+
+Rules        : 5653707  (Original: 5641034)
+  Choice     : 720     
+Atoms        : 107322  
+Disjunctions : 1368     (Original: 2170)
+Bodies       : 527368   (Original: 499683)
+Equivalences : 210459   (Atom=Atom: 32723 Body=Body: 22313 Other: 155423)
+Tight        : No       (SCCs: 108 Non-Hcfs: 36 Nodes: 96599 Gammas: 15012)
+Variables    : 354996   (Eliminated:    0 Frozen: 79118)
+Constraints  : 4803089  (Binary:  92.7% Ternary:   6.3% Other:   1.0%)
+

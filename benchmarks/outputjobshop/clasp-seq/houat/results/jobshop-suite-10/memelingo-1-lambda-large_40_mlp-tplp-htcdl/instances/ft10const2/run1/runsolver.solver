@@ -1,0 +1,181 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...marks/job-shop/instances/ft10const2.lp ...
+Solving...
+Answer: 1 (Time: 246.822s)
+ Other shown symbols:
+ t(0,0) t(1,2) t(2,3) t(3,5) t(4,6) t(5,7) t(6,9) t(7,11) t(8,12) t(9,13) t(10,15) t(11,16) t(12,17) t(13,19) t(14,21) t(15,22) t(16,23) t(17,25) t(18,26) t(19,28) t(20,30) t(21,32) t(22,34) t(23,35) t(24,37) t(25,38) t(26,39) t(27,40) t(28,41) t(29,42) t(30,43) t(31,44) t(32,45) t(33,46) t(34,48) t(35,50) t(36,51) t(37,53) t(38,55) t(39,57)
+
+ State 0:
+ State 1:
+  start_run(90,1)
+ State 2:
+  start_run(91,0)
+ State 3:
+  start_run(0,0)
+  start_run(92,2)
+ State 4:
+  start_run(93,6)
+ State 5:
+  start_run(94,8)
+ State 6:
+  start_run(80,0)
+  start_run(95,9)
+ State 7:
+  start_run(50,2)
+  start_run(81,1)
+  start_run(96,5)
+ State 8:
+  start_run(97,3)
+ State 9:
+ State 10:
+  start_run(98,4)
+ State 11:
+ State 12:
+ State 13:
+  start_run(99,7)
+ State 14:
+  start_run(82,3)
+ State 15:
+  start_run(83,5)
+ State 16:
+ State 17:
+  start_run(84,2)
+ State 18:
+  start_run(30,1)
+  start_run(70,2)
+  start_run(85,9)
+ State 19:
+  start_run(10,0)
+  start_run(20,1)
+  start_run(31,2)
+  start_run(86,6)
+ State 20:
+  start_run(32,0)
+  start_run(60,1)
+  start_run(87,7)
+ State 21:
+  start_run(1,1)
+  start_run(21,0)
+  start_run(40,2)
+ State 22:
+  start_run(2,2)
+  start_run(22,3)
+  start_run(33,4)
+  start_run(61,0)
+ State 23:
+  start_run(3,3)
+  start_run(11,2)
+  start_run(34,6)
+  start_run(51,1)
+  start_run(71,0)
+  start_run(88,4)
+ State 24:
+  start_run(4,4)
+  start_run(35,8)
+  start_run(52,5)
+  start_run(62,3)
+  start_run(72,1)
+ State 25:
+  start_run(5,5)
+  start_run(12,4)
+  start_run(36,7)
+  start_run(41,0)
+  start_run(53,3)
+ State 26:
+  start_run(6,6)
+  start_run(13,9)
+  start_run(23,2)
+  start_run(42,1)
+  start_run(73,5)
+ State 27:
+  start_run(7,7)
+  start_run(14,3)
+  start_run(24,8)
+  start_run(43,5)
+  start_run(63,2)
+ State 28:
+  start_run(8,8)
+  start_run(15,1)
+  start_run(37,3)
+  start_run(64,6)
+ State 29:
+  start_run(16,6)
+  start_run(25,5)
+  start_run(38,9)
+  start_run(44,3)
+  start_run(54,8)
+  start_run(74,4)
+ State 30:
+  start_run(17,5)
+  start_run(26,7)
+  start_run(45,4)
+  start_run(55,9)
+  start_run(75,6)
+ State 31:
+  start_run(9,9)
+  start_run(18,7)
+  start_run(27,6)
+  start_run(46,8)
+  start_run(56,0)
+  start_run(65,5)
+ State 32:
+  start_run(28,9)
+  start_run(39,5)
+  start_run(47,7)
+  start_run(57,6)
+  start_run(76,8)
+ State 33:
+ State 34:
+  start_run(58,4)
+  start_run(66,9)
+  start_run(89,8)
+ State 35:
+  start_run(29,4)
+  start_run(59,7)
+  start_run(67,8)
+  start_run(77,9)
+ State 36:
+  start_run(48,9)
+  start_run(78,7)
+ State 37:
+  start_run(19,8)
+  start_run(49,6)
+  start_run(68,7)
+ State 38:
+  start_run(69,4)
+  start_run(79,3)
+ State 39:
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 246.838s (Solving: 231.86s 1st Model: 231.84s Unsat: 0.00s)
+CPU Time     : 246.665s
+
+Choices      : 11233433
+Conflicts    : 3295     (Analyzed: 3295)
+Restarts     : 22       (Average: 149.77 Last: 34 Blocked: 0)
+Stab. Tests  : 200      (Full: 100 Partial: 100)
+Model-Level  : 3699.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 14210    (Deleted: 3424)
+  Binary     : 632      (Ratio:   4.45%)
+  Ternary    : 306      (Ratio:   2.15%)
+  Conflict   : 3295     (Average Length:   19.4 Ratio:  23.19%) 
+  Loop       : 10915    (Average Length:   20.7 Ratio:  76.81%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 3295     (Average: 3408.08 Max: 11542 Sum: 11229625)
+  Executed   : 961      (Average: 3407.37 Max: 11542 Sum: 11227291 Ratio:  99.98%)
+  Bounded    : 2334     (Average:  1.00 Max:   1 Sum:   2334 Ratio:   0.02%)
+
+Rules        : 1811326 
+  Choice     : 4000    
+Atoms        : 744685  
+Disjunctions : 7800     (Original: 7800)
+Bodies       : 1166366  (Original: 1002566)
+Equivalences : 1326032  (Atom=Atom: 179342 Body=Body: 120921 Other: 1025769)
+Tight        : No       (SCCs: 300 Non-Hcfs: 100 Nodes: 924240 Gammas: 163800)
+Variables    : 923259   (Eliminated:    0 Frozen: 751459)
+Constraints  : 6009632  (Binary:  86.6% Ternary:   7.8% Other:   5.6%)
+

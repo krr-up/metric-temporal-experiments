@@ -1,0 +1,81 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...chmarks/mapf/instances/x6_y6_a2_f30.lp ...
+Solving...
+Answer: 1 (Time: 44.012s)
+ Other shown symbols:
+ t(0,0) t(1,44) t(2,59) t(3,179) t(4,209) t(5,299) t(6,389) t(7,419) t(8,420) t(9,450)
+
+ State 0:
+  at(1,(1,1))
+  at(2,(2,1))
+ State 1:
+  at(1,(1,1))
+  at(2,(2,1))
+ State 2:
+  at(1,(1,1))
+  at(2,(2,1))
+  move(1,(1,1),(2,1),120)
+  move(2,(2,1),(2,2),120)
+ State 3:
+  at(1,(2,1))
+  at(2,(2,2))
+  move(1,(2,1),(2,2),120)
+  move(2,(2,2),(2,3),30)
+ State 4:
+  at(2,(2,3))
+  moving(1,(2,1),(2,2))
+  move(2,(2,3),(3,3),90)
+ State 5:
+  at(1,(2,2))
+  at(2,(3,3))
+  move(2,(3,3),(4,3),90)
+ State 6:
+  at(1,(2,2))
+  at(2,(4,3))
+  move(1,(2,2),(2,3),30)
+  move(2,(4,3),(5,3),30)
+ State 7:
+  at(1,(2,3))
+  at(2,(5,3))
+ State 8:
+  at(1,(2,3))
+  at(2,(5,3))
+  move(2,(5,3),(4,3),30)
+ State 9:
+  at(1,(2,3))
+  at(2,(4,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 44.017s (Solving: 40.37s 1st Model: 40.36s Unsat: 0.00s)
+CPU Time     : 43.860s
+
+Choices      : 26652   
+Conflicts    : 15196    (Analyzed: 15196)
+Restarts     : 62       (Average: 245.10 Last: 445 Blocked: 0)
+Stab. Tests  : 4        (Full: 2 Partial: 2)
+Model-Level  : 41.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 90197    (Deleted: 65108)
+  Binary     : 4301     (Ratio:   4.77%)
+  Ternary    : 732      (Ratio:   0.81%)
+  Conflict   : 15196    (Average Length:   93.8 Ratio:  16.85%) 
+  Loop       : 71041    (Average Length:   31.3 Ratio:  78.76%) 
+  Other      : 3960     (Average Length:    2.0 Ratio:   4.39%) 
+Backjumps    : 15196    (Average:  1.70 Max:  65 Sum:  25869)
+  Executed   : 15191    (Average:  1.70 Max:  65 Sum:  25864 Ratio:  99.98%)
+  Bounded    : 5        (Average:  1.00 Max:   1 Sum:      5 Ratio:   0.02%)
+
+Rules        : 338521   (Original: 336281)
+  Choice     : 2400    
+Atoms        : 222341  
+Disjunctions : 1692     (Original: 1692)
+Bodies       : 190594   (Original: 178204)
+  Count      : 0        (Original: 640)
+Equivalences : 377109   (Atom=Atom: 89856 Body=Body: 67975 Other: 219278)
+Tight        : No       (SCCs: 242 Non-Hcfs: 2 Nodes: 97794 Gammas: 10150)
+Variables    : 89635    (Eliminated:    0 Frozen: 76608)
+Constraints  : 754862   (Binary:  31.7% Ternary:  64.8% Other:   3.5%)
+

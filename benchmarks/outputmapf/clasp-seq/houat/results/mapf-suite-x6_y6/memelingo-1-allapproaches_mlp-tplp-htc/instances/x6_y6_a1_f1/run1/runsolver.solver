@@ -1,0 +1,65 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...nchmarks/mapf/instances/x6_y6_a1_f1.lp ...
+Solving...
+Answer: 1 (Time: 2.307s)
+ Other shown symbols:
+ t(0,0) t(1,1) t(2,5) t(3,9) t(4,10) t(5,11) t(6,12) t(7,13) t(8,14) t(9,15)
+
+ State 0:
+  at(1,(1,1))
+ State 1:
+  at(1,(1,1))
+  move(1,(1,1),(2,1),4)
+ State 2:
+  at(1,(2,1))
+  move(1,(2,1),(2,2),4)
+ State 3:
+  at(1,(2,2))
+ State 4:
+  at(1,(2,2))
+ State 5:
+  at(1,(2,2))
+ State 6:
+  at(1,(2,2))
+ State 7:
+  at(1,(2,2))
+ State 8:
+  at(1,(2,2))
+  move(1,(2,2),(2,3),1)
+ State 9:
+  at(1,(2,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 2.310s (Solving: 0.28s 1st Model: 0.28s Unsat: 0.00s)
+CPU Time     : 2.117s
+
+Choices      : 668     
+Conflicts    : 247      (Analyzed: 247)
+Restarts     : 2        (Average: 123.50 Last: 47 Blocked: 0)
+Stab. Tests  : 2        (Full: 1 Partial: 1)
+Model-Level  : 9.0     
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 2093     (Deleted: 0)
+  Binary     : 151      (Ratio:   7.21%)
+  Ternary    : 154      (Ratio:   7.36%)
+  Conflict   : 247      (Average Length:   43.4 Ratio:  11.80%) 
+  Loop       : 1828     (Average Length:   23.8 Ratio:  87.34%) 
+  Other      : 18       (Average Length:    2.0 Ratio:   0.86%) 
+Backjumps    : 247      (Average:  2.56 Max:  14 Sum:    632)
+  Executed   : 245      (Average:  2.55 Max:  14 Sum:    630 Ratio:  99.68%)
+  Bounded    : 2        (Average:  1.00 Max:   1 Sum:      2 Ratio:   0.32%)
+
+Rules        : 179712   (Original: 178592)
+  Choice     : 1200    
+Atoms        : 122084  
+Disjunctions : 846      (Original: 846)
+Bodies       : 96715    (Original: 90519)
+  Count      : 0        (Original: 320)
+Equivalences : 191482   (Atom=Atom: 46788 Body=Body: 34011 Other: 110683)
+Tight        : No       (SCCs: 121 Non-Hcfs: 1 Nodes: 49065 Gammas: 5076)
+Variables    : 42747    (Eliminated:    0 Frozen: 36231)
+Constraints  : 134103   (Binary:  74.5% Ternary:  16.9% Other:   8.6%)
+
