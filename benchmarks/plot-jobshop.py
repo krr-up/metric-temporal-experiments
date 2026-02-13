@@ -250,9 +250,9 @@ def plot_instance_single(instance: str, attrs: list[str], df: pd.DataFrame):
 
 
 def main():
-    path = "results-mapf.xlsx"  # change this later
+    path = "results-jobshop-new.xlsx"  # change this later
     df = load_xlsx(path)
-    df.to_csv("results-mapf.csv", index=False)
+    df.to_csv("results-jobshop-new.csv", index=False)
     df_instances = load_and_clean(df)
 
     if len(sys.argv) > 1:
@@ -262,8 +262,8 @@ def main():
     # instance = "instances/ft06"
     full_instance = "instances/" + instance
     title = instance
-    # plot_instance_single(title, ["time"], df_instances[full_instance])
-    plot_instance(title, ["time"], df_instances[full_instance])
+    plot_instance_single(title, ["time"], df_instances[full_instance])
+    # plot_instance(title, ["time"], df_instances[full_instance])
 
 
 if __name__ == "__main__":

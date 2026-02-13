@@ -1,0 +1,1712 @@
+<result>
+	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB"/>
+	<config name="seq-generic" template="templates/seq-generic.sh"/>
+	<system name="memelingo" version="1" measures="rp_tmp" config="seq-generic" cmdline="--project=show --stats" cmdline_post="">
+		<setting name="lambda-small_10_mlp-tplp-ht" tag="lambdasmall" cmdline="-c lambda=10 --approach=mlp-tplp-ht" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_10_mlp-tplp-htc" tag="lambdasmall" cmdline="-c lambda=10 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_10_mlp-tplp-htcdl" tag="lambdasmall" cmdline="-c lambda=10 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_12_mlp-tplp-ht" tag="lambdasmall" cmdline="-c lambda=12 --approach=mlp-tplp-ht" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_12_mlp-tplp-htc" tag="lambdasmall" cmdline="-c lambda=12 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_12_mlp-tplp-htcdl" tag="lambdasmall" cmdline="-c lambda=12 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_14_mlp-tplp-ht" tag="lambdasmall" cmdline="-c lambda=14 --approach=mlp-tplp-ht" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_14_mlp-tplp-htc" tag="lambdasmall" cmdline="-c lambda=14 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_14_mlp-tplp-htcdl" tag="lambdasmall" cmdline="-c lambda=14 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_16_mlp-tplp-ht" tag="lambdasmall" cmdline="-c lambda=16 --approach=mlp-tplp-ht" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_16_mlp-tplp-htc" tag="lambdasmall" cmdline="-c lambda=16 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_16_mlp-tplp-htcdl" tag="lambdasmall" cmdline="-c lambda=16 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_18_mlp-tplp-ht" tag="lambdasmall" cmdline="-c lambda=18 --approach=mlp-tplp-ht" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_18_mlp-tplp-htc" tag="lambdasmall" cmdline="-c lambda=18 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_18_mlp-tplp-htcdl" tag="lambdasmall" cmdline="-c lambda=18 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_20_mlp-tplp-ht" tag="lambdasmall" cmdline="-c lambda=20 --approach=mlp-tplp-ht" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_20_mlp-tplp-htc" tag="lambdasmall" cmdline="-c lambda=20 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_20_mlp-tplp-htcdl" tag="lambdasmall" cmdline="-c lambda=20 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_22_mlp-tplp-ht" tag="lambdasmall" cmdline="-c lambda=22 --approach=mlp-tplp-ht" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_22_mlp-tplp-htc" tag="lambdasmall" cmdline="-c lambda=22 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-small_22_mlp-tplp-htcdl" tag="lambdasmall" cmdline="-c lambda=22 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_30_mlp-tplp-htc" tag="lambdalarge" cmdline="-c lambda=30 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_30_mlp-tplp-htcdl" tag="lambdalarge" cmdline="-c lambda=30 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_35_mlp-tplp-htc" tag="lambdalarge" cmdline="-c lambda=35 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_35_mlp-tplp-htcdl" tag="lambdalarge" cmdline="-c lambda=35 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_40_mlp-tplp-htc" tag="lambdalarge" cmdline="-c lambda=40 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_40_mlp-tplp-htcdl" tag="lambdalarge" cmdline="-c lambda=40 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_45_mlp-tplp-htc" tag="lambdalarge" cmdline="-c lambda=45 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_45_mlp-tplp-htcdl" tag="lambdalarge" cmdline="-c lambda=45 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_50_mlp-tplp-htc" tag="lambdalarge" cmdline="-c lambda=50 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_50_mlp-tplp-htcdl" tag="lambdalarge" cmdline="-c lambda=50 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_55_mlp-tplp-htc" tag="lambdalarge" cmdline="-c lambda=55 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_55_mlp-tplp-htcdl" tag="lambdalarge" cmdline="-c lambda=55 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_60_mlp-tplp-htc" tag="lambdalarge" cmdline="-c lambda=60 --approach=mlp-tplp-htc" dist_template="templates/single.dist">
+		</setting>
+		<setting name="lambda-large_60_mlp-tplp-htcdl" tag="lambdalarge" cmdline="-c lambda=60 --approach=mlp-tplp-htcdl" dist_template="templates/single.dist">
+		</setting>
+	</system>
+	<distjob name="dist-generic" timeout="1200" memout="20000" runs="1" template_options="--single" script_mode="timeout" walltime="86399" cpt="4" partition="kr"/>
+	<benchmark name="jobshop-suite-06">
+		<class name="instances" id="0">
+			<instance name="ft06" id="0" cmdline="--timepoint-limit=55">
+				<file name="ft06.lp"/>
+			</instance>
+		</class>
+	</benchmark>
+	<benchmark name="jobshop-suite-10">
+		<class name="instances" id="0">
+			<instance name="ft10const10" id="0">
+				<file name="ft10const10.lp"/>
+			</instance>
+			<instance name="ft10const15" id="1">
+				<file name="ft10const15.lp"/>
+			</instance>
+			<instance name="ft10const2" id="2">
+				<file name="ft10const2.lp"/>
+			</instance>
+			<instance name="ft10const5" id="3">
+				<file name="ft10const5.lp"/>
+			</instance>
+		</class>
+	</benchmark>
+	<project name="clasp-seq" job="dist-generic">
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_10_mlp-tplp-ht">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="47067.0"/>
+						<measure name="choices" type="float" val="8512193.0"/>
+						<measure name="conflicts" type="float" val="292475.0"/>
+						<measure name="ctime" type="float" val="314.518"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="8.06"/>
+						<measure name="mem" type="float" val="866.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="320.78"/>
+						<measure name="ptime" type="float" val="6.26"/>
+						<measure name="rchoices" type="float" val="360.0"/>
+						<measure name="restarts" type="float" val="788.0"/>
+						<measure name="roriginal" type="float" val="1697314.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1706377.0"/>
+						<measure name="status" type="string" val="UNSATISFIABLE"/>
+						<measure name="stime" type="float" val="306.46"/>
+						<measure name="time" type="float" val="320.78"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_10_mlp-tplp-htc">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="47489.0"/>
+						<measure name="choices" type="float" val="18411.0"/>
+						<measure name="conflicts" type="float" val="8681.0"/>
+						<measure name="ctime" type="float" val="4.536"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="0.92"/>
+						<measure name="mem" type="float" val="122.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="10.83"/>
+						<measure name="ptime" type="float" val="6.29"/>
+						<measure name="rchoices" type="float" val="360.0"/>
+						<measure name="restarts" type="float" val="42.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="77480.0"/>
+						<measure name="status" type="string" val="UNSATISFIABLE"/>
+						<measure name="stime" type="float" val="3.62"/>
+						<measure name="time" type="float" val="10.83"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_10_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="47479.0"/>
+						<measure name="choices" type="float" val="281003.0"/>
+						<measure name="conflicts" type="float" val="2515.0"/>
+						<measure name="ctime" type="float" val="2.847"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="0.9"/>
+						<measure name="mem" type="float" val="118.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="9.55"/>
+						<measure name="ptime" type="float" val="6.7"/>
+						<measure name="rchoices" type="float" val="360.0"/>
+						<measure name="restarts" type="float" val="15.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="77470.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="1.95"/>
+						<measure name="time" type="float" val="9.55"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_12_mlp-tplp-ht">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="57830.0"/>
+						<measure name="choices" type="float" val="171962.0"/>
+						<measure name="conflicts" type="float" val="114047.0"/>
+						<measure name="ctime" type="float" val="179.366"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="13.61"/>
+						<measure name="mem" type="float" val="1129.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="186.22"/>
+						<measure name="ptime" type="float" val="6.85"/>
+						<measure name="rchoices" type="float" val="432.0"/>
+						<measure name="restarts" type="float" val="381.0"/>
+						<measure name="roriginal" type="float" val="2372080.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2382465.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="165.76"/>
+						<measure name="time" type="float" val="186.22"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_12_mlp-tplp-htc">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="58529.0"/>
+						<measure name="choices" type="float" val="29055.0"/>
+						<measure name="conflicts" type="float" val="9679.0"/>
+						<measure name="ctime" type="float" val="6.19"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="1.14"/>
+						<measure name="mem" type="float" val="145.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="12.61"/>
+						<measure name="ptime" type="float" val="6.42"/>
+						<measure name="rchoices" type="float" val="432.0"/>
+						<measure name="restarts" type="float" val="45.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="99618.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="5.05"/>
+						<measure name="time" type="float" val="12.61"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_12_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="58517.0"/>
+						<measure name="choices" type="float" val="642852.0"/>
+						<measure name="conflicts" type="float" val="3393.0"/>
+						<measure name="ctime" type="float" val="5.715"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="1.12"/>
+						<measure name="mem" type="float" val="139.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="12.43"/>
+						<measure name="ptime" type="float" val="6.71"/>
+						<measure name="rchoices" type="float" val="432.0"/>
+						<measure name="restarts" type="float" val="24.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="99606.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="4.6"/>
+						<measure name="time" type="float" val="12.43"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_14_mlp-tplp-ht">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="69237.0"/>
+						<measure name="choices" type="float" val="6390101.0"/>
+						<measure name="conflicts" type="float" val="227134.0"/>
+						<measure name="ctime" type="float" val="306.079"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="15.27"/>
+						<measure name="mem" type="float" val="1452.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="312.71"/>
+						<measure name="ptime" type="float" val="6.63"/>
+						<measure name="rchoices" type="float" val="504.0"/>
+						<measure name="restarts" type="float" val="652.0"/>
+						<measure name="roriginal" type="float" val="3118727.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3130110.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="290.81"/>
+						<measure name="time" type="float" val="312.71"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_14_mlp-tplp-htc">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="70297.0"/>
+						<measure name="choices" type="float" val="69246.0"/>
+						<measure name="conflicts" type="float" val="20355.0"/>
+						<measure name="ctime" type="float" val="14.703"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="1.45"/>
+						<measure name="mem" type="float" val="168.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="21.76"/>
+						<measure name="ptime" type="float" val="7.06"/>
+						<measure name="rchoices" type="float" val="504.0"/>
+						<measure name="restarts" type="float" val="82.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="124172.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="13.25"/>
+						<measure name="time" type="float" val="21.76"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_14_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="70283.0"/>
+						<measure name="choices" type="float" val="978492.0"/>
+						<measure name="conflicts" type="float" val="4996.0"/>
+						<measure name="ctime" type="float" val="10.124"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="1.38"/>
+						<measure name="mem" type="float" val="162.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="16.76"/>
+						<measure name="ptime" type="float" val="6.64"/>
+						<measure name="rchoices" type="float" val="504.0"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="124158.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="8.74"/>
+						<measure name="time" type="float" val="16.76"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_16_mlp-tplp-ht">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="81288.0"/>
+						<measure name="choices" type="float" val="5754577.0"/>
+						<measure name="conflicts" type="float" val="227057.0"/>
+						<measure name="ctime" type="float" val="331.421"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="20.58"/>
+						<measure name="mem" type="float" val="1750.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="338.49"/>
+						<measure name="ptime" type="float" val="7.07"/>
+						<measure name="rchoices" type="float" val="576.0"/>
+						<measure name="restarts" type="float" val="634.0"/>
+						<measure name="roriginal" type="float" val="3921907.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3933988.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="310.84"/>
+						<measure name="time" type="float" val="338.49"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_16_mlp-tplp-htc">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="82793.0"/>
+						<measure name="choices" type="float" val="45707.0"/>
+						<measure name="conflicts" type="float" val="8456.0"/>
+						<measure name="ctime" type="float" val="6.752"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="1.67"/>
+						<measure name="mem" type="float" val="193.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="13.7"/>
+						<measure name="ptime" type="float" val="6.95"/>
+						<measure name="rchoices" type="float" val="576.0"/>
+						<measure name="restarts" type="float" val="31.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="151142.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="5.08"/>
+						<measure name="time" type="float" val="13.7"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_16_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="82777.0"/>
+						<measure name="choices" type="float" val="1911730.0"/>
+						<measure name="conflicts" type="float" val="4159.0"/>
+						<measure name="ctime" type="float" val="15.639"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="1.63"/>
+						<measure name="mem" type="float" val="187.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="22.37"/>
+						<measure name="ptime" type="float" val="6.73"/>
+						<measure name="rchoices" type="float" val="576.0"/>
+						<measure name="restarts" type="float" val="28.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="151126.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="14.01"/>
+						<measure name="time" type="float" val="22.37"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_18_mlp-tplp-ht">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="93983.0"/>
+						<measure name="choices" type="float" val="926712.0"/>
+						<measure name="conflicts" type="float" val="61418.0"/>
+						<measure name="ctime" type="float" val="124.799"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="26.25"/>
+						<measure name="mem" type="float" val="2055.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="131.53"/>
+						<measure name="ptime" type="float" val="6.73"/>
+						<measure name="rchoices" type="float" val="648.0"/>
+						<measure name="restarts" type="float" val="226.0"/>
+						<measure name="roriginal" type="float" val="4767184.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="4779687.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="98.55"/>
+						<measure name="time" type="float" val="131.53"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_18_mlp-tplp-htc">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="96017.0"/>
+						<measure name="choices" type="float" val="36189.0"/>
+						<measure name="conflicts" type="float" val="4722.0"/>
+						<measure name="ctime" type="float" val="5.522"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="2.0"/>
+						<measure name="mem" type="float" val="222.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="12.49"/>
+						<measure name="ptime" type="float" val="6.97"/>
+						<measure name="rchoices" type="float" val="648.0"/>
+						<measure name="restarts" type="float" val="21.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="180528.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="3.52"/>
+						<measure name="time" type="float" val="12.49"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_18_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="95999.0"/>
+						<measure name="choices" type="float" val="2663873.0"/>
+						<measure name="conflicts" type="float" val="4223.0"/>
+						<measure name="ctime" type="float" val="21.822"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="1.91"/>
+						<measure name="mem" type="float" val="214.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="28.88"/>
+						<measure name="ptime" type="float" val="7.06"/>
+						<measure name="rchoices" type="float" val="648.0"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="180510.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="19.91"/>
+						<measure name="time" type="float" val="28.88"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_20_mlp-tplp-ht">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="107322.0"/>
+						<measure name="choices" type="float" val="50232.0"/>
+						<measure name="conflicts" type="float" val="13156.0"/>
+						<measure name="ctime" type="float" val="62.715"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="32.01"/>
+						<measure name="mem" type="float" val="2410.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="69.84"/>
+						<measure name="ptime" type="float" val="7.12"/>
+						<measure name="rchoices" type="float" val="720.0"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="roriginal" type="float" val="5641034.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="5653707.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="30.71"/>
+						<measure name="time" type="float" val="69.84"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_20_mlp-tplp-htc">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="109969.0"/>
+						<measure name="choices" type="float" val="37282.0"/>
+						<measure name="conflicts" type="float" val="5070.0"/>
+						<measure name="ctime" type="float" val="7.026"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="2.37"/>
+						<measure name="mem" type="float" val="253.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="13.83"/>
+						<measure name="ptime" type="float" val="6.8"/>
+						<measure name="rchoices" type="float" val="720.0"/>
+						<measure name="restarts" type="float" val="27.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="212330.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="4.66"/>
+						<measure name="time" type="float" val="13.83"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_20_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="109949.0"/>
+						<measure name="choices" type="float" val="4204672.0"/>
+						<measure name="conflicts" type="float" val="5561.0"/>
+						<measure name="ctime" type="float" val="36.787"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="2.26"/>
+						<measure name="mem" type="float" val="243.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="43.6"/>
+						<measure name="ptime" type="float" val="6.81"/>
+						<measure name="rchoices" type="float" val="720.0"/>
+						<measure name="restarts" type="float" val="36.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="212310.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="34.53"/>
+						<measure name="time" type="float" val="43.6"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_22_mlp-tplp-ht">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="121305.0"/>
+						<measure name="choices" type="float" val="764685.0"/>
+						<measure name="conflicts" type="float" val="34429.0"/>
+						<measure name="ctime" type="float" val="102.8"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="38.4"/>
+						<measure name="mem" type="float" val="2779.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="110.07"/>
+						<measure name="ptime" type="float" val="7.27"/>
+						<measure name="rchoices" type="float" val="792.0"/>
+						<measure name="restarts" type="float" val="125.0"/>
+						<measure name="roriginal" type="float" val="6530845.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="6543460.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="64.4"/>
+						<measure name="time" type="float" val="110.07"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_22_mlp-tplp-htc">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="124649.0"/>
+						<measure name="choices" type="float" val="59214.0"/>
+						<measure name="conflicts" type="float" val="5916.0"/>
+						<measure name="ctime" type="float" val="7.622"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="2.33"/>
+						<measure name="mem" type="float" val="294.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="14.3"/>
+						<measure name="ptime" type="float" val="6.68"/>
+						<measure name="rchoices" type="float" val="792.0"/>
+						<measure name="restarts" type="float" val="28.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="246548.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="5.29"/>
+						<measure name="time" type="float" val="14.3"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-06" setting="lambda-small_22_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="124627.0"/>
+						<measure name="choices" type="float" val="5651032.0"/>
+						<measure name="conflicts" type="float" val="6948.0"/>
+						<measure name="ctime" type="float" val="46.952"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="2.25"/>
+						<measure name="mem" type="float" val="279.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="53.45"/>
+						<measure name="ptime" type="float" val="6.5"/>
+						<measure name="rchoices" type="float" val="792.0"/>
+						<measure name="restarts" type="float" val="45.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="246526.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="44.7"/>
+						<measure name="time" type="float" val="53.45"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_30_mlp-tplp-htc">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20002.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20002.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20003.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20006.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_30_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="499745.0"/>
+						<measure name="choices" type="float" val="2587271.0"/>
+						<measure name="conflicts" type="float" val="5169.0"/>
+						<measure name="ctime" type="float" val="78.972"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="9.18"/>
+						<measure name="mem" type="float" val="1110.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="88.99"/>
+						<measure name="ptime" type="float" val="10.02"/>
+						<measure name="rchoices" type="float" val="3000.0"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1120051.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="69.79"/>
+						<measure name="time" type="float" val="88.99"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="499745.0"/>
+						<measure name="choices" type="float" val="3354543.0"/>
+						<measure name="conflicts" type="float" val="10442.0"/>
+						<measure name="ctime" type="float" val="75.923"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="9.15"/>
+						<measure name="mem" type="float" val="1109.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="84.47"/>
+						<measure name="ptime" type="float" val="8.55"/>
+						<measure name="rchoices" type="float" val="3000.0"/>
+						<measure name="restarts" type="float" val="47.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1120051.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="66.77"/>
+						<measure name="time" type="float" val="84.47"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="499745.0"/>
+						<measure name="choices" type="float" val="2870549.0"/>
+						<measure name="conflicts" type="float" val="2452.0"/>
+						<measure name="ctime" type="float" val="70.638"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="9.15"/>
+						<measure name="mem" type="float" val="1108.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="79.55"/>
+						<measure name="ptime" type="float" val="8.91"/>
+						<measure name="rchoices" type="float" val="3000.0"/>
+						<measure name="restarts" type="float" val="20.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1120051.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="61.49"/>
+						<measure name="time" type="float" val="79.55"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="499745.0"/>
+						<measure name="choices" type="float" val="2905399.0"/>
+						<measure name="conflicts" type="float" val="9013.0"/>
+						<measure name="ctime" type="float" val="78.456"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="9.06"/>
+						<measure name="mem" type="float" val="1107.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="87.94"/>
+						<measure name="ptime" type="float" val="9.48"/>
+						<measure name="rchoices" type="float" val="3000.0"/>
+						<measure name="restarts" type="float" val="47.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1120051.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="69.4"/>
+						<measure name="time" type="float" val="87.94"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_35_mlp-tplp-htc">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20003.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20003.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20003.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20005.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_35_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="617115.0"/>
+						<measure name="choices" type="float" val="5138564.0"/>
+						<measure name="conflicts" type="float" val="7524.0"/>
+						<measure name="ctime" type="float" val="125.472"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="11.85"/>
+						<measure name="mem" type="float" val="1425.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="135.33"/>
+						<measure name="ptime" type="float" val="9.86"/>
+						<measure name="rchoices" type="float" val="3500.0"/>
+						<measure name="restarts" type="float" val="47.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1445626.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="113.62"/>
+						<measure name="time" type="float" val="135.33"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="617115.0"/>
+						<measure name="choices" type="float" val="5806346.0"/>
+						<measure name="conflicts" type="float" val="9267.0"/>
+						<measure name="ctime" type="float" val="115.444"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="11.84"/>
+						<measure name="mem" type="float" val="1425.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="125.63"/>
+						<measure name="ptime" type="float" val="10.19"/>
+						<measure name="rchoices" type="float" val="3500.0"/>
+						<measure name="restarts" type="float" val="54.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1445626.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="103.6"/>
+						<measure name="time" type="float" val="125.63"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="617115.0"/>
+						<measure name="choices" type="float" val="5999289.0"/>
+						<measure name="conflicts" type="float" val="2468.0"/>
+						<measure name="ctime" type="float" val="137.369"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="11.87"/>
+						<measure name="mem" type="float" val="1430.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="147.2"/>
+						<measure name="ptime" type="float" val="9.83"/>
+						<measure name="rchoices" type="float" val="3500.0"/>
+						<measure name="restarts" type="float" val="21.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1445626.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="125.5"/>
+						<measure name="time" type="float" val="147.2"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="617115.0"/>
+						<measure name="choices" type="float" val="8337421.0"/>
+						<measure name="conflicts" type="float" val="8367.0"/>
+						<measure name="ctime" type="float" val="152.648"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="11.8"/>
+						<measure name="mem" type="float" val="1424.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="161.84"/>
+						<measure name="ptime" type="float" val="9.19"/>
+						<measure name="rchoices" type="float" val="3500.0"/>
+						<measure name="restarts" type="float" val="48.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1445626.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="140.85"/>
+						<measure name="time" type="float" val="161.84"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_40_mlp-tplp-htc">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20415.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20014.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20442.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20343.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_40_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="744685.0"/>
+						<measure name="choices" type="float" val="7000744.0"/>
+						<measure name="conflicts" type="float" val="6720.0"/>
+						<measure name="ctime" type="float" val="200.026"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="15.14"/>
+						<measure name="mem" type="float" val="1778.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="209.66"/>
+						<measure name="ptime" type="float" val="9.63"/>
+						<measure name="rchoices" type="float" val="4000.0"/>
+						<measure name="restarts" type="float" val="43.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1811326.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="184.89"/>
+						<measure name="time" type="float" val="209.66"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="744685.0"/>
+						<measure name="choices" type="float" val="11663403.0"/>
+						<measure name="conflicts" type="float" val="9794.0"/>
+						<measure name="ctime" type="float" val="233.253"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="15.02"/>
+						<measure name="mem" type="float" val="1778.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="243.3"/>
+						<measure name="ptime" type="float" val="10.05"/>
+						<measure name="rchoices" type="float" val="4000.0"/>
+						<measure name="restarts" type="float" val="59.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1811326.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="218.23"/>
+						<measure name="time" type="float" val="243.3"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="744685.0"/>
+						<measure name="choices" type="float" val="11233433.0"/>
+						<measure name="conflicts" type="float" val="3295.0"/>
+						<measure name="ctime" type="float" val="246.838"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="14.98"/>
+						<measure name="mem" type="float" val="1778.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="256.59"/>
+						<measure name="ptime" type="float" val="9.75"/>
+						<measure name="rchoices" type="float" val="4000.0"/>
+						<measure name="restarts" type="float" val="22.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1811326.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="231.86"/>
+						<measure name="time" type="float" val="256.59"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="744685.0"/>
+						<measure name="choices" type="float" val="7281971.0"/>
+						<measure name="conflicts" type="float" val="15354.0"/>
+						<measure name="ctime" type="float" val="224.783"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="15.06"/>
+						<measure name="mem" type="float" val="1779.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="234.91"/>
+						<measure name="ptime" type="float" val="10.13"/>
+						<measure name="rchoices" type="float" val="4000.0"/>
+						<measure name="restarts" type="float" val="69.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1811326.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="209.72"/>
+						<measure name="time" type="float" val="234.91"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_45_mlp-tplp-htc">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20001.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20002.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20006.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20003.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_45_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="882455.0"/>
+						<measure name="choices" type="float" val="9915166.0"/>
+						<measure name="conflicts" type="float" val="8784.0"/>
+						<measure name="ctime" type="float" val="330.481"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="19.13"/>
+						<measure name="mem" type="float" val="2222.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="341.32"/>
+						<measure name="ptime" type="float" val="10.84"/>
+						<measure name="rchoices" type="float" val="4500.0"/>
+						<measure name="restarts" type="float" val="59.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2217151.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="311.35"/>
+						<measure name="time" type="float" val="341.32"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="882455.0"/>
+						<measure name="choices" type="float" val="11125893.0"/>
+						<measure name="conflicts" type="float" val="10174.0"/>
+						<measure name="ctime" type="float" val="305.223"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="19.1"/>
+						<measure name="mem" type="float" val="2221.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="316.06"/>
+						<measure name="ptime" type="float" val="10.84"/>
+						<measure name="rchoices" type="float" val="4500.0"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2217151.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="286.12"/>
+						<measure name="time" type="float" val="316.06"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="882455.0"/>
+						<measure name="choices" type="float" val="14985817.0"/>
+						<measure name="conflicts" type="float" val="4765.0"/>
+						<measure name="ctime" type="float" val="378.304"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="19.07"/>
+						<measure name="mem" type="float" val="2223.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="387.99"/>
+						<measure name="ptime" type="float" val="9.69"/>
+						<measure name="rchoices" type="float" val="4500.0"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2217151.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="359.23"/>
+						<measure name="time" type="float" val="387.99"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="882455.0"/>
+						<measure name="choices" type="float" val="9169981.0"/>
+						<measure name="conflicts" type="float" val="10553.0"/>
+						<measure name="ctime" type="float" val="288.943"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="19.14"/>
+						<measure name="mem" type="float" val="2222.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="299.43"/>
+						<measure name="ptime" type="float" val="10.49"/>
+						<measure name="rchoices" type="float" val="4500.0"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2217151.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="269.8"/>
+						<measure name="time" type="float" val="299.43"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_50_mlp-tplp-htc">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20002.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20003.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20004.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20001.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_50_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="1030425.0"/>
+						<measure name="choices" type="float" val="16274725.0"/>
+						<measure name="conflicts" type="float" val="8098.0"/>
+						<measure name="ctime" type="float" val="482.529"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="23.12"/>
+						<measure name="mem" type="float" val="2673.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="490.64"/>
+						<measure name="ptime" type="float" val="8.11"/>
+						<measure name="rchoices" type="float" val="5000.0"/>
+						<measure name="restarts" type="float" val="52.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2663101.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="459.41"/>
+						<measure name="time" type="float" val="490.64"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="1030425.0"/>
+						<measure name="choices" type="float" val="16466189.0"/>
+						<measure name="conflicts" type="float" val="25692.0"/>
+						<measure name="ctime" type="float" val="520.507"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="23.45"/>
+						<measure name="mem" type="float" val="2678.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="528.11"/>
+						<measure name="ptime" type="float" val="7.6"/>
+						<measure name="rchoices" type="float" val="5000.0"/>
+						<measure name="restarts" type="float" val="125.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2663101.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="497.06"/>
+						<measure name="time" type="float" val="528.11"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="1030425.0"/>
+						<measure name="choices" type="float" val="22410515.0"/>
+						<measure name="conflicts" type="float" val="4563.0"/>
+						<measure name="ctime" type="float" val="548.983"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="23.51"/>
+						<measure name="mem" type="float" val="2672.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="557.31"/>
+						<measure name="ptime" type="float" val="8.33"/>
+						<measure name="rchoices" type="float" val="5000.0"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2663101.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="525.47"/>
+						<measure name="time" type="float" val="557.31"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="1030425.0"/>
+						<measure name="choices" type="float" val="15841226.0"/>
+						<measure name="conflicts" type="float" val="9953.0"/>
+						<measure name="ctime" type="float" val="487.702"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="23.58"/>
+						<measure name="mem" type="float" val="2683.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="497.9"/>
+						<measure name="ptime" type="float" val="10.2"/>
+						<measure name="rchoices" type="float" val="5000.0"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2663101.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="464.12"/>
+						<measure name="time" type="float" val="497.9"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_55_mlp-tplp-htc">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20003.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20002.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20000.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20001.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_55_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="1188595.0"/>
+						<measure name="choices" type="float" val="20809899.0"/>
+						<measure name="conflicts" type="float" val="10125.0"/>
+						<measure name="ctime" type="float" val="667.107"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="28.46"/>
+						<measure name="mem" type="float" val="3165.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="676.25"/>
+						<measure name="ptime" type="float" val="9.14"/>
+						<measure name="rchoices" type="float" val="5500.0"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3149176.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="638.65"/>
+						<measure name="time" type="float" val="676.25"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="1188595.0"/>
+						<measure name="choices" type="float" val="46746530.0"/>
+						<measure name="conflicts" type="float" val="16311.0"/>
+						<measure name="ctime" type="float" val="755.217"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="30.58"/>
+						<measure name="mem" type="float" val="3167.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="765.94"/>
+						<measure name="ptime" type="float" val="10.72"/>
+						<measure name="rchoices" type="float" val="5500.0"/>
+						<measure name="restarts" type="float" val="85.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3149176.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="724.64"/>
+						<measure name="time" type="float" val="765.94"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="1188595.0"/>
+						<measure name="choices" type="float" val="31327844.0"/>
+						<measure name="conflicts" type="float" val="5492.0"/>
+						<measure name="ctime" type="float" val="863.526"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="28.33"/>
+						<measure name="mem" type="float" val="3166.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="874.06"/>
+						<measure name="ptime" type="float" val="10.53"/>
+						<measure name="rchoices" type="float" val="5500.0"/>
+						<measure name="restarts" type="float" val="34.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3149176.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="835.2"/>
+						<measure name="time" type="float" val="874.06"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="1188595.0"/>
+						<measure name="choices" type="float" val="24929699.0"/>
+						<measure name="conflicts" type="float" val="17942.0"/>
+						<measure name="ctime" type="float" val="800.968"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="28.22"/>
+						<measure name="mem" type="float" val="3160.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="810.46"/>
+						<measure name="ptime" type="float" val="9.49"/>
+						<measure name="rchoices" type="float" val="5500.0"/>
+						<measure name="restarts" type="float" val="95.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3149176.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="772.75"/>
+						<measure name="time" type="float" val="810.46"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_60_mlp-tplp-htc">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20002.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20003.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20002.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20001.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="jobshop-suite-10" setting="lambda-large_60_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="1356965.0"/>
+						<measure name="choices" type="float" val="31384028.0"/>
+						<measure name="conflicts" type="float" val="11145.0"/>
+						<measure name="ctime" type="float" val="921.132"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="34.99"/>
+						<measure name="mem" type="float" val="3705.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="931.44"/>
+						<measure name="ptime" type="float" val="10.31"/>
+						<measure name="rchoices" type="float" val="6000.0"/>
+						<measure name="restarts" type="float" val="62.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3675376.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="886.14"/>
+						<measure name="time" type="float" val="931.44"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="1356965.0"/>
+						<measure name="choices" type="float" val="32985099.0"/>
+						<measure name="conflicts" type="float" val="20692.0"/>
+						<measure name="ctime" type="float" val="957.911"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="35.01"/>
+						<measure name="mem" type="float" val="3704.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="968.26"/>
+						<measure name="ptime" type="float" val="10.35"/>
+						<measure name="rchoices" type="float" val="6000.0"/>
+						<measure name="restarts" type="float" val="109.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3675376.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="922.9"/>
+						<measure name="time" type="float" val="968.26"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="1356965.0"/>
+						<measure name="choices" type="float" val="43034678.0"/>
+						<measure name="conflicts" type="float" val="7562.0"/>
+						<measure name="ctime" type="float" val="1191.396"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="35.39"/>
+						<measure name="mem" type="float" val="3700.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="8.6"/>
+						<measure name="rchoices" type="float" val="6000.0"/>
+						<measure name="restarts" type="float" val="51.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="3675376.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1156.01"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="1356965.0"/>
+						<measure name="choices" type="float" val="27739447.0"/>
+						<measure name="conflicts" type="float" val="15561.0"/>
+						<measure name="ctime" type="float" val="902.432"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="gtime" type="float" val="35.28"/>
+						<measure name="mem" type="float" val="3704.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="912.57"/>
+						<measure name="ptime" type="float" val="10.14"/>
+						<measure name="rchoices" type="float" val="6000.0"/>
+						<measure name="restarts" type="float" val="85.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="3675376.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="867.15"/>
+						<measure name="time" type="float" val="912.57"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+	</project>
+</result>
