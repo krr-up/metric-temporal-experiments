@@ -13,7 +13,7 @@
 		</setting>
 	</system>
 
-	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
+	<distjob name="dist-generic" timeout="3600s" runs="1" template_options="--single"
 		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
 
 	<benchmark name="mapf-suite-x6_y6">
@@ -27,9 +27,6 @@
 			<add file="instances/x6_y6_a1_f25.lp" cmdline="--timepoint-limit=375" />
 			<add file="instances/x6_y6_a1_f30.lp" cmdline="--timepoint-limit=450" />
 			<add file="instances/x6_y6_a1_f35.lp" cmdline="--timepoint-limit=525" />
-			<add file="instances/x6_y6_a1_f40.lp" cmdline="--timepoint-limit=600" />
-			<add file="instances/x6_y6_a1_f45.lp" cmdline="--timepoint-limit=675" />
-			<add file="instances/x6_y6_a1_f50.lp" cmdline="--timepoint-limit=750" />
 			<add file="instances/x6_y6_a2_f1.lp" cmdline="--timepoint-limit=15" />
 			<add file="instances/x6_y6_a2_f5.lp" cmdline="--timepoint-limit=75" />
 			<add file="instances/x6_y6_a2_f10.lp" cmdline="--timepoint-limit=150" />
@@ -38,9 +35,6 @@
 			<add file="instances/x6_y6_a2_f25.lp" cmdline="--timepoint-limit=375" />
 			<add file="instances/x6_y6_a2_f30.lp" cmdline="--timepoint-limit=450" />
 			<add file="instances/x6_y6_a2_f35.lp" cmdline="--timepoint-limit=525" />
-			<add file="instances/x6_y6_a2_f40.lp" cmdline="--timepoint-limit=600" />
-			<add file="instances/x6_y6_a2_f45.lp" cmdline="--timepoint-limit=675" />
-			<add file="instances/x6_y6_a2_f50.lp" cmdline="--timepoint-limit=750" />
 			<add file="instances/x6_y6_a3_f1.lp" cmdline="--timepoint-limit=15" />
 			<add file="instances/x6_y6_a3_f5.lp" cmdline="--timepoint-limit=75" />
 			<add file="instances/x6_y6_a3_f10.lp" cmdline="--timepoint-limit=150" />
@@ -49,9 +43,6 @@
 			<add file="instances/x6_y6_a3_f25.lp" cmdline="--timepoint-limit=375" />
 			<add file="instances/x6_y6_a3_f30.lp" cmdline="--timepoint-limit=450" />
 			<add file="instances/x6_y6_a3_f35.lp" cmdline="--timepoint-limit=525" />
-			<add file="instances/x6_y6_a3_f40.lp" cmdline="--timepoint-limit=600" />
-			<add file="instances/x6_y6_a3_f45.lp" cmdline="--timepoint-limit=675" />
-			<add file="instances/x6_y6_a3_f50.lp" cmdline="--timepoint-limit=750" />
 			<add file="instances/x6_y6_a4_f1.lp" cmdline="--timepoint-limit=15" />
 			<add file="instances/x6_y6_a4_f5.lp" cmdline="--timepoint-limit=75" />
 			<add file="instances/x6_y6_a4_f10.lp" cmdline="--timepoint-limit=150" />
@@ -60,9 +51,6 @@
 			<add file="instances/x6_y6_a4_f25.lp" cmdline="--timepoint-limit=375" />
 			<add file="instances/x6_y6_a4_f30.lp" cmdline="--timepoint-limit=450" />
 			<add file="instances/x6_y6_a4_f35.lp" cmdline="--timepoint-limit=525" />
-			<add file="instances/x6_y6_a4_f40.lp" cmdline="--timepoint-limit=600" />
-			<add file="instances/x6_y6_a4_f45.lp" cmdline="--timepoint-limit=675" />
-			<add file="instances/x6_y6_a4_f50.lp" cmdline="--timepoint-limit=750" />
 		</files>
 	</benchmark>
 
