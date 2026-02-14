@@ -609,7 +609,6 @@ def plot_multiple_instances_by_row(
                                 statuses.append(inst_df.loc[benchmark, "status"])
                             else:
                                 statuses.append(None)
-
             if not groups:
                 continue
 
@@ -777,7 +776,7 @@ def main():
             save_path=save_path,
             dpi=300,
             group_skip={30, 35, 40, 45, 50},
-            approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
+            # approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
             subplot_titles=subplot_titles,
         )
 

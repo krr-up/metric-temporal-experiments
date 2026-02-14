@@ -9,7 +9,7 @@
 		config="seq-generic"
 		cmdline="--project=show --stats">
 		<setting name="lambda-small" tag="lambdasmall">
-			<variable cmd="-c lambda={}" value="10;12;14;16;18;20;22" />
+			<variable cmd="-c lambda={}" value="10;12;14;16;18;20;22;24;26;28;30" />
 			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 		<setting name="lambda-large" tag="lambdalarge">
@@ -23,15 +23,15 @@
 		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
 
 	<benchmark name="jobshop-suite-06">
-		<files path="../examples/benchmarks/job-shop">
-			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
 			<add file="instances/ft06.lp" cmdline="--timepoint-limit=55" />
 		</files>
 	</benchmark>
 
 	<benchmark name="jobshop-suite-10">
-		<files path="../examples/benchmarks/job-shop">
-			<encoding file="../examples/benchmarks/job-shop/job-shop.lp" />
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
 			<add file="instances/ft10const2.lp" />
 			<add file="instances/ft10const5.lp" />
 			<add file="instances/ft10const10.lp" />
@@ -43,7 +43,6 @@
 	<project
 		name="clasp-seq" job="dist-generic">
 		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
-		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
 	</project>
 
 

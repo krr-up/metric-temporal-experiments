@@ -9,7 +9,6 @@
 item(icard). item(cash).
 loc(dentist). loc(office). loc(atm). loc(home).
 
-#const size = 1.
 distance(dentist,home,20*size).
 distance(dentist,office,30*size).
 distance(dentist,atm,40*size).
@@ -48,4 +47,5 @@ next((0,w),at(I,L)) :- at(I,L), item(I), not has(_,I), not finally.
 #external at(I,L): item(I), loc(L).
 #external has(ram,I): item(I).
 
-#show show(go(P,L)):go(P,L).
+#show _show(go(P,L)):go(P,L).
+#show _show(at(P,L)):at(P,L).

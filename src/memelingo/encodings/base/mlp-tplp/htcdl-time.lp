@@ -5,3 +5,5 @@
 &diff{t(0)} = 0 :- time(0).
 
 &diff{t(K) - t(K+1)} <= -1:- time(K), time(K+1).
+
+&diff{t(K)} <= L:- time(K), timepoint_limit(L).

@@ -13,12 +13,26 @@ from . import reify
 
 # from .approaches.asp import ASPApproach
 # from .approaches.clingcon import ClingconApproach
-from .approaches.mlp import MLPhtExtended
-from .approaches.mlp_htc import MLPhtcExtended, MLPhtcExtendedDL
+from .approaches.mlp import MLPhtExtended, MLPhtPlain
+from .approaches.mlp_htc import (
+    MLPhtcExtended,
+    MLPhtcExtendedDL,
+    MLPhtcPlain,
+    MLPhtcPlainDL,
+)
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 
 log = logging.getLogger("main")
+
+APPROACHES = {
+    "mlp-lpnmr-ht": MLPhtPlain,
+    "mlp-lpnmr-htc": MLPhtcPlain,
+    "mlp-lpnmr-htcdl": MLPhtcPlainDL,
+    "mlp-tplp-htc": MLPhtcExtended,
+    "mlp-tplp-htcdl": MLPhtcExtendedDL,
+    "mlp-tplp-ht": MLPhtExtended,
+}
 
 
 def _sym_to_prg(symbols: Sequence[Symbol]):
@@ -63,19 +77,12 @@ class MemelingoApp(Application):
         #     self._approach_class = ClingconApproach
         # elif approach == "asp":
         #     self._approach_class = ASPApproach
-        # elif approach == "mlp":
-        #     self._approach_class = MLPht
-        # elif approach == "mlp-htc":
-        #     self._approach_class = MLPhtc
-        if approach == "mlp-tplp-htc":
-            self._approach_class = MLPhtcExtended
-        elif approach == "mlp-tplp-htcdl":
-            self._approach_class = MLPhtcExtendedDL
-        elif approach == "mlp-tplp-ht":
-            self._approach_class = MLPhtExtended
-        else:
+        if approach not in APPROACHES:
+            log.error(
+                f"Approach {approach} not recognized. Available approaches: {', '.join(APPROACHES.keys())}"
+            )
             return False
-
+        self._approach_class = APPROACHES[approach]
         return True
 
     def parse_timepoint_limit(self, timepoint):
@@ -163,7 +170,8 @@ class MemelingoApp(Application):
             else:
                 extra_shown.append(sym)
         if len(extra_shown) > 0:
-            sys.stdout.write(" Other shown symbols:\n")
+            # sys.stdout.write(" Other shown symbols:\n")
+            sys.stdout.write("\n")
             for sym in extra_shown:
                 sys.stdout.write(" {}".format(sym))
             sys.stdout.write("\n\n")

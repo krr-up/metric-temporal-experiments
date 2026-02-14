@@ -8,6 +8,28 @@ import os
 from . import MyApproach, ENCODINGS_PATH
 
 
+class MLPhtPlain(MyApproach):
+    """
+    ASP approach for metric logic TPLP version
+    """
+
+    def __init__(self, ctl: Control, timepoint_limit):
+        """
+        Creates the approach
+        Args:
+            ctl (Control): clingo COntrol
+        """
+        super().__init__(ctl, timepoint_limit, ["mlp-lpnmr-ht.lp"])
+
+    def load(self, reified_prg: str):
+        """
+        Loads and adds needed info.
+        Args:
+            reified_prg (str): The reified program as a string
+        """
+        super().load(reified_prg)
+
+
 class MLPhtExtended(MyApproach):
     """
     ASP approach for metric logic TPLP version

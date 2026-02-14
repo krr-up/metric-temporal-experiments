@@ -4,9 +4,9 @@ The Approach utils
 
 import logging
 import os
-from typing import Callable, List, Optional
+from typing import Any, Callable, List, Optional
 
-from clingo import Control, Model
+from clingo import Control, Function, Model, Number
 from clingo.ast import ProgramBuilder, parse_files
 from clingo.theory import Theory
 from clingox.program import Program, ProgramObserver
@@ -107,7 +107,23 @@ class MyApproach:
             on_model (Optional[Callable], optional): A possible callback. Defaults to None.
         """
         log.info("Solving...")
-        self.ctl.solve(on_model=on_model)  # nocoverage
+        self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+
+    def custom_on_model(self, on_model: Optional[Callable] = None) -> Callable:
+        """
+        Custom on_model that takes care of assignments
+        Args:
+            on_model (Callable[..., Any] | None, optional): A possible callback. Defaults to None.
+
+        Returns:
+            : A function that can be passed to the on_model in solve
+        """
+
+        def on_model_function(mdl: Model):
+            if on_model is not None:
+                on_model(mdl)
+
+        return on_model_function
 
 
 class CApproach(MyApproach):
@@ -173,19 +189,24 @@ class CApproach(MyApproach):
         else:
             log.info("No timepoint limit provided, using unbounded timepoints.")
 
-    def custom_on_model(self, on_model: Optional[Callable] = None) -> Callable:
+    def custom_on_model(
+        self, on_model: Optional[Callable[..., Any]] = None
+    ) -> Callable:
         """
         Custom on_model that takes care of assignments
         Args:
             on_model (Callable[..., Any] | None, optional): A possible callback. Defaults to None.
 
         Returns:
-            : A function that can be passed to the on_model in solve
+            _type_: A function that can be passed to the on_model in solve
         """
+        super_f = super().custom_on_model(on_model)
 
-        def on_model_function(mdl: Model):
-            if on_model is not None:
-                on_model(mdl)
+        def on_model_function(mdl: Model) -> None:
+            for key, val in self.theory.assignment(mdl.thread_id):
+                f = Function("t", [key.arguments[0], Number(int(str(val)))])
+                mdl.extend([f])
+            super_f(mdl)
 
         return on_model_function
 
@@ -195,7 +216,5 @@ class CApproach(MyApproach):
         Args:
             on_model (Optional[Callable], optional): A possible callback. Defaults to None.
         """
-        log.info("Solving...")
         self.theory.prepare(self.ctl)
-
-        self.ctl.solve(on_model=self.custom_on_model(on_model=on_model))
+        super().solve(on_model=on_model)
