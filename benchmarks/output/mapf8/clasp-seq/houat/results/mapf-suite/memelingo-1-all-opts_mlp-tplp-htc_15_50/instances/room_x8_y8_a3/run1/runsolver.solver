@@ -1,0 +1,145 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 24.818s)
+
+ t(0,0) t(1,1) t(2,3) t(3,4) t(4,6) t(5,7) t(6,8) t(7,9) t(8,10) t(9,12) t(10,15) t(11,16) t(12,17) t(13,18) t(14,23)
+
+ State 0:
+  wait(2)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(6,1))
+  move(1,(7,3),(7,2))
+  move(3,(6,1),(5,1))
+ State 1:
+  wait(3)
+  at(1,(7,2))
+  at(2,(1,8))
+  at(3,(5,1))
+  move(1,(7,2),(8,2))
+  move(2,(1,8),(2,8))
+ State 2:
+  at(1,(7,2))
+  at(2,(1,8))
+  at(3,(5,1))
+  move(3,(5,1),(5,2))
+  moving(1,(7,2),(8,2))
+  moving(2,(1,8),(2,8))
+ State 3:
+  at(1,(7,2))
+  at(2,(2,8))
+  at(3,(5,1))
+  move(2,(2,8),(2,7))
+  moving(1,(7,2),(8,2))
+  moving(3,(5,1),(5,2))
+ State 4:
+  at(1,(8,2))
+  at(2,(2,8))
+  at(3,(5,1))
+  move(1,(8,2),(7,2))
+  moving(2,(2,8),(2,7))
+  moving(3,(5,1),(5,2))
+ State 5:
+  wait(2)
+  at(1,(7,2))
+  at(2,(2,7))
+  at(3,(5,2))
+  move(1,(7,2),(7,1))
+  move(3,(5,2),(5,1))
+ State 6:
+  wait(1)
+  at(1,(7,1))
+  at(2,(2,7))
+  at(3,(5,2))
+  move(2,(2,7),(1,7))
+  moving(3,(5,2),(5,1))
+ State 7:
+  wait(1)
+  wait(2)
+  at(1,(7,1))
+  at(2,(1,7))
+  at(3,(5,2))
+  moving(3,(5,2),(5,1))
+ State 8:
+  wait(1)
+  at(1,(7,1))
+  at(2,(1,7))
+  at(3,(5,1))
+  move(2,(1,7),(2,7))
+  move(3,(5,1),(4,1))
+ State 9:
+  at(1,(7,1))
+  at(2,(2,7))
+  at(3,(4,1))
+  move(1,(7,1),(6,1))
+  move(2,(2,7),(2,6))
+  move(3,(4,1),(4,2))
+ State 10:
+  at(1,(7,1))
+  at(2,(2,6))
+  at(3,(4,1))
+  move(2,(2,6),(2,5))
+  moving(1,(7,1),(6,1))
+  moving(3,(4,1),(4,2))
+ State 11:
+  wait(3)
+  at(1,(7,1))
+  at(2,(2,6))
+  at(3,(4,2))
+  moving(1,(7,1),(6,1))
+  moving(2,(2,6),(2,5))
+ State 12:
+  at(1,(6,1))
+  at(2,(2,5))
+  at(3,(4,2))
+  move(1,(6,1),(5,1))
+  move(2,(2,5),(3,5))
+  move(3,(4,2),(4,3))
+ State 13:
+  wait(1)
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,5))
+  at(3,(4,3))
+  move(2,(3,5),(3,4))
+ State 14:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,4))
+  at(3,(4,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 24.837s (Solving: 1.18s 1st Model: 1.16s Unsat: 0.00s)
+CPU Time     : 24.692s
+
+Choices      : 1782    
+Conflicts    : 75       (Analyzed: 75)
+Restarts     : 0       
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 77.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 10331    (Deleted: 0)
+  Binary     : 633      (Ratio:   6.13%)
+  Ternary    : 44       (Ratio:   0.43%)
+  Conflict   : 75       (Average Length:  175.5 Ratio:   0.73%) 
+  Loop       : 10188    (Average Length:   31.1 Ratio:  98.62%) 
+  Other      : 68       (Average Length:    2.0 Ratio:   0.66%) 
+Backjumps    : 75       (Average: 22.76 Max: 710 Sum:   1707)
+  Executed   : 74       (Average: 22.75 Max: 710 Sum:   1706 Ratio:  99.94%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.06%)
+
+Rules        : 1303633  (Original: 1303464)
+Atoms        : 740702   (Original: 738362 Auxiliary: 2340)
+Disjunctions : 7548     (Original: 7551)
+Bodies       : 708805   (Original: 653146)
+Equivalences : 1238352  (Atom=Atom: 270562 Body=Body: 208268 Other: 759522)
+Tight        : No       (SCCs: 471 Non-Hcfs: 3 Nodes: 503065 Gammas: 53147)
+Variables    : 433278   (Eliminated:    0 Frozen: 379393)
+Constraints  : 1690816  (Binary:  75.3% Ternary:  15.9% Other:   8.9%)
+

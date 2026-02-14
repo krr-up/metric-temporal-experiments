@@ -1,0 +1,107 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...../examples/job-shop/instances/ft06.lp ...
+Solving...
+Answer: 1 (Time: 230.298s)
+
+ t(0,0) t(1,3) t(2,4) t(3,7) t(4,8) t(5,9) t(6,10) t(7,14) t(8,16) t(9,19) t(10,20) t(11,21) t(12,22) t(13,23) t(14,26) t(15,27) t(16,29) t(17,32) t(18,33) t(19,34) t(20,35) t(21,36) t(22,37) t(23,38) t(24,39) t(25,41) t(26,42) t(27,43) t(28,46) t(29,55)
+
+ State 0:
+  start_run(0,2)
+  start_run(18,1)
+ State 1:
+  start_run(1,0)
+  start_run(12,2)
+ State 2:
+  start_run(2,1)
+  start_run(13,3)
+ State 3:
+  start_run(3,3)
+  start_run(19,0)
+ State 4:
+  start_run(4,5)
+ State 5:
+  start_run(5,4)
+ State 6:
+  start_run(14,5)
+  start_run(20,2)
+  start_run(30,1)
+ State 7:
+  start_run(31,3)
+ State 8:
+  start_run(21,3)
+ State 9:
+  start_run(22,4)
+  start_run(32,5)
+ State 10:
+  start_run(24,2)
+  start_run(33,0)
+ State 11:
+ State 12:
+ State 13:
+  start_run(25,1)
+ State 14:
+  start_run(26,4)
+ State 15:
+ State 16:
+  start_run(15,0)
+ State 17:
+  start_run(6,1)
+  start_run(27,5)
+ State 18:
+  start_run(7,2)
+ State 19:
+  start_run(8,4)
+ State 20:
+ State 21:
+ State 22:
+  start_run(9,5)
+  start_run(28,0)
+ State 23:
+ State 24:
+  start_run(16,1)
+ State 25:
+ State 26:
+  start_run(10,0)
+ State 27:
+  start_run(29,3)
+  start_run(34,4)
+ State 28:
+  start_run(11,3)
+  start_run(17,4)
+  start_run(23,5)
+  start_run(35,2)
+ State 29:
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 230.305s (Solving: 226.64s 1st Model: 226.63s Unsat: 0.00s)
+CPU Time     : 230.151s
+
+Choices      : 18606635
+Conflicts    : 25725    (Analyzed: 25725)
+Restarts     : 125      (Average: 205.80 Last: 1930 Blocked: 0)
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 1552.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 59337    (Deleted: 34119)
+  Binary     : 7920     (Ratio:  13.35%)
+  Ternary    : 2496     (Ratio:   4.21%)
+  Conflict   : 25725    (Average Length:   22.8 Ratio:  43.35%) 
+  Loop       : 33612    (Average Length:   27.3 Ratio:  56.65%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 25725    (Average: 723.38 Max: 4861 Sum: 18609021)
+  Executed   : 21416    (Average: 723.22 Max: 4861 Sum: 18604712 Ratio:  99.98%)
+  Bounded    : 4309     (Average:  1.00 Max:   1 Sum:   4309 Ratio:   0.02%)
+
+Rules        : 407580  
+  Choice     : 1080    
+Atoms        : 190649  
+Disjunctions : 2088     (Original: 2088)
+Bodies       : 267999   (Original: 234591)
+Equivalences : 374271   (Atom=Atom: 52832 Body=Body: 36742 Other: 284697)
+Tight        : No       (SCCs: 108 Non-Hcfs: 36 Nodes: 203346 Gammas: 33408)
+Variables    : 207179   (Eliminated:    0 Frozen: 171611)
+Constraints  : 1145577  (Binary:  84.7% Ternary:   9.3% Other:   6.1%)
+

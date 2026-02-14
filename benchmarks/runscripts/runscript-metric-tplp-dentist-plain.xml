@@ -24,7 +24,7 @@
 
 	<benchmark name="dentist-simple">
 		<files path="../examples/dentist">
-			<encoding file="dentist.lp" />
+			<encoding file="../examples/dentist/dentist.lp" />
 			<add file="instances/size-1.lp" cmdline="--timepoint-limit=110" />
 			<add file="instances/size-5.lp" cmdline="--timepoint-limit=550" />
 			<add file="instances/size-7.lp" cmdline="--timepoint-limit=770" />

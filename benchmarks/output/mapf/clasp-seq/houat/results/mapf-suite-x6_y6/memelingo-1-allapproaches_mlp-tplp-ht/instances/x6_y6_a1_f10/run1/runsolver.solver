@@ -1,0 +1,70 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...xamples/mapf/instances/x6_y6_a1_f10.lp ...
+Solving...
+Answer: 1 (Time: 280.629s)
+
+ t(0,0) t(1,12) t(2,15) t(3,27) t(4,34) t(5,35) t(6,42) t(7,65) t(8,68) t(9,78)
+
+ State 0:
+  wait(1)
+  at(1,(1,1))
+ State 1:
+  wait(1)
+  at(1,(1,1))
+ State 2:
+  at(1,(1,1))
+  move(1,(1,1),(1,2))
+ State 3:
+  at(1,(1,1))
+  moving(1,(1,1),(1,2))
+ State 4:
+  at(1,(1,1))
+  moving(1,(1,1),(1,2))
+ State 5:
+  at(1,(1,2))
+  move(1,(1,2),(2,2))
+ State 6:
+  at(1,(1,2))
+  moving(1,(1,2),(2,2))
+ State 7:
+  wait(1)
+  at(1,(2,2))
+ State 8:
+  at(1,(2,2))
+  move(1,(2,2),(2,3))
+ State 9:
+  wait(1)
+  at(1,(2,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 280.647s (Solving: 237.34s 1st Model: 237.32s Unsat: 0.00s)
+CPU Time     : 280.433s
+
+Choices      : 1681169 
+Conflicts    : 42262    (Analyzed: 42262)
+Restarts     : 126      (Average: 335.41 Last: 5765 Blocked: 0)
+Stab. Tests  : 2        (Full: 1 Partial: 1)
+Model-Level  : 76.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 96681    (Deleted: 85556)
+  Binary     : 185      (Ratio:   0.19%)
+  Ternary    : 221      (Ratio:   0.23%)
+  Conflict   : 42262    (Average Length: 15670.4 Ratio:  43.71%) 
+  Loop       : 54419    (Average Length:   73.7 Ratio:  56.29%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 42262    (Average: 26.26 Max: 14092 Sum: 1109635)
+  Executed   : 42257    (Average: 26.26 Max: 14092 Sum: 1109630 Ratio: 100.00%)
+  Bounded    : 5        (Average:  1.00 Max:   1 Sum:      5 Ratio:   0.00%)
+
+Rules        : 9488797  (Original: 9407400)
+Atoms        : 131581   (Original: 131266 Auxiliary: 315)
+Disjunctions : 1170     (Original: 2363)
+Bodies       : 1050068  (Original: 962005)
+Equivalences : 201456   (Atom=Atom: 45515 Body=Body: 33576 Other: 122365)
+Tight        : No       (SCCs: 121 Non-Hcfs: 1 Nodes: 65275 Gammas: 6350)
+Variables    : 952225   (Eliminated:    0 Frozen: 48475)
+Constraints  : 18516574 (Binary:  94.9% Ternary:   4.6% Other:   0.6%)
+

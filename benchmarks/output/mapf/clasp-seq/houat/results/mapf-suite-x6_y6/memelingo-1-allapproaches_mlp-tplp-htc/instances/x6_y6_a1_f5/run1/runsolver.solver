@@ -1,0 +1,70 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...examples/mapf/instances/x6_y6_a1_f5.lp ...
+Solving...
+Answer: 1 (Time: 3.369s)
+
+ t(0,0) t(1,1) t(2,11) t(3,16) t(4,17) t(5,32) t(6,52) t(7,53) t(8,54) t(9,59)
+
+ State 0:
+  wait(1)
+  at(1,(1,1))
+ State 1:
+  at(1,(1,1))
+  move(1,(1,1),(1,2))
+ State 2:
+  wait(1)
+  at(1,(1,2))
+ State 3:
+  wait(1)
+  at(1,(1,2))
+ State 4:
+  at(1,(1,2))
+  move(1,(1,2),(2,2))
+ State 5:
+  wait(1)
+  at(1,(2,2))
+ State 6:
+  wait(1)
+  at(1,(2,2))
+ State 7:
+  wait(1)
+  at(1,(2,2))
+ State 8:
+  at(1,(2,2))
+  move(1,(2,2),(2,3))
+ State 9:
+  wait(1)
+  at(1,(2,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 3.373s (Solving: 0.15s 1st Model: 0.14s Unsat: 0.00s)
+CPU Time     : 3.201s
+
+Choices      : 341     
+Conflicts    : 122      (Analyzed: 122)
+Restarts     : 1        (Average: 122.00 Last: 56 Blocked: 0)
+Stab. Tests  : 2        (Full: 1 Partial: 1)
+Model-Level  : 22.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 2210     (Deleted: 0)
+  Binary     : 395      (Ratio:  17.87%)
+  Ternary    : 20       (Ratio:   0.90%)
+  Conflict   : 122      (Average Length:   44.7 Ratio:   5.52%) 
+  Loop       : 1824     (Average Length:   19.9 Ratio:  82.53%) 
+  Other      : 264      (Average Length:    2.0 Ratio:  11.95%) 
+Backjumps    : 122      (Average:  1.60 Max:  11 Sum:    195)
+  Executed   : 122      (Average:  1.60 Max:  11 Sum:    195 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 202640   (Original: 202601)
+Atoms        : 131023   (Original: 130673 Auxiliary: 350)
+Disjunctions : 1205     (Original: 1206)
+Bodies       : 106455   (Original: 99468)
+Equivalences : 205283   (Atom=Atom: 47314 Body=Body: 34961 Other: 123008)
+Tight        : No       (SCCs: 121 Non-Hcfs: 1 Nodes: 67682 Gammas: 6597)
+Variables    : 56987    (Eliminated:    0 Frozen: 50352)
+Constraints  : 265401   (Binary:  57.6% Ternary:  35.3% Other:   7.1%)
+

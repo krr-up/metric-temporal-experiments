@@ -1,0 +1,56 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ..../examples/dentist/instances/size-1.lp ...
+Solving...
+Answer: 1 (Time: 2.531s)
+
+ t(0,0) t(1,20) t(2,35) t(3,55)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,home)
+ State 2:
+  at(icard,home)
+  at(ram,home)
+  go(ram,dentist)
+ State 3:
+  at(ram,dentist)
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 2.532s (Solving: 0.03s 1st Model: 0.03s Unsat: 0.00s)
+CPU Time     : 2.384s
+
+Choices      : 464     
+Conflicts    : 8        (Analyzed: 8)
+Restarts     : 0       
+Stab. Tests  : 2        (Full: 1 Partial: 1)
+Model-Level  : 8.0     
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 25       (Deleted: 0)
+  Binary     : 7        (Ratio:  28.00%)
+  Ternary    : 5        (Ratio:  20.00%)
+  Conflict   : 8        (Average Length:  849.8 Ratio:  32.00%) 
+  Loop       : 17       (Average Length:    3.6 Ratio:  68.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 8        (Average: 57.25 Max: 214 Sum:    458)
+  Executed   : 7        (Average: 57.12 Max: 214 Sum:    457 Ratio:  99.78%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.22%)
+
+Rules        : 376978   (Original: 365076)
+Atoms        : 2617    
+Disjunctions : 3        (Original: 227)
+Bodies       : 66771    (Original: 54860)
+Equivalences : 4961     (Atom=Atom: 873 Body=Body: 708 Other: 3380)
+Tight        : No       (SCCs: 13 Non-Hcfs: 1 Nodes: 389 Gammas: 9)
+Variables    : 64868    (Eliminated:    0 Frozen:  631)
+Constraints  : 1328386  (Binary:  95.1% Ternary:   4.0% Other:   0.9%)
+

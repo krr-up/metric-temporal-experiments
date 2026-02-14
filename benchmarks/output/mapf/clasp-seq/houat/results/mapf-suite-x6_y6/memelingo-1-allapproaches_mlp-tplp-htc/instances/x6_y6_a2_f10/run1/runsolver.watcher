@@ -1,0 +1,29 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node3
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		--project=show
+[runlim] argv[2]:		--stats
+[runlim] argv[3]:		-c
+[runlim] argv[4]:		lambda=10
+[runlim] argv[5]:		--approach=mlp-tplp-htc
+[runlim] argv[6]:		--timepoint-limit=150
+[runlim] argv[7]:		../../../../../../../../../../../examples/mapf/instances/x6_y6_a2_f10.lp
+[runlim] argv[8]:		../../../../../../../../../../../examples/mapf/mapf.lp
+[runlim] start:			Sat Feb 14 05:12:43 2026
+[runlim] child:			18048
+[runlim] sample:		4.31 time, 10.01 real, 306 MB, 1.81 load
+[runlim] sample:		14.31 time, 20.01 real, 421 MB, 1.84 load
+[runlim] sample:		24.31 time, 30.01 real, 406 MB, 1.87 load
+[runlim] end:			Sat Feb 14 05:13:14 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			30.44 seconds
+[runlim] time:			24.71 seconds
+[runlim] space:			435 MB
+[runlim] load:			1.88 maximum
+[runlim] samples:		305

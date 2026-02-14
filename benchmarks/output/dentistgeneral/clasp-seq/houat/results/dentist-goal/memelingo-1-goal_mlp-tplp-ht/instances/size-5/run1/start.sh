@@ -14,7 +14,7 @@ runner=( "../../../../../../../../../../programs/runlim" \
   --project=show --stats -c lambda=4 --approach=mlp-tplp-ht --timepoint-limit=550 \
      )
 
-input=( "../../../../../../../../../../../examples/dentist/instances/size-5.lp" "../../../../../../../../../../dentist-goal.lp" "../../../../../../../../../../dentist.lp" )
+input=( "../../../../../../../../../../../examples/dentist/instances/size-5.lp" "../../../../../../../../../../../examples/dentist/dentist-goal.lp" "../../../../../../../../../../../examples/dentist/dentist.lp" )
 
 if [[ ! -e .finished ]]; then
   {

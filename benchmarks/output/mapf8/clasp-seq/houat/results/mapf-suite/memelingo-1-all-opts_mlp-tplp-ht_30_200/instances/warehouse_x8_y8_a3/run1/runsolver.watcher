@@ -1,0 +1,52 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node4
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		--project=show
+[runlim] argv[2]:		--stats
+[runlim] argv[3]:		--approach=mlp-tplp-ht
+[runlim] argv[4]:		-c
+[runlim] argv[5]:		lambda=30
+[runlim] argv[6]:		--timepoint-limit=200
+[runlim] argv[7]:		../../../../../../../../../../../examples/mapf/instances/warehouse_x8_y8_a3.lp
+[runlim] argv[8]:		../../../../../../../../../../../examples/mapf/mapf.lp
+[runlim] start:			Sat Feb 14 05:10:51 2026
+[runlim] child:			17802
+[runlim] sample:		4.35 time, 10.01 real, 415 MB, 1.95 load
+[runlim] sample:		14.34 time, 20.01 real, 1284 MB, 1.96 load
+[runlim] sample:		24.34 time, 30.01 real, 2097 MB, 1.97 load
+[runlim] sample:		34.33 time, 40.01 real, 2970 MB, 1.97 load
+[runlim] sample:		44.32 time, 50.01 real, 3696 MB, 1.98 load
+[runlim] sample:		54.31 time, 60.01 real, 4432 MB, 1.98 load
+[runlim] sample:		64.31 time, 70.01 real, 5130 MB, 1.98 load
+[runlim] sample:		74.30 time, 80.01 real, 5940 MB, 1.99 load
+[runlim] sample:		84.29 time, 90.01 real, 6581 MB, 1.99 load
+[runlim] sample:		94.29 time, 100.01 real, 7474 MB, 1.99 load
+[runlim] sample:		104.28 time, 110.01 real, 8187 MB, 1.99 load
+[runlim] sample:		114.27 time, 120.01 real, 9161 MB, 2.00 load
+[runlim] sample:		124.27 time, 130.01 real, 9734 MB, 2.00 load
+[runlim] sample:		134.26 time, 140.01 real, 10604 MB, 2.00 load
+[runlim] sample:		144.26 time, 150.01 real, 11336 MB, 2.00 load
+[runlim] sample:		154.25 time, 160.01 real, 11850 MB, 2.00 load
+[runlim] sample:		164.26 time, 170.01 real, 12721 MB, 2.00 load
+[runlim] sample:		174.26 time, 180.01 real, 13562 MB, 2.00 load
+[runlim] sample:		184.25 time, 190.01 real, 13859 MB, 2.00 load
+[runlim] sample:		194.24 time, 200.01 real, 14719 MB, 2.00 load
+[runlim] sample:		204.23 time, 210.01 real, 15589 MB, 2.00 load
+[runlim] sample:		214.23 time, 220.01 real, 16440 MB, 2.00 load
+[runlim] sample:		224.22 time, 230.01 real, 16712 MB, 2.00 load
+[runlim] sample:		234.21 time, 240.01 real, 17457 MB, 2.00 load
+[runlim] sample:		244.20 time, 250.01 real, 18324 MB, 2.00 load
+[runlim] sample:		254.20 time, 260.01 real, 19169 MB, 2.00 load
+[runlim] end:			Sat Feb 14 05:15:21 2026
+[runlim] status:		out of memory
+[runlim] result:		3
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			271.00 seconds
+[runlim] time:			264.00 seconds
+[runlim] space:			20005 MB
+[runlim] load:			2.04 maximum
+[runlim] samples:		2698

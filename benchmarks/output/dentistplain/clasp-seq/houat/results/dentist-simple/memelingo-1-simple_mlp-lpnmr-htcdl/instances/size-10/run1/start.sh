@@ -14,7 +14,7 @@ runner=( "../../../../../../../../../../programs/runlim" \
   --project=show --stats -c lambda=4 --approach=mlp-lpnmr-htcdl --timepoint-limit=1100 \
      )
 
-input=( "../../../../../../../../../../../examples/dentist/instances/size-10.lp" "../../../../../../../../../../dentist.lp" )
+input=( "../../../../../../../../../../../examples/dentist/instances/size-10.lp" "../../../../../../../../../../../examples/dentist/dentist.lp" )
 
 if [[ ! -e .finished ]]; then
   {
