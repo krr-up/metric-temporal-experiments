@@ -1,4 +1,4 @@
-<runscript output="outputmapf8">
+<runscript output="output/mapf8">
 
 	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB" />
 

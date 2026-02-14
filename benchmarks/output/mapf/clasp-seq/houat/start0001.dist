@@ -1,0 +1,78 @@
+#!/bin/bash
+#SBATCH --output=out.%j
+#SBATCH --error=err.%j
+#SBATCH --time=00-23:59:59        # walltime
+#SBATCH --cpus-per-task=4    # number of processor cores (i.e. tasks)
+#SBATCH --partition=kr
+                  # additional dist options (specified via runscript setting)
+
+# Good Idea to stop operation on first error.
+set -e
+
+# Load environment modules for your application here.
+source ~/.bashrc
+source ~/miniconda3/bin/activate
+source activate memelingo
+
+# Run jobs
+jobs="results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a2_f15/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a1_f25/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a1_f35/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a1_f5/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a2_f10/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a4_f1/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a3_f5/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a3_f1/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a1_f40/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a2_f1/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a2_f35/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a4_f40/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a2_f20/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a4_f35/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htc/instances/x6_y6_a2_f25/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f30/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f10/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f20/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f15/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f35/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f40/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f10/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f1/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f5/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f30/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f10/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f25/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f15/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f30/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f15/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f30/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f40/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f20/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f25/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f20/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f5/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f15/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f25/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f35/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f5/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f10/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f1/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f5/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a3_f1/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a1_f40/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f1/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f35/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f40/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f20/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a4_f35/run1/start.sh
+results/mapf-suite-x6_y6/memelingo-1-allapproaches_mlp-tplp-htcdl/instances/x6_y6_a2_f25/run1/start.sh
+"
+echo running jobs@$(hostname)...
+echo ""
+echo "jobs:" $jobs
+echo ""
+for i in $jobs
+do
+    echo "running " $i
+    $i
+done

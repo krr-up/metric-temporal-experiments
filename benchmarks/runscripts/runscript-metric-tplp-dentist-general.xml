@@ -1,4 +1,4 @@
-<runscript output="outputdentistgeneral">
+<runscript output="output/dentistgeneral">
 
 	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB" />
 
