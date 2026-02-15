@@ -18,20 +18,23 @@ AGGREGATE_COLUMNS = {"min", "median", "max"}
 
 
 def get_size(name):
-    return name.split("-")[1]
+    return int(name.split("-")[1])
 
 
 def get_lambda(name):
     return name.split("_")[1]
 
 
-def get_horizon_mapf8(name):
-    h = name.split("-")[-1].split("_")[1]
-    v = name.split("-")[-1].split("_")[2]
-    if v != "30":
-        print("Skipping instance with unexpected factor:", name)
-        return None
-    return int(h)
+def get_horizon_mapf8(timepoint=30):
+    def f(name):
+        h = name.split("-")[-1].split("_")[1]
+        v = name.split("-")[-1].split("_")[2]
+        if v != str(timepoint):
+            print("Skipping instance with unexpected factor:", name)
+            return None
+        return int(h)
+
+    return f
 
 
 def get_agents(name):
@@ -68,6 +71,8 @@ def get_approach(benchmark_name):
     # e.g., 'memelingo-1/allapproaches_mlp-tplp-ht' -> 'ht'
     if "mlp-tplp-" in benchmark_name:
         return benchmark_name.split("mlp-tplp-")[-1].split("_")[0]
+    if "mlp-lpnmr-" in benchmark_name:
+        return benchmark_name.split("mlp-lpnmr-")[-1].split("_")[0] + "-lpnmr"
     return benchmark_name
 
 
@@ -143,11 +148,28 @@ colors = {
     "htc": "#000848",  # Blue
     "htcdl": "#025bff",  # Green
     "ht": "#58AF4D",  # Orange
+    "htc-lpnmr": "#65167B",  # Blue
+    "htcdl-lpnmr": "#a202ff",  # Green
+    "ht-lpnmr": "#ACB324",  # Orange
 }
-markers = {"htc": "o", "ht": "s", "htcdl": "^"}
+markers = {
+    "htc": "o",
+    "ht": "s",
+    "htcdl": "^",
+    "htc-lpnmr": "o",
+    "htcdl-lpnmr": "^",
+    "ht-lpnmr": "s",
+}
 
 # More formal approach names for legend
-approach_labels = {"htc": "clingcon", "ht": "clingo", "htcdl": "clingo-dl"}
+approach_labels = {
+    "htc": "clingcon",
+    "ht": "clingo",
+    "htcdl": "clingo-dl",
+    "htc-lpnmr": "clingcon-plain",
+    "htcdl-lpnmr": "clingo-dl-plain",
+    "ht-lpnmr": "clingo-plain",
+}
 
 CONFIG = {
     "font.family": "serif",
@@ -824,7 +846,7 @@ def main():
         instance_prefix = sys.argv[2]
         save_path = f"plots/{instance_prefix}_factor.pdf"
 
-        # # ------ Dentist
+        # # ------ Dentist general
         # plot_instance_by_row(
         #     instance_prefix,
         #     ["time"],
@@ -833,11 +855,32 @@ def main():
         #     y="Time (s)",
         #     x="Factor",
         #     thick_attr="stime",
-        #     figsize=(3, 4),
+        #     figsize=(4, 3),
         #     save_path=save_path,
         #     dpi=300,
         #     group_skip={30, 35, 40, 45, 50},
-        #     approaches_skipped=["ht"],  # Skip clingo for better visibility
+        #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
+        #     # title=f"Agents = {get_agents(instance_prefix)}",
+        # )
+
+        # # ------ Dentist plain
+        # plot_instance_by_row(
+        #     instance_prefix,
+        #     ["time"],
+        #     df_instances,
+        #     grouping_function=get_size,
+        #     y="Time (s)",
+        #     x="Factor",
+        #     thick_attr="stime",
+        #     figsize=(4, 3),
+        #     save_path=save_path,
+        #     dpi=300,
+        #     group_skip={30, 35, 40, 45, 50},
+        #     # approaches_skipped=[
+        #     #     "ht",
+        #     #     "htc",
+        #     #     "htcdl",
+        #     # ],  # Skip clingo for better visibility
         #     # title=f"Agents = {get_agents(instance_prefix)}",
         # )
 
@@ -858,14 +901,33 @@ def main():
         #     # title=f"Agents = {get_agents(instance_prefix)}",
         # )
 
-        # # ------MAPF 8
+        # ------MAPF 8
+        for v in [30, 50, 100]:
+            map_name = instance_prefix.split("_")[0]
+            save_path = f"plots/{map_name}-v{v}.pdf"
+
+            plot_instance_by_column(
+                instance_prefix,
+                ["time"],
+                df_instances,
+                grouping_function=get_horizon_mapf8(v),
+                y="Time (s)",
+                x="Lambda",
+                thick_attr="stime",
+                figsize=(6, 4),
+                save_path=save_path,
+                dpi=300,
+                title=f"{map_name.upper()} - Timepoint limit = {v}",
+            )
+
+        # # ------Job
         # plot_instance_by_column(
         #     instance_prefix,
         #     ["time"],
         #     df_instances,
-        #     grouping_function=get_horizon_mapf8,
+        #     grouping_function=get_lambda,
         #     y="Time (s)",
-        #     x="Horizon",
+        #     x="Lambda",
         #     thick_attr="stime",
         #     figsize=(3, 4),
         #     save_path=save_path,
@@ -874,23 +936,6 @@ def main():
         #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
         #     # title=f"Agents = {get_agents(instance_prefix)}",
         # )
-
-        # ------Job
-        plot_instance_by_column(
-            instance_prefix,
-            ["time"],
-            df_instances,
-            grouping_function=get_lambda,
-            y="Time (s)",
-            x="Lambda",
-            thick_attr="stime",
-            figsize=(3, 4),
-            save_path=save_path,
-            dpi=300,
-            # group_skip={30, 35, 40, 45, 50},
-            # approaches_skipped=["ht"],  # Skip clingo for better visibility
-            # title=f"Agents = {get_agents(instance_prefix)}",
-        )
 
     else:
         # Multiple instances - use new function
@@ -902,7 +947,7 @@ def main():
 
         plot_multiple_instances_by_row(
             instances,
-            ["ctime"],
+            ["time"],
             df_instances,
             grouping_function=get_factor,
             y="Time (s)",
@@ -911,7 +956,7 @@ def main():
             figsize=(12, 3),  # 4 subplots × 3 inches each
             save_path=save_path,
             dpi=300,
-            group_skip={30, 35, 40, 45, 50},
+            # group_skip={30, 35, 40, 45, 50},
             # approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
             subplot_titles=subplot_titles,
         )
