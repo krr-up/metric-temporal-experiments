@@ -1,0 +1,180 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 240.610s)
+
+ t(0,0) t(1,1) t(2,2) t(3,3) t(4,4) t(5,5) t(6,6) t(7,7) t(8,8) t(9,9) t(10,10) t(11,11) t(12,12) t(13,13) t(14,14) t(15,15) t(16,16) t(17,18) t(18,19) t(19,24)
+
+ State 0:
+  wait(1)
+  wait(2)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(6,1))
+  move(3,(6,1),(5,1))
+ State 1:
+  wait(1)
+  wait(2)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(5,1))
+  move(3,(5,1),(4,1))
+ State 2:
+  wait(1)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(5,1))
+  move(2,(1,8),(2,8))
+  moving(3,(5,1),(4,1))
+ State 3:
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(4,1))
+  move(1,(7,3),(7,2))
+  move(3,(4,1),(4,2))
+  moving(2,(1,8),(2,8))
+ State 4:
+  at(1,(7,2))
+  at(2,(1,8))
+  at(3,(4,1))
+  move(1,(7,2),(7,3))
+  moving(2,(1,8),(2,8))
+  moving(3,(4,1),(4,2))
+ State 5:
+  wait(2)
+  at(1,(7,2))
+  at(2,(2,8))
+  at(3,(4,1))
+  moving(1,(7,2),(7,3))
+  moving(3,(4,1),(4,2))
+ State 6:
+  at(1,(7,2))
+  at(2,(2,8))
+  at(3,(4,1))
+  move(2,(2,8),(2,7))
+  moving(1,(7,2),(7,3))
+  moving(3,(4,1),(4,2))
+ State 7:
+  wait(3)
+  at(1,(7,2))
+  at(2,(2,8))
+  at(3,(4,2))
+  moving(1,(7,2),(7,3))
+  moving(2,(2,8),(2,7))
+ State 8:
+  wait(3)
+  at(1,(7,3))
+  at(2,(2,8))
+  at(3,(4,2))
+  move(1,(7,3),(7,2))
+  moving(2,(2,8),(2,7))
+ State 9:
+  at(1,(7,2))
+  at(2,(2,7))
+  at(3,(4,2))
+  move(1,(7,2),(7,1))
+  move(2,(2,7),(2,6))
+  move(3,(4,2),(4,3))
+ State 10:
+  wait(1)
+  at(1,(7,1))
+  at(2,(2,7))
+  at(3,(4,3))
+  move(3,(4,3),(4,2))
+  moving(2,(2,7),(2,6))
+ State 11:
+  at(1,(7,1))
+  at(2,(2,7))
+  at(3,(4,2))
+  move(1,(7,1),(7,2))
+  move(3,(4,2),(4,3))
+  moving(2,(2,7),(2,6))
+ State 12:
+  wait(2)
+  at(1,(7,2))
+  at(2,(2,6))
+  at(3,(4,3))
+  move(1,(7,2),(7,1))
+  move(3,(4,3),(4,2))
+ State 13:
+  wait(2)
+  at(1,(7,1))
+  at(2,(2,6))
+  at(3,(4,2))
+  move(1,(7,1),(6,1))
+  move(3,(4,2),(4,3))
+ State 14:
+  wait(2)
+  at(1,(7,1))
+  at(2,(2,6))
+  at(3,(4,3))
+  move(3,(4,3),(4,2))
+  moving(1,(7,1),(6,1))
+ State 15:
+  wait(2)
+  at(1,(7,1))
+  at(2,(2,6))
+  at(3,(4,2))
+  move(3,(4,2),(4,3))
+  moving(1,(7,1),(6,1))
+ State 16:
+  wait(3)
+  at(1,(7,1))
+  at(2,(2,6))
+  at(3,(4,3))
+  move(2,(2,6),(2,5))
+  moving(1,(7,1),(6,1))
+ State 17:
+  wait(3)
+  at(1,(6,1))
+  at(2,(2,5))
+  at(3,(4,3))
+  move(1,(6,1),(5,1))
+  move(2,(2,5),(3,5))
+ State 18:
+  wait(1)
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,5))
+  at(3,(4,3))
+  move(2,(3,5),(3,4))
+ State 19:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,4))
+  at(3,(4,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 240.630s (Solving: 180.44s 1st Model: 180.42s Unsat: 0.00s)
+CPU Time     : 240.462s
+
+Choices      : 5513232 
+Conflicts    : 10688    (Analyzed: 10688)
+Restarts     : 60       (Average: 178.13 Last: 274 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 2566.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 113761   (Deleted: 69483)
+  Binary     : 1763     (Ratio:   1.55%)
+  Ternary    : 624      (Ratio:   0.55%)
+  Conflict   : 10688    (Average Length:  101.9 Ratio:   9.40%) 
+  Loop       : 103073   (Average Length:   32.2 Ratio:  90.60%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 10688    (Average: 515.23 Max: 12192 Sum: 5506792)
+  Executed   : 9658     (Average: 515.13 Max: 12192 Sum: 5505762 Ratio:  99.98%)
+  Bounded    : 1030     (Average:  1.00 Max:   1 Sum:   1030 Ratio:   0.02%)
+
+Rules        : 1561305  (Original: 1561136)
+Atoms        : 869625   (Original: 866511 Auxiliary: 3114)
+Disjunctions : 10182    (Original: 10191)
+Bodies       : 928875   (Original: 836129)
+Equivalences : 1546140  (Atom=Atom: 326056 Body=Body: 253237 Other: 966847)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 616791 Gammas: 89460)
+Variables    : 548599   (Eliminated:    0 Frozen: 458973)
+Constraints  : 2743721  (Binary:  82.0% Ternary:  10.5% Other:   7.5%)
+

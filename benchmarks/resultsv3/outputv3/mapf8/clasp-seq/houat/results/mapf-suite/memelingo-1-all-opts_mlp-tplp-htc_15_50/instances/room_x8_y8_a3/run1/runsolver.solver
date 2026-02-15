@@ -1,0 +1,145 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 31.952s)
+
+ t(0,0) t(1,1) t(2,6) t(3,7) t(4,8) t(5,9) t(6,10) t(7,11) t(8,13) t(9,14) t(10,15) t(11,20) t(12,21) t(13,25) t(14,28)
+
+ State 0:
+  wait(1)
+  wait(2)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(6,1))
+  move(3,(6,1),(5,1))
+ State 1:
+  wait(1)
+  wait(3)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(5,1))
+  move(2,(1,8),(1,7))
+ State 2:
+  wait(1)
+  at(1,(7,3))
+  at(2,(1,7))
+  at(3,(5,1))
+  move(2,(1,7),(2,7))
+  move(3,(5,1),(6,1))
+ State 3:
+  at(1,(7,3))
+  at(2,(1,7))
+  at(3,(5,1))
+  move(1,(7,3),(7,2))
+  moving(2,(1,7),(2,7))
+  moving(3,(5,1),(6,1))
+ State 4:
+  at(1,(7,2))
+  at(2,(2,7))
+  at(3,(5,1))
+  move(1,(7,2),(7,1))
+  move(2,(2,7),(2,6))
+  moving(3,(5,1),(6,1))
+ State 5:
+  at(1,(7,1))
+  at(2,(2,7))
+  at(3,(6,1))
+  move(1,(7,1),(6,1))
+  move(3,(6,1),(5,1))
+  moving(2,(2,7),(2,6))
+ State 6:
+  wait(3)
+  at(1,(7,1))
+  at(2,(2,7))
+  at(3,(5,1))
+  moving(1,(7,1),(6,1))
+  moving(2,(2,7),(2,6))
+ State 7:
+  at(1,(7,1))
+  at(2,(2,6))
+  at(3,(5,1))
+  move(2,(2,6),(2,5))
+  move(3,(5,1),(5,2))
+  moving(1,(7,1),(6,1))
+ State 8:
+  at(1,(7,1))
+  at(2,(2,5))
+  at(3,(5,1))
+  move(2,(2,5),(3,5))
+  moving(1,(7,1),(6,1))
+  moving(3,(5,1),(5,2))
+ State 9:
+  wait(1)
+  wait(2)
+  at(1,(6,1))
+  at(2,(3,5))
+  at(3,(5,1))
+  moving(3,(5,1),(5,2))
+ State 10:
+  wait(1)
+  at(1,(6,1))
+  at(2,(3,5))
+  at(3,(5,2))
+  move(2,(3,5),(3,4))
+  move(3,(5,2),(5,3))
+ State 11:
+  wait(2)
+  at(1,(6,1))
+  at(2,(3,4))
+  at(3,(5,3))
+  move(1,(6,1),(5,1))
+  move(3,(5,3),(4,3))
+ State 12:
+  wait(2)
+  at(1,(5,1))
+  at(2,(3,4))
+  at(3,(5,3))
+  move(1,(5,1),(5,2))
+  moving(3,(5,3),(4,3))
+ State 13:
+  wait(2)
+  wait(3)
+  at(1,(5,2))
+  at(2,(3,4))
+  at(3,(4,3))
+  move(1,(5,2),(5,1))
+ State 14:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,4))
+  at(3,(4,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 31.967s (Solving: 8.98s 1st Model: 8.96s Unsat: 0.00s)
+CPU Time     : 31.814s
+
+Choices      : 3872    
+Conflicts    : 1261     (Analyzed: 1261)
+Restarts     : 7        (Average: 180.14 Last: 84 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 34.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 23963    (Deleted: 0)
+  Binary     : 713      (Ratio:   2.98%)
+  Ternary    : 282      (Ratio:   1.18%)
+  Conflict   : 1261     (Average Length:  161.2 Ratio:   5.26%) 
+  Loop       : 22410    (Average Length:   25.2 Ratio:  93.52%) 
+  Other      : 292      (Average Length:    2.0 Ratio:   1.22%) 
+Backjumps    : 1261     (Average:  2.92 Max: 115 Sum:   3688)
+  Executed   : 1247     (Average:  2.91 Max: 115 Sum:   3674 Ratio:  99.62%)
+  Bounded    : 14       (Average:  1.00 Max:   1 Sum:     14 Ratio:   0.38%)
+
+Rules        : 1085130  (Original: 1084961)
+Atoms        : 660575   (Original: 658241 Auxiliary: 2334)
+Disjunctions : 7542     (Original: 7551)
+Bodies       : 622580   (Original: 566959)
+Equivalences : 1114370  (Atom=Atom: 244261 Body=Body: 189887 Other: 680222)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 384921 Gammas: 53115)
+Variables    : 334144   (Eliminated:    0 Frozen: 280863)
+Constraints  : 1367951  (Binary:  75.1% Ternary:  16.7% Other:   8.3%)
+

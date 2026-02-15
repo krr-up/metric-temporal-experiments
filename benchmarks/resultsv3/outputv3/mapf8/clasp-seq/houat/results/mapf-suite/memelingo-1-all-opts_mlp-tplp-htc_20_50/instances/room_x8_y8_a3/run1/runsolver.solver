@@ -1,0 +1,180 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 73.422s)
+
+ t(0,0) t(1,26) t(2,27) t(3,28) t(4,29) t(5,32) t(6,33) t(7,34) t(8,35) t(9,36) t(10,37) t(11,38) t(12,39) t(13,40) t(14,44) t(15,45) t(16,47) t(17,48) t(18,49) t(19,50)
+
+ State 0:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(6,1))
+ State 1:
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(6,1))
+  move(1,(7,3),(8,3))
+  move(2,(1,8),(2,8))
+  move(3,(6,1),(5,1))
+ State 2:
+  wait(3)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(5,1))
+  moving(1,(7,3),(8,3))
+  moving(2,(1,8),(2,8))
+ State 3:
+  wait(1)
+  wait(3)
+  at(1,(8,3))
+  at(2,(1,8))
+  at(3,(5,1))
+  moving(2,(1,8),(2,8))
+ State 4:
+  at(1,(8,3))
+  at(2,(2,8))
+  at(3,(5,1))
+  move(1,(8,3),(8,4))
+  move(2,(2,8),(2,7))
+  move(3,(5,1),(5,2))
+ State 5:
+  at(1,(8,4))
+  at(2,(2,7))
+  at(3,(5,1))
+  move(1,(8,4),(8,3))
+  move(2,(2,7),(2,6))
+  moving(3,(5,1),(5,2))
+ State 6:
+  wait(3)
+  at(1,(8,4))
+  at(2,(2,7))
+  at(3,(5,2))
+  moving(1,(8,4),(8,3))
+  moving(2,(2,7),(2,6))
+ State 7:
+  at(1,(8,4))
+  at(2,(2,7))
+  at(3,(5,2))
+  move(3,(5,2),(5,1))
+  moving(1,(8,4),(8,3))
+  moving(2,(2,7),(2,6))
+ State 8:
+  at(1,(8,3))
+  at(2,(2,6))
+  at(3,(5,2))
+  move(1,(8,3),(8,2))
+  move(2,(2,6),(2,5))
+  moving(3,(5,2),(5,1))
+ State 9:
+  at(1,(8,3))
+  at(2,(2,6))
+  at(3,(5,2))
+  moving(1,(8,3),(8,2))
+  moving(2,(2,6),(2,5))
+  moving(3,(5,2),(5,1))
+ State 10:
+  wait(3)
+  at(1,(8,2))
+  at(2,(2,5))
+  at(3,(5,1))
+  move(1,(8,2),(7,2))
+  move(2,(2,5),(3,5))
+ State 11:
+  wait(2)
+  at(1,(7,2))
+  at(2,(3,5))
+  at(3,(5,1))
+  move(1,(7,2),(7,1))
+  move(3,(5,1),(4,1))
+ State 12:
+  wait(1)
+  wait(2)
+  at(1,(7,1))
+  at(2,(3,5))
+  at(3,(5,1))
+  moving(3,(5,1),(4,1))
+ State 13:
+  wait(1)
+  wait(3)
+  at(1,(7,1))
+  at(2,(3,5))
+  at(3,(4,1))
+  move(2,(3,5),(3,4))
+ State 14:
+  at(1,(7,1))
+  at(2,(3,5))
+  at(3,(4,1))
+  move(1,(7,1),(6,1))
+  move(3,(4,1),(4,2))
+  moving(2,(3,5),(3,4))
+ State 15:
+  at(1,(7,1))
+  at(2,(3,4))
+  at(3,(4,1))
+  move(2,(3,4),(2,4))
+  moving(1,(7,1),(6,1))
+  moving(3,(4,1),(4,2))
+ State 16:
+  at(1,(7,1))
+  at(2,(3,4))
+  at(3,(4,1))
+  moving(1,(7,1),(6,1))
+  moving(2,(3,4),(2,4))
+  moving(3,(4,1),(4,2))
+ State 17:
+  wait(3)
+  at(1,(7,1))
+  at(2,(2,4))
+  at(3,(4,2))
+  move(2,(2,4),(3,4))
+  moving(1,(7,1),(6,1))
+ State 18:
+  wait(2)
+  at(1,(6,1))
+  at(2,(3,4))
+  at(3,(4,2))
+  move(1,(6,1),(5,1))
+  move(3,(4,2),(4,3))
+ State 19:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,4))
+  at(3,(4,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 73.447s (Solving: 17.65s 1st Model: 17.63s Unsat: 0.00s)
+CPU Time     : 73.331s
+
+Choices      : 5963    
+Conflicts    : 1206     (Analyzed: 1206)
+Restarts     : 6        (Average: 201.00 Last: 364 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 50.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 35113    (Deleted: 0)
+  Binary     : 658      (Ratio:   1.87%)
+  Ternary    : 263      (Ratio:   0.75%)
+  Conflict   : 1206     (Average Length:  376.3 Ratio:   3.43%) 
+  Loop       : 33644    (Average Length:   45.6 Ratio:  95.82%) 
+  Other      : 263      (Average Length:    2.0 Ratio:   0.75%) 
+Backjumps    : 1206     (Average:  4.69 Max: 116 Sum:   5654)
+  Executed   : 1201     (Average:  4.68 Max: 116 Sum:   5649 Ratio:  99.91%)
+  Bounded    : 5        (Average:  1.00 Max:   1 Sum:      5 Ratio:   0.09%)
+
+Rules        : 1561305  (Original: 1561136)
+Atoms        : 869625   (Original: 866511 Auxiliary: 3114)
+Disjunctions : 10182    (Original: 10191)
+Bodies       : 928875   (Original: 836129)
+Equivalences : 1546140  (Atom=Atom: 326056 Body=Body: 253237 Other: 966847)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 616791 Gammas: 89460)
+Variables    : 549359   (Eliminated:    0 Frozen: 459733)
+Constraints  : 2610336  (Binary:  78.1% Ternary:  14.4% Other:   7.5%)
+

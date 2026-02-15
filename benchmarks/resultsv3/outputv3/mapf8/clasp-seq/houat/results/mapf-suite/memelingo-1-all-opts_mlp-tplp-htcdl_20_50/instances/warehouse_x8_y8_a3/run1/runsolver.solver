@@ -1,0 +1,180 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 137.443s)
+
+ t(0,0) t(1,2) t(2,4) t(3,6) t(4,7) t(5,8) t(6,9) t(7,10) t(8,11) t(9,12) t(10,13) t(11,14) t(12,16) t(13,17) t(14,18) t(15,19) t(16,23) t(17,24) t(18,27) t(19,28)
+
+ State 0:
+  wait(1)
+  wait(2)
+  at(1,(5,7))
+  at(2,(7,8))
+  at(3,(1,8))
+  move(3,(1,8),(1,7))
+ State 1:
+  wait(1)
+  at(1,(5,7))
+  at(2,(7,8))
+  at(3,(1,8))
+  move(2,(7,8),(7,7))
+  moving(3,(1,8),(1,7))
+ State 2:
+  wait(1)
+  wait(3)
+  at(1,(5,7))
+  at(2,(7,8))
+  at(3,(1,7))
+  moving(2,(7,8),(7,7))
+ State 3:
+  at(1,(5,7))
+  at(2,(7,8))
+  at(3,(1,7))
+  move(1,(5,7),(6,7))
+  move(3,(1,7),(2,7))
+  moving(2,(7,8),(7,7))
+ State 4:
+  wait(1)
+  at(1,(6,7))
+  at(2,(7,7))
+  at(3,(2,7))
+  move(2,(7,7),(8,7))
+  move(3,(2,7),(3,7))
+ State 5:
+  wait(2)
+  at(1,(6,7))
+  at(2,(8,7))
+  at(3,(2,7))
+  move(1,(6,7),(7,7))
+  moving(3,(2,7),(3,7))
+ State 6:
+  wait(2)
+  at(1,(6,7))
+  at(2,(8,7))
+  at(3,(2,7))
+  moving(1,(6,7),(7,7))
+  moving(3,(2,7),(3,7))
+ State 7:
+  wait(2)
+  at(1,(6,7))
+  at(2,(8,7))
+  at(3,(3,7))
+  move(3,(3,7),(4,7))
+  moving(1,(6,7),(7,7))
+ State 8:
+  wait(2)
+  at(1,(7,7))
+  at(2,(8,7))
+  at(3,(4,7))
+  move(1,(7,7),(7,6))
+  move(3,(4,7),(5,7))
+ State 9:
+  wait(2)
+  at(1,(7,7))
+  at(2,(8,7))
+  at(3,(4,7))
+  moving(1,(7,7),(7,6))
+  moving(3,(4,7),(5,7))
+ State 10:
+  at(1,(7,7))
+  at(2,(8,7))
+  at(3,(5,7))
+  move(2,(8,7),(7,7))
+  move(3,(5,7),(6,7))
+  moving(1,(7,7),(7,6))
+ State 11:
+  at(1,(7,7))
+  at(2,(8,7))
+  at(3,(6,7))
+  move(3,(6,7),(7,7))
+  moving(1,(7,7),(7,6))
+  moving(2,(8,7),(7,7))
+ State 12:
+  at(1,(7,6))
+  at(2,(8,7))
+  at(3,(6,7))
+  move(1,(7,6),(7,5))
+  moving(2,(8,7),(7,7))
+  moving(3,(6,7),(7,7))
+ State 13:
+  at(1,(7,6))
+  at(2,(8,7))
+  at(3,(7,7))
+  move(3,(7,7),(7,8))
+  moving(1,(7,6),(7,5))
+  moving(2,(8,7),(7,7))
+ State 14:
+  wait(1)
+  wait(2)
+  at(1,(7,5))
+  at(2,(7,7))
+  at(3,(7,8))
+  move(3,(7,8),(7,7))
+ State 15:
+  at(1,(7,5))
+  at(2,(7,7))
+  at(3,(7,8))
+  move(1,(7,5),(7,4))
+  move(2,(7,7),(6,7))
+  moving(3,(7,8),(7,7))
+ State 16:
+  wait(3)
+  at(1,(7,5))
+  at(2,(6,7))
+  at(3,(7,7))
+  move(2,(6,7),(5,7))
+  moving(1,(7,5),(7,4))
+ State 17:
+  wait(2)
+  wait(3)
+  at(1,(7,4))
+  at(2,(5,7))
+  at(3,(7,7))
+  move(1,(7,4),(8,4))
+ State 18:
+  wait(1)
+  wait(3)
+  at(1,(8,4))
+  at(2,(5,7))
+  at(3,(7,7))
+  move(2,(5,7),(4,7))
+ State 19:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(8,4))
+  at(2,(4,7))
+  at(3,(7,7))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 137.453s (Solving: 119.93s 1st Model: 119.92s Unsat: 0.00s)
+CPU Time     : 137.220s
+
+Choices      : 4351118 
+Conflicts    : 19611    (Analyzed: 19611)
+Restarts     : 82       (Average: 239.16 Last: 18 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 1202.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 111712   (Deleted: 89638)
+  Binary     : 1799     (Ratio:   1.61%)
+  Ternary    : 879      (Ratio:   0.79%)
+  Conflict   : 19611    (Average Length:  103.2 Ratio:  17.55%) 
+  Loop       : 92101    (Average Length:   36.2 Ratio:  82.45%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 19611    (Average: 221.54 Max: 10424 Sum: 4344664)
+  Executed   : 18579    (Average: 221.49 Max: 10424 Sum: 4343632 Ratio:  99.98%)
+  Bounded    : 1032     (Average:  1.00 Max:   1 Sum:   1032 Ratio:   0.02%)
+
+Rules        : 747079   (Original: 746955)
+Atoms        : 418286   (Original: 416312 Auxiliary: 1974)
+Disjunctions : 5550     (Original: 5574)
+Bodies       : 460180   (Original: 413126)
+Equivalences : 775655   (Atom=Atom: 161322 Body=Body: 125007 Other: 489326)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 300574 Gammas: 44968)
+Variables    : 267629   (Eliminated:    0 Frozen: 222555)
+Constraints  : 1337941  (Binary:  82.0% Ternary:  10.7% Other:   7.2%)
+

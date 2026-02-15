@@ -1,0 +1,216 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 312.165s)
+Adding timepoint limit: 100
+
+ t(0,0) t(1,1) t(2,2) t(3,48) t(4,51) t(5,58) t(6,79) t(7,80) t(8,82) t(9,83) t(10,84) t(11,85) t(12,86) t(13,89) t(14,90) t(15,91) t(16,92) t(17,93) t(18,94) t(19,95) t(20,96) t(21,97) t(22,98) t(23,99) t(24,100)
+
+ State 0:
+  wait(2)
+  wait(3)
+  at(1,(7,3))
+  at(2,(1,8))
+  at(3,(6,1))
+  move(1,(7,3),(7,2))
+ State 1:
+  wait(2)
+  wait(3)
+  at(1,(7,2))
+  at(2,(1,8))
+  at(3,(6,1))
+  move(1,(7,2),(7,1))
+ State 2:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(7,1))
+  at(2,(1,8))
+  at(3,(6,1))
+ State 3:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(7,1))
+  at(2,(1,8))
+  at(3,(6,1))
+ State 4:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(7,1))
+  at(2,(1,8))
+  at(3,(6,1))
+ State 5:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(7,1))
+  at(2,(1,8))
+  at(3,(6,1))
+ State 6:
+  wait(1)
+  wait(3)
+  at(1,(7,1))
+  at(2,(1,8))
+  at(3,(6,1))
+  move(2,(1,8),(2,8))
+ State 7:
+  wait(3)
+  at(1,(7,1))
+  at(2,(1,8))
+  at(3,(6,1))
+  move(1,(7,1),(6,1))
+  moving(2,(1,8),(2,8))
+ State 8:
+  at(1,(7,1))
+  at(2,(2,8))
+  at(3,(6,1))
+  move(2,(2,8),(2,7))
+  move(3,(6,1),(5,1))
+  moving(1,(7,1),(6,1))
+ State 9:
+  wait(3)
+  at(1,(7,1))
+  at(2,(2,8))
+  at(3,(5,1))
+  moving(1,(7,1),(6,1))
+  moving(2,(2,8),(2,7))
+ State 10:
+  wait(3)
+  at(1,(7,1))
+  at(2,(2,8))
+  at(3,(5,1))
+  moving(1,(7,1),(6,1))
+  moving(2,(2,8),(2,7))
+ State 11:
+  wait(1)
+  wait(2)
+  at(1,(6,1))
+  at(2,(2,7))
+  at(3,(5,1))
+  move(3,(5,1),(5,2))
+ State 12:
+  wait(1)
+  at(1,(6,1))
+  at(2,(2,7))
+  at(3,(5,1))
+  move(2,(2,7),(2,6))
+  moving(3,(5,1),(5,2))
+ State 13:
+  wait(1)
+  at(1,(6,1))
+  at(2,(2,6))
+  at(3,(5,2))
+  move(2,(2,6),(2,5))
+  move(3,(5,2),(4,2))
+ State 14:
+  wait(1)
+  at(1,(6,1))
+  at(2,(2,6))
+  at(3,(5,2))
+  moving(2,(2,6),(2,5))
+  moving(3,(5,2),(4,2))
+ State 15:
+  at(1,(6,1))
+  at(2,(2,5))
+  at(3,(5,2))
+  move(1,(6,1),(5,1))
+  move(2,(2,5),(3,5))
+  moving(3,(5,2),(4,2))
+ State 16:
+  at(1,(5,1))
+  at(2,(3,5))
+  at(3,(4,2))
+  move(1,(5,1),(6,1))
+  move(2,(3,5),(3,4))
+  move(3,(4,2),(4,3))
+ State 17:
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,5))
+  at(3,(4,3))
+  moving(1,(5,1),(6,1))
+  moving(2,(3,5),(3,4))
+ State 18:
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,5))
+  at(3,(4,3))
+  moving(1,(5,1),(6,1))
+  moving(2,(3,5),(3,4))
+ State 19:
+  wait(1)
+  wait(3)
+  at(1,(6,1))
+  at(2,(3,5))
+  at(3,(4,3))
+  moving(2,(3,5),(3,4))
+ State 20:
+  wait(1)
+  wait(3)
+  at(1,(6,1))
+  at(2,(3,5))
+  at(3,(4,3))
+  moving(2,(3,5),(3,4))
+ State 21:
+  wait(2)
+  wait(3)
+  at(1,(6,1))
+  at(2,(3,4))
+  at(3,(4,3))
+  move(1,(6,1),(5,1))
+ State 22:
+  wait(1)
+  wait(2)
+  at(1,(5,1))
+  at(2,(3,4))
+  at(3,(4,3))
+  move(3,(4,3),(4,2))
+ State 23:
+  wait(1)
+  wait(2)
+  at(1,(5,1))
+  at(2,(3,4))
+  at(3,(4,2))
+  move(3,(4,2),(4,3))
+ State 24:
+  wait(1)
+  wait(2)
+  wait(3)
+  at(1,(5,1))
+  at(2,(3,4))
+  at(3,(4,3))
+
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 312.210s (Solving: 20.85s 1st Model: 20.81s Unsat: 0.00s)
+CPU Time     : 312.056s
+
+Choices      : 174498  
+Conflicts    : 1687     (Analyzed: 1687)
+Restarts     : 9        (Average: 187.44 Last: 277 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 3666.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 10563    (Deleted: 0)
+  Binary     : 15       (Ratio:   0.14%)
+  Ternary    : 371      (Ratio:   3.51%)
+  Conflict   : 1687     (Average Length: 4653.2 Ratio:  15.97%) 
+  Loop       : 8876     (Average Length:   58.9 Ratio:  84.03%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1687     (Average: 74.85 Max: 8907 Sum: 126280)
+  Executed   : 1686     (Average: 74.85 Max: 8907 Sum: 126279 Ratio: 100.00%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.00%)
+
+Rules        : 24064696 (Original: 23995404)
+Atoms        : 1095928  (Original: 1092184 Auxiliary: 3744)
+Disjunctions : 12672    (Original: 14833)
+Bodies       : 3600878  (Original: 3393763)
+Equivalences : 1966981  (Atom=Atom: 398782 Body=Body: 308654 Other: 1259545)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 891751 Gammas: 134076)
+Variables    : 2582909  (Eliminated:    0 Frozen: 672913)
+Constraints  : 29657836 (Binary:  91.3% Ternary:   7.3% Other:   1.3%)
+

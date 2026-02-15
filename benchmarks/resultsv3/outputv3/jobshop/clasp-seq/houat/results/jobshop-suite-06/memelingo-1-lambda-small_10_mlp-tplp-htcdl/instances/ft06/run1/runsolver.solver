@@ -1,0 +1,35 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ...../examples/job-shop/instances/ft06.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 3.763s (Solving: 2.88s 1st Model: 0.00s Unsat: 2.88s)
+CPU Time     : 3.624s
+
+Choices      : 288928  
+Conflicts    : 4351     (Analyzed: 4350)
+Restarts     : 28       (Average: 155.36 Last: 68 Blocked: 0)
+Stab. Tests  : 36       (Full: 0 Partial: 36)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 6581     (Deleted: 2639)
+  Binary     : 989      (Ratio:  15.03%)
+  Ternary    : 309      (Ratio:   4.70%)
+  Conflict   : 4350     (Average Length:   11.9 Ratio:  66.10%) 
+  Loop       : 2231     (Average Length:    8.3 Ratio:  33.90%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 4350     (Average: 66.47 Max: 1100 Sum: 289146)
+  Executed   : 4046     (Average: 66.40 Max: 1100 Sum: 288842 Ratio:  99.89%)
+  Bounded    : 304      (Average:  1.00 Max:   1 Sum:    304 Ratio:   0.11%)
+
+Rules        : 77413   
+  Choice     : 360     
+Atoms        : 47422   
+Disjunctions : 648      (Original: 648)
+Bodies       : 49349    (Original: 45461)
+Equivalences : 91341    (Atom=Atom: 16602 Body=Body: 11372 Other: 63367)
+Tight        : No       (SCCs: 108 Non-Hcfs: 36 Nodes: 29646 Gammas: 3888)
+Variables    : 30019    (Eliminated:    0 Frozen: 25411)
+Constraints  : 84507    (Binary:  75.9% Ternary:  15.4% Other:   8.7%)
+

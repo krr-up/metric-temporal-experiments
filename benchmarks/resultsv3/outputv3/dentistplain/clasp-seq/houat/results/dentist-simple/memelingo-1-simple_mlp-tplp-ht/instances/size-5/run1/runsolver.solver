@@ -1,0 +1,635 @@
+/mnt/beegfs/home/hahnmartinlu/miniconda3/envs/memelingo/bin/memelingo version 5.8.0
+Reading from ..../examples/dentist/instances/size-5.lp ...
+Solving...
+Answer: 1 (Time: 55.366s)
+Adding timepoint limit: 550
+
+ t(0,0) t(1,100) t(2,200) t(3,350)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,office)
+ State 2:
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 3:
+  at(icard,home)
+  at(ram,dentist)
+
+Answer: 2 (Time: 56.370s)
+
+ t(0,0) t(1,150) t(2,250) t(3,325)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,home)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,office)
+ State 3:
+  at(cash,atm)
+  at(ram,office)
+
+Answer: 3 (Time: 56.415s)
+
+ t(0,0) t(1,150) t(2,250) t(3,350)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,home)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,dentist)
+ State 3:
+  at(cash,atm)
+  at(ram,dentist)
+
+Answer: 4 (Time: 56.470s)
+
+ t(0,0) t(1,150) t(2,250) t(3,325)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,home)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,atm)
+ State 3:
+  at(cash,atm)
+  at(ram,atm)
+
+Answer: 5 (Time: 56.595s)
+
+ t(0,0) t(1,150) t(2,300) t(3,400)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,office)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 3:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+
+Answer: 6 (Time: 56.639s)
+
+ t(0,0) t(1,150) t(2,300) t(3,375)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,office)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 3:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+
+Answer: 7 (Time: 56.728s)
+
+ t(0,0) t(1,150) t(2,300) t(3,450)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,office)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 3:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+
+Answer: 8 (Time: 57.602s)
+
+ t(0,0) t(1,150) t(2,350) t(3,450)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,atm)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,office)
+ State 3:
+  at(icard,home)
+  at(ram,office)
+
+Answer: 9 (Time: 57.617s)
+
+ t(0,0) t(1,150) t(2,350) t(3,425)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,atm)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,home)
+ State 3:
+  at(icard,home)
+  at(ram,home)
+
+Answer: 10 (Time: 57.676s)
+
+ t(0,0) t(1,150) t(2,350) t(3,550)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,dentist)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,atm)
+ State 2:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,dentist)
+ State 3:
+  at(icard,home)
+  at(ram,dentist)
+
+Answer: 11 (Time: 58.023s)
+
+ t(0,0) t(1,100) t(2,175) t(3,250)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,home)
+ State 2:
+  at(icard,home)
+  at(ram,home)
+  go(ram,office)
+ State 3:
+  at(ram,office)
+
+Answer: 12 (Time: 58.062s)
+
+ t(0,0) t(1,100) t(2,175) t(3,250)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,home)
+ State 2:
+  at(icard,home)
+  at(ram,home)
+  go(ram,atm)
+ State 3:
+  at(ram,atm)
+
+Answer: 13 (Time: 58.112s)
+
+ t(0,0) t(1,100) t(2,300) t(3,450)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,dentist)
+ State 2:
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,office)
+ State 3:
+  at(icard,home)
+  at(ram,office)
+
+Answer: 14 (Time: 58.202s)
+
+ t(0,0) t(1,100) t(2,200) t(3,300)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,office)
+ State 2:
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 3:
+  at(icard,home)
+  at(ram,atm)
+
+Answer: 15 (Time: 58.315s)
+
+ t(0,0) t(1,100) t(2,300) t(3,500)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,dentist)
+ State 2:
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,atm)
+ State 3:
+  at(icard,home)
+  at(ram,atm)
+
+Answer: 16 (Time: 58.412s)
+
+ t(0,0) t(1,100) t(2,200) t(3,275)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,office)
+ State 2:
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 3:
+  at(icard,home)
+  at(ram,home)
+
+Answer: 17 (Time: 58.456s)
+
+ t(0,0) t(1,100) t(2,300) t(3,400)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,dentist)
+ State 2:
+  at(icard,home)
+  at(ram,dentist)
+  go(ram,home)
+ State 3:
+  at(icard,home)
+  at(ram,home)
+
+Answer: 18 (Time: 58.499s)
+
+ t(0,0) t(1,100) t(2,175) t(3,275)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,atm)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,atm)
+  go(ram,home)
+ State 2:
+  at(icard,home)
+  at(ram,home)
+  go(ram,dentist)
+ State 3:
+  at(ram,dentist)
+
+Answer: 19 (Time: 58.960s)
+
+ t(0,0) t(1,75) t(2,175) t(3,325)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,dentist)
+ State 2:
+  at(cash,atm)
+  at(ram,dentist)
+  go(ram,office)
+ State 3:
+  at(cash,atm)
+  at(ram,office)
+
+Answer: 20 (Time: 58.988s)
+
+ t(0,0) t(1,75) t(2,175) t(3,375)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,dentist)
+ State 2:
+  at(cash,atm)
+  at(ram,dentist)
+  go(ram,atm)
+ State 3:
+  at(cash,atm)
+  at(ram,atm)
+
+Answer: 21 (Time: 59.011s)
+
+ t(0,0) t(1,75) t(2,175) t(3,275)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,dentist)
+ State 2:
+  at(cash,atm)
+  at(ram,dentist)
+  go(ram,home)
+ State 3:
+  at(cash,atm)
+  at(ram,home)
+
+Answer: 22 (Time: 59.073s)
+
+ t(0,0) t(1,75) t(2,150) t(3,350)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,atm)
+ State 2:
+  at(cash,atm)
+  at(ram,atm)
+  go(ram,dentist)
+ State 3:
+  at(ram,dentist)
+
+Answer: 23 (Time: 59.126s)
+
+ t(0,0) t(1,75) t(2,150) t(3,300)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,office)
+ State 2:
+  at(cash,atm)
+  at(ram,office)
+  go(ram,dentist)
+ State 3:
+  at(cash,atm)
+  at(ram,dentist)
+
+Answer: 24 (Time: 59.213s)
+
+ t(0,0) t(1,75) t(2,150) t(3,225)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,office)
+ State 2:
+  at(cash,atm)
+  at(ram,office)
+  go(ram,home)
+ State 3:
+  at(cash,atm)
+  at(ram,home)
+
+Answer: 25 (Time: 59.308s)
+
+ t(0,0) t(1,75) t(2,150) t(3,250)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,atm)
+ State 2:
+  at(cash,atm)
+  at(ram,atm)
+  go(ram,office)
+ State 3:
+  at(ram,office)
+
+Answer: 26 (Time: 59.341s)
+
+ t(0,0) t(1,75) t(2,150) t(3,225)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,atm)
+ State 2:
+  at(cash,atm)
+  at(ram,atm)
+  go(ram,home)
+ State 3:
+  at(ram,home)
+
+Answer: 27 (Time: 59.499s)
+
+ t(0,0) t(1,75) t(2,150) t(3,250)
+
+ State 0:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,office)
+  go(ram,home)
+ State 1:
+  at(cash,atm)
+  at(icard,home)
+  at(ram,home)
+  go(ram,office)
+ State 2:
+  at(cash,atm)
+  at(ram,office)
+  go(ram,atm)
+ State 3:
+  at(cash,atm)
+  at(ram,atm)
+
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 60.122s (Solving: 7.20s 1st Model: 2.44s Unsat: 0.62s)
+CPU Time     : 59.977s
+
+Choices      : 8143    
+Conflicts    : 293      (Analyzed: 251)
+Restarts     : 2        (Average: 125.50 Last: 243 Blocked: 0)
+Model-Level  : 50.9    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 288      (Deleted: 0)
+  Binary     : 21       (Ratio:   7.29%)
+  Ternary    : 21       (Ratio:   7.29%)
+  Conflict   : 251      (Average Length: 9967.0 Ratio:  87.15%) 
+  Loop       : 37       (Average Length:    3.6 Ratio:  12.85%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 251      (Average: 23.60 Max: 444 Sum:   5924)
+  Executed   : 241      (Average: 23.55 Max: 444 Sum:   5910 Ratio:  99.76%)
+  Bounded    : 10       (Average:  1.40 Max:   3 Sum:     14 Ratio:   0.24%)
+
+Rules        : 8437935  (Original: 8136513)
+Atoms        : 5147    
+Disjunctions : 0        (Original: 1104)
+Bodies       : 1660571  (Original: 1359149)
+Equivalences : 13993    (Atom=Atom: 1709 Body=Body: 1558 Other: 10726)
+Tight        : No       (SCCs: 12 Non-Hcfs: 0 Nodes: 342 Gammas: 0)
+Variables    : 1653880  (Eliminated:    0 Frozen: 1912)
+Constraints  : 121275642 (Binary:  98.6% Ternary:   1.1% Other:   0.2%)
+
