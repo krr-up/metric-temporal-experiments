@@ -186,6 +186,7 @@ class CApproach(MyApproach):
         self.parse_load_files()
         self.ctl.add("base", [], reified_prg)
         if self.timepoint_limit is not None:
+            log.info(f"Adding timepoint limit: {self.timepoint_limit}")
             self.ctl.add("base", [], f"timepoint_limit({self.timepoint_limit}).")
         else:
             log.info("No timepoint limit provided, using unbounded timepoints.")
