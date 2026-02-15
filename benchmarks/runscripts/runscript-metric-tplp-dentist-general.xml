@@ -7,7 +7,7 @@
 
 	<system name="memelingo" version="1" measures="rp_tmp"
 		config="seq-generic"
-		cmdline="--project=show --stats -c lambda=4">
+		cmdline="0 --project=show --stats -c lambda=4">
 		<setting name="simple" tag="simple">
 			<variable cmd="--approach={}"
 				value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl;mlp-lpnmr-ht;mlp-lpnmr-htc;mlp-lpnmr-htcdl" />

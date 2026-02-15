@@ -4,7 +4,7 @@ wait(A); move(A,U,V) : myedge(U,V,D) :- at(A,U), not moving(A,_,_).
 
 % % - move ------------------------------------------------------------------
 always((1,D),moving(A,U,V)) :- move(A,U,V), myedge(U,V,D).
-always((1,D),at(A,U)) :- move(A,U,V), myedge(U,V,D).
+at(A,U) :- moving(A,U,V).
 eventually((D,D+1),at(A,V)) :- move(A,U,V), myedge(U,V,D).
 
 next((0,w),at(A,U)) :- wait(A), at(A,U), not finally.

@@ -11,7 +11,7 @@
 		<setting name="all-opts" tag="all-opts">
 			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 			<variable cmd="-c lambda={}" value="15;20;25;30;35" />
-			<variable cmd="--timepoint-limit={}" value="30;50;100;150;200" />
+			<variable cmd="--timepoint-limit={}" value="30;50;100" />
 		</setting>
 	</system>
 

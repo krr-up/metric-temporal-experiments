@@ -23,6 +23,7 @@ def reify(
 
         Returns: a string representing the reified program
     """
+    log.info("Reifying program...")
     if files is None:
         files = []
     symbols: List[Symbol] = []

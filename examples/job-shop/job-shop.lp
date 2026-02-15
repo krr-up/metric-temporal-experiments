@@ -1,6 +1,3 @@
-timepoint_limit(X):-meta(optimum,X).
-timepoint_limit(100):-not meta(optimum,_).
-
 
 operation(O):- operation(J,O,M,D).
 {start_run(O,M):operation(_,O,M,_)}:-operation(O).

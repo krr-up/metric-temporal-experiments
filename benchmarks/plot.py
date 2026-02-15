@@ -17,8 +17,21 @@ SUMMARY_ROWS = {"SUM", "AVG", "DEV", "DST", "BEST", "BETTER", "WORSE", "WORST"}
 AGGREGATE_COLUMNS = {"min", "median", "max"}
 
 
+def get_size(name):
+    return name.split("-")[1]
+
+
 def get_lambda(name):
     return name.split("_")[1]
+
+
+def get_horizon_mapf8(name):
+    h = name.split("-")[-1].split("_")[1]
+    v = name.split("-")[-1].split("_")[2]
+    if v != "30":
+        print("Skipping instance with unexpected factor:", name)
+        return None
+    return int(h)
 
 
 def get_agents(name):
@@ -32,6 +45,8 @@ def get_instance_prefix(name):
     # Split by '_f' and take the first part
     if "_f" in name:
         return name.split("_f")[0]
+    if "-" in name:
+        return name.split("-")[0]
     return name
 
 
@@ -44,11 +59,15 @@ def get_factor(name):
     return None
 
 
+def group_id(name):
+    return name
+
+
 def get_approach(benchmark_name):
     """Extract approach from benchmark column name"""
     # e.g., 'memelingo-1/allapproaches_mlp-tplp-ht' -> 'ht'
     if "mlp-tplp-" in benchmark_name:
-        return benchmark_name.split("mlp-tplp-")[-1]
+        return benchmark_name.split("mlp-tplp-")[-1].split("_")[0]
     return benchmark_name
 
 
@@ -276,17 +295,22 @@ def plot_instance_by_row(
     """
     approaches_skipped = approaches_skipped or []
     group_skip = group_skip or set()
-
+    if grouping_function is None:
+        grouping_function = group_id
     # Filter instances matching the prefix and extract groups
     matching_instances = {}
     for inst_name, inst_df in all_instances.items():
         if get_instance_prefix(inst_name) == instance_prefix:
+            print(f"Matching instance: {inst_name}")
             group = grouping_function(inst_name)
             if group is not None and group not in group_skip:
                 matching_instances[group] = (inst_name, inst_df)
 
     if not matching_instances:
         print(f"No instances found matching prefix: {instance_prefix}")
+        print(
+            f"Available instance prefixes: {set(get_instance_prefix(name) for name in all_instances.keys())}"
+        )
         return
 
     plt.rcParams.update(CONFIG)
@@ -295,6 +319,7 @@ def plot_instance_by_row(
     # Get all approaches from first instance
     first_df = list(matching_instances.values())[0][1]
     all_unknown = {}
+    unsat_groups = set()  # NEW: Track UNSATISFIABLE groups
 
     # Loop: for each approach (column), collect data across groups (rows)
     for benchmark in first_df.index:
@@ -337,12 +362,26 @@ def plot_instance_by_row(
                             thick_values.append(0)
 
                         if "status" in inst_df.columns:
-                            statuses.append(inst_df.loc[benchmark, "status"])
+                            status = inst_df.loc[benchmark, "status"]
+                            statuses.append(status)
+                            # NEW: Track UNSATISFIABLE groups
+                            if status == "UNSATISFIABLE":
+                                unsat_groups.add(group)
                         else:
                             statuses.append(None)
 
         if not groups:
             continue
+
+        # Zip everything together, sort by group, then unzip
+        sorted_data = sorted(zip(groups, values, thick_values, statuses))
+        groups, values, thick_values, statuses = (
+            zip(*sorted_data) if sorted_data else ([], [], [], [])
+        )
+        groups = list(groups)
+        values = list(values)
+        thick_values = list(thick_values)
+        statuses = list(statuses)
 
         # Plot filled area
         if thick_attr and thick_values:
@@ -358,6 +397,19 @@ def plot_instance_by_row(
         # Plot line
         unknown = plot_approach_line(ax, groups, values, statuses, approach, label)
         all_unknown[approach] = unknown
+
+    # NEW: Add vertical lines for UNSATISFIABLE groups
+    if unsat_groups:
+        for group_val in sorted(unsat_groups):
+            ax.axvline(
+                x=group_val,
+                color="orange",
+                linestyle="--",
+                linewidth=2,
+                alpha=0.7,
+                zorder=0,
+                label="UNSAT" if group_val == min(unsat_groups) else "",
+            )
 
     # Add timeout legend entry
     if any(all_unknown.values()):
@@ -394,7 +446,8 @@ def plot_instance_by_column(
     """
     approaches_skipped = approaches_skipped or []
     group_skip = group_skip or set()
-
+    if not grouping_function:
+        grouping_function = group_id
     # Find the instance
     all_prefixes = {get_instance_prefix(inst): inst for inst in all_instances.keys()}
     if instance_name not in all_prefixes:
@@ -424,9 +477,11 @@ def plot_instance_by_column(
     approaches_set = set()
     for benchmarks in group_matrix.values():
         for benchmark in benchmarks:
+            print("getting approach from benchmark:", benchmark)
             approaches_set.add(get_approach(benchmark))
 
     all_unknown = {}
+    unsat_groups = set()  # NEW: Track UNSATISFIABLE groups
 
     # Loop: for each approach, collect data across groups (columns)
     for approach in sorted(approaches_set):
@@ -474,12 +529,26 @@ def plot_instance_by_column(
                             thick_values.append(0)
 
                         if "status" in inst_df.columns:
-                            statuses.append(inst_df.loc[benchmark, "status"])
+                            status = inst_df.loc[benchmark, "status"]
+                            statuses.append(status)
+                            # NEW: Track UNSATISFIABLE groups
+                            if status == "UNSATISFIABLE":
+                                unsat_groups.add(group)
                         else:
                             statuses.append(None)
 
         if not groups:
             continue
+
+        # Zip everything together, sort by group, then unzip
+        sorted_data = sorted(zip(groups, values, thick_values, statuses))
+        groups, values, thick_values, statuses = (
+            zip(*sorted_data) if sorted_data else ([], [], [], [])
+        )
+        groups = list(groups)
+        values = list(values)
+        thick_values = list(thick_values)
+        statuses = list(statuses)
 
         # Plot filled area
         if thick_attr and thick_values:
@@ -495,6 +564,19 @@ def plot_instance_by_column(
         # Plot line
         unknown = plot_approach_line(ax, groups, values, statuses, approach, label)
         all_unknown[approach] = unknown
+
+    # NEW: Add vertical lines for UNSATISFIABLE groups
+    if unsat_groups:
+        for group_val in sorted(unsat_groups):
+            ax.axvline(
+                x=group_val,
+                color="orange",
+                linestyle="--",
+                linewidth=2,
+                alpha=0.7,
+                zorder=0,
+                label="UNSAT" if group_val == min(unsat_groups) else "",
+            )
 
     # Add timeout legend entry
     if any(all_unknown.values()):
@@ -742,20 +824,74 @@ def main():
         instance_prefix = sys.argv[2]
         save_path = f"plots/{instance_prefix}_factor.pdf"
 
-        plot_instance_by_row(
+        # # ------ Dentist
+        # plot_instance_by_row(
+        #     instance_prefix,
+        #     ["time"],
+        #     df_instances,
+        #     grouping_function=get_size,
+        #     y="Time (s)",
+        #     x="Factor",
+        #     thick_attr="stime",
+        #     figsize=(3, 4),
+        #     save_path=save_path,
+        #     dpi=300,
+        #     group_skip={30, 35, 40, 45, 50},
+        #     approaches_skipped=["ht"],  # Skip clingo for better visibility
+        #     # title=f"Agents = {get_agents(instance_prefix)}",
+        # )
+
+        # # ------MAPF
+        # plot_instance_by_row(
+        #     instance_prefix,
+        #     ["time"],
+        #     df_instances,
+        #     grouping_function=get_factor,
+        #     y="Time (s)",
+        #     x="Factor",
+        #     thick_attr="stime",
+        #     figsize=(3, 4),
+        #     save_path=save_path,
+        #     dpi=300,
+        #     group_skip={30, 35, 40, 45, 50},
+        #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
+        #     # title=f"Agents = {get_agents(instance_prefix)}",
+        # )
+
+        # # ------MAPF 8
+        # plot_instance_by_column(
+        #     instance_prefix,
+        #     ["time"],
+        #     df_instances,
+        #     grouping_function=get_horizon_mapf8,
+        #     y="Time (s)",
+        #     x="Horizon",
+        #     thick_attr="stime",
+        #     figsize=(3, 4),
+        #     save_path=save_path,
+        #     dpi=300,
+        #     # group_skip={30, 35, 40, 45, 50},
+        #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
+        #     # title=f"Agents = {get_agents(instance_prefix)}",
+        # )
+
+        # ------Job
+        plot_instance_by_column(
             instance_prefix,
             ["time"],
             df_instances,
-            grouping_function=get_factor,
+            grouping_function=get_lambda,
             y="Time (s)",
-            x="Factor",
+            x="Lambda",
             thick_attr="stime",
             figsize=(3, 4),
             save_path=save_path,
             dpi=300,
-            group_skip={30, 35, 40, 45, 50},
-            title=f"Agents = {get_agents(instance_prefix)}",
+            # group_skip={30, 35, 40, 45, 50},
+            # approaches_skipped=["ht"],  # Skip clingo for better visibility
+            # title=f"Agents = {get_agents(instance_prefix)}",
         )
+
     else:
         # Multiple instances - use new function
         instances = ["x6_y6_a1", "x6_y6_a2", "x6_y6_a3", "x6_y6_a4"]
@@ -766,7 +902,7 @@ def main():
 
         plot_multiple_instances_by_row(
             instances,
-            ["time"],
+            ["ctime"],
             df_instances,
             grouping_function=get_factor,
             y="Time (s)",

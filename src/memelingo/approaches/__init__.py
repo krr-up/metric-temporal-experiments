@@ -63,6 +63,7 @@ class MyApproach:
             self.ctl.load(f)
         self.ctl.add("base", [], f"#const v={self.timepoint_limit}.")
         if self.timepoint_limit is not None:
+            print("Adding timepoint limit:", self.timepoint_limit)
             self.ctl.add("base", [], f"timepoint_limit({self.timepoint_limit}).")
         else:
             log.info("No timepoint limit provided, using unbounded timepoints.")
