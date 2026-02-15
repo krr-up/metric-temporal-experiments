@@ -23,6 +23,10 @@ clasp_re = {
             r"^(c )?Time[ ]*:[ ]*[0-9]+(\.[0-9]+)?s[ ]*\(Solving:[ ]*(?P<val>[0-9]+(\.[0-9]+)?)"
         ),
     ),
+    "fmtime": (
+        "float",
+        re.compile(r"^(c )?Time[ ]*:.*1st Model:[ ]*(?P<val>[0-9]+(\.[0-9]+)?)"),
+    ),
     "rules": ("float", re.compile(r"^(c )?Rules[ ]*:[ ]*(?P<val>[0-9]+)")),
     "roriginal": (
         "float",
