@@ -26,24 +26,24 @@
 		<files path="../examples/dentist">
 			<encoding file="../examples/dentist/dentist.lp" />
 			<encoding file="../examples/dentist/dentist-goal.lp" />
-			<add file="instances/size-1.lp" cmdline="--timepoint-limit=110" />
-			<add file="instances/size-2.lp" cmdline="--timepoint-limit=220" />
-			<add file="instances/size-3.lp" cmdline="--timepoint-limit=330" />
-			<add file="instances/size-4.lp" cmdline="--timepoint-limit=440" />
-			<add file="instances/size-5.lp" cmdline="--timepoint-limit=550" />
-			<add file="instances/size-6.lp" cmdline="--timepoint-limit=660" />
-			<add file="instances/size-7.lp" cmdline="--timepoint-limit=770" />
-			<add file="instances/size-8.lp" cmdline="--timepoint-limit=880" />
-			<add file="instances/size-9.lp" cmdline="--timepoint-limit=990" />
-			<add file="instances/size-10.lp" cmdline="--timepoint-limit=1100" />
+			<add file="instances/size-1.lp" cmdline="-c v=110" />
+			<add file="instances/size-2.lp" cmdline="-c v=220" />
+			<add file="instances/size-3.lp" cmdline="-c v=330" />
+			<add file="instances/size-4.lp" cmdline="-c v=440" />
+			<add file="instances/size-5.lp" cmdline="-c v=550" />
+			<add file="instances/size-6.lp" cmdline="-c v=660" />
+			<add file="instances/size-7.lp" cmdline="-c v=770" />
+			<add file="instances/size-8.lp" cmdline="-c v=880" />
+			<add file="instances/size-9.lp" cmdline="-c v=990" />
+			<add file="instances/size-10.lp" cmdline="-c v=1100" />
 		</files>
 	</benchmark>
 
 	<benchmark name="dentist-test">
 		<files path="../examples/dentist">
 			<encoding file="../examples/dentist/dentist.lp" />
-			<add file="instances/size-1.lp" cmdline="--timepoint-limit=110" />
-			<add file="instances/size-2.lp" cmdline="--timepoint-limit=220" />
+			<add file="instances/size-1.lp" cmdline="-c v=110" />
+			<add file="instances/size-2.lp" cmdline="-c v=220" />
 		</files>
 	</benchmark>
 
