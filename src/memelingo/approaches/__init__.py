@@ -137,20 +137,17 @@ class CApproach(MyApproach):
         ctl: Control,
         timepoint_limit: int,
         asp_files: List[str],
-        theory_class,
     ):
         """
         Creates an approach
 
         Args:
             ctl (Control): The clingo control
-            theory_class (_type_): The theory class used
             timepoint_limit: Limit for the timepoints
             asp_files (List[str]): The list of additional files needed to calculate the intervals
         """
         super().__init__(ctl, timepoint_limit, asp_files)
-        self.theory_class = theory_class
-        self.theory: Theory
+        self.theory = self.__class__.theory
 
     @property
     def files(self):
@@ -181,7 +178,6 @@ class CApproach(MyApproach):
         """
         log.debug("Loading...")
 
-        self.theory = self.theory_class()
         self.theory.register(self.ctl)
         self.parse_load_files()
         self.ctl.add("base", [], reified_prg)

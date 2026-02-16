@@ -73,15 +73,12 @@ class MemelingoApp(Application):
         """
         Parse approach
         """
-        # if approach == "clingcon":
-        #     self._approach_class = ClingconApproach
-        # elif approach == "asp":
-        #     self._approach_class = ASPApproach
         if approach not in APPROACHES:
             log.error(
                 f"Approach {approach} not recognized. Available approaches: {', '.join(APPROACHES.keys())}"
             )
             return False
+        print(f"Using approach {approach}")
         self._approach_class = APPROACHES[approach]
         return True
 
@@ -97,6 +94,7 @@ class MemelingoApp(Application):
         Add custom options
         """
         group = "Clingo.Memelingo"
+        self.options = options
         # Add an option of the system to run
         options.add(
             group,
@@ -139,6 +137,11 @@ class MemelingoApp(Application):
             self.parse_timepoint_limit,
             argument="<timepoint>",
         )
+        if self._approach_class is not None:
+            if hasattr(self._approach_class, "theory"):
+                print("Theory")
+                print(self._approach_class.theory)
+                self._approach_class.theory.register_options(self.options)
 
     def print_model1(self, model: Model, _) -> None:
         """

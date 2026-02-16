@@ -1,6 +1,9 @@
 %================================================
 % General meta-encoding
 %================================================
+#const v = 0.
+#const lambda = 0.
+
 time(0..lambda-1).
 
 conjunction(B,T) :- literal_tuple(B), time(T),

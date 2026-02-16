@@ -6,4 +6,4 @@
 
 &diff{t(K) - t(K+1)} <= -1:- time(K), time(K+1).
 
-&diff{t(K)} <= L:- time(K), timepoint_limit(L).
+&diff{t(K)} <= v:- time(K), v!=0.

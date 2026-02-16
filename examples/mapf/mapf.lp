@@ -14,9 +14,9 @@ next((0,w),at(A,U)) :- wait(A), at(A,U), not finally.
 :- at(A,V), at(A',V), vertex(V), A>A'.
 
 % % % - edge collision --------------------------------------------------------
-taken(A,U,V) :- move(A,U,V).
-taken(A,V,U) :- moving(A,V,U).
-:- taken(_,U,V), taken(_,V,U), U < V.
+taken(U,V) :- move(A,U,V).
+taken(V,U) :- moving(A,V,U).
+:- taken(U,V), taken(V,U), U < V.
 
 % % - query -----------------------------------------------------------------
 :- goal(A,V), not at(A,V), finally.

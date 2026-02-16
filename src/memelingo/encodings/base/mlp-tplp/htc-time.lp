@@ -6,4 +6,4 @@
 
 &sum{t(K) ; -t(K+1)} <= -1:- time(K), time(K+1).
 
-&sum{t(K)} <= L:- time(K), timepoint_limit(L).
+&sum{t(K)} <= v:- time(K), v!=0.

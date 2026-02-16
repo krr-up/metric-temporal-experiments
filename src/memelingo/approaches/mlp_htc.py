@@ -21,6 +21,7 @@ class MLPhtcPlain(CApproach):
     """
 
     system_name = "clingcon"
+    theory = ClingconTheory()
 
     def __init__(self, ctl: Control, timepoint_limit: int):
         """
@@ -28,7 +29,7 @@ class MLPhtcPlain(CApproach):
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, timepoint_limit, ["mlp-lpnmr-htc.lp"], ClingconTheory)
+        super().__init__(ctl, timepoint_limit, ["mlp-lpnmr-htc.lp"])
 
 
 class MLPhtcPlainDL(CApproach):
@@ -37,6 +38,7 @@ class MLPhtcPlainDL(CApproach):
     """
 
     system_name = "clingodl"
+    theory = ClingoDLTheory()
 
     def __init__(self, ctl: Control, timepoint_limit: int):
         """
@@ -44,7 +46,7 @@ class MLPhtcPlainDL(CApproach):
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, timepoint_limit, ["mlp-lpnmr-htcdl.lp"], ClingoDLTheory)
+        super().__init__(ctl, timepoint_limit, ["mlp-lpnmr-htcdl.lp"])
 
 
 class MLPhtcExtended(CApproach):
@@ -53,6 +55,7 @@ class MLPhtcExtended(CApproach):
     """
 
     system_name = "clingcon"
+    theory = ClingconTheory()
 
     def __init__(self, ctl: Control, timepoint_limit: int):
         """
@@ -60,7 +63,7 @@ class MLPhtcExtended(CApproach):
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, timepoint_limit, ["mlp-tplp-htc.lp"], ClingconTheory)
+        super().__init__(ctl, timepoint_limit, ["mlp-tplp-htc.lp"])
 
 
 class MLPhtcExtendedDL(CApproach):
@@ -69,6 +72,7 @@ class MLPhtcExtendedDL(CApproach):
     """
 
     system_name = "clingodl"
+    theory = ClingoDLTheory()
 
     def __init__(self, ctl: Control, timepoint_limit: int):
         """
@@ -76,4 +80,4 @@ class MLPhtcExtendedDL(CApproach):
         Args:
             ctl (Control): clingo COntrol
         """
-        super().__init__(ctl, timepoint_limit, ["mlp-tplp-htcdl.lp"], ClingoDLTheory)
+        super().__init__(ctl, timepoint_limit, ["mlp-tplp-htcdl.lp"])
