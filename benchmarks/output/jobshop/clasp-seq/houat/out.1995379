@@ -37,3 +37,7 @@ running  results/jobshop-suite-la1/memelingo-1-lambda-large_150_mlp-tplp-htc/ins
 running  results/jobshop-suite-la1/memelingo-1-lambda-large_150_mlp-tplp-htc/instances/la01/run1/start.sh
 running  results/jobshop-suite-la1/memelingo-1-lambda-large_150_mlp-tplp-htcdl/instances/la02/run1/start.sh
 running  results/jobshop-suite-la1/memelingo-1-lambda-large_150_mlp-tplp-htcdl/instances/la01/run1/start.sh
+running  results/jobshop-suite-la1/memelingo-1-lambda-large_200_mlp-tplp-htc/instances/la02/run1/start.sh
+running  results/jobshop-suite-la1/memelingo-1-lambda-large_200_mlp-tplp-htc/instances/la01/run1/start.sh
+running  results/jobshop-suite-la1/memelingo-1-lambda-large_200_mlp-tplp-htcdl/instances/la02/run1/start.sh
+running  results/jobshop-suite-la1/memelingo-1-lambda-large_200_mlp-tplp-htcdl/instances/la01/run1/start.sh
