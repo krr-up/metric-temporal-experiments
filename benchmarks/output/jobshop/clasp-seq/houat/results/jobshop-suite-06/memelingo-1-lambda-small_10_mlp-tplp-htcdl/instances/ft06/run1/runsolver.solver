@@ -1,0 +1,57 @@
+python -m clingo ../../../../../../../../../../../examples/job-shop/instances/ft06.lp ../../../../../../../../../../../examples/job-shop/job-shop.lp --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp --models=1 --project=show --stats -c lambda=10 -c v=55 --propagate=full
+clingo-dl version 1.5.0
+Reading from - ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 1.853s (Solving: 1.36s 1st Model: 0.00s Unsat: 1.36s)
+CPU Time     : 1.787s
+
+Choices      : 4130    
+Conflicts    : 2584     (Analyzed: 2583)
+Restarts     : 14       (Average: 184.50 Last: 385 Blocked: 0)
+Stab. Tests  : 36       (Full: 0 Partial: 36)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 10622    (Deleted: 2287)
+  Binary     : 2645     (Ratio:  24.90%)
+  Ternary    : 2126     (Ratio:  20.02%)
+  Conflict   : 2583     (Average Length:   17.7 Ratio:  24.32%) 
+  Loop       : 2611     (Average Length:    8.3 Ratio:  24.58%) 
+  Other      : 5428     (Average Length:    2.6 Ratio:  51.10%) 
+Backjumps    : 2583     (Average:  1.51 Max:  43 Sum:   3895)
+  Executed   : 2552     (Average:  1.50 Max:  43 Sum:   3864 Ratio:  99.20%)
+  Bounded    : 31       (Average:  1.00 Max:   1 Sum:     31 Ratio:   0.80%)
+
+Rules        : 77412   
+  Choice     : 360     
+Atoms        : 47421   
+Disjunctions : 648      (Original: 648)
+Bodies       : 49349    (Original: 45461)
+Equivalences : 91341    (Atom=Atom: 16602 Body=Body: 11372 Other: 63367)
+Tight        : No       (SCCs: 108 Non-Hcfs: 36 Nodes: 29646 Gammas: 3888)
+Variables    : 30019    (Eliminated:    0 Frozen: 25411)
+Constraints  : 84507    (Binary:  75.9% Ternary:  15.4% Other:   8.7%)
+
+DifferenceLogic
+  Time init(s): 0.00486554
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 1731
+  Variables  : 11
+  [Thread 0]
+    Propagation(s): 0.201626
+    Dijkstra(s): 0.115154
+    Undo(s)  : 0.00313293
+    True edges: 35982
+    False edges: 3757
+    False edges (inverse): 663
+    False edges (partial): 1800
+    False edges (partial+): 202
+    Edges added: 40604
+    Edges skipped: 36166
+    Edges propagated: 40452
+    Cost consistency: 129850
+    Cost forward: 5.65318e+06
+    Cost backward: 5.63229e+06

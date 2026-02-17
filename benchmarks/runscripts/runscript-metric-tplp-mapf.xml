@@ -7,7 +7,7 @@
 
 	<system name="memelingo" version="1" measures="rp_tmp"
 		config="seq-generic"
-		cmdline="--project=show --stats">
+		cmdline="--models=1 --project=show --stats">
 		<setting name="allapproaches" tag="allapproaches" cmdline="-c lambda=10">
 			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
@@ -19,42 +19,42 @@
 	<benchmark name="mapf-suite-x6_y6">
 		<files path="../examples/mapf">
 			<encoding file="../examples/mapf/mapf.lp" />
-			<add file="instances/x6_y6_a1_f1.lp" cmdline="--timepoint-limit=15" />
-			<add file="instances/x6_y6_a1_f5.lp" cmdline="--timepoint-limit=75" />
-			<add file="instances/x6_y6_a1_f10.lp" cmdline="--timepoint-limit=150" />
-			<add file="instances/x6_y6_a1_f15.lp" cmdline="--timepoint-limit=225" />
-			<add file="instances/x6_y6_a1_f20.lp" cmdline="--timepoint-limit=300" />
-			<add file="instances/x6_y6_a1_f25.lp" cmdline="--timepoint-limit=375" />
-			<add file="instances/x6_y6_a1_f30.lp" cmdline="--timepoint-limit=450" />
-			<add file="instances/x6_y6_a1_f35.lp" cmdline="--timepoint-limit=525" />
-			<add file="instances/x6_y6_a1_f40.lp" cmdline="--timepoint-limit=600" />
-			<add file="instances/x6_y6_a2_f1.lp" cmdline="--timepoint-limit=15" />
-			<add file="instances/x6_y6_a2_f5.lp" cmdline="--timepoint-limit=75" />
-			<add file="instances/x6_y6_a2_f10.lp" cmdline="--timepoint-limit=150" />
-			<add file="instances/x6_y6_a2_f15.lp" cmdline="--timepoint-limit=225" />
-			<add file="instances/x6_y6_a2_f20.lp" cmdline="--timepoint-limit=300" />
-			<add file="instances/x6_y6_a2_f25.lp" cmdline="--timepoint-limit=375" />
-			<add file="instances/x6_y6_a2_f30.lp" cmdline="--timepoint-limit=450" />
-			<add file="instances/x6_y6_a2_f35.lp" cmdline="--timepoint-limit=525" />
-			<add file="instances/x6_y6_a2_f40.lp" cmdline="--timepoint-limit=600" />
-			<add file="instances/x6_y6_a3_f1.lp" cmdline="--timepoint-limit=15" />
-			<add file="instances/x6_y6_a3_f5.lp" cmdline="--timepoint-limit=75" />
-			<add file="instances/x6_y6_a3_f10.lp" cmdline="--timepoint-limit=150" />
-			<add file="instances/x6_y6_a3_f15.lp" cmdline="--timepoint-limit=225" />
-			<add file="instances/x6_y6_a3_f20.lp" cmdline="--timepoint-limit=300" />
-			<add file="instances/x6_y6_a3_f25.lp" cmdline="--timepoint-limit=375" />
-			<add file="instances/x6_y6_a3_f30.lp" cmdline="--timepoint-limit=450" />
-			<add file="instances/x6_y6_a3_f35.lp" cmdline="--timepoint-limit=525" />
-			<add file="instances/x6_y6_a3_f40.lp" cmdline="--timepoint-limit=600" />
-			<add file="instances/x6_y6_a4_f1.lp" cmdline="--timepoint-limit=15" />
-			<add file="instances/x6_y6_a4_f5.lp" cmdline="--timepoint-limit=75" />
-			<add file="instances/x6_y6_a4_f10.lp" cmdline="--timepoint-limit=150" />
-			<add file="instances/x6_y6_a4_f15.lp" cmdline="--timepoint-limit=225" />
-			<add file="instances/x6_y6_a4_f20.lp" cmdline="--timepoint-limit=300" />
-			<add file="instances/x6_y6_a4_f25.lp" cmdline="--timepoint-limit=375" />
-			<add file="instances/x6_y6_a4_f30.lp" cmdline="--timepoint-limit=450" />
-			<add file="instances/x6_y6_a4_f35.lp" cmdline="--timepoint-limit=525" />
-			<add file="instances/x6_y6_a4_f40.lp" cmdline="--timepoint-limit=600" />
+			<add file="instances/x6_y6_a1_f1.lp" cmdline="-c v=15" />
+			<add file="instances/x6_y6_a1_f5.lp" cmdline="-c v=75" />
+			<add file="instances/x6_y6_a1_f10.lp" cmdline="-c v=150" />
+			<add file="instances/x6_y6_a1_f15.lp" cmdline="-c v=225" />
+			<add file="instances/x6_y6_a1_f20.lp" cmdline="-c v=300" />
+			<add file="instances/x6_y6_a1_f25.lp" cmdline="-c v=375" />
+			<add file="instances/x6_y6_a1_f30.lp" cmdline="-c v=450" />
+			<add file="instances/x6_y6_a1_f35.lp" cmdline="-c v=525" />
+			<add file="instances/x6_y6_a1_f40.lp" cmdline="-c v=600" />
+			<add file="instances/x6_y6_a2_f1.lp" cmdline="-c v=15" />
+			<add file="instances/x6_y6_a2_f5.lp" cmdline="-c v=75" />
+			<add file="instances/x6_y6_a2_f10.lp" cmdline="-c v=150" />
+			<add file="instances/x6_y6_a2_f15.lp" cmdline="-c v=225" />
+			<add file="instances/x6_y6_a2_f20.lp" cmdline="-c v=300" />
+			<add file="instances/x6_y6_a2_f25.lp" cmdline="-c v=375" />
+			<add file="instances/x6_y6_a2_f30.lp" cmdline="-c v=450" />
+			<add file="instances/x6_y6_a2_f35.lp" cmdline="-c v=525" />
+			<add file="instances/x6_y6_a2_f40.lp" cmdline="-c v=600" />
+			<add file="instances/x6_y6_a3_f1.lp" cmdline="-c v=15" />
+			<add file="instances/x6_y6_a3_f5.lp" cmdline="-c v=75" />
+			<add file="instances/x6_y6_a3_f10.lp" cmdline="-c v=150" />
+			<add file="instances/x6_y6_a3_f15.lp" cmdline="-c v=225" />
+			<add file="instances/x6_y6_a3_f20.lp" cmdline="-c v=300" />
+			<add file="instances/x6_y6_a3_f25.lp" cmdline="-c v=375" />
+			<add file="instances/x6_y6_a3_f30.lp" cmdline="-c v=450" />
+			<add file="instances/x6_y6_a3_f35.lp" cmdline="-c v=525" />
+			<add file="instances/x6_y6_a3_f40.lp" cmdline="-c v=600" />
+			<add file="instances/x6_y6_a4_f1.lp" cmdline="-c v=15" />
+			<add file="instances/x6_y6_a4_f5.lp" cmdline="-c v=75" />
+			<add file="instances/x6_y6_a4_f10.lp" cmdline="-c v=150" />
+			<add file="instances/x6_y6_a4_f15.lp" cmdline="-c v=225" />
+			<add file="instances/x6_y6_a4_f20.lp" cmdline="-c v=300" />
+			<add file="instances/x6_y6_a4_f25.lp" cmdline="-c v=375" />
+			<add file="instances/x6_y6_a4_f30.lp" cmdline="-c v=450" />
+			<add file="instances/x6_y6_a4_f35.lp" cmdline="-c v=525" />
+			<add file="instances/x6_y6_a4_f40.lp" cmdline="-c v=600" />
 		</files>
 	</benchmark>
 

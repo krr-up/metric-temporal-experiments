@@ -1,0 +1,39 @@
+python -m clingo ../../../../../../../../../../../examples/job-shop/instances/ft06.lp ../../../../../../../../../../../examples/job-shop/job-shop.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=26 -c v=55
+pyclingo version 5.8.0
+Reading from - ...
+Solving...
+Answer: 1 (Time: 50.640s)
+t(0,0) t(1,1) t(2,2) t(3,3) t(4,4) t(5,5) t(6,8) t(7,15) t(8,19) t(9,25) t(10,26) t(11,27) t(12,28) t(13,30) t(14,36) t(15,37) t(16,38) t(17,39) t(18,40) t(19,41) t(20,45) t(21,46) t(22,47) t(23,48) t(24,51) t(25,52) true(start_run(0,2),0) true(start_run(30,1),0) true(start_run(31,3),1) true(start_run(32,5),2) true(start_run(12,2),3) true(start_run(33,0),3) true(start_run(13,3),4) true(start_run(34,4),4) true(start_run(6,1),5) true(start_run(7,2),6) true(start_run(8,4),7) true(start_run(14,5),7) true(start_run(18,1),7) true(start_run(24,2),7) true(start_run(19,0),8) true(start_run(1,0),9) true(start_run(20,2),9) true(start_run(21,3),10) true(start_run(15,0),11) true(start_run(22,4),11) true(start_run(25,1),11) true(start_run(23,5),12) true(start_run(16,1),13) true(start_run(35,2),13) true(start_run(9,5),14) true(start_run(26,4),14) true(start_run(2,1),16) true(start_run(10,0),16) true(start_run(3,3),17) true(start_run(17,4),18) true(start_run(4,5),20) true(start_run(11,3),20) true(start_run(5,4),21) true(start_run(27,5),22) true(start_run(28,0),23) true(start_run(29,3),24)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 50.647s (Solving: 36.04s 1st Model: 36.03s Unsat: 0.00s)
+CPU Time     : 50.516s
+
+Choices      : 65830   
+Conflicts    : 13981    (Analyzed: 13981)
+Restarts     : 61       (Average: 229.20 Last: 566 Blocked: 0)
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 93.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 30464    (Deleted: 23521)
+  Binary     : 719      (Ratio:   2.36%)
+  Ternary    : 196      (Ratio:   0.64%)
+  Conflict   : 13981    (Average Length:  298.4 Ratio:  45.89%) 
+  Loop       : 16483    (Average Length:   42.0 Ratio:  54.11%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 13981    (Average:  4.59 Max: 349 Sum:  64140)
+  Executed   : 13927    (Average:  4.58 Max: 349 Sum:  64086 Ratio:  99.92%)
+  Bounded    : 54       (Average:  1.00 Max:   1 Sum:     54 Ratio:   0.08%)
+
+Rules        : 8324209  (Original: 8312298)
+  Choice     : 936     
+Atoms        : 151039  
+Disjunctions : 1800     (Original: 2797)
+Bodies       : 791926   (Original: 754851)
+Equivalences : 294035   (Atom=Atom: 42411 Body=Body: 28895 Other: 222729)
+Tight        : No       (SCCs: 108 Non-Hcfs: 36 Nodes: 155243 Gammas: 25164)
+Variables    : 465633   (Eliminated:    0 Frozen: 126761)
+Constraints  : 5815275  (Binary:  92.0% Ternary:   6.7% Other:   1.3%)
+

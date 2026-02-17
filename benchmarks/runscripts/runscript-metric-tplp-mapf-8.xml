@@ -7,11 +7,11 @@
 
 	<system name="memelingo" version="1" measures="rp_tmp"
 		config="seq-generic"
-		cmdline="--project=show --stats">
+		cmdline="--models=1 --project=show --stats">
 		<setting name="all-opts" tag="all-opts">
 			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
-			<variable cmd="-c lambda={}" value="15;20;25;30;35" />
-			<variable cmd="--timepoint-limit={}" value="30;50;100" />
+			<variable cmd="-c lambda={}" value="15;20;25;30;35;40;45" />
+			<variable cmd="-c v={}" value="30;50;100;150" />
 		</setting>
 	</system>
 

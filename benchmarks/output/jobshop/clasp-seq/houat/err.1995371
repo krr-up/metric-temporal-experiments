@@ -1,0 +1,1 @@
+slurmstepd-kr-node4: error: Detected 6 oom-kill event(s) in step 1995371.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

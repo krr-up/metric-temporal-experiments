@@ -39,19 +39,10 @@
 		</files>
 	</benchmark>
 
-	<benchmark name="dentist-test">
-		<files path="../examples/dentist">
-			<encoding file="../examples/dentist/dentist.lp" />
-			<add file="instances/size-1.lp" cmdline="-c v=110" />
-			<add file="instances/size-2.lp" cmdline="-c v=220" />
-		</files>
-	</benchmark>
-
 
 	<project
 		name="clasp-seq" job="dist-generic">
-		<!-- <runtag machine="houat" benchmark="dentist-goal" tag="goal" /> -->
-		<runtag machine="houat" benchmark="dentist-test" tag="simple" />
+		<runtag machine="houat" benchmark="dentist-goal" tag="goal" />
 	</project>
 
 

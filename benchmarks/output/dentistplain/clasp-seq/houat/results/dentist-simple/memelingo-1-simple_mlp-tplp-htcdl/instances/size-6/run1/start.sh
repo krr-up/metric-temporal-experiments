@@ -11,7 +11,7 @@ runner=( "../../../../../../../../../../programs/runlim" \
   --output-file=runsolver.watcher \
   --real-time-limit=1200 \
   "../../../../../../../../../../programs/memelingo-1" \
-  0 --project=show --stats -c lambda=4 --approach=mlp-tplp-htcdl --timepoint-limit=660 \
+  --models=0 --project=show --stats -c lambda=4 --approach=mlp-tplp-htcdl -c v=660 \
      )
 
 input=( "../../../../../../../../../../../examples/dentist/instances/size-6.lp" "../../../../../../../../../../../examples/dentist/dentist.lp" )

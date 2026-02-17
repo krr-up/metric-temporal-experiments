@@ -12,6 +12,6 @@ for arg in "$@"; do
     fi
 done
 
-echo "python -m clingo ${FILES[@]} --output=reify | python -m clingcon - src/memelingo/encodings/mlp-tplp-htc.lp ${ARGS[@]}"
+echo "python -m clingo ${FILES[@]} --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp ${ARGS[@]} --propagate=full"
 python -m clingo "${FILES[@]}" --output=reify | \
-python -m clingodl - src/memelingo/encodings/mlp-tplp-htcdl.lp "${ARGS[@]}"
+python -m clingodl - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htcdl.lp "${ARGS[@]}" --propagate=full
