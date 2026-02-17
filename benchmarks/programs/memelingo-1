@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Get the directory where this script is located
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR=../../"$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Check if at least one argument is provided
 if [ $# -eq 0 ]; then
@@ -44,23 +44,23 @@ fi
 
 # Dispatch to the appropriate meta script
 case "$SOLVER" in
-    mlp-tplp-htcdl)
-        exec "$SCRIPT_DIR/meta-tplp-clingo.sh" "${ARGS[@]}"
+    mlp-tplp-ht)
+        exec "../../../../../../../../../../../meta-tplp-clingo.sh" "${ARGS[@]}"
         ;;
     mlp-tplp-htc)
-        exec "$SCRIPT_DIR/meta-tplp-clingcon.sh" "${ARGS[@]}"
+        exec "../../../../../../../../../../../meta-tplp-clingcon.sh" "${ARGS[@]}"
         ;;
-    mlp-tplp-ht)
-        exec "$SCRIPT_DIR/meta-tplp-clingodl.sh" "${ARGS[@]}"
+    mlp-tplp-htcdl)
+        exec "../../../../../../../../../../../meta-tplp-clingodl.sh" "${ARGS[@]}"
         ;;
     mlp-lpnmr-ht)
-        exec "$SCRIPT_DIR/meta-lpnmr-clingo.sh" "${ARGS[@]}"
+        exec "../../../../../../../../../../../meta-lpnmr-clingo.sh" "${ARGS[@]}"
         ;;
     mlp-lpnmr-htc)
-        exec "$SCRIPT_DIR/meta-lpnmr-clingcon.sh" "${ARGS[@]}"
+        exec "../../../../../../../../../../../meta-lpnmr-clingcon.sh" "${ARGS[@]}"
         ;;
     mlp-lpnmr-htcdl)
-        exec "$SCRIPT_DIR/meta-lpnmr-clingodl.sh" "${ARGS[@]}"
+        exec "../../../../../../../../../../../meta-lpnmr-clingodl.sh" "${ARGS[@]}"
         ;;
     *)
         echo "Error: Unknown solver '$SOLVER'"

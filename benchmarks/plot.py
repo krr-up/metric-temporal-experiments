@@ -260,7 +260,7 @@ def plot_filled_segments(ax, groups, values, thick_values, statuses, color):
         )
 
 
-def plot_approach_line(ax, groups, values, statuses, approach, label):
+def plot_approach_line(ax, groups, values, statuses, memouts, approach, label):
     """Plot line for a single approach with UNKNOWN markers"""
     color = colors.get(approach, "black")
     marker = markers.get(approach, "o")
@@ -280,8 +280,8 @@ def plot_approach_line(ax, groups, values, statuses, approach, label):
 
     # Mark UNKNOWN points
     unknown_groups = set()
-    for g, v, s in zip(groups, values, statuses):
-        if s == "UNKNOWN" or pd.isna(s):
+    for g, v, s, m in zip(groups, values, statuses, memouts):
+        if s == "UNKNOWN" or pd.isna(s) or m:
             ax.scatter(
                 [g],
                 [v],
@@ -292,6 +292,7 @@ def plot_approach_line(ax, groups, values, statuses, approach, label):
                 zorder=10,
             )
             unknown_groups.add(g)
+        print(m)
 
     return unknown_groups
 
@@ -357,6 +358,7 @@ def plot_instance_by_row(
         values = []
         thick_values = []
         statuses = []
+        memoutes = []
 
         for group in sorted(matching_instances.keys()):
             inst_name, inst_df = matching_instances[group]
@@ -392,18 +394,25 @@ def plot_instance_by_row(
                         else:
                             statuses.append(None)
 
+                        if "memout" in inst_df.columns:
+                            memout = inst_df.loc[benchmark, "memout"]
+                            memoutes.append(memout)
+                        else:
+                            memoutes.append(None)
+
         if not groups:
             continue
 
         # Zip everything together, sort by group, then unzip
-        sorted_data = sorted(zip(groups, values, thick_values, statuses))
-        groups, values, thick_values, statuses = (
-            zip(*sorted_data) if sorted_data else ([], [], [], [])
+        sorted_data = sorted(zip(groups, values, thick_values, statuses, memoutes))
+        groups, values, thick_values, statuses, memoutes = (
+            zip(*sorted_data) if sorted_data else ([], [], [], [], [])
         )
         groups = list(groups)
         values = list(values)
         thick_values = list(thick_values)
         statuses = list(statuses)
+        memoutes = list(memoutes)
 
         # Plot filled area
         if thick_attr and thick_values:
@@ -417,7 +426,9 @@ def plot_instance_by_row(
             )
 
         # Plot line
-        unknown = plot_approach_line(ax, groups, values, statuses, approach, label)
+        unknown = plot_approach_line(
+            ax, groups, values, statuses, memoutes, approach, label
+        )
         all_unknown[approach] = unknown
 
     # NEW: Add vertical lines for UNSATISFIABLE groups
@@ -516,6 +527,7 @@ def plot_instance_by_column(
         values = []
         thick_values = []
         statuses = []
+        memoutes = []
 
         for group in sorted(group_matrix.keys()):
             # Find benchmark for this approach in this group
@@ -559,18 +571,25 @@ def plot_instance_by_column(
                         else:
                             statuses.append(None)
 
+                        if "memout" in inst_df.columns:
+                            memout = inst_df.loc[benchmark, "memout"]
+                            memoutes.append(memout)
+                        else:
+                            memoutes.append(None)
+
         if not groups:
             continue
 
         # Zip everything together, sort by group, then unzip
-        sorted_data = sorted(zip(groups, values, thick_values, statuses))
-        groups, values, thick_values, statuses = (
-            zip(*sorted_data) if sorted_data else ([], [], [], [])
+        sorted_data = sorted(zip(groups, values, thick_values, statuses, memoutes))
+        groups, values, thick_values, statuses, memoutes = (
+            zip(*sorted_data) if sorted_data else ([], [], [], [], [])
         )
         groups = list(groups)
         values = list(values)
         thick_values = list(thick_values)
         statuses = list(statuses)
+        memoutes = list(memoutes)
 
         # Plot filled area
         if thick_attr and thick_values:
@@ -584,7 +603,9 @@ def plot_instance_by_column(
             )
 
         # Plot line
-        unknown = plot_approach_line(ax, groups, values, statuses, approach, label)
+        unknown = plot_approach_line(
+            ax, groups, values, statuses, memoutes, approach, label
+        )
         all_unknown[approach] = unknown
 
     # NEW: Add vertical lines for UNSATISFIABLE groups
@@ -683,6 +704,7 @@ def plot_multiple_instances_by_row(
             values = []
             thick_values = []
             statuses = []
+            memouts = []
 
             for group in sorted(matching_instances.keys()):
                 inst_name, inst_df = matching_instances[group]
@@ -713,6 +735,10 @@ def plot_multiple_instances_by_row(
                                 statuses.append(inst_df.loc[benchmark, "status"])
                             else:
                                 statuses.append(None)
+                            if "memout" in inst_df.columns:
+                                memouts.append(inst_df.loc[benchmark, "memout"])
+                            else:
+                                memouts.append(None)
             if not groups:
                 continue
 
@@ -744,7 +770,7 @@ def plot_multiple_instances_by_row(
             )
 
             # Mark UNKNOWN points
-            for g, v, s in zip(groups, values, statuses):
+            for g, v, s, m in zip(groups, values, statuses, memouts):
                 if s == "UNKNOWN" or pd.isna(s):
                     ax.scatter(
                         [g],
@@ -752,6 +778,18 @@ def plot_multiple_instances_by_row(
                         marker="x",
                         s=80,
                         color="red",
+                        linewidths=1,
+                        zorder=10,
+                    )
+                    all_unknown = True
+                print(m)
+                if m:
+                    ax.scatter(
+                        [g],
+                        [v],
+                        marker="o",
+                        s=80,
+                        color="yellow",
                         linewidths=1,
                         zorder=10,
                     )
@@ -836,72 +874,123 @@ def plot_multiple_instances_by_row(
     plt.show()
 
 
-def main():
-    path = sys.argv[1]
+def plot_dentist_plain():
+    # Example usage for dentist instance
+    path = f"resultsv4/dentist-plain.xlsx"
+    instance_prefix = "size"
+    save_path = f"plots/dentist_plain_factor.pdf"
+
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
-    if len(sys.argv) > 2:
-        # Single instance - use original function
-        instance_prefix = sys.argv[2]
-        save_path = f"plots/{instance_prefix}_factor.pdf"
+    plot_instance_by_row(
+        instance_prefix,
+        ["time"],
+        df_instances,
+        grouping_function=get_size,
+        y="Time (s)",
+        x="Factor",
+        thick_attr="stime",
+        figsize=(4, 3),
+        save_path=save_path,
+        dpi=300,
+        group_skip={30, 35, 40, 45, 50},
+        # approaches_skipped=["ht", "ht-lpnmr"],  # Skip clingo for better visibility
+        # approaches_skipped=[
+        #     "ht",
+        #     "htc",
+        #     "htcdl",
+        # ],  # Skip clingo for better visibility
+        # title=f"Agents = {get_agents(instance_prefix)}",
+    )
 
-        # # ------ Dentist general
-        # plot_instance_by_row(
-        #     instance_prefix,
-        #     ["time"],
-        #     df_instances,
-        #     grouping_function=get_size,
-        #     y="Time (s)",
-        #     x="Factor",
-        #     thick_attr="stime",
-        #     figsize=(4, 3),
-        #     save_path=save_path,
-        #     dpi=300,
-        #     group_skip={30, 35, 40, 45, 50},
-        #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
-        #     # title=f"Agents = {get_agents(instance_prefix)}",
-        # )
 
-        # # ------ Dentist plain
-        # plot_instance_by_row(
-        #     instance_prefix,
-        #     ["time"],
-        #     df_instances,
-        #     grouping_function=get_size,
-        #     y="Time (s)",
-        #     x="Factor",
-        #     thick_attr="stime",
-        #     figsize=(4, 3),
-        #     save_path=save_path,
-        #     dpi=300,
-        #     group_skip={30, 35, 40, 45, 50},
-        #     # approaches_skipped=[
-        #     #     "ht",
-        #     #     "htc",
-        #     #     "htcdl",
-        #     # ],  # Skip clingo for better visibility
-        #     # title=f"Agents = {get_agents(instance_prefix)}",
-        # )
+def plot_dentist_general():
+    # Example usage for dentist instance
+    path = f"resultsv4/dentist-general.xlsx"
+    instance_prefix = "size"
+    save_path = f"plots/dentist_general_factor.pdf"
 
-        # # ------MAPF
-        # plot_instance_by_row(
-        #     instance_prefix,
-        #     ["time"],
-        #     df_instances,
-        #     grouping_function=get_factor,
-        #     y="Time (s)",
-        #     x="Factor",
-        #     thick_attr="stime",
-        #     figsize=(3, 4),
-        #     save_path=save_path,
-        #     dpi=300,
-        #     group_skip={30, 35, 40, 45, 50},
-        #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
-        #     # title=f"Agents = {get_agents(instance_prefix)}",
-        # )
+    df = load_xlsx(path)
+    df_instances = load_and_clean(df)
 
-        # ------MAPF 8
+    plot_instance_by_row(
+        instance_prefix,
+        ["time"],
+        df_instances,
+        grouping_function=get_size,
+        y="Time (s)",
+        x="Factor",
+        thick_attr="stime",
+        figsize=(4, 3),
+        save_path=save_path,
+        dpi=300,
+        group_skip={30, 35, 40, 45, 50},
+        # approaches_skipped=["ht", "ht-lpnmr"],  # Skip clingo for better visibility
+        # title=f"Agents = {get_agents(instance_prefix)}",
+    )
+
+
+def plot_jobshop_6():
+    path = "resultsv4/jobshop.xlsx"
+    instance_prefix = "ft06"
+    save_path = f"plots/{instance_prefix}_factor.pdf"
+
+    df = load_xlsx(path)
+    df_instances = load_and_clean(df)
+    # ------Job
+    plot_instance_by_column(
+        instance_prefix,
+        ["time"],
+        df_instances,
+        grouping_function=get_lambda,
+        y="Time (s)",
+        x="Lambda",
+        thick_attr="stime",
+        figsize=(4, 3),
+        save_path=save_path,
+        dpi=300,
+        # group_skip={30, 35, 40, 45, 50},
+        # approaches_skipped=["ht"],  # Skip clingo for better visibility
+        # title=f"Agents = {get_agents(instance_prefix)}",
+    )
+
+
+def plot_all_mapf_empty():
+    path = "resultsv4/mapf.xlsx"
+    df = load_xlsx(path)
+    df_instances = load_and_clean(df)
+
+    # Multiple instances - use new function
+    instances = ["x6_y6_a1", "x6_y6_a2", "x6_y6_a3", "x6_y6_a4"]
+    save_path = "plots/all_mapf_factor.pdf"
+
+    # Generate subplot titles
+    subplot_titles = [f"Agents = {get_agents(inst)}" for inst in instances]
+
+    plot_multiple_instances_by_row(
+        instances,
+        ["time"],
+        df_instances,
+        grouping_function=get_factor,
+        y="Time (s)",
+        x="Factor",
+        thick_attr="stime",
+        figsize=(12, 3),  # 4 subplots × 3 inches each
+        save_path=save_path,
+        dpi=300,
+        # group_skip={30, 35, 40, 45, 50},
+        # approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
+        subplot_titles=subplot_titles,
+    )
+
+
+def plot_mapf_8():
+    path = "resultsv4/mapf-8.xlsx"
+    df = load_xlsx(path)
+    df_instances = load_and_clean(df)
+
+    for instance_prefix in ["random_x8_y8_a3", "room_x8_y8_a3", "warehouse_x8_y8_a3"]:
         for v in [30, 50, 100]:
             map_name = instance_prefix.split("_")[0]
             save_path = f"plots/{map_name}-v{v}.pdf"
@@ -920,47 +1009,8 @@ def main():
                 title=f"{map_name.upper()} - Timepoint limit = {v}",
             )
 
-        # # ------Job
-        # plot_instance_by_column(
-        #     instance_prefix,
-        #     ["time"],
-        #     df_instances,
-        #     grouping_function=get_lambda,
-        #     y="Time (s)",
-        #     x="Lambda",
-        #     thick_attr="stime",
-        #     figsize=(3, 4),
-        #     save_path=save_path,
-        #     dpi=300,
-        #     # group_skip={30, 35, 40, 45, 50},
-        #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
-        #     # title=f"Agents = {get_agents(instance_prefix)}",
-        # )
-
-    else:
-        # Multiple instances - use new function
-        instances = ["x6_y6_a1", "x6_y6_a2", "x6_y6_a3", "x6_y6_a4"]
-        save_path = "plots/all_instances_factor.pdf"
-
-        # Generate subplot titles
-        subplot_titles = [f"Agents = {get_agents(inst)}" for inst in instances]
-
-        plot_multiple_instances_by_row(
-            instances,
-            ["time"],
-            df_instances,
-            grouping_function=get_factor,
-            y="Time (s)",
-            x="Factor",
-            thick_attr="stime",
-            figsize=(12, 3),  # 4 subplots × 3 inches each
-            save_path=save_path,
-            dpi=300,
-            # group_skip={30, 35, 40, 45, 50},
-            # approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
-            subplot_titles=subplot_titles,
-        )
-
 
 if __name__ == "__main__":
-    main()
+    # plot_dentist_general()
+    # plot_dentist_plain()
+    plot_jobshop_6()

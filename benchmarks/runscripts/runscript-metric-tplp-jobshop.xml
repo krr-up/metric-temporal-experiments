@@ -9,11 +9,11 @@
 		config="seq-generic"
 		cmdline="--models=1 --project=show --stats">
 		<setting name="lambda-small" tag="lambdasmall">
-			<variable cmd="-c lambda={}" value="10;12;14;16;18;20;22;24;26;28;30" />
+			<variable cmd="-c lambda={}" value="20;25;30;35;40;45;50" />
 			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 		<setting name="lambda-large" tag="lambdalarge">
-			<variable cmd="-c lambda={}" value="50;60;70;80;90;100" />
+			<variable cmd="-c lambda={}" value="100;150;200" />
 			<variable cmd="--approach={}" value="mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 	</system>
@@ -25,14 +25,22 @@
 	<benchmark name="jobshop-suite-06">
 		<files path="../examples/job-shop">
 			<encoding file="../examples/job-shop/job-shop.lp" />
-			<add file="instances/ft06.lp" cmdline="-c v=55" />
+			<add file="instances/ft06.lp" cmdline="-c v=56" />
 		</files>
 	</benchmark>
 
 	<benchmark name="jobshop-suite-10">
 		<files path="../examples/job-shop">
 			<encoding file="../examples/job-shop/job-shop.lp" />
-			<add file="instances/ft10.lp" cmdline="-c v=930" />
+			<add file="instances/ft10.lp" cmdline="-c v=931" />
+		</files>
+	</benchmark>
+
+	<benchmark name="jobshop-suite-la1">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/la01.lp" cmdline="-c v=666" />
+			<add file="instances/la02.lp" cmdline="-c v=655" />
 		</files>
 	</benchmark>
 
@@ -41,6 +49,7 @@
 		name="clasp-seq" job="dist-generic">
 		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
 		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
+		<runtag machine="houat" benchmark="jobshop-suite-la1" tag="lambdalarge" />
 	</project>
 
 
