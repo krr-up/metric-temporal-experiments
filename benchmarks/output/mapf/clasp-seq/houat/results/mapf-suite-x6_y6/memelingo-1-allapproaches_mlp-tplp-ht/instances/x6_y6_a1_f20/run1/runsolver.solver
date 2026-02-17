@@ -1,0 +1,38 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/x6_y6_a1_f20.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=10 -c v=300
+pyclingo version 5.8.0
+Reading from - ...
+Solving...
+Answer: 1 (Time: 2540.620s)
+t(0,0) true(at(1,(1,1)),0) t(1,57) t(2,97) t(3,157) t(4,197) t(5,198) t(6,266) t(7,284) t(8,285) t(9,297) true(moving(1,(1,3),(2,3)),8) true(moving(1,(1,3),(2,3)),7) true(moving(1,(1,3),(2,3)),6) true(moving(1,(1,3),(2,3)),5) true(at(1,(1,3)),8) true(at(1,(1,3)),7) true(at(1,(1,3)),6) true(at(1,(1,3)),5) true(at(1,(1,3)),4) true(at(1,(1,2)),3) true(at(1,(1,2)),2) true(at(1,(1,1)),1) true(at(1,(2,3)),9) true(wait(1),9) true(move(1,(1,3),(2,3)),4) true(move(1,(1,2),(1,3)),3) true(wait(1),2) true(move(1,(1,1),(1,2)),1) true(wait(1),0)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 2540.742s (Solving: 2138.61s 1st Model: 2138.48s Unsat: 0.00s)
+CPU Time     : 1239.569s
+
+Choices      : 3674804 
+Conflicts    : 36666    (Analyzed: 36666)
+Restarts     : 125      (Average: 293.33 Last: 499 Blocked: 0)
+Stab. Tests  : 2        (Full: 1 Partial: 1)
+Model-Level  : 35991.0 
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 65609    (Deleted: 56001)
+  Binary     : 185      (Ratio:   0.28%)
+  Ternary    : 246      (Ratio:   0.37%)
+  Conflict   : 36666    (Average Length: 69038.7 Ratio:  55.89%) 
+  Loop       : 28943    (Average Length:   32.5 Ratio:  44.11%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 36666    (Average: 62.04 Max: 74660 Sum: 2274915)
+  Executed   : 36660    (Average: 62.04 Max: 74660 Sum: 2274909 Ratio: 100.00%)
+  Bounded    : 6        (Average:  1.00 Max:   1 Sum:      6 Ratio:   0.00%)
+
+Rules        : 38396764 (Original: 38054217)
+Atoms        : 113530   (Original: 113215 Auxiliary: 315)
+Disjunctions : 1170     (Original: 3563)
+Bodies       : 3982102  (Original: 3632889)
+Equivalences : 181626   (Atom=Atom: 38997 Body=Body: 28435 Other: 114194)
+Tight        : No       (SCCs: 1 Non-Hcfs: 1 Nodes: 49637 Gammas: 6350)
+Variables    : 3838401  (Eliminated:    0 Frozen: 37626)
+Constraints  : 111703588 (Binary:  96.6% Ternary:   3.1% Other:   0.3%)
+

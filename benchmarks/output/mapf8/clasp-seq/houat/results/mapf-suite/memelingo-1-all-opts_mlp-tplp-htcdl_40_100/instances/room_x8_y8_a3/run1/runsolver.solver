@@ -1,0 +1,61 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/room_x8_y8_a3.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp --models=1 --project=show --stats -c lambda=40 -c v=100 --propagate=full
+clingo-dl version 1.5.0
+Reading from - ...
+Solving...
+Answer: 1 (Time: 824.977s)
+true(wait(1),0) true(wait(1),1) true(wait(1),5) true(wait(1),14) true(wait(1),15) true(wait(1),16) true(wait(1),17) true(wait(1),19) true(wait(1),20) true(wait(1),21) true(wait(1),25) true(wait(1),32) true(wait(1),33) true(wait(1),34) true(wait(1),39) true(wait(2),1) true(wait(2),13) true(wait(2),15) true(wait(2),19) true(wait(2),20) true(wait(2),21) true(wait(2),22) true(wait(2),23) true(wait(2),26) true(wait(2),28) true(wait(2),30) true(wait(2),32) true(wait(2),33) true(wait(2),38) true(wait(2),39) true(wait(3),0) true(wait(3),1) true(wait(3),2) true(wait(3),3) true(wait(3),14) true(wait(3),17) true(wait(3),19) true(wait(3),21) true(wait(3),22) true(wait(3),23) true(wait(3),25) true(wait(3),28) true(wait(3),29) true(wait(3),31) true(wait(3),32) true(wait(3),33) true(wait(3),34) true(wait(3),37) true(wait(3),38) true(wait(3),39) true(at(1,(2,2)),28) true(at(1,(2,3)),29) true(at(1,(3,2)),27) true(at(1,(3,3)),30) true(at(1,(3,3)),31) true(at(1,(4,1)),37) true(at(1,(4,1)),38) true(at(1,(4,2)),25) true(at(1,(4,2)),26) true(at(1,(4,2)),36) true(at(1,(4,3)),32) true(at(1,(4,3)),33) true(at(1,(4,3)),34) true(at(1,(4,3)),35) true(at(1,(5,1)),19) true(at(1,(5,1)),20) true(at(1,(5,1)),21) true(at(1,(5,1)),22) true(at(1,(5,1)),39) true(at(1,(5,2)),23) true(at(1,(5,2)),24) true(at(1,(6,1)),14) true(at(1,(6,1)),15) true(at(1,(6,1)),16) true(at(1,(6,1)),17) true(at(1,(6,1)),18) true(at(1,(7,1)),12) true(at(1,(7,1)),13) true(at(1,(7,2)),11) true(at(1,(7,3)),0) true(at(1,(7,3)),1) true(at(1,(7,3)),2) true(at(1,(8,1)),8) true(at(1,(8,1)),9) true(at(1,(8,2)),5) true(at(1,(8,2)),6) true(at(1,(8,2)),7) true(at(1,(8,2)),10) true(at(1,(8,3)),3) true(at(1,(8,3)),4) true(at(2,(1,4)),15) true(at(2,(1,4)),16) true(at(2,(1,4)),17) true(at(2,(1,4)),18) true(at(2,(1,4)),26) true(at(2,(1,4)),27) true(at(2,(1,5)),13) true(at(2,(1,5)),14) true(at(2,(1,5)),28) true(at(2,(1,5)),29) true(at(2,(1,5)),32) true(at(2,(1,5)),33) true(at(2,(1,5)),34) true(at(2,(1,7)),5) true(at(2,(1,7)),6) true(at(2,(1,8)),0) true(at(2,(2,4)),19) true(at(2,(2,4)),20) true(at(2,(2,4)),21) true(at(2,(2,4)),22) true(at(2,(2,4)),23) true(at(2,(2,4)),24) true(at(2,(2,4)),25) true(at(2,(2,4)),37) true(at(2,(2,5)),12) true(at(2,(2,5)),30) true(at(2,(2,5)),31) true(at(2,(2,5)),35) true(at(2,(2,5)),36) true(at(2,(2,6)),10) true(at(2,(2,6)),11) true(at(2,(2,7)),4) true(at(2,(2,7)),7) true(at(2,(2,7)),8) true(at(2,(2,7)),9) true(at(2,(2,8)),1) true(at(2,(2,8)),2) true(at(2,(2,8)),3) true(at(2,(3,4)),38) true(at(2,(3,4)),39) true(at(3,(3,1)),10) true(at(3,(3,1)),11) true(at(3,(3,1)),12) true(at(3,(3,2)),13) true(at(3,(4,1)),7) true(at(3,(4,1)),8) true(at(3,(4,1)),9) true(at(3,(4,2)),14) true(at(3,(4,2)),15) true(at(3,(4,2)),17) true(at(3,(4,2)),18) true(at(3,(4,2)),21) true(at(3,(4,2)),22) true(at(3,(4,2)),23) true(at(3,(4,2)),24) true(at(3,(4,3)),16) true(at(3,(4,3)),19) true(at(3,(4,3)),20) true(at(3,(4,3)),25) true(at(3,(4,3)),26) true(at(3,(4,3)),37) true(at(3,(4,3)),38) true(at(3,(4,3)),39) true(at(3,(5,1)),5) true(at(3,(5,1)),6) true(at(3,(5,3)),27) true(at(3,(5,3)),31) true(at(3,(5,3)),32) true(at(3,(5,3)),33) true(at(3,(5,3)),34) true(at(3,(5,3)),35) true(at(3,(5,3)),36) true(at(3,(5,4)),28) true(at(3,(5,4)),29) true(at(3,(5,4)),30) true(at(3,(6,1)),0) true(at(3,(6,1)),1) true(at(3,(6,1)),2) true(at(3,(6,1)),3) true(at(3,(6,1)),4) true(move(1,(2,2),(2,3)),28) true(move(1,(2,3),(3,3)),29) true(move(1,(3,2),(2,2)),27) true(move(1,(3,3),(4,3)),30) true(move(1,(4,1),(5,1)),37) true(move(1,(4,2),(3,2)),26) true(move(1,(4,2),(4,1)),36) true(move(1,(4,3),(4,2)),35) true(move(1,(5,1),(5,2)),22) true(move(1,(5,2),(4,2)),23) true(move(1,(6,1),(5,1)),18) true(move(1,(7,1),(6,1)),12) true(move(1,(7,2),(7,1)),11) true(move(1,(7,3),(8,3)),2) true(move(1,(8,1),(8,2)),8) true(move(1,(8,2),(7,2)),10) true(move(1,(8,2),(8,1)),6) true(move(1,(8,3),(8,2)),3) true(move(2,(1,4),(1,5)),27) true(move(2,(1,4),(2,4)),16) true(move(2,(1,5),(1,4)),14) true(move(2,(1,5),(2,5)),29) true(move(2,(1,5),(2,5)),34) true(move(2,(1,7),(2,7)),5) true(move(2,(1,8),(2,8)),0) true(move(2,(2,4),(1,4)),24) true(move(2,(2,4),(3,4)),37) true(move(2,(2,5),(1,5)),12) true(move(2,(2,5),(1,5)),31) true(move(2,(2,5),(2,4)),35) true(move(2,(2,6),(2,5)),10) true(move(2,(2,7),(1,7)),4) true(move(2,(2,7),(2,6)),7) true(move(2,(2,8),(2,7)),2) true(move(3,(3,1),(3,2)),10) true(move(3,(3,2),(4,2)),13) true(move(3,(4,1),(3,1)),7) true(move(3,(4,2),(4,3)),15) true(move(3,(4,2),(4,3)),18) true(move(3,(4,2),(4,3)),24) true(move(3,(4,3),(4,2)),16) true(move(3,(4,3),(4,2)),20) true(move(3,(4,3),(5,3)),26) true(move(3,(5,1),(4,1)),5) true(move(3,(5,3),(4,3)),35) true(move(3,(5,3),(5,4)),27) true(move(3,(5,4),(5,3)),30) true(move(3,(6,1),(5,1)),4) true(moving(1,(3,3),(4,3)),31) true(moving(1,(4,1),(5,1)),38) true(moving(1,(5,2),(4,2)),24) true(moving(1,(7,1),(6,1)),13) true(moving(1,(8,1),(8,2)),9) true(moving(1,(8,2),(8,1)),7) true(moving(1,(8,3),(8,2)),4) true(moving(2,(1,4),(2,4)),17) true(moving(2,(1,4),(2,4)),18) true(moving(2,(1,7),(2,7)),6) true(moving(2,(2,4),(1,4)),25) true(moving(2,(2,5),(2,4)),36) true(moving(2,(2,6),(2,5)),11) true(moving(2,(2,7),(2,6)),8) true(moving(2,(2,7),(2,6)),9) true(moving(2,(2,8),(2,7)),3) true(moving(3,(3,1),(3,2)),11) true(moving(3,(3,1),(3,2)),12) true(moving(3,(4,1),(3,1)),8) true(moving(3,(4,1),(3,1)),9) true(moving(3,(5,1),(4,1)),6) true(moving(3,(5,3),(4,3)),36)
+Assignment:
+t(0)=0 t(1)=3 t(2)=8 t(3)=10 t(4)=11 t(5)=12 t(6)=13 t(7)=14 t(8)=15 t(9)=16 t(10)=17 t(11)=18 t(12)=19 t(13)=20 t(14)=24 t(15)=27 t(16)=28 t(17)=29 t(18)=31 t(19)=32 t(20)=35 t(21)=36 t(22)=42 t(23)=46 t(24)=48 t(25)=49 t(26)=52 t(27)=54 t(28)=56 t(29)=60 t(30)=65 t(31)=68 t(32)=69 t(33)=71 t(34)=76 t(35)=81 t(36)=82 t(37)=86 t(38)=87 t(39)=89
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 825.006s (Solving: 70.14s 1st Model: 70.12s Unsat: 0.00s)
+CPU Time     : 824.846s
+
+Choices      : 121630  
+Conflicts    : 2610     (Analyzed: 2610)
+Restarts     : 14       (Average: 186.43 Last: 146 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 3941.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 86589    (Deleted: 28129)
+  Binary     : 3028     (Ratio:   3.50%)
+  Ternary    : 4165     (Ratio:   4.81%)
+  Conflict   : 2610     (Average Length:  288.6 Ratio:   3.01%) 
+  Loop       : 71106    (Average Length:   15.4 Ratio:  82.12%) 
+  Other      : 12873    (Average Length:    2.2 Ratio:  14.87%) 
+Backjumps    : 2610     (Average: 37.79 Max: 3775 Sum:  98624)
+  Executed   : 2592     (Average: 37.78 Max: 3775 Sum:  98606 Ratio:  99.98%)
+  Bounded    : 18       (Average:  1.00 Max:   1 Sum:     18 Ratio:   0.02%)
+
+Rules        : 4126159  (Original: 4125990)
+Atoms        : 1751449  (Original: 1745218 Auxiliary: 6231)
+Disjunctions : 20742    (Original: 20751)
+Bodies       : 2525742  (Original: 2192249)
+Equivalences : 3244764  (Atom=Atom: 566203 Body=Body: 425584 Other: 2252977)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 2056271 Gammas: 327090)
+Variables    : 1906100  (Eliminated:    0 Frozen: 1578844)
+Constraints  : 14389861 (Binary:  87.5% Ternary:   7.3% Other:   5.2%)
+
+DifferenceLogic
+  Time init(s): 0.0359275
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 18801
+  Variables  : 41
+  [Thread 0]
+    Propagation(s): 18.7262
+    Dijkstra(s): 0.157329
+    Undo(s)  : 0.00383176
+    True edges: 30680
+    False edges: 8743
+    False edges (inverse): 796
+    False edges (partial): 4891
+    False edges (partial+): 67
+    Edges added: 13282
+    Edges skipped: 11040
+    Edges propagated: 13056
+    Cost consistency: 137634
+    Cost forward: 2.32902e+06
+    Cost backward: 2.40833e+06

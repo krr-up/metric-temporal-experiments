@@ -1,0 +1,61 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/warehouse_x8_y8_a3.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp --models=1 --project=show --stats -c lambda=15 -c v=100 --propagate=full
+clingo-dl version 1.5.0
+Reading from - ...
+Solving...
+Answer: 1 (Time: 199.715s)
+true(wait(1),0) true(wait(1),2) true(wait(1),8) true(wait(1),10) true(wait(1),11) true(wait(1),12) true(wait(1),13) true(wait(1),14) true(wait(2),3) true(wait(2),4) true(wait(2),5) true(wait(2),6) true(wait(2),9) true(wait(2),14) true(wait(3),5) true(wait(3),7) true(wait(3),13) true(wait(3),14) true(at(1,(5,7)),0) true(at(1,(5,7)),1) true(at(1,(6,7)),2) true(at(1,(6,7)),3) true(at(1,(6,7)),4) true(at(1,(7,4)),8) true(at(1,(7,4)),9) true(at(1,(7,5)),7) true(at(1,(7,6)),6) true(at(1,(7,7)),5) true(at(1,(8,4)),10) true(at(1,(8,4)),11) true(at(1,(8,4)),12) true(at(1,(8,4)),13) true(at(1,(8,4)),14) true(at(2,(4,7)),14) true(at(2,(5,7)),13) true(at(2,(6,7)),12) true(at(2,(7,7)),2) true(at(2,(7,7)),8) true(at(2,(7,7)),11) true(at(2,(7,8)),0) true(at(2,(7,8)),1) true(at(2,(7,8)),3) true(at(2,(7,8)),4) true(at(2,(7,8)),5) true(at(2,(7,8)),6) true(at(2,(7,8)),7) true(at(2,(7,8)),9) true(at(2,(7,8)),10) true(at(3,(1,7)),1) true(at(3,(1,8)),0) true(at(3,(2,7)),2) true(at(3,(2,7)),3) true(at(3,(3,7)),4) true(at(3,(4,7)),5) true(at(3,(4,7)),6) true(at(3,(5,7)),7) true(at(3,(5,7)),8) true(at(3,(6,7)),9) true(at(3,(7,6)),11) true(at(3,(7,6)),12) true(at(3,(7,7)),10) true(at(3,(7,7)),13) true(at(3,(7,7)),14) true(move(1,(5,7),(6,7)),1) true(move(1,(6,7),(7,7)),3) true(move(1,(7,4),(8,4)),9) true(move(1,(7,5),(7,4)),7) true(move(1,(7,6),(7,5)),6) true(move(1,(7,7),(7,6)),5) true(move(2,(5,7),(4,7)),13) true(move(2,(6,7),(5,7)),12) true(move(2,(7,7),(6,7)),11) true(move(2,(7,7),(7,8)),2) true(move(2,(7,7),(7,8)),8) true(move(2,(7,8),(7,7)),0) true(move(2,(7,8),(7,7)),7) true(move(2,(7,8),(7,7)),10) true(move(3,(1,7),(2,7)),1) true(move(3,(1,8),(1,7)),0) true(move(3,(2,7),(3,7)),2) true(move(3,(3,7),(4,7)),4) true(move(3,(4,7),(5,7)),6) true(move(3,(5,7),(6,7)),8) true(move(3,(6,7),(7,7)),9) true(move(3,(7,6),(7,7)),11) true(move(3,(7,7),(7,6)),10) true(moving(1,(6,7),(7,7)),4) true(moving(2,(7,8),(7,7)),1) true(moving(3,(2,7),(3,7)),3) true(moving(3,(7,6),(7,7)),12)
+Assignment:
+t(0)=0 t(1)=4 t(2)=5 t(3)=6 t(4)=8 t(5)=9 t(6)=14 t(7)=16 t(8)=21 t(9)=22 t(10)=25 t(11)=30 t(12)=34 t(13)=35 t(14)=36
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 199.721s (Solving: 192.56s 1st Model: 192.56s Unsat: 0.00s)
+CPU Time     : 199.602s
+
+Choices      : 85332   
+Conflicts    : 53737    (Analyzed: 53737)
+Restarts     : 172      (Average: 312.42 Last: 836 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 23.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 171227   (Deleted: 133838)
+  Binary     : 2546     (Ratio:   1.49%)
+  Ternary    : 2246     (Ratio:   1.31%)
+  Conflict   : 53737    (Average Length:  142.5 Ratio:  31.38%) 
+  Loop       : 114187   (Average Length:   15.2 Ratio:  66.69%) 
+  Other      : 3303     (Average Length:    2.2 Ratio:   1.93%) 
+Backjumps    : 53737    (Average:  1.56 Max:  57 Sum:  84021)
+  Executed   : 53466    (Average:  1.56 Max:  57 Sum:  83750 Ratio:  99.68%)
+  Bounded    : 271      (Average:  1.00 Max:   1 Sum:    271 Ratio:   0.32%)
+
+Rules        : 474329   (Original: 474205)
+Atoms        : 274359   (Original: 272883 Auxiliary: 1476)
+Disjunctions : 4110     (Original: 4134)
+Bodies       : 288432   (Original: 260176)
+Equivalences : 504336   (Atom=Atom: 106116 Body=Body: 80069 Other: 318151)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 188089 Gammas: 26668)
+Variables    : 159851   (Eliminated:    0 Frozen: 133077)
+Constraints  : 697924   (Binary:  80.0% Ternary:  11.8% Other:   8.1%)
+
+DifferenceLogic
+  Time init(s): 0.00691587
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 2551
+  Variables  : 16
+  [Thread 0]
+    Propagation(s): 3.63713
+    Dijkstra(s): 1.16678
+    Undo(s)  : 0.0588108
+    True edges: 386842
+    False edges: 2291
+    False edges (inverse): 317
+    False edges (partial): 1519
+    False edges (partial+): 52
+    Edges added: 264842
+    Edges skipped: 207531
+    Edges propagated: 264672
+    Cost consistency: 650796
+    Cost forward: 2.23672e+07
+    Cost backward: 2.52134e+07
