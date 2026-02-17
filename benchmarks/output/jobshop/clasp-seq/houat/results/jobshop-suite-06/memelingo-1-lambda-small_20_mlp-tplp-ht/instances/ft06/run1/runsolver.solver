@@ -1,39 +1,4 @@
-python -m clingo ../../../../../../../../../../../examples/job-shop/instances/ft06.lp ../../../../../../../../../../../examples/job-shop/job-shop.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=20 -c v=55
+python -m clingo ../../../../../../../../../../../examples/job-shop/instances/ft06.lp ../../../../../../../../../../../examples/job-shop/job-shop.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=20 -c v=56
 pyclingo version 5.8.0
 Reading from - ...
 Solving...
-Answer: 1 (Time: 41.580s)
-t(0,0) t(1,1) t(2,2) t(3,3) t(4,12) t(5,13) t(6,14) t(7,15) t(8,16) t(9,19) t(10,22) t(11,29) t(12,39) t(13,40) t(14,41) t(15,42) t(16,44) t(17,49) t(18,50) t(19,54) true(start_run(0,2),0) true(start_run(30,1),0) true(start_run(1,0),1) true(start_run(31,3),1) true(start_run(2,1),2) true(start_run(32,5),2) true(start_run(3,3),3) true(start_run(24,2),3) true(start_run(33,0),3) true(start_run(4,5),4) true(start_run(12,2),4) true(start_run(25,1),4) true(start_run(18,1),6) true(start_run(26,4),6) true(start_run(13,3),7) true(start_run(19,0),7) true(start_run(14,5),8) true(start_run(20,2),8) true(start_run(6,1),9) true(start_run(15,0),9) true(start_run(21,3),9) true(start_run(34,4),9) true(start_run(7,2),10) true(start_run(22,4),10) true(start_run(8,4),11) true(start_run(23,5),11) true(start_run(5,4),12) true(start_run(27,5),12) true(start_run(35,2),12) true(start_run(16,1),13) true(start_run(28,0),13) true(start_run(9,5),15) true(start_run(10,0),16) true(start_run(17,4),16) true(start_run(29,3),17) true(start_run(11,3),18)
-SATISFIABLE
-
-Models       : 1+
-Calls        : 1
-Time         : 41.585s (Solving: 31.36s 1st Model: 31.35s Unsat: 0.00s)
-CPU Time     : 41.475s
-
-Choices      : 50232   
-Conflicts    : 13156    (Analyzed: 13156)
-Restarts     : 61       (Average: 215.67 Last: 914 Blocked: 0)
-Stab. Tests  : 72       (Full: 36 Partial: 36)
-Model-Level  : 81.0    
-Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 25944    (Deleted: 17132)
-  Binary     : 831      (Ratio:   3.20%)
-  Ternary    : 254      (Ratio:   0.98%)
-  Conflict   : 13156    (Average Length:  372.1 Ratio:  50.71%) 
-  Loop       : 12788    (Average Length:   34.6 Ratio:  49.29%) 
-  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
-Backjumps    : 13156    (Average:  3.70 Max: 221 Sum:  48666)
-  Executed   : 13056    (Average:  3.69 Max: 221 Sum:  48566 Ratio:  99.79%)
-  Bounded    : 100      (Average:  1.00 Max:   1 Sum:    100 Ratio:   0.21%)
-
-Rules        : 5653579  (Original: 5640906)
-  Choice     : 720     
-Atoms        : 107194  
-Disjunctions : 1368     (Original: 2170)
-Bodies       : 527368   (Original: 499683)
-Equivalences : 210419   (Atom=Atom: 32703 Body=Body: 22313 Other: 155403)
-Tight        : No       (SCCs: 108 Non-Hcfs: 36 Nodes: 96599 Gammas: 15012)
-Variables    : 354996   (Eliminated:    0 Frozen: 79118)
-Constraints  : 4803089  (Binary:  92.7% Ternary:   6.3% Other:   1.0%)
-

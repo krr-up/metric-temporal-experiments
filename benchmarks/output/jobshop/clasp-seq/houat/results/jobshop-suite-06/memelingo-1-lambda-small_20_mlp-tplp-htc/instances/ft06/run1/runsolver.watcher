@@ -1,5 +1,5 @@
 [runlim] version:		2.0.0rc12
-[runlim] host:			kr-node4
+[runlim] host:			kr-node2
 [runlim] time limit:		311040000 seconds
 [runlim] real time limit:	1200 seconds
 [runlim] space limit:		20000 MB
@@ -11,18 +11,19 @@
 [runlim] argv[5]:		lambda=20
 [runlim] argv[6]:		--approach=mlp-tplp-htc
 [runlim] argv[7]:		-c
-[runlim] argv[8]:		v=55
+[runlim] argv[8]:		v=56
 [runlim] argv[9]:		../../../../../../../../../../../examples/job-shop/instances/ft06.lp
 [runlim] argv[10]:		../../../../../../../../../../../examples/job-shop/job-shop.lp
-[runlim] start:			Mon Feb 16 19:38:23 2026
-[runlim] child:			6711
-[runlim] end:			Mon Feb 16 19:38:30 2026
+[runlim] start:			Tue Feb 17 06:14:48 2026
+[runlim] child:			5187
+[runlim] sample:		0.01 time, 10.01 real, 3 MB, 5.19 load
+[runlim] end:			Tue Feb 17 06:15:05 2026
 [runlim] status:		ok
 [runlim] result:		10
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			6.68 seconds
-[runlim] time:			0.00 seconds
+[runlim] real:			16.72 seconds
+[runlim] time:			0.01 seconds
 [runlim] space:			3 MB
-[runlim] load:			2.02 maximum
-[runlim] samples:		67
+[runlim] load:			5.34 maximum
+[runlim] samples:		168

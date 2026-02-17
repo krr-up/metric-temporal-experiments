@@ -1,0 +1,65 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/x6_y6_a2_f5.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp --models=1 --project=show --stats -c lambda=10 -c v=75
+clingcon version 5.2.1
+Reading from - ...
+Solving...
+Answer: 1 (Time: 306.403s)
+true(wait(1),0) true(wait(1),1) true(wait(1),2) true(wait(1),3) true(wait(1),7) true(wait(1),9) true(wait(2),0) true(wait(2),1) true(wait(2),2) true(wait(2),3) true(wait(2),9) true(at(1,(1,1)),0) true(at(1,(1,1)),1) true(at(1,(1,1)),2) true(at(1,(1,1)),3) true(at(1,(1,1)),4) true(at(1,(2,1)),5) true(at(1,(2,1)),6) true(at(1,(2,2)),7) true(at(1,(2,2)),8) true(at(1,(2,3)),9) true(at(2,(2,1)),0) true(at(2,(2,1)),1) true(at(2,(2,1)),2) true(at(2,(2,1)),3) true(at(2,(2,1)),4) true(at(2,(2,2)),5) true(at(2,(2,3)),6) true(at(2,(3,3)),7) true(at(2,(3,3)),8) true(at(2,(4,3)),9) true(move(1,(1,1),(2,1)),4) true(move(1,(2,1),(2,2)),5) true(move(1,(2,2),(2,3)),8) true(move(2,(2,1),(2,2)),4) true(move(2,(2,2),(2,3)),5) true(move(2,(2,3),(3,3)),6) true(move(2,(3,3),(4,3)),7) true(moving(1,(2,1),(2,2)),6) true(moving(2,(3,3),(4,3)),8)
+Assignment:
+t(0)=0 t(1)=1 t(2)=5 t(3)=6 t(4)=7 t(5)=27 t(6)=32 t(7)=47 t(8)=57 t(9)=62
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 306.409s (Solving: 294.00s 1st Model: 294.00s Unsat: 0.00s)
+CPU Time     : 149.625s
+
+Choices      : 72322   
+Conflicts    : 46040    (Analyzed: 46040)
+Restarts     : 139      (Average: 331.22 Last: 76 Blocked: 0)
+Stab. Tests  : 4        (Full: 2 Partial: 2)
+Model-Level  : 18.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 225830   (Deleted: 187365)
+  Binary     : 1287     (Ratio:   0.57%)
+  Ternary    : 2061     (Ratio:   0.91%)
+  Conflict   : 46040    (Average Length:  110.7 Ratio:  20.39%) 
+  Loop       : 179205   (Average Length:   25.5 Ratio:  79.35%) 
+  Other      : 585      (Average Length:    2.0 Ratio:   0.26%) 
+Backjumps    : 46040    (Average:  1.54 Max:  54 Sum:  70942)
+  Executed   : 45919    (Average:  1.54 Max:  54 Sum:  70821 Ratio:  99.83%)
+  Bounded    : 121      (Average:  1.00 Max:   1 Sum:    121 Ratio:   0.17%)
+
+Rules        : 298037   (Original: 297958)
+Atoms        : 188236   (Original: 187538 Auxiliary: 698)
+Disjunctions : 2408     (Original: 2412)
+Bodies       : 171102   (Original: 157139)
+Equivalences : 324182   (Atom=Atom: 72428 Body=Body: 54014 Other: 197740)
+Tight        : No       (SCCs: 2 Non-Hcfs: 2 Nodes: 103012 Gammas: 13184)
+Variables    : 85602    (Eliminated:    0 Frozen: 72341)
+Constraints  : 374521   (Binary:  63.7% Ternary:  28.5% Other:   7.8%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.145463
+    Simplify : 0.0046613
+    Translate: 0.0481608
+  Problem
+    Constraints: 0
+    Variables: 10
+    Clauses  : 73394
+    Literals : 630
+  Translate
+    Constraints removed: 1879
+    Constraints added: 0
+    Clauses  : 73135
+    Weight constraints: 5
+    Literals : 630
+  [Thread 0]
+    Time in seconds
+      Total  : 0.467082
+      Propagation: 0.42262
+      Check  : 0.0322801
+      Undo   : 0.0121814
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

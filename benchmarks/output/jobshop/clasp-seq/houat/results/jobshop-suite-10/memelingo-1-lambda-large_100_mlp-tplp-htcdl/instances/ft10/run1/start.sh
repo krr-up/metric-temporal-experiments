@@ -11,7 +11,7 @@ runner=( "../../../../../../../../../../programs/runlim" \
   --output-file=runsolver.watcher \
   --real-time-limit=1200 \
   "../../../../../../../../../../programs/memelingo-1" \
-  --models=1 --project=show --stats -c lambda=100 --approach=mlp-tplp-htcdl -c v=930 \
+  --models=1 --project=show --stats -c lambda=100 --approach=mlp-tplp-htcdl -c v=931 \
      )
 
 input=( "../../../../../../../../../../../examples/job-shop/instances/ft10.lp" "../../../../../../../../../../../examples/job-shop/job-shop.lp" )
