@@ -22,7 +22,7 @@ def get_size(name):
 
 
 def get_lambda(name):
-    return name.split("_")[1]
+    return int(name.split("_")[1])
 
 
 def get_horizon_mapf8(timepoint=30):
@@ -292,7 +292,6 @@ def plot_approach_line(ax, groups, values, statuses, memouts, approach, label):
                 zorder=10,
             )
             unknown_groups.add(g)
-        print(m)
 
     return unknown_groups
 
@@ -876,7 +875,7 @@ def plot_multiple_instances_by_row(
 
 def plot_dentist_plain():
     # Example usage for dentist instance
-    path = f"resultsv4/dentist-plain.xlsx"
+    path = f"resultsv5/dentist-plain.xlsx"
     instance_prefix = "size"
     save_path = f"plots/dentist_plain_factor.pdf"
 
@@ -907,7 +906,7 @@ def plot_dentist_plain():
 
 def plot_dentist_general():
     # Example usage for dentist instance
-    path = f"resultsv4/dentist-general.xlsx"
+    path = f"resultsv5/dentist-general.xlsx"
     instance_prefix = "size"
     save_path = f"plots/dentist_general_factor.pdf"
 
@@ -932,7 +931,7 @@ def plot_dentist_general():
 
 
 def plot_jobshop_6():
-    path = "resultsv4/jobshop.xlsx"
+    path = "resultsv5/jobshop.xlsx"
     instance_prefix = "ft06"
     save_path = f"plots/{instance_prefix}_factor.pdf"
 
@@ -941,7 +940,7 @@ def plot_jobshop_6():
     # ------Job
     plot_instance_by_column(
         instance_prefix,
-        ["time"],
+        ["ctime"],
         df_instances,
         grouping_function=get_lambda,
         y="Time (s)",
@@ -957,7 +956,7 @@ def plot_jobshop_6():
 
 
 def plot_all_mapf_empty():
-    path = "resultsv4/mapf.xlsx"
+    path = "resultsv5/mapf.xlsx"
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
@@ -970,7 +969,7 @@ def plot_all_mapf_empty():
 
     plot_multiple_instances_by_row(
         instances,
-        ["time"],
+        ["ctime"],
         df_instances,
         grouping_function=get_factor,
         y="Time (s)",
@@ -980,13 +979,13 @@ def plot_all_mapf_empty():
         save_path=save_path,
         dpi=300,
         # group_skip={30, 35, 40, 45, 50},
-        # approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
+        approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
         subplot_titles=subplot_titles,
     )
 
 
 def plot_mapf_8():
-    path = "resultsv4/mapf-8.xlsx"
+    path = "resultsv5/mapf-8.xlsx"
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
@@ -1011,6 +1010,7 @@ def plot_mapf_8():
 
 
 if __name__ == "__main__":
-    # plot_dentist_general()
-    # plot_dentist_plain()
-    plot_jobshop_6()
+    plot_dentist_general()
+    plot_dentist_plain()
+    # plot_jobshop_6()
+    # plot_all_mapf_empty()

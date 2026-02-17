@@ -48,8 +48,8 @@
 	<project
 		name="clasp-seq" job="dist-generic">
 		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
-		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
-		<runtag machine="houat" benchmark="jobshop-suite-la1" tag="lambdalarge" />
+		<!-- <runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" /> -->
+		<!-- <runtag machine="houat" benchmark="jobshop-suite-la1" tag="lambdalarge" /> -->
 	</project>
 
 
