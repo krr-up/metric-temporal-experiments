@@ -1,0 +1,56 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/random_x8_y8_a3.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingodl - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htcdl.lp --models=1 --project=show --stats -c lambda=15 -c v=30 --propagate=full
+clingo-dl version 1.5.0
+Reading from - ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 635.214s (Solving: 620.65s 1st Model: 0.00s Unsat: 620.65s)
+CPU Time     : 635.077s
+
+Choices      : 128325  
+Conflicts    : 85224    (Analyzed: 85223)
+Restarts     : 264      (Average: 322.81 Last: 66 Blocked: 0)
+Stab. Tests  : 3        (Full: 0 Partial: 3)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 383782   (Deleted: 328606)
+  Binary     : 2777     (Ratio:   0.72%)
+  Ternary    : 3046     (Ratio:   0.79%)
+  Conflict   : 85223    (Average Length:  146.5 Ratio:  22.21%) 
+  Loop       : 261346   (Average Length:   16.3 Ratio:  68.10%) 
+  Other      : 37213    (Average Length:    5.5 Ratio:   9.70%) 
+Backjumps    : 85223    (Average:  1.49 Max:  56 Sum: 127228)
+  Executed   : 84851    (Average:  1.49 Max:  56 Sum: 126856 Ratio:  99.71%)
+  Bounded    : 372      (Average:  1.00 Max:   1 Sum:    372 Ratio:   0.29%)
+
+Rules        : 857843   (Original: 857677)
+Atoms        : 491361   (Original: 489255 Auxiliary: 2106)
+Disjunctions : 6633     (Original: 6654)
+Bodies       : 506667   (Original: 458119)
+Equivalences : 874940   (Atom=Atom: 186187 Body=Body: 140401 Other: 548352)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 336292 Gammas: 46285)
+Variables    : 285336   (Eliminated:    0 Frozen: 238900)
+Constraints  : 1253412  (Binary:  80.1% Ternary:  11.5% Other:   8.4%)
+
+DifferenceLogic
+  Time init(s): 0.00503222
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 2551
+  Variables  : 16
+  [Thread 0]
+    Propagation(s): 58.9624
+    Dijkstra(s): 2.75068
+    Undo(s)  : 0.107643
+    True edges: 878369
+    False edges: 98595
+    False edges (inverse): 418
+    False edges (partial): 1349
+    False edges (partial+): 38
+    Edges added: 626349
+    Edges skipped: 520459
+    Edges propagated: 624135
+    Cost consistency: 1.18082e+06
+    Cost forward: 5.28634e+07
+    Cost backward: 5.69512e+07

@@ -1,0 +1,25 @@
+running jobs@kr-node3...
+
+jobs: results/jobshop-suite-06/memelingo-1-lambda-small_20_mlp-tplp-ht/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_20_mlp-tplp-htc/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_20_mlp-tplp-htcdl/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_25_mlp-tplp-ht/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_25_mlp-tplp-htc/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_25_mlp-tplp-htcdl/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_30_mlp-tplp-ht/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_30_mlp-tplp-htc/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_30_mlp-tplp-htcdl/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_35_mlp-tplp-ht/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_35_mlp-tplp-htc/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_35_mlp-tplp-htcdl/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_40_mlp-tplp-ht/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_40_mlp-tplp-htc/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_40_mlp-tplp-htcdl/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_45_mlp-tplp-ht/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_45_mlp-tplp-htc/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_45_mlp-tplp-htcdl/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_50_mlp-tplp-ht/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_50_mlp-tplp-htc/instances/ft06/run1/start.sh results/jobshop-suite-06/memelingo-1-lambda-small_50_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+
+running  results/jobshop-suite-06/memelingo-1-lambda-small_20_mlp-tplp-ht/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_20_mlp-tplp-htc/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_20_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_25_mlp-tplp-ht/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_25_mlp-tplp-htc/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_25_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_30_mlp-tplp-ht/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_30_mlp-tplp-htc/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_30_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_35_mlp-tplp-ht/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_35_mlp-tplp-htc/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_35_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_40_mlp-tplp-ht/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_40_mlp-tplp-htc/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_40_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_45_mlp-tplp-ht/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_45_mlp-tplp-htc/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_45_mlp-tplp-htcdl/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_50_mlp-tplp-ht/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_50_mlp-tplp-htc/instances/ft06/run1/start.sh
+running  results/jobshop-suite-06/memelingo-1-lambda-small_50_mlp-tplp-htcdl/instances/ft06/run1/start.sh

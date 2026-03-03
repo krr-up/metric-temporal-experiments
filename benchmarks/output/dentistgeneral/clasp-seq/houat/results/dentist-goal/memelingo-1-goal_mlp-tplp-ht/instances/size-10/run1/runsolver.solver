@@ -1,0 +1,6 @@
+python -m clingo ../../../../../../../../../../../examples/dentist/instances/size-10.lp ../../../../../../../../../../../examples/dentist/dentist-goal.lp ../../../../../../../../../../../examples/dentist/dentist.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=0 --project=show --stats -c lambda=4 -c v=1100
+pyclingo version 5.8.0
+Reading from - ...
+Solving...
+Answer: 1 (Time: 219.544s)
+t(0,0) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) t(1,200) t(2,350) t(3,550) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,dentist),2) true(at(ram,dentist),3)

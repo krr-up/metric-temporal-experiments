@@ -1,0 +1,65 @@
+python -m clingo ../../../../../../../../../../../examples/dentist/instances/size-7.lp ../../../../../../../../../../../examples/dentist/dentist-goal.lp ../../../../../../../../../../../examples/dentist/dentist.lp --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp --models=0 --project=show --stats -c lambda=4 -c v=770
+clingcon version 5.2.1
+Reading from - ...
+Solving...
+Answer: 1 (Time: 0.113s)
+true(at(cash,atm),0) true(at(cash,atm),1) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(ram,atm),1) true(at(ram,dentist),3) true(at(ram,home),2) true(at(ram,office),0) true(go(ram,atm),0) true(go(ram,dentist),2) true(go(ram,home),1)
+Assignment:
+t(0)=0 t(1)=140 t(2)=245 t(3)=385
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.117s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.046s
+
+Choices      : 54      
+Conflicts    : 44       (Analyzed: 40)
+Restarts     : 0       
+Stab. Tests  : 7        (Full: 4 Partial: 3)
+Model-Level  : 7.0     
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 1663     (Deleted: 0)
+  Binary     : 1607     (Ratio:  96.63%)
+  Ternary    : 18       (Ratio:   1.08%)
+  Conflict   : 40       (Average Length:    4.8 Ratio:   2.41%) 
+  Loop       : 24       (Average Length:    3.5 Ratio:   1.44%) 
+  Other      : 1599     (Average Length:    2.0 Ratio:  96.15%) 
+Backjumps    : 40       (Average:  1.12 Max:   2 Sum:     45)
+  Executed   : 40       (Average:  1.12 Max:   2 Sum:     45 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 2407     (Original: 2383)
+Atoms        : 2070    
+Disjunctions : 3        (Original: 11)
+Bodies       : 1155     (Original: 1122)
+Equivalences : 3023     (Atom=Atom: 666 Body=Body: 495 Other: 1862)
+Tight        : No       (SCCs: 13 Non-Hcfs: 1 Nodes: 389 Gammas: 9)
+Variables    : 2744     (Eliminated:    0 Frozen: 2711)
+Constraints  : 37457    (Binary:   6.4% Ternary:  93.4% Other:   0.2%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.0100812
+    Simplify : 4.1082e-05
+    Translate: 0.00437811
+  Problem
+    Constraints: 0
+    Variables: 4
+    Clauses  : 36478
+    Literals : 2304
+  Translate
+    Constraints removed: 202
+    Constraints added: 0
+    Clauses  : 36423
+    Weight constraints: 0
+    Literals : 2304
+  [Thread 0]
+    Time in seconds
+      Total  : 0.00086851
+      Propagation: 0.000861769
+      Check  : 4.274e-06
+      Undo   : 2.467e-06
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

@@ -1,0 +1,4 @@
+/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/benchmarks/output/mapf8/clasp-seq/houat/results/mapf-suite/memelingo-1-all-opts_mlp-tplp-ht_45_150/instances/warehouse_x8_y8_a3/run1/../../../../../../../../../../../meta-tplp-clingo.sh: line 17: 13941 Done                    python -m clingo "${FILES[@]}" --output=reify
+     13942 Killed                  | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp "${ARGS[@]}"
+/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/benchmarks/output/mapf8/clasp-seq/houat/results/mapf-suite/memelingo-1-all-opts_mlp-tplp-ht_45_150/instances/random_x8_y8_a3/run1/../../../../../../../../../../../meta-tplp-clingo.sh: line 17: 14325 Done                    python -m clingo "${FILES[@]}" --output=reify
+     14326 Killed                  | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp "${ARGS[@]}"

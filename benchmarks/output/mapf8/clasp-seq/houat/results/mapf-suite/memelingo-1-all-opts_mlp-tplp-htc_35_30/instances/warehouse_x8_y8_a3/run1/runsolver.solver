@@ -1,0 +1,59 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/warehouse_x8_y8_a3.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp --models=1 --project=show --stats -c lambda=35 -c v=30
+clingcon version 5.2.1
+Reading from - ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 122.369s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 122.291s
+
+Choices      : 0       
+Conflicts    : 1        (Analyzed: 0)
+Restarts     : 0       
+Problems     : 0        (Average Length: 0.00 Splits: 0)
+Lemmas       : 0        (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 0        (Ratio:   0.00%)
+  Conflict   : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
+  Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
+
+Rules        : 3209918  (Original: 3209670)
+Atoms        : 1446238  (Original: 1439326 Auxiliary: 6912)
+Disjunctions : 19740    (Original: 19788)
+Bodies       : 2029324  (Original: 1766652)
+Equivalences : 2792012  (Atom=Atom: 497732 Body=Body: 374338 Other: 1919942)
+Tight        : No       (SCCs: 6 Non-Hcfs: 6 Nodes: 1570958 Gammas: 255536)
+Variables    : 724061   (Eliminated:    0 Frozen: 596187)
+Constraints  : 0        (Binary:   0.0% Ternary:   0.0% Other:   0.0%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.0722463
+    Simplify : 0.0258841
+    Translate: 0
+  Problem
+    Constraints: 15154
+    Variables: 35
+    Clauses  : 1612
+    Literals : 0
+  Translate
+    Constraints removed: 0
+    Constraints added: 0
+    Clauses  : 0
+    Weight constraints: 0
+    Literals : 0
+  [Thread 0]
+    Time in seconds
+      Total  : 0
+      Propagation: 0
+      Check  : 0
+      Undo   : 0
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

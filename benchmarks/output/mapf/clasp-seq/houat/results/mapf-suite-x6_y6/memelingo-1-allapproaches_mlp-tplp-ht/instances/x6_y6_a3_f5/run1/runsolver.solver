@@ -1,0 +1,38 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/x6_y6_a3_f5.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=10 -c v=75
+pyclingo version 5.8.0
+Reading from - ...
+Solving...
+Answer: 1 (Time: 11574.062s)
+t(0,0) true(at(3,(4,4)),0) true(at(2,(2,1)),0) true(at(1,(1,1)),0) t(1,4) t(2,5) t(3,10) t(4,20) t(5,28) t(6,33) t(7,48) t(8,53) t(9,63) true(moving(2,(3,3),(4,3)),8) true(moving(3,(4,3),(4,2)),7) true(moving(3,(4,3),(4,2)),6) true(moving(3,(4,4),(4,3)),3) true(moving(2,(2,1),(2,2)),3) true(moving(2,(2,1),(2,2)),2) true(moving(2,(2,1),(2,2)),1) true(at(3,(4,2)),8) true(at(2,(3,3)),8) true(at(1,(2,3)),8) true(at(3,(4,3)),7) true(at(2,(3,3)),7) true(at(1,(2,2)),7) true(at(3,(4,3)),6) true(at(2,(2,3)),6) true(at(1,(1,2)),6) true(at(3,(4,3)),5) true(at(2,(2,2)),5) true(at(1,(1,2)),5) true(at(3,(4,3)),4) true(at(2,(2,2)),4) true(at(1,(1,2)),4) true(at(3,(4,4)),3) true(at(2,(2,1)),3) true(at(1,(1,1)),3) true(at(3,(4,4)),2) true(at(2,(2,1)),2) true(at(1,(1,1)),2) true(at(3,(4,4)),1) true(at(2,(2,1)),1) true(at(1,(1,1)),1) true(at(1,(2,3)),9) true(at(2,(4,3)),9) true(at(3,(4,1)),9) true(wait(3),9) true(wait(2),9) true(wait(1),9) true(move(3,(4,2),(4,1)),8) true(wait(1),8) true(move(2,(3,3),(4,3)),7) true(move(1,(2,2),(2,3)),7) true(move(2,(2,3),(3,3)),6) true(move(1,(1,2),(2,2)),6) true(move(3,(4,3),(4,2)),5) true(move(2,(2,2),(2,3)),5) true(wait(1),5) true(wait(3),4) true(wait(2),4) true(wait(1),4) true(move(1,(1,1),(1,2)),3) true(move(3,(4,4),(4,3)),2) true(wait(1),2) true(wait(3),1) true(wait(1),1) true(wait(3),0) true(move(2,(2,1),(2,2)),0) true(wait(1),0)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 11574.073s (Solving: 11560.67s 1st Model: 11560.56s Unsat: 0.00s)
+CPU Time     : 10299.287s
+
+Choices      : 16302272
+Conflicts    : 1782325  (Analyzed: 1782325)
+Restarts     : 3579     (Average: 498.00 Last: 8751 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 209.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 2947411  (Deleted: 2887903)
+  Binary     : 3976     (Ratio:   0.13%)
+  Ternary    : 2499     (Ratio:   0.08%)
+  Conflict   : 1782325  (Average Length: 3671.3 Ratio:  60.47%) 
+  Loop       : 1165086  (Average Length:   37.5 Ratio:  39.53%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1782325  (Average:  8.31 Max: 14915 Sum: 14803510)
+  Executed   : 1782166  (Average:  8.31 Max: 14915 Sum: 14803351 Ratio: 100.00%)
+  Bounded    : 159      (Average:  1.00 Max:   1 Sum:    159 Ratio:   0.00%)
+
+Rules        : 2615970  (Original: 2597567)
+Atoms        : 264300   (Original: 263355 Auxiliary: 945)
+Disjunctions : 3510     (Original: 4175)
+Bodies       : 470214   (Original: 431813)
+Equivalences : 450314   (Atom=Atom: 99755 Body=Body: 74520 Other: 276039)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 148356 Gammas: 19050)
+Variables    : 321199   (Eliminated:    0 Frozen: 102243)
+Constraints  : 3700383  (Binary:  91.4% Ternary:   6.7% Other:   1.9%)
+
