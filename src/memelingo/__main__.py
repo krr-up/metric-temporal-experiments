@@ -2,12 +2,18 @@
 The main entry point for the application.
 """
 
-import argparse
 import sys
-
+from typing import Optional
+import os
+import argparse
 from clingo.application import clingo_main
+from memelingo.utils.parser import get_parser
+from memelingo.application import make_app
+from pprint import pprint
 
-from .application import MemelingoApp
+import logging
+
+log = logging.getLogger(__name__)
 
 
 def parse_constants(arguments: list[str]) -> dict[str, str]:
@@ -38,13 +44,21 @@ def parse_constants(arguments: list[str]) -> dict[str, str]:
     return input_consts
 
 
-def main():
+def main() -> None:
     """
-    Main function calling the application class
+    Run the main function.
     """
     constants_dict = parse_constants(sys.argv[2:])
-    clingo_main(MemelingoApp(sys.argv[0], constants=constants_dict), sys.argv[1:])
-    sys.exit()
+    if len(sys.argv) < 2:
+        parser = get_parser()
+        parser.print_help()
+        # print("Usage: metasp <solve | reify | transform> [options] <files>")
+        exit(1)
+
+    system_name = sys.argv[1]
+    App_class = make_app(system_name)
+    exit_status = clingo_main(App_class(constants=constants_dict), sys.argv[2:])
+    sys.exit(exit_status)
 
 
 if __name__ == "__main__":

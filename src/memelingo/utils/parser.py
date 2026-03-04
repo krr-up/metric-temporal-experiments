@@ -26,8 +26,8 @@ def get_parser() -> ArgumentParser:
         prog="memelingo",
         description=dedent(
             """\
-            memelingo
-            filldescription
+            Memelingo
+            System for metric temporal reasoning
             """
         ),
     )
