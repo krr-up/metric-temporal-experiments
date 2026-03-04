@@ -7,19 +7,20 @@
 
 	<system name="memelingo" version="1" measures="rp_tmp"
 		config="seq-generic"
-		cmdline="--models=1 --project=show --stats">
+		cmdline="">
 		<setting name="lambda-small" tag="lambdasmall">
-			<variable cmd="-c lambda={}" value="20;25;30;35;40;45;50" />
-			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
+			<variable cmd="{}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
+			<variable cmd="-c lambda={} --models=1 --project=show --stats"
+				value="20;25;30;35;40;45;50" />
 		</setting>
 		<setting name="lambda-large" tag="lambdalarge">
-			<variable cmd="-c lambda={}" value="100;150;200" />
-			<variable cmd="--approach={}" value="mlp-tplp-htc;mlp-tplp-htcdl" />
+			<variable cmd="{}" value="mlp-tplp-htc;mlp-tplp-htcdl" />
+			<variable cmd="-c lambda={} --models=1 --project=show --stats" value="100;150;200" />
 		</setting>
 	</system>
 
 
-	<distjob name="dist-generic" timeout="1200s" runs="1"
+	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
 		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
 
 	<benchmark name="jobshop-suite-06">

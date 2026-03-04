@@ -7,15 +7,15 @@
 
 	<system name="memelingo" version="1" measures="rp_tmp"
 		config="seq-generic"
-		cmdline="--models=1 --project=show --stats">
+		cmdline="">
 		<setting name="all-opts" tag="all-opts">
-			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
+			<variable cmd="{}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 			<variable cmd="-c lambda={}" value="15;20;25;30;35;40;45" />
-			<variable cmd="-c v={}" value="30;50;100;150" />
+			<variable cmd="-c v={} --models=1 --project=show --stats" value="30;50;100;150" />
 		</setting>
 	</system>
 
-	<distjob name="dist-generic" timeout="1200s" runs="1"
+	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
 		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
 
 	<benchmark name="mapf-suite">

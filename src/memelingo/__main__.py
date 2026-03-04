@@ -57,6 +57,8 @@ def main() -> None:
 
     system_name = sys.argv[1]
     App_class = make_app(system_name)
+    if system_name[-2:] == "dl":
+        sys.argv.append("--propagate=full")
     exit_status = clingo_main(App_class(constants=constants_dict), sys.argv[2:])
     sys.exit(exit_status)
 

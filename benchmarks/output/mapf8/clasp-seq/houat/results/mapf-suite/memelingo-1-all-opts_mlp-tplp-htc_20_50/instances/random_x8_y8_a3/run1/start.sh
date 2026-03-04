@@ -6,12 +6,12 @@ CAT="../../../../../../../../../../programs/gcat.sh"
 cd "$(dirname $0)"
 
 runner=( "../../../../../../../../../../programs/runlim" \
-   \
+  --single \
   --space-limit=20000 \
   --output-file=runsolver.watcher \
   --real-time-limit=1200 \
   "../../../../../../../../../../programs/memelingo-1" \
-  --models=1 --project=show --stats --approach=mlp-tplp-htc -c lambda=20 -c v=50  \
+   mlp-tplp-htc -c lambda=20 -c v=50 --models=1 --project=show --stats  \
      )
 
 input=( "../../../../../../../../../../../examples/mapf/instances/random_x8_y8_a3.lp" "../../../../../../../../../../../examples/mapf/mapf.lp" )

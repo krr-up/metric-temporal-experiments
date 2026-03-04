@@ -7,13 +7,14 @@
 
 	<system name="memelingo" version="1" measures="rp_tmp"
 		config="seq-generic"
-		cmdline="--models=1 --project=show --stats">
-		<setting name="allapproaches" tag="allapproaches" cmdline="-c lambda=10">
-			<variable cmd="--approach={}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
+		cmdline="">
+		<setting name="allapproaches" tag="allapproaches" cmdline="">
+			<variable cmd="{} --models=1 --project=show --stats -c lambda=10"
+				value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 		</setting>
 	</system>
 
-	<distjob name="dist-generic" timeout="1200s" runs="1"
+	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
 		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
 
 	<benchmark name="mapf-suite-x6_y6">
