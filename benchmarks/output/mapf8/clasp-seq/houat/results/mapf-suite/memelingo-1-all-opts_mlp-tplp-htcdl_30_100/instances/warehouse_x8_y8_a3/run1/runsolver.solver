@@ -1,0 +1,3 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/warehouse_x8_y8_a3.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingodl - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htcdl.lp --models=1 --project=show --stats -c lambda=30 -c v=100 --propagate=full
+clingo-dl version 1.5.0
+Reading from - ...

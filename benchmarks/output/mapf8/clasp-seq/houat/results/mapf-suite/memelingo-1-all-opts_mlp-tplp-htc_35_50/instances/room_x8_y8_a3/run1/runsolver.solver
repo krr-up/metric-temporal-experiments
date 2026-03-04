@@ -1,0 +1,61 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/room_x8_y8_a3.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp --models=1 --project=show --stats -c lambda=35 -c v=50
+clingcon version 5.2.1
+Reading from - ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1199.057s (Solving: 588.20s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1198.841s
+
+Choices      : 174600  
+Conflicts    : 26233    (Analyzed: 26233)
+Restarts     : 86       (Average: 305.03 Last: 16 Blocked: 0)
+Stab. Tests  : 3        (Full: 0 Partial: 3)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 375745   (Deleted: 329771)
+  Binary     : 1263     (Ratio:   0.34%)
+  Ternary    : 1028     (Ratio:   0.27%)
+  Conflict   : 26233    (Average Length: 1663.4 Ratio:   6.98%) 
+  Loop       : 349162   (Average Length:   63.7 Ratio:  92.93%) 
+  Other      : 350      (Average Length:    2.0 Ratio:   0.09%) 
+Backjumps    : 26233    (Average:  6.44 Max: 673 Sum: 169041)
+  Executed   : 26197    (Average:  6.44 Max: 673 Sum: 169005 Ratio:  99.98%)
+  Bounded    : 36       (Average:  1.00 Max:   1 Sum:     36 Ratio:   0.02%)
+
+Rules        : 3329664  (Original: 3329495)
+Atoms        : 1471319  (Original: 1465868 Auxiliary: 5451)
+Disjunctions : 18102    (Original: 18111)
+Bodies       : 2038167  (Original: 1778699)
+Equivalences : 2736974  (Atom=Atom: 495228 Body=Body: 372374 Other: 1869372)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 1619601 Gammas: 253845)
+Variables    : 1488095  (Eliminated:    0 Frozen: 1234084)
+Constraints  : 7109266  (Binary:  82.4% Ternary:  10.4% Other:   7.2%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.404062
+    Simplify : 0.066472
+    Translate: 0.0730784
+  Problem
+    Constraints: 0
+    Variables: 35
+    Clauses  : 371773
+    Literals : 1105
+  Translate
+    Constraints removed: 15154
+    Constraints added: 0
+    Clauses  : 370338
+    Weight constraints: 9
+    Literals : 1105
+  [Thread 0]
+    Time in seconds
+      Total  : 0.991461
+      Propagation: 0.966911
+      Check  : 0.0187643
+      Undo   : 0.0057858
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

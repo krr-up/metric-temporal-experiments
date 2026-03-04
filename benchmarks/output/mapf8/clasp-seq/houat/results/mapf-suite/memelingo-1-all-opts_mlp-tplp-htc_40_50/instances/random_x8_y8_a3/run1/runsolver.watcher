@@ -1,0 +1,19 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node4
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		--models=1
+[runlim] argv[2]:		--project=show
+[runlim] argv[3]:		--stats
+[runlim] argv[4]:		--approach=mlp-tplp-htc
+[runlim] argv[5]:		-c
+[runlim] argv[6]:		lambda=40
+[runlim] argv[7]:		-c
+[runlim] argv[8]:		v=50
+[runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/random_x8_y8_a3.lp
+[runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf.lp
+[runlim] start:			Wed Mar  4 06:26:36 2026
+[runlim] child:			4745
+runlim error: group pid 22130 larger than child pid 4745

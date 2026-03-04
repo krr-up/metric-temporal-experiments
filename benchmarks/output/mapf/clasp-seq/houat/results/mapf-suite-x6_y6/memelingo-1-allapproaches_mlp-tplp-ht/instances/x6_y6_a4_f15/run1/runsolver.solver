@@ -1,0 +1,36 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/x6_y6_a4_f15.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=10 -c v=225
+pyclingo version 5.8.0
+Reading from - ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1198.944s (Solving: 1154.31s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1198.743s
+
+Choices      : 8699658 
+Conflicts    : 93585    (Analyzed: 93585)
+Restarts     : 254      (Average: 368.44 Last: 7101 Blocked: 0)
+Stab. Tests  : 4        (Full: 0 Partial: 4)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 315531   (Deleted: 295706)
+  Binary     : 420      (Ratio:   0.13%)
+  Ternary    : 755      (Ratio:   0.24%)
+  Conflict   : 93585    (Average Length: 42023.0 Ratio:  29.66%) 
+  Loop       : 221946   (Average Length:   29.5 Ratio:  70.34%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 93585    (Average: 63.79 Max: 79397 Sum: 5969709)
+  Executed   : 93571    (Average: 63.79 Max: 79397 Sum: 5969695 Ratio: 100.00%)
+  Bounded    : 14       (Average:  1.00 Max:   1 Sum:     14 Ratio:   0.00%)
+
+Rules        : 21862695 (Original: 21673101)
+Atoms        : 346300   (Original: 345040 Auxiliary: 1260)
+Disjunctions : 4680     (Original: 6581)
+Bodies       : 2499015  (Original: 2282757)
+Equivalences : 604366   (Atom=Atom: 132240 Body=Body: 99667 Other: 372459)
+Tight        : No       (SCCs: 4 Non-Hcfs: 4 Nodes: 197701 Gammas: 25400)
+Variables    : 2258038  (Eliminated:    0 Frozen: 136916)
+Constraints  : 52868399 (Binary:  95.7% Ternary:   3.8% Other:   0.5%)
+

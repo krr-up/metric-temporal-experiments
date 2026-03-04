@@ -15,7 +15,7 @@
 		</setting>
 	</system>
 
-	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
+	<distjob name="dist-generic" timeout="1200s" runs="1"
 		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
 
 	<benchmark name="mapf-suite">

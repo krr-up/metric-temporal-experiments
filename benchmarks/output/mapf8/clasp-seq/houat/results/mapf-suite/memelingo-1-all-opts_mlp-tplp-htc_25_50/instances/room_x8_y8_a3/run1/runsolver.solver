@@ -1,0 +1,3 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/room_x8_y8_a3.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingcon - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-htc.lp --models=1 --project=show --stats -c lambda=25 -c v=50
+clingcon version 5.2.1
+Reading from - ...

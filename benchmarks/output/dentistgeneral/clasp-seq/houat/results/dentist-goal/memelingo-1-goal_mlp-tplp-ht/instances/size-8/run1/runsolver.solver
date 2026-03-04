@@ -1,0 +1,38 @@
+python -m clingo ../../../../../../../../../../../examples/dentist/instances/size-8.lp ../../../../../../../../../../../examples/dentist/dentist-goal.lp ../../../../../../../../../../../examples/dentist/dentist.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=0 --project=show --stats -c lambda=4 -c v=880
+pyclingo version 5.8.0
+Reading from - ...
+Solving...
+Answer: 1 (Time: 119.189s)
+t(0,0) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) t(1,160) t(2,280) t(3,440) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 263.304s (Solving: 162.60s 1st Model: 18.48s Unsat: 144.12s)
+CPU Time     : 263.187s
+
+Choices      : 66161   
+Conflicts    : 1182     (Analyzed: 1001)
+Restarts     : 57       (Average: 17.56 Last: 4 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 440.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 1033     (Deleted: 0)
+  Binary     : 92       (Ratio:   8.91%)
+  Ternary    : 35       (Ratio:   3.39%)
+  Conflict   : 1001     (Average Length: 5034.6 Ratio:  96.90%) 
+  Loop       : 32       (Average Length:    3.6 Ratio:   3.10%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1001     (Average: 64.89 Max: 1355 Sum:  64955)
+  Executed   : 990      (Average: 63.51 Max: 1355 Sum:  63576 Ratio:  97.88%)
+  Bounded    : 11       (Average: 125.36 Max: 181 Sum:   1379 Ratio:   2.12%)
+
+Rules        : 24425057 (Original: 23652395)
+Atoms        : 7236    
+Disjunctions : 3        (Original: 1767)
+Bodies       : 4253646  (Original: 3480975)
+Equivalences : 21131    (Atom=Atom: 2413 Body=Body: 2248 Other: 16470)
+Tight        : No       (SCCs: 13 Non-Hcfs: 1 Nodes: 389 Gammas: 9)
+Variables    : 4243273  (Eliminated:    0 Frozen: 2941)
+Constraints  : 483454891 (Binary:  99.1% Ternary:   0.7% Other:   0.2%)
+

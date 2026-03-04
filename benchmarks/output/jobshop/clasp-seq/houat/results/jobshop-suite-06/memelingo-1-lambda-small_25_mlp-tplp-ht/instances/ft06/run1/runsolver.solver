@@ -1,0 +1,35 @@
+python -m clingo ../../../../../../../../../../../examples/job-shop/instances/ft06.lp ../../../../../../../../../../../examples/job-shop/job-shop.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=25 -c v=56
+pyclingo version 5.8.0
+Reading from - ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1199.108s (Solving: 1186.91s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1197.930s
+
+Choices      : 6196289 
+Conflicts    : 746193   (Analyzed: 746193)
+Restarts     : 1865     (Average: 400.10 Last: 228 Blocked: 0)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 1010587  (Deleted: 941188)
+  Binary     : 7587     (Ratio:   0.75%)
+  Ternary    : 4217     (Ratio:   0.42%)
+  Conflict   : 746193   (Average Length:  784.4 Ratio:  73.84%) 
+  Loop       : 264394   (Average Length:   31.1 Ratio:  26.16%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 746193   (Average:  7.84 Max: 15376 Sum: 5853164)
+  Executed   : 737887   (Average:  7.83 Max: 15376 Sum: 5844858 Ratio:  99.86%)
+  Bounded    : 8306     (Average:  1.00 Max:   1 Sum:   8306 Ratio:   0.14%)
+
+Rules        : 7778774  (Original: 7764133)
+Atoms        : 106261  
+Disjunctions : 0        (Original: 1890)
+Bodies       : 668104   (Original: 653463)
+Equivalences : 164737   (Atom=Atom: 32984 Body=Body: 21000 Other: 110753)
+Tight        : No       (SCCs: 72 Non-Hcfs: 0 Nodes: 68432 Gammas: 0)
+Variables    : 394783   (Eliminated:    0 Frozen: 66978)
+Constraints  : 5214470  (Binary:  92.5% Ternary:   6.7% Other:   0.8%)
+

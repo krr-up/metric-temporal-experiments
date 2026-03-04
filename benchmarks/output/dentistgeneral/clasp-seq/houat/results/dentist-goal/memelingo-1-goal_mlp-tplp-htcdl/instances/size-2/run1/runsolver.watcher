@@ -1,0 +1,29 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node1
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		--models=0
+[runlim] argv[2]:		--project=show
+[runlim] argv[3]:		--stats
+[runlim] argv[4]:		-c
+[runlim] argv[5]:		lambda=4
+[runlim] argv[6]:		--approach=mlp-tplp-htcdl
+[runlim] argv[7]:		-c
+[runlim] argv[8]:		v=220
+[runlim] argv[9]:		../../../../../../../../../../../examples/dentist/instances/size-2.lp
+[runlim] argv[10]:		../../../../../../../../../../../examples/dentist/dentist-goal.lp
+[runlim] argv[11]:		../../../../../../../../../../../examples/dentist/dentist.lp
+[runlim] start:			Wed Mar  4 00:06:24 2026
+[runlim] child:			22315
+[runlim] end:			Wed Mar  4 00:06:25 2026
+[runlim] status:		ok
+[runlim] result:		30
+[runlim] children:		5
+[runlim] processes:		6
+[runlim] real:			1.26 seconds
+[runlim] time:			0.28 seconds
+[runlim] space:			32 MB
+[runlim] load:			0.85 maximum
+[runlim] samples:		13

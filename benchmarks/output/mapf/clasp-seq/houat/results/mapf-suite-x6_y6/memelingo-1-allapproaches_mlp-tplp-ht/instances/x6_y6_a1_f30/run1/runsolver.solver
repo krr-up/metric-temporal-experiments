@@ -1,0 +1,3 @@
+python -m clingo ../../../../../../../../../../../examples/mapf/instances/x6_y6_a1_f30.lp ../../../../../../../../../../../examples/mapf/mapf.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=10 -c v=450
+pyclingo version 5.8.0
+Reading from - ...

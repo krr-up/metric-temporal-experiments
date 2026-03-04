@@ -1,0 +1,37 @@
+python -m clingo ../../../../../../../../../../../examples/job-shop/instances/ft06.lp ../../../../../../../../../../../examples/job-shop/job-shop.lp --output=reify | python -m clingo - ../../../../../../../../../../../src/memelingo/encodings/mlp-tplp-ht.lp --models=1 --project=show --stats -c lambda=45 -c v=56
+pyclingo version 5.8.0
+Reading from - ...
+Solving...
+Answer: 1 (Time: 190.430s)
+t(0,0) t(1,1) t(2,2) t(3,3) t(4,4) t(5,5) t(6,6) t(7,7) t(8,8) t(9,9) t(10,10) t(11,11) t(12,12) t(13,13) t(14,14) t(15,15) t(16,16) t(17,17) t(18,18) t(19,19) t(20,20) t(21,21) t(22,22) t(23,23) t(24,25) t(25,28) t(26,31) t(27,37) t(28,38) t(29,39) t(30,40) t(31,41) t(32,42) t(33,43) t(34,44) t(35,45) t(36,46) t(37,48) t(38,49) t(39,50) t(40,51) t(41,52) t(42,53) t(43,54) t(44,56) true(start_run(35,2),43) true(start_run(29,3),43) true(start_run(28,0),39) true(start_run(11,3),39) true(start_run(17,4),38) true(start_run(23,5),35) true(start_run(5,4),33) true(start_run(27,5),31) true(start_run(10,0),30) true(start_run(34,4),29) true(start_run(4,5),28) true(start_run(3,3),27) true(start_run(22,4),26) true(start_run(3,3),26) true(start_run(33,0),25) true(start_run(21,3),25) true(start_run(16,1),25) true(start_run(9,5),25) true(start_run(26,4),24) true(start_run(20,2),23) true(start_run(25,1),22) true(start_run(32,5),19) true(start_run(15,0),18) true(start_run(31,3),16) true(start_run(2,1),16) true(start_run(8,4),14) true(start_run(30,1),13) true(start_run(24,2),13) true(start_run(19,0),13) true(start_run(14,5),9) true(start_run(1,0),9) true(start_run(18,1),8) true(start_run(7,2),8) true(start_run(13,3),5) true(start_run(0,2),5) true(start_run(12,2),0) true(start_run(6,1),0)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 190.435s (Solving: 171.87s 1st Model: 171.86s Unsat: 0.00s)
+CPU Time     : 190.324s
+
+Choices      : 853150  
+Conflicts    : 100322   (Analyzed: 100322)
+Restarts     : 276      (Average: 363.49 Last: 172 Blocked: 0)
+Model-Level  : 563.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 231540   (Deleted: 210389)
+  Binary     : 1663     (Ratio:   0.72%)
+  Ternary    : 980      (Ratio:   0.42%)
+  Conflict   : 100322   (Average Length:  636.8 Ratio:  43.33%) 
+  Loop       : 131218   (Average Length:   59.9 Ratio:  56.67%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 100322   (Average:  8.08 Max: 2806 Sum: 810577)
+  Executed   : 99610    (Average:  8.07 Max: 2806 Sum: 809865 Ratio:  99.91%)
+  Bounded    : 712      (Average:  1.00 Max:   1 Sum:    712 Ratio:   0.09%)
+
+Rules        : 14804634 (Original: 14797583)
+Atoms        : 228621  
+Disjunctions : 0        (Original: 3040)
+Bodies       : 1348879  (Original: 1341828)
+Equivalences : 333787   (Atom=Atom: 58864 Body=Body: 37360 Other: 237563)
+Tight        : No       (SCCs: 72 Non-Hcfs: 0 Nodes: 193732 Gammas: 0)
+Variables    : 346650   (Eliminated:    0 Frozen: 176609)
+Constraints  : 2842871  (Binary:  88.0% Ternary:   9.1% Other:   2.9%)
+
