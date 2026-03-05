@@ -11,7 +11,7 @@
 		<setting name="lambda-small" tag="lambdasmall">
 			<variable cmd="{}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
 			<variable cmd="-c lambda={} --models=1 --project=show --stats"
-				value="20;25;30;35;40;45;50" />
+				value="10;15;20;25;30;35;40;45;50" />
 		</setting>
 		<setting name="lambda-large" tag="lambdalarge">
 			<variable cmd="{}" value="mlp-tplp-htc;mlp-tplp-htcdl" />

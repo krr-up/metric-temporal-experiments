@@ -22,7 +22,7 @@ def get_size(name):
 
 
 def get_lambda(name):
-    return int(name.split("_")[1])
+    return int(name.split("_")[2])
 
 
 def get_horizon_mapf8(timepoint=30):
@@ -875,7 +875,7 @@ def plot_multiple_instances_by_row(
 
 def plot_dentist_plain():
     # Example usage for dentist instance
-    path = f"resultsv7/dentist-plain.xlsx"
+    path = f"resultsv8/dentist-plain.xlsx"
     instance_prefix = "size"
     save_path = f"plots/dentist_plain_factor.pdf"
 
@@ -906,7 +906,7 @@ def plot_dentist_plain():
 
 def plot_dentist_general():
     # Example usage for dentist instance
-    path = f"resultsv7/dentist-general.xlsx"
+    path = f"resultsv8/dentist-general.xlsx"
     instance_prefix = "size"
     save_path = f"plots/dentist_general_factor.pdf"
 
@@ -931,7 +931,7 @@ def plot_dentist_general():
 
 
 def plot_jobshop_6():
-    path = "resultsv7/jobshop.xlsx"
+    path = "resultsv8/jobshop.xlsx"
     instance_prefix = "ft06"
     save_path = f"plots/{instance_prefix}_factor.pdf"
 
@@ -956,7 +956,7 @@ def plot_jobshop_6():
 
 
 def plot_all_mapf_empty():
-    path = "resultsv7/mapf.xlsx"
+    path = "resultsv8/mapf.xlsx"
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
@@ -985,7 +985,7 @@ def plot_all_mapf_empty():
 
 
 def plot_mapf_8():
-    path = "resultsv7/mapf-8.xlsx"
+    path = "resultsv8/mapf-8.xlsx"
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
@@ -1010,7 +1010,8 @@ def plot_mapf_8():
 
 
 if __name__ == "__main__":
-    plot_dentist_general()
-    plot_dentist_plain()
-    plot_jobshop_6()
+    # plot_dentist_general()
+    # plot_dentist_plain()
+    # plot_jobshop_6()
     # plot_all_mapf_empty()
+    plot_mapf_8()
