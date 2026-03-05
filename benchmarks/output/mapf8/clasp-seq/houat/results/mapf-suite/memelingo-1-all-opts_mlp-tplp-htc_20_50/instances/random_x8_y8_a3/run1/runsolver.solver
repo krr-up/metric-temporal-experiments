@@ -1,0 +1,63 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1194.432s (Solving: 1156.93s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1194.182s
+
+Choices      : 164176  
+Conflicts    : 77707    (Analyzed: 77707)
+Restarts     : 246      (Average: 315.88 Last: 78 Blocked: 0)
+Stab. Tests  : 3        (Full: 0 Partial: 3)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 730547   (Deleted: 664362)
+  Binary     : 2053     (Ratio:   0.28%)
+  Ternary    : 3028     (Ratio:   0.41%)
+  Conflict   : 77707    (Average Length:  479.8 Ratio:  10.64%) 
+  Loop       : 652271   (Average Length:   40.9 Ratio:  89.29%) 
+  Other      : 569      (Average Length:    2.0 Ratio:   0.08%) 
+Backjumps    : 77707    (Average:  2.06 Max: 117 Sum: 160462)
+  Executed   : 77509    (Average:  2.06 Max: 117 Sum: 160264 Ratio:  99.88%)
+  Bounded    : 198      (Average:  1.00 Max:   1 Sum:    198 Ratio:   0.12%)
+
+Rules        : 1286851  (Original: 1286685)
+Atoms        : 682249   (Original: 679438 Auxiliary: 2811)
+Disjunctions : 8958     (Original: 8979)
+Bodies       : 787977   (Original: 707074)
+Equivalences : 1285210  (Atom=Atom: 274902 Body=Body: 200406 Other: 809902)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 538627 Gammas: 77935)
+Variables    : 471796   (Eliminated:    0 Frozen: 393710)
+Constraints  : 2281458  (Binary:  77.8% Ternary:  14.7% Other:   7.4%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.151556
+    Simplify : 0.0246691
+    Translate: 0.0282511
+  Problem
+    Constraints: 0
+    Variables: 20
+    Clauses  : 154378
+    Literals : 760
+  Translate
+    Constraints removed: 5059
+    Constraints added: 0
+    Clauses  : 153723
+    Weight constraints: 9
+    Literals : 760
+  [Thread 0]
+    Time in seconds
+      Total  : 0.412153
+      Propagation: 0.343041
+      Check  : 0.0392819
+      Undo   : 0.0298297
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmp6qpyy60f.lp']

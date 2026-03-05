@@ -26,6 +26,7 @@ from .utils.logger import setup_logger
 from .utils.visualizer import visualize
 import meta_tools
 import tempfile
+import memelingo
 
 log = logging.getLogger("main")
 
@@ -48,31 +49,32 @@ class ClingoApp(Application):
         ctl.ground([("base", [])])
         ctl.solve()
 
+package_dir = memelingo.__path__[0]
 
 APP_INFO = {
     "mlp-lpnmr-ht": {
         "application": ClingoApp,
-        "files": ["src/memelingo/encodings/mlp-lpnmr-ht.lp"],
+        "files": [f"{package_dir}/encodings/mlp-lpnmr-ht.lp"],
     },
     "mlp-lpnmr-htc": {
         "application": ClingconApp,
-        "files": ["src/memelingo/encodings/mlp-lpnmr-htc.lp"],
+        "files": [f"{package_dir}/encodings/mlp-lpnmr-htc.lp"],
     },
     "mlp-lpnmr-htcdl": {
         "application": ClingoDLApp,
-        "files": ["src/memelingo/encodings/mlp-lpnmr-htcdl.lp"],
+        "files": [f"{package_dir}/encodings/mlp-lpnmr-htcdl.lp"],
     },
     "mlp-tplp-htc": {
         "application": ClingconApp,
-        "files": ["src/memelingo/encodings/mlp-tplp-htc.lp"],
+        "files": [f"{package_dir}/encodings/mlp-tplp-htc.lp"],
     },
     "mlp-tplp-htcdl": {
         "application": ClingoDLApp,
-        "files": ["src/memelingo/encodings/mlp-tplp-htcdl.lp"],
+        "files": [f"{package_dir}/encodings/mlp-tplp-htcdl.lp"],
     },
     "mlp-tplp-ht": {
         "application": ClingoApp,
-        "files": ["src/memelingo/encodings/mlp-tplp-ht.lp"],
+        "files": [f"{package_dir}/encodings/mlp-tplp-ht.lp"],
     },
 }
 
@@ -182,6 +184,7 @@ def make_app(app_name: str) -> Application:
             """
             Main entry point for the application.
             """
+            print("Reifing...")
             rsymbols = meta_tools.classic_reify(
                 ["--preserve-facts=symtab"]
                 + [f"-c {k}={v}" for k, v in self.constants.items()],
@@ -190,13 +193,14 @@ def make_app(app_name: str) -> Application:
                 files=files,
             )
             simple_reified_prg = "\n".join([f"{str(s)}." for s in rsymbols])
+            print("Saving refication...")
             with tempfile.NamedTemporaryFile(
                 "w", delete=False, suffix=".lp"
             ) as tmp_file:
                 tmp_file.write(simple_reified_prg)
                 reified_path = tmp_file.name
             files = APP_INFO[app_name]["files"] + [reified_path]
-            print(files)
+            print("Running application... with files ", files)
             super().main(control, files)
 
     return MemelingoApp

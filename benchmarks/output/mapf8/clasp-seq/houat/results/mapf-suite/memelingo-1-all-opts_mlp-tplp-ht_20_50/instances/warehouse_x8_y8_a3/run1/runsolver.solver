@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 176.828s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpnn7nmsjf.lp']
+t(0,0) t(1,14) t(2,18) t(3,19) t(4,20) t(5,22) t(6,23) t(7,24) t(8,25) t(9,26) t(10,27) t(11,29) t(12,30) t(13,39) t(14,40) t(15,42) t(16,44) t(17,45) t(18,46) t(19,49) true(moving(3,(7,8),(7,7)),18) true(moving(3,(7,8),(7,7)),17) true(moving(1,(7,5),(7,4)),16) true(moving(2,(7,7),(6,7)),15) true(moving(1,(7,5),(7,4)),15) true(moving(2,(8,7),(7,7)),11) true(moving(3,(6,7),(7,7)),10) true(moving(2,(8,7),(7,7)),10) true(moving(2,(8,7),(7,7)),9) true(moving(1,(7,7),(7,6)),9) true(moving(1,(7,7),(7,6)),8) true(moving(3,(4,7),(5,7)),7) true(moving(1,(7,7),(7,6)),7) true(moving(1,(7,7),(7,6)),6) true(moving(3,(2,7),(3,7)),4) true(moving(1,(6,7),(7,7)),4) true(moving(2,(7,8),(7,7)),2) true(at(3,(7,8)),18) true(at(2,(4,7)),18) true(at(1,(7,4)),18) true(at(3,(7,8)),17) true(at(2,(5,7)),17) true(at(1,(7,4)),17) true(at(3,(7,8)),16) true(at(2,(6,7)),16) true(at(1,(7,5)),16) true(at(3,(7,8)),15) true(at(2,(7,7)),15) true(at(1,(7,5)),15) true(at(3,(7,8)),14) true(at(2,(7,7)),14) true(at(1,(7,5)),14) true(at(3,(7,8)),13) true(at(2,(7,7)),13) true(at(1,(7,5)),13) true(at(3,(7,8)),12) true(at(2,(7,7)),12) true(at(1,(7,5)),12) true(at(3,(7,7)),11) true(at(2,(8,7)),11) true(at(1,(7,5)),11) true(at(3,(6,7)),10) true(at(2,(8,7)),10) true(at(1,(7,6)),10) true(at(3,(6,7)),9) true(at(2,(8,7)),9) true(at(1,(7,7)),9) true(at(3,(5,7)),8) true(at(2,(8,7)),8) true(at(1,(7,7)),8) true(at(3,(4,7)),7) true(at(2,(8,7)),7) true(at(1,(7,7)),7) true(at(3,(4,7)),6) true(at(2,(8,7)),6) true(at(1,(7,7)),6) true(at(3,(3,7)),5) true(at(2,(8,7)),5) true(at(1,(7,7)),5) true(at(3,(2,7)),4) true(at(2,(8,7)),4) true(at(1,(6,7)),4) true(at(3,(2,7)),3) true(at(2,(7,7)),3) true(at(1,(6,7)),3) true(at(3,(1,7)),2) true(at(2,(7,8)),2) true(at(1,(5,7)),2) true(at(3,(1,8)),1) true(at(2,(7,8)),1) true(at(1,(5,7)),1) true(at(3,(1,8)),0) true(at(2,(7,8)),0) true(at(1,(5,7)),0) true(at(1,(8,4)),19) true(at(2,(4,7)),19) true(at(3,(7,7)),19) true(wait(3),19) true(wait(2),19) true(wait(1),19) true(wait(2),18) true(move(1,(7,4),(8,4)),18) true(move(2,(5,7),(4,7)),17) true(wait(1),17) true(move(3,(7,8),(7,7)),16) true(move(2,(6,7),(5,7)),16) true(wait(3),15) true(wait(3),14) true(move(2,(7,7),(6,7)),14) true(move(1,(7,5),(7,4)),14) true(wait(3),13) true(wait(2),13) true(wait(1),13) true(wait(3),12) true(wait(2),12) true(wait(1),12) true(move(3,(7,7),(7,8)),11) true(wait(1),11) true(move(1,(7,6),(7,5)),10) true(move(3,(6,7),(7,7)),9) true(move(3,(5,7),(6,7)),8) true(move(2,(8,7),(7,7)),8) true(wait(2),7) true(move(3,(4,7),(5,7)),6) true(wait(2),6) true(move(3,(3,7),(4,7)),5) true(wait(2),5) true(move(1,(7,7),(7,6)),5) true(wait(2),4) true(move(3,(2,7),(3,7)),3) true(move(2,(7,7),(8,7)),3) true(move(1,(6,7),(7,7)),3) true(move(3,(1,7),(2,7)),2) true(move(1,(5,7),(6,7)),2) true(move(3,(1,8),(1,7)),1) true(move(2,(7,8),(7,7)),1) true(wait(1),1) true(wait(3),0) true(wait(2),0) true(wait(1),0)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 176.844s (Solving: 157.39s 1st Model: 157.38s Unsat: 0.00s)
+CPU Time     : 176.737s
+
+Choices      : 489392  
+Conflicts    : 12929    (Analyzed: 12929)
+Restarts     : 55       (Average: 235.07 Last: 133 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 92.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 66176    (Deleted: 46748)
+  Binary     : 91       (Ratio:   0.14%)
+  Ternary    : 195      (Ratio:   0.29%)
+  Conflict   : 12929    (Average Length: 1014.1 Ratio:  19.54%) 
+  Loop       : 53247    (Average Length:   84.6 Ratio:  80.46%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 12929    (Average: 35.02 Max: 7569 Sum: 452728)
+  Executed   : 12924    (Average: 35.02 Max: 7569 Sum: 452723 Ratio: 100.00%)
+  Bounded    : 5        (Average:  1.00 Max:   1 Sum:      5 Ratio:   0.00%)
+
+Rules        : 3634648  (Original: 3625006)
+Atoms        : 379137   (Original: 377256 Auxiliary: 1881)
+Disjunctions : 5457     (Original: 6286)
+Bodies       : 756303   (Original: 700293)
+Equivalences : 720472   (Atom=Atom: 152651 Body=Body: 110929 Other: 456892)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 296474 Gammas: 44499)
+Variables    : 452818   (Eliminated:    0 Frozen: 214168)
+Constraints  : 3912350  (Binary:  88.6% Ternary:   8.5% Other:   2.9%)
+

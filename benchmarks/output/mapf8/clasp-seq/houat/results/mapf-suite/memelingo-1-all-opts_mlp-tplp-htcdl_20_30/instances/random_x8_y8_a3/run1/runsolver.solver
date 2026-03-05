@@ -1,0 +1,59 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1193.415s (Solving: 1153.31s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1193.142s
+
+Choices      : 129457  
+Conflicts    : 78472    (Analyzed: 78472)
+Restarts     : 240      (Average: 326.97 Last: 54 Blocked: 0)
+Stab. Tests  : 3        (Full: 0 Partial: 3)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 618736   (Deleted: 554009)
+  Binary     : 3088     (Ratio:   0.50%)
+  Ternary    : 5217     (Ratio:   0.84%)
+  Conflict   : 78472    (Average Length:  159.3 Ratio:  12.68%) 
+  Loop       : 480673   (Average Length:   17.1 Ratio:  77.69%) 
+  Other      : 59591    (Average Length:    4.6 Ratio:   9.63%) 
+Backjumps    : 78472    (Average:  1.63 Max:  61 Sum: 128036)
+  Executed   : 78257    (Average:  1.63 Max:  61 Sum: 127821 Ratio:  99.83%)
+  Bounded    : 215      (Average:  1.00 Max:   1 Sum:    215 Ratio:   0.17%)
+
+Rules        : 1286851  (Original: 1286685)
+Atoms        : 682249   (Original: 679438 Auxiliary: 2811)
+Disjunctions : 8958     (Original: 8979)
+Bodies       : 787977   (Original: 707074)
+Equivalences : 1285210  (Atom=Atom: 274902 Body=Body: 200406 Other: 809902)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 538627 Gammas: 77935)
+Variables    : 471036   (Eliminated:    0 Frozen: 392950)
+Constraints  : 2380932  (Binary:  82.2% Ternary:  10.3% Other:   7.5%)
+
+DifferenceLogic
+  Time init(s): 0.0104822
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 4601
+  Variables  : 21
+  [Thread 0]
+    Propagation(s): 180.98
+    Dijkstra(s): 3.21151
+    Undo(s)  : 0.12092
+    True edges: 1.03647e+06
+    False edges: 231985
+    False edges (inverse): 518
+    False edges (partial): 941
+    False edges (partial+): 70
+    Edges added: 516341
+    Edges skipped: 466907
+    Edges propagated: 514186
+    Cost consistency: 1.18164e+06
+    Cost forward: 6.36241e+07
+    Cost backward: 6.59441e+07
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpwqz4qrbs.lp']

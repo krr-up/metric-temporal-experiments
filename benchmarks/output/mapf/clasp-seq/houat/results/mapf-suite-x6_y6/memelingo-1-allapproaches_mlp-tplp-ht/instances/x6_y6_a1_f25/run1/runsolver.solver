@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...xamples/mapf/instances/x6_y6_a1_f25.lp ...
+Solving...
+Answer: 1 (Time: 693.369s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmp3ql2v3y8.lp']
+t(0,0) t(1,175) t(2,178) t(3,225) t(4,240) t(5,241) t(6,250) t(7,300) t(8,325) t(9,341) true(moving(1,(1,2),(2,2)),6) true(moving(1,(1,2),(2,2)),5) true(moving(1,(1,2),(2,2)),4) true(moving(1,(1,1),(1,2)),2) true(at(1,(2,3)),8) true(at(1,(2,2)),7) true(at(1,(1,2)),6) true(at(1,(1,2)),5) true(at(1,(1,2)),4) true(at(1,(1,2)),3) true(at(1,(1,1)),2) true(at(1,(1,1)),1) true(at(1,(1,1)),0) true(at(1,(2,3)),9) true(wait(1),9) true(wait(1),8) true(move(1,(2,2),(2,3)),7) true(move(1,(1,2),(2,2)),3) true(move(1,(1,1),(1,2)),1) true(wait(1),0)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 693.480s (Solving: 552.33s 1st Model: 552.22s Unsat: 0.00s)
+CPU Time     : 693.245s
+
+Choices      : 3870004 
+Conflicts    : 19036    (Analyzed: 19036)
+Restarts     : 73       (Average: 260.77 Last: 3 Blocked: 0)
+Stab. Tests  : 2        (Full: 1 Partial: 1)
+Model-Level  : 32075.0 
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 36637    (Deleted: 31239)
+  Binary     : 37       (Ratio:   0.10%)
+  Ternary    : 142      (Ratio:   0.39%)
+  Conflict   : 19036    (Average Length: 153493.3 Ratio:  51.96%) 
+  Loop       : 17601    (Average Length:   32.8 Ratio:  48.04%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 19036    (Average: 119.84 Max: 60913 Sum: 2281223)
+  Executed   : 19034    (Average: 119.84 Max: 60913 Sum: 2281221 Ratio: 100.00%)
+  Bounded    : 2        (Average:  1.00 Max:   1 Sum:      2 Ratio:   0.00%)
+
+Rules        : 60255532 (Original: 59714910)
+Atoms        : 123808   (Original: 123493 Auxiliary: 315)
+Disjunctions : 1170     (Original: 4163)
+Bodies       : 6218287  (Original: 5670999)
+Equivalences : 215151   (Atom=Atom: 50757 Body=Body: 34615 Other: 129779)
+Tight        : No       (SCCs: 1 Non-Hcfs: 1 Nodes: 49637 Gammas: 6350)
+Variables    : 6038526  (Eliminated:    0 Frozen: 38301)
+Constraints  : 203317238 (Binary:  97.0% Ternary:   2.7% Other:   0.3%)
+

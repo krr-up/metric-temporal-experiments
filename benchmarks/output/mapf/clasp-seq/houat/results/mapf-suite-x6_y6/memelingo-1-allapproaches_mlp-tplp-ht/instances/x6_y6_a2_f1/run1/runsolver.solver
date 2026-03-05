@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...examples/mapf/instances/x6_y6_a2_f1.lp ...
+Solving...
+Answer: 1 (Time: 3.175s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpl0tncdqs.lp']
+t(0,0) t(1,1) t(2,2) t(3,3) t(4,4) t(5,5) t(6,6) t(7,7) t(8,8) t(9,11) true(moving(1,(1,3),(2,3)),8) true(moving(2,(2,3),(3,3)),7) true(moving(1,(1,3),(2,3)),7) true(moving(2,(2,3),(3,3)),6) true(moving(1,(1,2),(1,3)),5) true(moving(2,(2,1),(2,2)),3) true(moving(1,(1,1),(1,2)),3) true(moving(2,(2,1),(2,2)),2) true(moving(2,(2,1),(2,2)),1) true(at(2,(3,3)),8) true(at(1,(1,3)),8) true(at(2,(2,3)),7) true(at(1,(1,3)),7) true(at(2,(2,3)),6) true(at(1,(1,3)),6) true(at(2,(2,3)),5) true(at(1,(1,2)),5) true(at(2,(2,2)),4) true(at(1,(1,2)),4) true(at(2,(2,1)),3) true(at(1,(1,1)),3) true(at(2,(2,1)),2) true(at(1,(1,1)),2) true(at(2,(2,1)),1) true(at(1,(1,1)),1) true(at(2,(2,1)),0) true(at(1,(1,1)),0) true(at(1,(2,3)),9) true(at(2,(4,3)),9) true(wait(2),9) true(wait(1),9) true(move(2,(3,3),(4,3)),8) true(move(1,(1,3),(2,3)),6) true(move(2,(2,3),(3,3)),5) true(move(2,(2,2),(2,3)),4) true(move(1,(1,2),(1,3)),4) true(move(1,(1,1),(1,2)),2) true(wait(1),1) true(move(2,(2,1),(2,2)),0) true(wait(1),0)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 3.179s (Solving: 0.09s 1st Model: 0.09s Unsat: 0.00s)
+CPU Time     : 3.003s
+
+Choices      : 106     
+Conflicts    : 13       (Analyzed: 13)
+Restarts     : 0       
+Stab. Tests  : 4        (Full: 2 Partial: 2)
+Model-Level  : 23.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 664      (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 15       (Ratio:   2.26%)
+  Conflict   : 13       (Average Length:   49.8 Ratio:   1.96%) 
+  Loop       : 651      (Average Length:   32.2 Ratio:  98.04%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 13       (Average:  6.54 Max:  54 Sum:     85)
+  Executed   : 12       (Average:  6.46 Max:  54 Sum:     84 Ratio:  98.82%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   1.18%)
+
+Rules        : 351161   (Original: 350859)
+Atoms        : 194148   (Original: 193518 Auxiliary: 630)
+Disjunctions : 2340     (Original: 2489)
+Bodies       : 182986   (Original: 169352)
+Equivalences : 331224   (Atom=Atom: 79270 Body=Body: 55733 Other: 196221)
+Tight        : No       (SCCs: 2 Non-Hcfs: 2 Nodes: 98999 Gammas: 12700)
+Variables    : 83271    (Eliminated:    0 Frozen: 68320)
+Constraints  : 384125   (Binary:  79.0% Ternary:  12.2% Other:   8.8%)
+

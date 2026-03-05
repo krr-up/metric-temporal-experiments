@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ..../examples/dentist/instances/size-7.lp ...
+Solving...
+Answer: 1 (Time: 93.763s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmprwg6d5k2.lp']
+t(0,0) t(1,140) t(2,245) t(3,385) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 94.244s (Solving: 17.20s 1st Model: 16.72s Unsat: 0.48s)
+CPU Time     : 94.036s
+
+Choices      : 74150   
+Conflicts    : 501      (Analyzed: 499)
+Restarts     : 3        (Average: 166.33 Last: 438 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 6.0     
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 529      (Deleted: 0)
+  Binary     : 28       (Ratio:   5.29%)
+  Ternary    : 17       (Ratio:   3.21%)
+  Conflict   : 499      (Average Length: 18328.4 Ratio:  94.33%) 
+  Loop       : 30       (Average Length:    3.5 Ratio:   5.67%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 499      (Average: 142.85 Max: 6871 Sum:  71283)
+  Executed   : 485      (Average: 142.82 Max: 6871 Sum:  71269 Ratio:  99.98%)
+  Bounded    : 14       (Average:  1.00 Max:   1 Sum:     14 Ratio:   0.02%)
+
+Rules        : 18694341 (Original: 18102959)
+Atoms        : 6828    
+Disjunctions : 3        (Original: 1547)
+Bodies       : 3256509  (Original: 2665118)
+Equivalences : 19541    (Atom=Atom: 2481 Body=Body: 2172 Other: 14888)
+Tight        : No       (SCCs: 13 Non-Hcfs: 1 Nodes: 389 Gammas: 9)
+Variables    : 3247058  (Eliminated:    0 Frozen: 2611)
+Constraints  : 326650676 (Binary:  99.0% Ternary:   0.8% Other:   0.2%)
+

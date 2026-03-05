@@ -1,0 +1,35 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1194.140s (Solving: 742.64s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1193.923s
+
+Choices      : 348140  
+Conflicts    : 6122     (Analyzed: 6122)
+Restarts     : 30       (Average: 204.07 Last: 371 Blocked: 0)
+Stab. Tests  : 3        (Full: 0 Partial: 3)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 39482    (Deleted: 17358)
+  Binary     : 9        (Ratio:   0.02%)
+  Ternary    : 317      (Ratio:   0.80%)
+  Conflict   : 6122     (Average Length: 4780.4 Ratio:  15.51%) 
+  Loop       : 33360    (Average Length:  237.2 Ratio:  84.49%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 6122     (Average: 55.66 Max: 1921 Sum: 340762)
+  Executed   : 6122     (Average: 55.66 Max: 1921 Sum: 340762 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 77917498 (Original: 77707154)
+Atoms        : 1087725  (Original: 1083636 Auxiliary: 4089)
+Disjunctions : 13473    (Original: 17396)
+Bodies       : 9420833  (Original: 9041934)
+Equivalences : 2065237  (Atom=Atom: 408471 Body=Body: 297285 Other: 1359481)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 1069994 Gammas: 164475)
+Variables    : 7437797  (Eliminated:    0 Frozen: 806039)
+Constraints  : 101467993 (Binary:  92.7% Ternary:   6.7% Other:   0.6%)
+

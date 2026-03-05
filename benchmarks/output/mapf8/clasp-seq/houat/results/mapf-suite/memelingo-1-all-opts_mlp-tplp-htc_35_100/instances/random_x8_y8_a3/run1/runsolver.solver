@@ -1,0 +1,60 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1193.295s (Solving: 721.83s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1193.018s
+
+Choices      : 2437241 
+Conflicts    : 25555    (Analyzed: 25555)
+Restarts     : 89       (Average: 287.13 Last: 17 Blocked: 0)
+Stab. Tests  : 3        (Full: 0 Partial: 3)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 271833   (Deleted: 227577)
+  Binary     : 5451     (Ratio:   2.01%)
+  Ternary    : 8994     (Ratio:   3.31%)
+  Conflict   : 25555    (Average Length: 1933.0 Ratio:   9.40%) 
+  Loop       : 233224   (Average Length:  124.2 Ratio:  85.80%) 
+  Other      : 13054    (Average Length:    2.6 Ratio:   4.80%) 
+Backjumps    : 25555    (Average: 71.13 Max: 25984 Sum: 1817655)
+  Executed   : 25530    (Average: 71.13 Max: 25984 Sum: 1817630 Ratio: 100.00%)
+  Bounded    : 25       (Average:  1.00 Max:   1 Sum:     25 Ratio:   0.00%)
+
+Rules        : 2952931  (Original: 2952765)
+Atoms        : 1321174  (Original: 1316248 Auxiliary: 4926)
+Disjunctions : 15933    (Original: 15954)
+Bodies       : 1829037  (Original: 1602919)
+Equivalences : 2520070  (Atom=Atom: 481977 Body=Body: 350811 Other: 1687282)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 1413232 Gammas: 221035)
+Variables    : 1300941  (Eliminated:    0 Frozen: 1079755)
+Constraints  : 9422265  (Binary:  77.1% Ternary:  17.7% Other:   5.2%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.367988
+    Simplify : 0.043087
+    Translate: 0.099068
+  Problem
+    Constraints: 604
+    Variables: 35
+    Clauses  : 1.0015e+06
+    Literals : 2805
+  Translate
+    Constraints removed: 14550
+    Constraints added: 0
+    Clauses  : 1.00006e+06
+    Weight constraints: 9
+    Literals : 2805
+  [Thread 0]
+    Time in seconds
+      Total  : 10.1418
+      Propagation: 0.883381
+      Check  : 9.21246
+      Undo   : 0.0459347
+    Refined reason: 4138
+    Introduced reason: 0
+    Literals introduced: 0

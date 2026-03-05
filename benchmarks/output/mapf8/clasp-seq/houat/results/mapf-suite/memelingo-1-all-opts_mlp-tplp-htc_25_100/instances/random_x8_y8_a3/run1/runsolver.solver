@@ -1,0 +1,67 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 665.312s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmpo0n9hc6w.lp']
+true(wait(1),0) true(wait(1),1) true(wait(1),2) true(wait(1),3) true(wait(1),4) true(wait(1),12) true(wait(1),13) true(wait(1),14) true(wait(1),23) true(wait(1),24) true(wait(2),0) true(wait(2),1) true(wait(2),2) true(wait(2),23) true(wait(2),24) true(wait(3),2) true(wait(3),12) true(wait(3),24) true(at(1,(6,2)),20) true(at(1,(6,3)),17) true(at(1,(6,3)),18) true(at(1,(6,3)),19) true(at(1,(6,4)),12) true(at(1,(6,4)),13) true(at(1,(6,4)),14) true(at(1,(6,4)),15) true(at(1,(6,4)),16) true(at(1,(6,6)),6) true(at(1,(6,6)),7) true(at(1,(6,7)),0) true(at(1,(6,7)),1) true(at(1,(6,7)),2) true(at(1,(6,7)),3) true(at(1,(6,7)),4) true(at(1,(6,7)),5) true(at(1,(7,1)),22) true(at(1,(7,2)),21) true(at(1,(7,4)),11) true(at(1,(7,5)),9) true(at(1,(7,5)),10) true(at(1,(7,6)),8) true(at(1,(8,1)),23) true(at(1,(8,1)),24) true(at(2,(7,2)),23) true(at(2,(7,2)),24) true(at(2,(7,3)),22) true(at(2,(7,4)),14) true(at(2,(7,4)),15) true(at(2,(7,4)),16) true(at(2,(7,5)),12) true(at(2,(7,5)),13) true(at(2,(7,6)),11) true(at(2,(7,7)),10) true(at(2,(7,8)),0) true(at(2,(7,8)),1) true(at(2,(7,8)),2) true(at(2,(7,8)),3) true(at(2,(7,8)),4) true(at(2,(7,8)),8) true(at(2,(7,8)),9) true(at(2,(8,3)),21) true(at(2,(8,4)),17) true(at(2,(8,4)),18) true(at(2,(8,4)),19) true(at(2,(8,4)),20) true(at(2,(8,8)),5) true(at(2,(8,8)),6) true(at(2,(8,8)),7) true(at(3,(2,5)),7) true(at(3,(2,5)),8) true(at(3,(2,6)),6) true(at(3,(2,7)),2) true(at(3,(2,7)),3) true(at(3,(2,7)),4) true(at(3,(2,7)),5) true(at(3,(2,8)),1) true(at(3,(3,5)),9) true(at(3,(3,5)),10) true(at(3,(3,8)),0) true(at(3,(4,5)),11) true(at(3,(5,5)),12) true(at(3,(5,5)),13) true(at(3,(5,5)),14) true(at(3,(5,8)),24) true(at(3,(6,5)),15) true(at(3,(6,5)),16) true(at(3,(6,6)),17) true(at(3,(6,6)),18) true(at(3,(6,6)),19) true(at(3,(6,7)),20) true(at(3,(6,7)),21) true(at(3,(6,8)),22) true(at(3,(6,8)),23) true(move(1,(6,2),(7,2)),20) true(move(1,(6,3),(6,2)),17) true(move(1,(6,4),(6,3)),15) true(move(1,(6,6),(7,6)),6) true(move(1,(6,7),(6,6)),5) true(move(1,(7,1),(8,1)),22) true(move(1,(7,2),(7,1)),21) true(move(1,(7,4),(6,4)),11) true(move(1,(7,5),(7,4)),9) true(move(1,(7,6),(7,5)),8) true(move(2,(7,3),(7,2)),22) true(move(2,(7,4),(8,4)),14) true(move(2,(7,5),(7,4)),12) true(move(2,(7,6),(7,5)),11) true(move(2,(7,7),(7,6)),10) true(move(2,(7,8),(7,7)),8) true(move(2,(7,8),(8,8)),3) true(move(2,(8,3),(7,3)),21) true(move(2,(8,4),(8,3)),17) true(move(2,(8,8),(7,8)),5) true(move(3,(2,5),(3,5)),7) true(move(3,(2,6),(2,5)),6) true(move(3,(2,7),(2,6)),3) true(move(3,(2,8),(2,7)),1) true(move(3,(3,5),(4,5)),9) true(move(3,(3,8),(2,8)),0) true(move(3,(4,5),(5,5)),11) true(move(3,(5,5),(6,5)),13) true(move(3,(6,5),(6,6)),15) true(move(3,(6,6),(6,7)),17) true(move(3,(6,7),(6,8)),20) true(move(3,(6,8),(5,8)),22) true(moving(1,(6,3),(6,2)),18) true(moving(1,(6,3),(6,2)),19) true(moving(1,(6,4),(6,3)),16) true(moving(1,(6,6),(7,6)),7) true(moving(1,(7,5),(7,4)),10) true(moving(2,(7,4),(8,4)),15) true(moving(2,(7,4),(8,4)),16) true(moving(2,(7,5),(7,4)),13) true(moving(2,(7,8),(7,7)),9) true(moving(2,(7,8),(8,8)),4) true(moving(2,(8,4),(8,3)),18) true(moving(2,(8,4),(8,3)),19) true(moving(2,(8,4),(8,3)),20) true(moving(2,(8,8),(7,8)),6) true(moving(2,(8,8),(7,8)),7) true(moving(3,(2,5),(3,5)),8) true(moving(3,(2,7),(2,6)),4) true(moving(3,(2,7),(2,6)),5) true(moving(3,(3,5),(4,5)),10) true(moving(3,(5,5),(6,5)),14) true(moving(3,(6,5),(6,6)),16) true(moving(3,(6,6),(6,7)),18) true(moving(3,(6,6),(6,7)),19) true(moving(3,(6,7),(6,8)),21) true(moving(3,(6,8),(5,8)),23)
+Assignment:
+t(0)=0 t(1)=2 t(2)=6 t(3)=63 t(4)=65 t(5)=66 t(6)=68 t(7)=70 t(8)=71 t(9)=72 t(10)=73 t(11)=75 t(12)=76 t(13)=78 t(14)=79 t(15)=80 t(16)=82 t(17)=84 t(18)=85 t(19)=86 t(20)=87 t(21)=88 t(22)=91 t(23)=92 t(24)=95
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 665.342s (Solving: 564.15s 1st Model: 564.12s Unsat: 0.00s)
+CPU Time     : 664.709s
+
+Choices      : 1378820 
+Conflicts    : 30073    (Analyzed: 30073)
+Restarts     : 107      (Average: 281.06 Last: 208 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 301.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 259237   (Deleted: 216970)
+  Binary     : 2344     (Ratio:   0.90%)
+  Ternary    : 923      (Ratio:   0.36%)
+  Conflict   : 30073    (Average Length: 1187.9 Ratio:  11.60%) 
+  Loop       : 227408   (Average Length:  102.0 Ratio:  87.72%) 
+  Other      : 1756     (Average Length:    2.0 Ratio:   0.68%) 
+Backjumps    : 30073    (Average: 41.26 Max: 40397 Sum: 1240868)
+  Executed   : 29974    (Average: 41.26 Max: 40397 Sum: 1240769 Ratio:  99.99%)
+  Bounded    : 99       (Average:  1.00 Max:   1 Sum:     99 Ratio:   0.01%)
+
+Rules        : 1768836  (Original: 1768670)
+Atoms        : 876449   (Original: 872933 Auxiliary: 3516)
+Disjunctions : 11283    (Original: 11304)
+Bodies       : 1092272  (Original: 970989)
+Equivalences : 1671480  (Atom=Atom: 343902 Body=Body: 250541 Other: 1077037)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 785562 Gammas: 117610)
+Variables    : 703836   (Eliminated:    0 Frozen: 586075)
+Constraints  : 4160488  (Binary:  74.2% Ternary:  19.5% Other:   6.2%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.28364
+    Simplify : 0.0310894
+    Translate: 0.0816421
+  Problem
+    Constraints: 0
+    Variables: 25
+    Clauses  : 559418
+    Literals : 2100
+  Translate
+    Constraints removed: 7824
+    Constraints added: 0
+    Clauses  : 558528
+    Weight constraints: 9
+    Literals : 2100
+  [Thread 0]
+    Time in seconds
+      Total  : 0.473125
+      Propagation: 0.398263
+      Check  : 0.0666632
+      Undo   : 0.00819962
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

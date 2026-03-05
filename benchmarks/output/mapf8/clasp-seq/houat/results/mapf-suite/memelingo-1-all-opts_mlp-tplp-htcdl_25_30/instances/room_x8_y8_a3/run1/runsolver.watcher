@@ -1,0 +1,45 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node4
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		mlp-tplp-htcdl
+[runlim] argv[2]:		-c
+[runlim] argv[3]:		lambda=25
+[runlim] argv[4]:		-c
+[runlim] argv[5]:		v=30
+[runlim] argv[6]:		--models=1
+[runlim] argv[7]:		--project=show
+[runlim] argv[8]:		--stats
+[runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/room_x8_y8_a3.lp
+[runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf.lp
+[runlim] start:			Wed Mar  4 19:47:50 2026
+[runlim] child:			8424
+[runlim] sample:		4.13 time, 10.01 real, 152 MB, 1.90 load
+[runlim] sample:		14.13 time, 20.01 real, 1162 MB, 1.91 load
+[runlim] sample:		24.13 time, 30.01 real, 1354 MB, 1.93 load
+[runlim] sample:		34.13 time, 40.01 real, 1354 MB, 1.94 load
+[runlim] sample:		44.13 time, 50.01 real, 1354 MB, 1.95 load
+[runlim] sample:		54.13 time, 60.01 real, 1354 MB, 1.96 load
+[runlim] sample:		64.13 time, 70.01 real, 1456 MB, 1.96 load
+[runlim] sample:		74.13 time, 80.01 real, 1456 MB, 1.97 load
+[runlim] sample:		84.13 time, 90.01 real, 1456 MB, 1.97 load
+[runlim] sample:		94.13 time, 100.01 real, 1456 MB, 1.98 load
+[runlim] sample:		104.13 time, 110.01 real, 1558 MB, 1.98 load
+[runlim] sample:		114.13 time, 120.01 real, 1558 MB, 1.99 load
+[runlim] sample:		124.13 time, 130.01 real, 1558 MB, 1.99 load
+[runlim] sample:		134.13 time, 140.01 real, 1558 MB, 1.99 load
+[runlim] sample:		144.13 time, 150.01 real, 1558 MB, 1.99 load
+[runlim] sample:		154.13 time, 160.01 real, 1517 MB, 1.99 load
+[runlim] sample:		164.13 time, 170.01 real, 1232 MB, 2.00 load
+[runlim] end:			Wed Mar  4 19:50:40 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			170.20 seconds
+[runlim] time:			164.23 seconds
+[runlim] space:			1594 MB
+[runlim] load:			2.00 maximum
+[runlim] samples:		1702

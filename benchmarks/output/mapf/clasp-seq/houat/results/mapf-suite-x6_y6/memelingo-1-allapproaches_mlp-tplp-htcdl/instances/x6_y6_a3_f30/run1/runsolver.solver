@@ -1,0 +1,63 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...xamples/mapf/instances/x6_y6_a3_f30.lp ...
+Solving...
+Answer: 1 (Time: 37.119s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpl7ninj_j.lp']
+true(wait(1),0) true(wait(1),3) true(wait(1),4) true(wait(1),9) true(wait(2),4) true(wait(2),9) true(wait(3),7) true(wait(3),9) true(at(1,(1,1)),0) true(at(1,(1,1)),1) true(at(1,(1,1)),2) true(at(1,(1,2)),3) true(at(1,(1,2)),4) true(at(1,(1,2)),5) true(at(1,(1,2)),6) true(at(1,(1,3)),7) true(at(1,(1,3)),8) true(at(1,(2,3)),9) true(at(2,(2,1)),0) true(at(2,(2,1)),1) true(at(2,(2,1)),2) true(at(2,(2,1)),3) true(at(2,(2,2)),4) true(at(2,(2,2)),5) true(at(2,(2,3)),6) true(at(2,(2,3)),7) true(at(2,(3,3)),8) true(at(2,(4,3)),9) true(at(3,(3,1)),7) true(at(3,(3,1)),8) true(at(3,(3,2)),5) true(at(3,(3,2)),6) true(at(3,(3,3)),4) true(at(3,(4,1)),9) true(at(3,(4,3)),2) true(at(3,(4,3)),3) true(at(3,(4,4)),0) true(at(3,(4,4)),1) true(move(1,(1,1),(1,2)),1) true(move(1,(1,2),(1,3)),5) true(move(1,(1,3),(2,3)),7) true(move(2,(2,1),(2,2)),0) true(move(2,(2,2),(2,3)),5) true(move(2,(2,3),(3,3)),6) true(move(2,(3,3),(4,3)),8) true(move(3,(3,1),(4,1)),8) true(move(3,(3,2),(3,1)),5) true(move(3,(3,3),(3,2)),4) true(move(3,(4,3),(3,3)),2) true(move(3,(4,4),(4,3)),0) true(moving(1,(1,1),(1,2)),2) true(moving(1,(1,2),(1,3)),6) true(moving(1,(1,3),(2,3)),8) true(moving(2,(2,1),(2,2)),1) true(moving(2,(2,1),(2,2)),2) true(moving(2,(2,1),(2,2)),3) true(moving(2,(2,3),(3,3)),7) true(moving(3,(3,2),(3,1)),6) true(moving(3,(4,3),(3,3)),3) true(moving(3,(4,4),(4,3)),1)
+Assignment:
+t(0)=0 t(1)=31 t(2)=90 t(3)=91 t(4)=120 t(5)=240 t(6)=270 t(7)=300 t(8)=360 t(9)=450
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 37.126s (Solving: 31.81s 1st Model: 31.80s Unsat: 0.00s)
+CPU Time     : 36.958s
+
+Choices      : 11154   
+Conflicts    : 6660     (Analyzed: 6660)
+Restarts     : 30       (Average: 222.00 Last: 650 Blocked: 0)
+Stab. Tests  : 6        (Full: 3 Partial: 3)
+Model-Level  : 15.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 78758    (Deleted: 50467)
+  Binary     : 3997     (Ratio:   5.08%)
+  Ternary    : 2838     (Ratio:   3.60%)
+  Conflict   : 6660     (Average Length:  127.4 Ratio:   8.46%) 
+  Loop       : 63057    (Average Length:   18.8 Ratio:  80.06%) 
+  Other      : 9041     (Average Length:    3.0 Ratio:  11.48%) 
+Backjumps    : 6660     (Average:  1.62 Max:  46 Sum:  10792)
+  Executed   : 6628     (Average:  1.62 Max:  46 Sum:  10760 Ratio:  99.70%)
+  Bounded    : 32       (Average:  1.00 Max:   1 Sum:     32 Ratio:   0.30%)
+
+Rules        : 444541   (Original: 444421)
+Atoms        : 276543   (Original: 275499 Auxiliary: 1044)
+Disjunctions : 3609     (Original: 3618)
+Bodies       : 264771   (Original: 243850)
+Equivalences : 503189   (Atom=Atom: 116837 Body=Body: 85350 Other: 301002)
+Tight        : No       (SCCs: 3 Non-Hcfs: 3 Nodes: 154196 Gammas: 19754)
+Variables    : 125996   (Eliminated:    0 Frozen: 106125)
+Constraints  : 461617   (Binary:  77.7% Ternary:  12.8% Other:   9.5%)
+
+DifferenceLogic
+  Time init(s): 0.00381766
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 1551
+  Variables  : 11
+  [Thread 0]
+    Propagation(s): 5.31955
+    Dijkstra(s): 0.231265
+    Undo(s)  : 0.00851025
+    True edges: 79639
+    False edges: 12873
+    False edges (inverse): 1001
+    False edges (partial): 2192
+    False edges (partial+): 103
+    Edges added: 62884
+    Edges skipped: 56113
+    Edges propagated: 62065
+    Cost consistency: 258494
+    Cost forward: 9.94845e+06
+    Cost backward: 9.94501e+06

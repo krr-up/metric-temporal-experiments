@@ -1,0 +1,10 @@
+running jobs@kr-node2...
+
+jobs: results/dentist-simple/memelingo-1-simple_mlp-tplp-ht/instances/size-1/run1/start.sh results/dentist-simple/memelingo-1-simple_mlp-tplp-htc/instances/size-1/run1/start.sh results/dentist-simple/memelingo-1-simple_mlp-tplp-htcdl/instances/size-1/run1/start.sh results/dentist-simple/memelingo-1-simple_mlp-lpnmr-ht/instances/size-1/run1/start.sh results/dentist-simple/memelingo-1-simple_mlp-lpnmr-htc/instances/size-1/run1/start.sh results/dentist-simple/memelingo-1-simple_mlp-lpnmr-htcdl/instances/size-1/run1/start.sh
+
+running  results/dentist-simple/memelingo-1-simple_mlp-tplp-ht/instances/size-1/run1/start.sh
+running  results/dentist-simple/memelingo-1-simple_mlp-tplp-htc/instances/size-1/run1/start.sh
+running  results/dentist-simple/memelingo-1-simple_mlp-tplp-htcdl/instances/size-1/run1/start.sh
+running  results/dentist-simple/memelingo-1-simple_mlp-lpnmr-ht/instances/size-1/run1/start.sh
+running  results/dentist-simple/memelingo-1-simple_mlp-lpnmr-htc/instances/size-1/run1/start.sh
+running  results/dentist-simple/memelingo-1-simple_mlp-lpnmr-htcdl/instances/size-1/run1/start.sh
