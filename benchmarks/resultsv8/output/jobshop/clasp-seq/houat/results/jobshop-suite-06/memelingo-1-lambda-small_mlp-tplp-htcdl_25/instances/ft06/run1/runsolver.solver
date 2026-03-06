@@ -6,21 +6,21 @@ UNKNOWN
 INTERRUPTED  : 1
 Models       : 0+
 Calls        : 1
-Time         : 1193.266s (Solving: 1192.31s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 1193.109s
+Time         : 1189.592s (Solving: 1188.50s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1189.367s
 
-Choices      : 3596267 
-Conflicts    : 1759930  (Analyzed: 1759930)
-Restarts     : 3506     (Average: 501.98 Last: 15 Blocked: 0)
+Choices      : 3541778 
+Conflicts    : 1731129  (Analyzed: 1731129)
+Restarts     : 3422     (Average: 505.88 Last: 77 Blocked: 0)
 Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 3480540  (Deleted: 3373255)
-  Binary     : 14055    (Ratio:   0.40%)
-  Ternary    : 14133    (Ratio:   0.41%)
-  Conflict   : 1759930  (Average Length:   96.6 Ratio:  50.56%) 
-  Loop       : 507496   (Average Length:   17.8 Ratio:  14.58%) 
-  Other      : 1213114  (Average Length:    6.1 Ratio:  34.85%) 
-Backjumps    : 1759930  (Average:  1.98 Max: 1398 Sum: 3487331)
-  Executed   : 1759881  (Average:  1.98 Max: 1398 Sum: 3487282 Ratio: 100.00%)
+Lemmas       : 3426334  (Deleted: 3316428)
+  Binary     : 14046    (Ratio:   0.41%)
+  Ternary    : 14108    (Ratio:   0.41%)
+  Conflict   : 1731129  (Average Length:   96.9 Ratio:  50.52%) 
+  Loop       : 503156   (Average Length:   17.8 Ratio:  14.68%) 
+  Other      : 1192049  (Average Length:    6.1 Ratio:  34.79%) 
+Backjumps    : 1731129  (Average:  1.98 Max: 1398 Sum: 3434882)
+  Executed   : 1731080  (Average:  1.98 Max: 1398 Sum: 3434833 Ratio: 100.00%)
   Bounded    : 49       (Average:  1.00 Max:   1 Sum:     49 Ratio:   0.00%)
 
 Rules        : 209998   (Original: 208270)
@@ -33,26 +33,26 @@ Variables    : 72461    (Eliminated:    0 Frozen: 70733)
 Constraints  : 244339   (Binary:  75.8% Ternary:  14.7% Other:   9.5%)
 
 DifferenceLogic
-  Time init(s): 0.0257823
+  Time init(s): 0.0273888
   CCs        : 1
   Mutexes    : 0
   Edges      : 11451
   Variables  : 26
   [Thread 0]
-    Propagation(s): 298.102
-    Dijkstra(s): 189.846
-    Undo(s)  : 2.78114
-    True edges: 5.67564e+07
-    False edges: 5.37594e+06
+    Propagation(s): 299.284
+    Dijkstra(s): 191.784
+    Undo(s)  : 2.71307
+    True edges: 5.57502e+07
+    False edges: 5.28138e+06
     False edges (inverse): 3140
-    False edges (partial): 7356
-    False edges (partial+): 1152
-    Edges added: 2.90427e+07
-    Edges skipped: 2.71723e+07
-    Edges propagated: 2.89897e+07
-    Cost consistency: 1.57058e+08
-    Cost forward: 9.07751e+09
-    Cost backward: 9.17353e+09
+    False edges (partial): 7342
+    False edges (partial+): 1149
+    Edges added: 2.86138e+07
+    Edges skipped: 2.67742e+07
+    Edges propagated: 2.85615e+07
+    Cost consistency: 1.54897e+08
+    Cost forward: 8.9696e+09
+    Cost backward: 9.06407e+09
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpf703p8i5.lp']
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmp63lwm1ym.lp']

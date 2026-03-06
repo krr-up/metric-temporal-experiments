@@ -4,7 +4,7 @@ Solving...
 Answer: 1 (Time: 0.140s)
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-lpnmr-htcdl.lp', '/tmp/tmpz7ketp_h.lp']
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-lpnmr-htcdl.lp', '/tmp/tmpf13hzy6h.lp']
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(cash,atm),3) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(ram,atm),3) true(at(ram,dentist),1) true(at(ram,home),2) true(at(ram,office),0) true(go(ram,atm),2) true(go(ram,dentist),0) true(go(ram,home),1)
 Assignment:
 t(0)=0 t(1)=30 t(2)=50 t(3)=65
@@ -12,7 +12,7 @@ Answer: 2 (Time: 0.141s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(icard,home),3) true(at(ram,atm),2) true(at(ram,dentist),1) true(at(ram,home),3) true(at(ram,office),0) true(go(ram,atm),1) true(go(ram,dentist),0) true(go(ram,home),2)
 Assignment:
 t(0)=0 t(1)=30 t(2)=70 t(3)=85
-Answer: 3 (Time: 0.141s)
+Answer: 3 (Time: 0.142s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(cash,atm),3) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(ram,dentist),1) true(at(ram,home),2) true(at(ram,office),0) true(at(ram,office),3) true(go(ram,dentist),0) true(go(ram,home),1) true(go(ram,office),2)
 Assignment:
 t(0)=0 t(1)=30 t(2)=50 t(3)=65
@@ -28,7 +28,7 @@ Answer: 6 (Time: 0.142s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(cash,atm),3) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(icard,home),3) true(at(ram,dentist),1) true(at(ram,home),3) true(at(ram,office),0) true(at(ram,office),2) true(go(ram,dentist),0) true(go(ram,home),2) true(go(ram,office),1)
 Assignment:
 t(0)=0 t(1)=30 t(2)=60 t(3)=75
-Answer: 7 (Time: 0.142s)
+Answer: 7 (Time: 0.143s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(cash,atm),3) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(icard,home),3) true(at(ram,dentist),1) true(at(ram,dentist),3) true(at(ram,office),0) true(at(ram,office),2) true(go(ram,dentist),0) true(go(ram,dentist),2) true(go(ram,office),1)
 Assignment:
 t(0)=0 t(1)=30 t(2)=60 t(3)=90
@@ -44,11 +44,11 @@ Answer: 10 (Time: 0.143s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(ram,atm),1) true(at(ram,home),2) true(at(ram,office),0) true(at(ram,office),3) true(go(ram,atm),0) true(go(ram,home),1) true(go(ram,office),2)
 Assignment:
 t(0)=0 t(1)=20 t(2)=35 t(3)=50
-Answer: 11 (Time: 0.143s)
+Answer: 11 (Time: 0.144s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(ram,atm),1) true(at(ram,atm),3) true(at(ram,home),2) true(at(ram,office),0) true(go(ram,atm),0) true(go(ram,atm),2) true(go(ram,home),1)
 Assignment:
 t(0)=0 t(1)=20 t(2)=35 t(3)=50
-Answer: 12 (Time: 0.143s)
+Answer: 12 (Time: 0.144s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(ram,atm),1) true(at(ram,dentist),3) true(at(ram,home),2) true(at(ram,office),0) true(go(ram,atm),0) true(go(ram,dentist),2) true(go(ram,home),1)
 Assignment:
 t(0)=0 t(1)=20 t(2)=35 t(3)=55
@@ -64,7 +64,7 @@ Answer: 15 (Time: 0.144s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(icard,home),3) true(at(ram,atm),1) true(at(ram,atm),3) true(at(ram,office),0) true(at(ram,office),2) true(go(ram,atm),0) true(go(ram,atm),2) true(go(ram,office),1)
 Assignment:
 t(0)=0 t(1)=20 t(2)=40 t(3)=60
-Answer: 16 (Time: 0.144s)
+Answer: 16 (Time: 0.145s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(icard,home),0) true(at(icard,home),1) true(at(icard,home),2) true(at(icard,home),3) true(at(ram,atm),1) true(at(ram,dentist),2) true(at(ram,home),3) true(at(ram,office),0) true(go(ram,atm),0) true(go(ram,dentist),1) true(go(ram,home),2)
 Assignment:
 t(0)=0 t(1)=20 t(2)=60 t(3)=80
@@ -80,11 +80,11 @@ Answer: 19 (Time: 0.145s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(cash,atm),3) true(at(icard,home),0) true(at(icard,home),1) true(at(ram,atm),3) true(at(ram,dentist),2) true(at(ram,home),1) true(at(ram,office),0) true(go(ram,atm),2) true(go(ram,dentist),1) true(go(ram,home),0)
 Assignment:
 t(0)=0 t(1)=15 t(2)=35 t(3)=75
-Answer: 20 (Time: 0.145s)
+Answer: 20 (Time: 0.146s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(icard,home),0) true(at(icard,home),1) true(at(ram,atm),2) true(at(ram,home),1) true(at(ram,office),0) true(at(ram,office),3) true(go(ram,atm),1) true(go(ram,home),0) true(go(ram,office),2)
 Assignment:
 t(0)=0 t(1)=15 t(2)=30 t(3)=50
-Answer: 21 (Time: 0.145s)
+Answer: 21 (Time: 0.146s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(icard,home),0) true(at(icard,home),1) true(at(ram,atm),2) true(at(ram,dentist),3) true(at(ram,home),1) true(at(ram,office),0) true(go(ram,atm),1) true(go(ram,dentist),2) true(go(ram,home),0)
 Assignment:
 t(0)=0 t(1)=15 t(2)=30 t(3)=70
@@ -100,11 +100,11 @@ Answer: 24 (Time: 0.146s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(cash,atm),3) true(at(icard,home),0) true(at(icard,home),1) true(at(ram,dentist),3) true(at(ram,home),1) true(at(ram,office),0) true(at(ram,office),2) true(go(ram,dentist),2) true(go(ram,home),0) true(go(ram,office),1)
 Assignment:
 t(0)=0 t(1)=15 t(2)=30 t(3)=60
-Answer: 25 (Time: 0.146s)
+Answer: 25 (Time: 0.147s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(cash,atm),3) true(at(icard,home),0) true(at(icard,home),1) true(at(ram,dentist),2) true(at(ram,home),1) true(at(ram,office),0) true(at(ram,office),3) true(go(ram,dentist),1) true(go(ram,home),0) true(go(ram,office),2)
 Assignment:
 t(0)=0 t(1)=15 t(2)=35 t(3)=65
-Answer: 26 (Time: 0.146s)
+Answer: 26 (Time: 0.147s)
 true(at(cash,atm),0) true(at(cash,atm),1) true(at(cash,atm),2) true(at(cash,atm),3) true(at(icard,home),0) true(at(icard,home),1) true(at(ram,dentist),2) true(at(ram,home),1) true(at(ram,home),3) true(at(ram,office),0) true(go(ram,dentist),1) true(go(ram,home),0) true(go(ram,home),2)
 Assignment:
 t(0)=0 t(1)=15 t(2)=35 t(3)=55
@@ -117,7 +117,7 @@ SATISFIABLE
 Models       : 27
 Calls        : 1
 Time         : 0.147s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.039s
+CPU Time     : 0.033s
 
 Choices      : 67      
 Conflicts    : 24       (Analyzed: 15)
@@ -144,15 +144,15 @@ Variables    : 152      (Eliminated:    0 Frozen:  128)
 Constraints  : 527      (Binary:  72.1% Ternary:  19.5% Other:   8.3%)
 
 DifferenceLogic
-  Time init(s): 0.000132784
+  Time init(s): 0.000125195
   CCs        : 1
   Mutexes    : 0
   Edges      : 30
   Variables  : 5
   [Thread 0]
-    Propagation(s): 0.000158444
-    Dijkstra(s): 4.9662e-05
-    Undo(s)  : 1.2375e-05
+    Propagation(s): 0.000161926
+    Dijkstra(s): 5.0984e-05
+    Undo(s)  : 1.1581e-05
     True edges: 3
     False edges: 0
     False edges (inverse): 2

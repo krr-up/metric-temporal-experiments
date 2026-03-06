@@ -1,5 +1,5 @@
 [runlim] version:		2.0.0rc12
-[runlim] host:			kr-node2
+[runlim] host:			kr-node7
 [runlim] time limit:		311040000 seconds
 [runlim] real time limit:	1200 seconds
 [runlim] space limit:		20000 MB
@@ -14,15 +14,15 @@
 [runlim] argv[8]:		v=110
 [runlim] argv[9]:		../../../../../../../../../../../examples/dentist/instances/size-1.lp
 [runlim] argv[10]:		../../../../../../../../../../../examples/dentist/dentist.lp
-[runlim] start:			Wed Mar  4 17:57:55 2026
-[runlim] child:			32261
-[runlim] end:			Wed Mar  4 17:58:02 2026
+[runlim] start:			Thu Mar  5 18:40:55 2026
+[runlim] child:			2865
+[runlim] end:			Thu Mar  5 18:41:02 2026
 [runlim] status:		ok
 [runlim] result:		30
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			6.24 seconds
-[runlim] time:			0.76 seconds
-[runlim] space:			52 MB
-[runlim] load:			0.39 maximum
-[runlim] samples:		63
+[runlim] real:			6.47 seconds
+[runlim] time:			0.82 seconds
+[runlim] space:			53 MB
+[runlim] load:			0.82 maximum
+[runlim] samples:		65

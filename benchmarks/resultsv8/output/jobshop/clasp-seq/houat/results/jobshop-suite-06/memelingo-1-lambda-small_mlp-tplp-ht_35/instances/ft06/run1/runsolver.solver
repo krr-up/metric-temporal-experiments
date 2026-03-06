@@ -6,22 +6,22 @@ UNKNOWN
 INTERRUPTED  : 1
 Models       : 0+
 Calls        : 1
-Time         : 1193.455s (Solving: 1175.71s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 1193.215s
+Time         : 1191.026s (Solving: 1175.11s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1190.833s
 
-Choices      : 6608181 
-Conflicts    : 795036   (Analyzed: 795036)
-Restarts     : 1851     (Average: 429.52 Last: 1788 Blocked: 0)
+Choices      : 6564943 
+Conflicts    : 790328   (Analyzed: 790328)
+Restarts     : 1849     (Average: 427.44 Last: 661 Blocked: 0)
 Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 1287595  (Deleted: 1233864)
-  Binary     : 5085     (Ratio:   0.39%)
-  Ternary    : 3375     (Ratio:   0.26%)
-  Conflict   : 795036   (Average Length:  707.7 Ratio:  61.75%) 
-  Loop       : 492559   (Average Length:   51.4 Ratio:  38.25%) 
+Lemmas       : 1280137  (Deleted: 1227005)
+  Binary     : 5070     (Ratio:   0.40%)
+  Ternary    : 3366     (Ratio:   0.26%)
+  Conflict   : 790328   (Average Length:  707.8 Ratio:  61.74%) 
+  Loop       : 489809   (Average Length:   51.3 Ratio:  38.26%) 
   Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
-Backjumps    : 795036   (Average:  7.69 Max: 5916 Sum: 6115612)
-  Executed   : 790540   (Average:  7.69 Max: 5916 Sum: 6111116 Ratio:  99.93%)
-  Bounded    : 4496     (Average:  1.00 Max:   1 Sum:   4496 Ratio:   0.07%)
+Backjumps    : 790328   (Average:  7.68 Max: 5916 Sum: 6072729)
+  Executed   : 785839   (Average:  7.68 Max: 5916 Sum: 6068240 Ratio:  99.93%)
+  Bounded    : 4489     (Average:  1.00 Max:   1 Sum:   4489 Ratio:   0.07%)
 
 Rules        : 11903879 (Original: 11892333)
 Atoms        : 184441  
@@ -34,4 +34,4 @@ Constraints  : 4825861  (Binary:  91.0% Ternary:   7.6% Other:   1.4%)
 
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpov4ppyig.lp']
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpxlau8en2.lp']

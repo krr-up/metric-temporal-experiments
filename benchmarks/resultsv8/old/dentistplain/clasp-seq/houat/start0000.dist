@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH --output=out.%j
+#SBATCH --error=err.%j
+#SBATCH --time=00-23:59:59        # walltime
+#SBATCH --cpus-per-task=4    # number of processor cores (i.e. tasks)
+#SBATCH --partition=kr
+                  # additional dist options (specified via runscript setting)
+
+# Good Idea to stop operation on first error.
+set -e
+
+# Load environment modules for your application here.
+source ~/.bashrc
+source ~/miniconda3/bin/activate
+source activate memelingo
+
+# Run jobs
+jobs="results/dentist-simple/memelingo-1-simple_mlp-tplp-ht/instances/size-1/run1/start.sh
+results/dentist-simple/memelingo-1-simple_mlp-tplp-htc/instances/size-1/run1/start.sh
+results/dentist-simple/memelingo-1-simple_mlp-tplp-htcdl/instances/size-1/run1/start.sh
+results/dentist-simple/memelingo-1-simple_mlp-lpnmr-ht/instances/size-1/run1/start.sh
+results/dentist-simple/memelingo-1-simple_mlp-lpnmr-htc/instances/size-1/run1/start.sh
+results/dentist-simple/memelingo-1-simple_mlp-lpnmr-htcdl/instances/size-1/run1/start.sh
+"
+echo running jobs@$(hostname)...
+echo ""
+echo "jobs:" $jobs
+echo ""
+for i in $jobs
+do
+    echo "running " $i
+    $i
+done

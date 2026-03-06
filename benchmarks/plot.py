@@ -199,6 +199,12 @@ def config_axes(ax, y_label, x_label, matching_instances, title=None):
 
     ax.set_xticks(sorted(matching_instances.keys()))
     ax.margins(x=0.05, y=0.05)
+
+    # Always set y-axis max to 1250 for time plots (1200 + buffer for markers)
+    if "time" in y_label.lower():
+        current_ylim = ax.get_ylim()
+        ax.set_ylim(current_ylim[0], 1250)  # Extra 50 for timeout markers
+
     ax.legend(
         loc="best",
         frameon=True,
@@ -850,6 +856,19 @@ def plot_multiple_instances_by_row(
         handles.append(timeout_marker)
         labels.append("Timeout")
 
+        memout_marker = plt.Line2D(
+            [0],
+            [0],
+            marker="o",
+            color="yellow",
+            markerfacecolor="yellow",
+            markersize=8,
+            linewidth=0,
+            label="Memout",
+        )
+        handles.append(memout_marker)
+        labels.append("Memout")
+
     # Add legend to the figure (not individual subplots)
     fig.legend(
         handles,
@@ -938,14 +957,30 @@ def plot_jobshop_6():
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
     # ------Job
+    # plot_instance_by_column(
+    #     instance_prefix,
+    #     ["ctime"],
+    #     df_instances,
+    #     grouping_function=get_lambda,
+    #     y="Time (s)",
+    #     x="Lambda",
+    #     thick_attr="stime",
+    #     figsize=(4, 3),
+    #     save_path=save_path,
+    #     dpi=300,
+    #     # group_skip={30, 35, 40, 45, 50},
+    #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
+    #     # title=f"Agents = {get_agents(instance_prefix)}",
+    # )
+
     plot_instance_by_column(
         instance_prefix,
-        ["ctime"],
+        ["rules"],
         df_instances,
         grouping_function=get_lambda,
-        y="Time (s)",
+        y="Rules",
         x="Lambda",
-        thick_attr="stime",
+        # thick_attr="stime",
         figsize=(4, 3),
         save_path=save_path,
         dpi=300,
@@ -967,14 +1002,30 @@ def plot_all_mapf_empty():
     # Generate subplot titles
     subplot_titles = [f"Agents = {get_agents(inst)}" for inst in instances]
 
+    # plot_multiple_instances_by_row(
+    #     instances,
+    #     ["ctime"],
+    #     df_instances,
+    #     grouping_function=get_factor,
+    #     y="Time (s)",
+    #     x="Factor",
+    #     thick_attr="stime",
+    #     figsize=(12, 3),  # 4 subplots × 3 inches each
+    #     save_path=save_path,
+    #     dpi=300,
+    #     # group_skip={30, 35, 40, 45, 50},
+    #     # approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
+    #     subplot_titles=subplot_titles,
+    # )
+
     plot_multiple_instances_by_row(
         instances,
-        ["ctime"],
+        ["rules"],
         df_instances,
         grouping_function=get_factor,
-        y="Time (s)",
+        y="Rules",
         x="Factor",
-        thick_attr="stime",
+        # thick_attr="stime",
         figsize=(12, 3),  # 4 subplots × 3 inches each
         save_path=save_path,
         dpi=300,
@@ -1012,6 +1063,6 @@ def plot_mapf_8():
 if __name__ == "__main__":
     # plot_dentist_general()
     # plot_dentist_plain()
-    # plot_jobshop_6()
+    plot_jobshop_6()
     # plot_all_mapf_empty()
-    plot_mapf_8()
+    # plot_mapf_8()
