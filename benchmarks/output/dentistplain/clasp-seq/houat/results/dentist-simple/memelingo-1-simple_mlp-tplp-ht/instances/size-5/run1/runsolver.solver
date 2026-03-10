@@ -1,0 +1,91 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ..../examples/dentist/instances/size-5.lp ...
+Solving...
+Answer: 1 (Time: 28.855s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpyfwf5a74.lp']
+t(0,0) t(1,100) t(2,200) t(3,350) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(at(icard,home),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+Answer: 2 (Time: 29.888s)
+t(0,0) t(1,150) t(2,250) t(3,325) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(cash,atm),3) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,office),2) true(at(ram,office),3)
+Answer: 3 (Time: 29.937s)
+t(0,0) t(1,150) t(2,250) t(3,350) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(cash,atm),3) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+Answer: 4 (Time: 29.996s)
+t(0,0) t(1,150) t(2,250) t(3,325) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(cash,atm),3) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,atm),2) true(at(ram,atm),3)
+Answer: 5 (Time: 30.143s)
+t(0,0) t(1,150) t(2,300) t(3,400) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(cash,atm),3) true(at(icard,home),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,atm),2) true(at(ram,atm),3)
+Answer: 6 (Time: 30.192s)
+t(0,0) t(1,150) t(2,300) t(3,375) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(cash,atm),3) true(at(icard,home),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,home),2) true(at(ram,home),3)
+Answer: 7 (Time: 30.292s)
+t(0,0) t(1,150) t(2,300) t(3,450) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(cash,atm),3) true(at(icard,home),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+Answer: 8 (Time: 31.240s)
+t(0,0) t(1,150) t(2,350) t(3,450) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(icard,home),3) true(go(ram,atm),1) true(at(ram,atm),2) true(go(ram,office),2) true(at(ram,office),3)
+Answer: 9 (Time: 31.263s)
+t(0,0) t(1,150) t(2,350) t(3,425) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(icard,home),3) true(go(ram,atm),1) true(at(ram,atm),2) true(go(ram,home),2) true(at(ram,home),3)
+Answer: 10 (Time: 31.333s)
+t(0,0) t(1,150) t(2,350) t(3,550) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,dentist),0) true(at(icard,home),2) true(at(cash,atm),2) true(at(ram,dentist),1) true(at(icard,home),3) true(go(ram,atm),1) true(at(ram,atm),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+Answer: 11 (Time: 31.718s)
+t(0,0) t(1,100) t(2,175) t(3,250) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,office),2) true(at(ram,office),3)
+Answer: 12 (Time: 31.762s)
+t(0,0) t(1,100) t(2,175) t(3,250) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,atm),2) true(at(ram,atm),3)
+Answer: 13 (Time: 31.818s)
+t(0,0) t(1,100) t(2,300) t(3,450) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(at(icard,home),3) true(go(ram,dentist),1) true(at(ram,dentist),2) true(go(ram,office),2) true(at(ram,office),3)
+Answer: 14 (Time: 31.918s)
+t(0,0) t(1,100) t(2,200) t(3,300) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(at(icard,home),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,atm),2) true(at(ram,atm),3)
+Answer: 15 (Time: 32.039s)
+t(0,0) t(1,100) t(2,300) t(3,500) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(at(icard,home),3) true(go(ram,dentist),1) true(at(ram,dentist),2) true(go(ram,atm),2) true(at(ram,atm),3)
+Answer: 16 (Time: 32.144s)
+t(0,0) t(1,100) t(2,200) t(3,275) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(at(icard,home),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,home),2) true(at(ram,home),3)
+Answer: 17 (Time: 32.190s)
+t(0,0) t(1,100) t(2,300) t(3,400) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(at(icard,home),3) true(go(ram,dentist),1) true(at(ram,dentist),2) true(go(ram,home),2) true(at(ram,home),3)
+Answer: 18 (Time: 32.236s)
+t(0,0) t(1,100) t(2,175) t(3,275) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,atm),0) true(at(icard,home),2) true(at(ram,atm),1) true(go(ram,home),1) true(at(ram,home),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+Answer: 19 (Time: 32.718s)
+t(0,0) t(1,75) t(2,175) t(3,325) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(at(cash,atm),3) true(go(ram,dentist),1) true(at(ram,dentist),2) true(go(ram,office),2) true(at(ram,office),3)
+Answer: 20 (Time: 32.749s)
+t(0,0) t(1,75) t(2,175) t(3,375) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(at(cash,atm),3) true(go(ram,dentist),1) true(at(ram,dentist),2) true(go(ram,atm),2) true(at(ram,atm),3)
+Answer: 21 (Time: 32.776s)
+t(0,0) t(1,75) t(2,175) t(3,275) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(at(cash,atm),3) true(go(ram,dentist),1) true(at(ram,dentist),2) true(go(ram,home),2) true(at(ram,home),3)
+Answer: 22 (Time: 32.844s)
+t(0,0) t(1,75) t(2,150) t(3,350) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(go(ram,atm),1) true(at(ram,atm),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+Answer: 23 (Time: 32.901s)
+t(0,0) t(1,75) t(2,150) t(3,300) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(at(cash,atm),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,dentist),2) true(at(ram,dentist),3)
+Answer: 24 (Time: 32.994s)
+t(0,0) t(1,75) t(2,150) t(3,225) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(at(cash,atm),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,home),2) true(at(ram,home),3)
+Answer: 25 (Time: 33.094s)
+t(0,0) t(1,75) t(2,150) t(3,250) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(go(ram,atm),1) true(at(ram,atm),2) true(go(ram,office),2) true(at(ram,office),3)
+Answer: 26 (Time: 33.131s)
+t(0,0) t(1,75) t(2,150) t(3,225) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(go(ram,atm),1) true(at(ram,atm),2) true(go(ram,home),2) true(at(ram,home),3)
+Answer: 27 (Time: 33.300s)
+t(0,0) t(1,75) t(2,150) t(3,250) true(at(icard,home),0) true(at(cash,atm),0) true(at(ram,office),0) true(at(icard,home),1) true(at(cash,atm),1) true(go(ram,home),0) true(at(cash,atm),2) true(at(ram,home),1) true(at(cash,atm),3) true(go(ram,office),1) true(at(ram,office),2) true(go(ram,atm),2) true(at(ram,atm),3)
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 33.969s (Solving: 7.63s 1st Model: 2.51s Unsat: 0.67s)
+CPU Time     : 33.806s
+
+Choices      : 8143    
+Conflicts    : 293      (Analyzed: 251)
+Restarts     : 2        (Average: 125.50 Last: 243 Blocked: 0)
+Model-Level  : 50.9    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 288      (Deleted: 0)
+  Binary     : 21       (Ratio:   7.29%)
+  Ternary    : 21       (Ratio:   7.29%)
+  Conflict   : 251      (Average Length: 9967.0 Ratio:  87.15%) 
+  Loop       : 37       (Average Length:    3.6 Ratio:  12.85%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 251      (Average: 23.60 Max: 444 Sum:   5924)
+  Executed   : 241      (Average: 23.55 Max: 444 Sum:   5910 Ratio:  99.76%)
+  Bounded    : 10       (Average:  1.40 Max:   3 Sum:     14 Ratio:   0.24%)
+
+Rules        : 8438258  (Original: 8136836)
+Atoms        : 5398    
+Disjunctions : 0        (Original: 1104)
+Bodies       : 1660859  (Original: 1359437)
+Equivalences : 14713    (Atom=Atom: 1997 Body=Body: 1702 Other: 11014)
+Tight        : No       (SCCs: 12 Non-Hcfs: 0 Nodes: 342 Gammas: 0)
+Variables    : 1653880  (Eliminated:    0 Frozen: 1912)
+Constraints  : 121275642 (Binary:  98.6% Ternary:   1.1% Other:   0.2%)
+

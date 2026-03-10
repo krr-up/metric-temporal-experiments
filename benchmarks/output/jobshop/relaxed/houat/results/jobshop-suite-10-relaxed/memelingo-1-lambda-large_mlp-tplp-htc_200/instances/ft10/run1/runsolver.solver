@@ -1,0 +1,59 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...../examples/job-shop/instances/ft10.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1190.226s (Solving: 983.81s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1190.012s
+
+Choices      : 60603   
+Conflicts    : 0        (Analyzed: 0)
+Restarts     : 0       
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 261450   (Deleted: 0)
+  Binary     : 1695     (Ratio:   0.65%)
+  Ternary    : 258459   (Ratio:  98.86%)
+  Conflict   : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Loop       : 110      (Average Length:    2.9 Ratio:   0.04%) 
+  Other      : 261340   (Average Length:    3.0 Ratio:  99.96%) 
+Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
+  Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
+
+Rules        : 22084107 (Original: 22044307)
+Atoms        : 10816608
+Disjunctions : 0        (Original: 20000)
+Bodies       : 10580203 (Original: 10540403)
+Equivalences : 18589653 (Atom=Atom: 2328821 Body=Body: 1961601 Other: 14299231)
+Tight        : No       (SCCs: 200 Non-Hcfs: 0 Nodes: 10789700 Gammas: 0)
+Variables    : 11999195 (Eliminated:    0 Frozen: 11959395)
+Constraints  : 40211095 (Binary:  76.6% Ternary:  13.4% Other:  10.0%)
+
+Clingcon
+  Init time in seconds
+    Total    : 103.676
+    Simplify : 90.0582
+    Translate: 2.04222
+  Problem
+    Constraints: 4.68904e+06
+    Variables: 200
+    Clauses  : 73253
+    Literals : 2894
+  Translate
+    Constraints removed: 94963
+    Constraints added: 0
+    Clauses  : 11458
+    Weight constraints: 118
+    Literals : 2894
+  [Thread 0]
+    Time in seconds
+      Total  : 982.856
+      Propagation: 0.0581061
+      Check  : 982.66
+      Undo   : 0.137797
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 258446

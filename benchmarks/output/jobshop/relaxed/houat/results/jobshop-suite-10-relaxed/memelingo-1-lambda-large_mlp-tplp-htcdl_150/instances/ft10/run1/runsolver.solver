@@ -1,0 +1,55 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...../examples/job-shop/instances/ft10.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1189.054s (Solving: 1122.60s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1188.831s
+
+Choices      : 185200  
+Conflicts    : 9350     (Analyzed: 9350)
+Restarts     : 45       (Average: 207.78 Last: 681 Blocked: 0)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 4439253  (Deleted: 1166312)
+  Binary     : 1560793  (Ratio:  35.16%)
+  Ternary    : 439077   (Ratio:   9.89%)
+  Conflict   : 9350     (Average Length:  439.0 Ratio:   0.21%) 
+  Loop       : 199292   (Average Length:  119.4 Ratio:   4.49%) 
+  Other      : 4230611  (Average Length:    8.6 Ratio:  95.30%) 
+Backjumps    : 9350     (Average: 19.04 Max: 35327 Sum: 177986)
+  Executed   : 9349     (Average: 19.04 Max: 35327 Sum: 177985 Ratio: 100.00%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.00%)
+
+Rules        : 12901932 (Original: 12872132)
+Atoms        : 6476333 
+Disjunctions : 0        (Original: 15000)
+Bodies       : 6296428  (Original: 6266628)
+Equivalences : 11274428 (Atom=Atom: 1525096 Body=Body: 1249676 Other: 8499656)
+Tight        : No       (SCCs: 200 Non-Hcfs: 0 Nodes: 6149250 Gammas: 0)
+Variables    : 6829351  (Eliminated:    0 Frozen: 6799551)
+Constraints  : 22858588 (Binary:  76.5% Ternary:  13.6% Other:   9.9%)
+
+DifferenceLogic
+  Time init(s): 4.91601
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 2.65995e+06
+  Variables  : 151
+  [Thread 0]
+    Propagation(s): 606.19
+    Dijkstra(s): 544.883
+    Undo(s)  : 2.199
+    True edges: 4.32748e+07
+    False edges: 4.82588e+06
+    False edges (inverse): 43893
+    False edges (partial): 62202
+    False edges (partial+): 88
+    Edges added: 3.22637e+06
+    Edges skipped: 3.21909e+06
+    Edges propagated: 3.22608e+06
+    Cost consistency: 1.13191e+07
+    Cost forward: 4.83903e+10
+    Cost backward: 4.74689e+10

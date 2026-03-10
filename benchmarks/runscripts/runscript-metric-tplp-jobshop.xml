@@ -30,12 +30,42 @@
 		</files>
 	</benchmark>
 
+	<benchmark name="jobshop-suite-06-relaxed">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft06.lp" cmdline="-c v=110" />
+		</files>
+	</benchmark>
+
+		<benchmark name="jobshop-suite-06-no-limit">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft06.lp" />
+		</files>
+	</benchmark>
+
 	<benchmark name="jobshop-suite-10">
 		<files path="../examples/job-shop">
 			<encoding file="../examples/job-shop/job-shop.lp" />
 			<add file="instances/ft10.lp" cmdline="-c v=931" />
 		</files>
 	</benchmark>
+
+	<benchmark name="jobshop-suite-10-relaxed">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft10.lp"	 cmdline="-c v=1862" />
+		</files>
+	</benchmark>
+
+
+	<benchmark name="jobshop-suite-10-no-limit">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft10.lp"	 />
+		</files>
+	</benchmark>
+
 
 	<benchmark name="jobshop-suite-la1">
 		<files path="../examples/job-shop">
@@ -48,9 +78,20 @@
 
 	<project
 		name="clasp-seq" job="dist-generic">
-		<!-- <runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" /> -->
+		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
 		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
-		<runtag machine="houat" benchmark="jobshop-suite-la1" tag="lambdalarge" />
+	</project>
+
+	<project
+		name="no-limit" job="dist-generic">
+		<runtag machine="houat" benchmark="jobshop-suite-06-no-limit" tag="lambdasmall" />
+		<runtag machine="houat" benchmark="jobshop-suite-10-no-limit" tag="lambdalarge" />
+	</project>
+
+	<project
+		name="relaxed" job="dist-generic">
+		<runtag machine="houat" benchmark="jobshop-suite-06-relaxed" tag="lambdasmall" />
+		<runtag machine="houat" benchmark="jobshop-suite-10-relaxed" tag="lambdalarge" />
 	</project>
 
 

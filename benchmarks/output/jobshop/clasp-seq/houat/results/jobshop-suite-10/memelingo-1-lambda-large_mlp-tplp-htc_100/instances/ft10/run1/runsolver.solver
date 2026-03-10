@@ -1,0 +1,59 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...../examples/job-shop/instances/ft10.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1194.466s (Solving: 1148.60s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1194.244s
+
+Choices      : 691548  
+Conflicts    : 13688    (Analyzed: 13688)
+Restarts     : 51       (Average: 268.39 Last: 45 Blocked: 0)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 20978944 (Deleted: 526794)
+  Binary     : 729239   (Ratio:   3.48%)
+  Ternary    : 19604305 (Ratio:  93.45%)
+  Conflict   : 13688    (Average Length: 1060.2 Ratio:   0.07%) 
+  Loop       : 162645   (Average Length:  123.2 Ratio:   0.78%) 
+  Other      : 20802611 (Average Length:    3.0 Ratio:  99.16%) 
+Backjumps    : 13688    (Average: 36.88 Max: 112578 Sum: 504828)
+  Executed   : 13684    (Average: 36.88 Max: 112578 Sum: 504824 Ratio: 100.00%)
+  Bounded    : 4        (Average:  1.00 Max:   1 Sum:      4 Ratio:   0.00%)
+
+Rules        : 6162257  (Original: 6142457)
+Atoms        : 3228558 
+Disjunctions : 0        (Original: 10000)
+Bodies       : 3105153  (Original: 3085353)
+Equivalences : 5736703  (Atom=Atom: 868871 Body=Body: 685251 Other: 4182581)
+Tight        : No       (SCCs: 200 Non-Hcfs: 0 Nodes: 2803800 Gammas: 0)
+Variables    : 3194373  (Eliminated:    0 Frozen: 3174573)
+Constraints  : 11237988 (Binary:  69.7% Ternary:  21.4% Other:   8.9%)
+
+Clingcon
+  Init time in seconds
+    Total    : 15.0641
+    Simplify : 10.7575
+    Translate: 0.650225
+  Problem
+    Constraints: 1.1649e+06
+    Variables: 100
+    Clauses  : 1.02375e+06
+    Literals : 86972
+  Translate
+    Constraints removed: 37102
+    Constraints added: 0
+    Clauses  : 1.0008e+06
+    Weight constraints: 118
+    Literals : 86972
+  [Thread 0]
+    Time in seconds
+      Total  : 959.342
+      Propagation: 39.6063
+      Check  : 852.629
+      Undo   : 67.1071
+    Refined reason: 1.58674e+07
+    Introduced reason: 64
+    Literals introduced: 219

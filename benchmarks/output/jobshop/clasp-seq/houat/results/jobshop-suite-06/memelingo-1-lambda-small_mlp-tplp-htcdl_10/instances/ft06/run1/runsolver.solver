@@ -1,0 +1,57 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...../examples/job-shop/instances/ft06.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.963s (Solving: 0.49s 1st Model: 0.00s Unsat: 0.49s)
+CPU Time     : 0.752s
+
+Choices      : 7473    
+Conflicts    : 2727     (Analyzed: 2726)
+Restarts     : 14       (Average: 194.71 Last: 445 Blocked: 0)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 11099    (Deleted: 2345)
+  Binary     : 2997     (Ratio:  27.00%)
+  Ternary    : 1873     (Ratio:  16.88%)
+  Conflict   : 2726     (Average Length:   18.3 Ratio:  24.56%) 
+  Loop       : 2818     (Average Length:    8.7 Ratio:  25.39%) 
+  Other      : 5555     (Average Length:    2.6 Ratio:  50.05%) 
+Backjumps    : 2726     (Average:  2.70 Max: 427 Sum:   7362)
+  Executed   : 2675     (Average:  2.68 Max: 427 Sum:   7311 Ratio:  99.31%)
+  Bounded    : 51       (Average:  1.00 Max:   1 Sum:     51 Ratio:   0.69%)
+
+Rules        : 62428    (Original: 61780)
+Atoms        : 44335   
+Disjunctions : 0        (Original: 360)
+Bodies       : 35814    (Original: 35166)
+Equivalences : 82554    (Atom=Atom: 21152 Body=Body: 14380 Other: 47022)
+Tight        : No       (SCCs: 72 Non-Hcfs: 0 Nodes: 14994 Gammas: 0)
+Variables    : 15761    (Eliminated:    0 Frozen: 15113)
+Constraints  : 45394    (Binary:  74.6% Ternary:  17.3% Other:   8.1%)
+
+DifferenceLogic
+  Time init(s): 0.00507886
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 1731
+  Variables  : 11
+  [Thread 0]
+    Propagation(s): 0.131428
+    Dijkstra(s): 0.0758602
+    Undo(s)  : 0.00228003
+    True edges: 45036
+    False edges: 5385
+    False edges (inverse): 905
+    False edges (partial): 1302
+    False edges (partial+): 58
+    Edges added: 39510
+    Edges skipped: 35562
+    Edges propagated: 39310
+    Cost consistency: 159186
+    Cost forward: 5.7956e+06
+    Cost backward: 5.7541e+06
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmp0bvkddq4.lp']

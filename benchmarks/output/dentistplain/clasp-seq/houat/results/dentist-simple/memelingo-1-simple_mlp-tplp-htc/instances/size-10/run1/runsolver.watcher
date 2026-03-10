@@ -1,0 +1,531 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node7
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		mlp-tplp-htc
+[runlim] argv[2]:		--models=0
+[runlim] argv[3]:		--project=show
+[runlim] argv[4]:		--stats
+[runlim] argv[5]:		-c
+[runlim] argv[6]:		lambda=4
+[runlim] argv[7]:		-c
+[runlim] argv[8]:		v=1100
+[runlim] argv[9]:		../../../../../../../../../../../examples/dentist/instances/size-10.lp
+[runlim] argv[10]:		../../../../../../../../../../../examples/dentist/dentist.lp
+[runlim] start:			Mon Mar  9 21:24:39 2026
+[runlim] child:			9249
+[runlim] group:			9181
+[runlim] session:		9175
+[runlim] parent:		9248
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] resize:		2
+[runlim] insert:		9249
+[runlim] add (new):		9249 (parent 9248, 0.010 sec, 6.258 MB)
+[runlim] resize:		4
+[runlim] insert:		9248
+[runlim] connected:		0 processes
+[runlim] resize:		8
+[runlim] sampling (new):	9249 (0.010 sec, 6.258 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.020 sec, 7.027 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.020 sec, 7.027 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.040 sec, 8.328 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.040 sec, 8.328 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.060 sec, 8.887 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.060 sec, 8.887 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.080 sec, 10.289 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.080 sec, 10.289 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.090 sec, 13.578 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.090 sec, 13.578 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.110 sec, 14.453 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.110 sec, 14.453 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.140 sec, 15.828 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.140 sec, 15.828 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.150 sec, 16.820 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.150 sec, 16.820 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.160 sec, 17.316 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.160 sec, 17.316 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.170 sec, 17.941 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.170 sec, 17.941 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.190 sec, 18.859 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.190 sec, 18.859 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.210 sec, 19.875 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.210 sec, 19.875 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.220 sec, 20.188 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.220 sec, 20.188 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.240 sec, 20.441 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.240 sec, 20.441 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.260 sec, 21.902 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.260 sec, 21.902 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.280 sec, 24.207 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.280 sec, 24.207 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.290 sec, 24.977 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.290 sec, 24.977 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.320 sec, 24.977 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.320 sec, 24.977 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.330 sec, 25.488 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.330 sec, 25.488 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.350 sec, 25.754 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.350 sec, 25.754 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.360 sec, 25.754 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.360 sec, 25.754 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.380 sec, 26.270 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.380 sec, 26.270 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.390 sec, 27.043 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.390 sec, 27.043 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.400 sec, 27.559 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.400 sec, 27.559 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.420 sec, 28.332 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.420 sec, 28.332 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.440 sec, 28.848 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.440 sec, 28.848 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.450 sec, 29.465 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.450 sec, 29.465 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.460 sec, 29.910 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.460 sec, 29.910 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.480 sec, 30.168 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.480 sec, 30.168 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.490 sec, 30.426 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.490 sec, 30.426 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.500 sec, 30.941 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.500 sec, 30.941 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.520 sec, 31.973 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.520 sec, 31.973 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.530 sec, 32.488 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.530 sec, 32.488 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.550 sec, 33.004 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.550 sec, 33.004 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.560 sec, 34.941 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.560 sec, 34.941 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.570 sec, 35.223 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.570 sec, 35.223 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.590 sec, 35.480 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.590 sec, 35.480 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.600 sec, 36.223 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.600 sec, 36.223 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.620 sec, 36.480 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.620 sec, 36.480 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.630 sec, 36.738 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.630 sec, 36.738 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.650 sec, 37.254 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.650 sec, 37.254 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.660 sec, 37.770 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.660 sec, 37.770 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.670 sec, 38.285 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.670 sec, 38.285 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.690 sec, 39.059 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.690 sec, 39.059 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.700 sec, 39.383 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.700 sec, 39.383 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.710 sec, 39.383 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.710 sec, 39.383 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.730 sec, 39.637 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.730 sec, 39.637 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.740 sec, 40.551 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.740 sec, 40.551 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.760 sec, 41.344 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.760 sec, 41.344 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.780 sec, 42.117 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.780 sec, 42.117 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.800 sec, 43.621 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.800 sec, 43.621 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.820 sec, 45.168 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.820 sec, 45.168 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.840 sec, 45.793 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.840 sec, 45.793 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.860 sec, 46.117 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.860 sec, 46.117 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.880 sec, 47.695 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.880 sec, 47.695 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.890 sec, 47.949 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.890 sec, 47.949 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.910 sec, 48.297 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.910 sec, 48.297 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.940 sec, 48.758 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.940 sec, 48.758 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.960 sec, 51.008 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.960 sec, 51.008 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] read:			pid=9249 ppid=9248 pgrp=9181 session=9175
+[runlim] utime:			0.000000 microseconds
+[runlim] stime:			0.000000 microseconds
+[runlim] add:			9249 (parent 9248, 0.990 sec, 55.039 MB)
+[runlim] connected:		0 processes
+[runlim] sampling:		9249 (0.990 sec, 55.039 MB)
+[runlim] sampled:		1 processes
+[runlim] flushed:		0 processes
+[runlim] connected:		0 processes
+[runlim] sampled:		0 processes
+[runlim] deactive:		9249 (0.990 sec)
+[runlim] flushed:		1 processes
+[runlim] killing:		all child processes
+[runlim] killed:		0 processes
+[runlim] end:			Mon Mar  9 21:24:45 2026
+[runlim] status:		ok
+[runlim] result:		30
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			6.19 seconds
+[runlim] time:			0.99 seconds
+[runlim] space:			55 MB
+[runlim] load:			1.97 maximum
+[runlim] samples:		62
+[runlim] reports:		62

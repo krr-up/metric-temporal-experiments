@@ -1,0 +1,62 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...../examples/job-shop/instances/ft06.lp ...
+Solving...
+Answer: 1 (Time: 0.953s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpu8s35i7q.lp']
+true(start_run(0),3) true(start_run(1),4) true(start_run(2),5) true(start_run(3),6) true(start_run(4),7) true(start_run(5),8) true(start_run(6),1) true(start_run(7),2) true(start_run(8),3) true(start_run(9),5) true(start_run(10),6) true(start_run(11),7) true(start_run(12),0) true(start_run(13),1) true(start_run(14),2) true(start_run(15),3) true(start_run(16),4) true(start_run(17),5) true(start_run(18),0) true(start_run(19),2) true(start_run(20),4) true(start_run(21),5) true(start_run(22),6) true(start_run(23),8) true(start_run(24),1) true(start_run(25),3) true(start_run(26),4) true(start_run(27),6) true(start_run(28),7) true(start_run(29),8) true(start_run(30),2) true(start_run(31),3) true(start_run(32),4) true(start_run(33),5) true(start_run(34),7) true(start_run(35),8)
+Assignment:
+t(0)=0 t(1)=5 t(2)=14 t(3)=22 t(4)=32 t(5)=41 t(6)=51 t(7)=61 t(8)=66 t(9)=76
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 0.955s (Solving: 0.55s 1st Model: 0.54s Unsat: 0.00s)
+CPU Time     : 0.813s
+
+Choices      : 9811    
+Conflicts    : 3483     (Analyzed: 3483)
+Restarts     : 20       (Average: 174.15 Last: 82 Blocked: 0)
+Model-Level  : 38.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 12892    (Deleted: 2559)
+  Binary     : 3154     (Ratio:  24.46%)
+  Ternary    : 2078     (Ratio:  16.12%)
+  Conflict   : 3483     (Average Length:   21.9 Ratio:  27.02%) 
+  Loop       : 3335     (Average Length:    8.8 Ratio:  25.87%) 
+  Other      : 6074     (Average Length:    2.6 Ratio:  47.11%) 
+Backjumps    : 3483     (Average:  2.75 Max: 427 Sum:   9575)
+  Executed   : 3431     (Average:  2.73 Max: 427 Sum:   9523 Ratio:  99.46%)
+  Bounded    : 52       (Average:  1.00 Max:   1 Sum:     52 Ratio:   0.54%)
+
+Rules        : 62418    (Original: 61770)
+Atoms        : 44325   
+Disjunctions : 0        (Original: 360)
+Bodies       : 35814    (Original: 35166)
+Equivalences : 82554    (Atom=Atom: 21152 Body=Body: 14380 Other: 47022)
+Tight        : No       (SCCs: 72 Non-Hcfs: 0 Nodes: 14994 Gammas: 0)
+Variables    : 15761    (Eliminated:    0 Frozen: 15113)
+Constraints  : 45394    (Binary:  74.6% Ternary:  17.3% Other:   8.1%)
+
+DifferenceLogic
+  Time init(s): 0.00364226
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 1721
+  Variables  : 11
+  [Thread 0]
+    Propagation(s): 0.116248
+    Dijkstra(s): 0.0594655
+    Undo(s)  : 0.00237155
+    True edges: 50515
+    False edges: 5572
+    False edges (inverse): 865
+    False edges (partial): 1575
+    False edges (partial+): 74
+    Edges added: 45512
+    Edges skipped: 40624
+    Edges propagated: 45362
+    Cost consistency: 140724
+    Cost forward: 3.46735e+06
+    Cost backward: 3.2936e+06

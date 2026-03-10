@@ -1,0 +1,55 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...../examples/job-shop/instances/ft10.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1193.458s (Solving: 1043.76s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1193.287s
+
+Choices      : 292064  
+Conflicts    : 1145     (Analyzed: 1145)
+Restarts     : 9        (Average: 127.22 Last: 19 Blocked: 0)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 7919469  (Deleted: 1008699)
+  Binary     : 3301984  (Ratio:  41.69%)
+  Ternary    : 1128375  (Ratio:  14.25%)
+  Conflict   : 1145     (Average Length:  599.0 Ratio:   0.01%) 
+  Loop       : 63850    (Average Length:  101.8 Ratio:   0.81%) 
+  Other      : 7854474  (Average Length:    5.1 Ratio:  99.18%) 
+Backjumps    : 1145     (Average: 228.89 Max: 45666 Sum: 262076)
+  Executed   : 1145     (Average: 228.89 Max: 45666 Sum: 262076 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 22083907 (Original: 22044107)
+Atoms        : 10816408
+Disjunctions : 0        (Original: 20000)
+Bodies       : 10580203 (Original: 10540403)
+Equivalences : 18589653 (Atom=Atom: 2328821 Body=Body: 1961601 Other: 14299231)
+Tight        : No       (SCCs: 200 Non-Hcfs: 0 Nodes: 10789700 Gammas: 0)
+Variables    : 11996301 (Eliminated:    0 Frozen: 11956501)
+Constraints  : 40365913 (Binary:  76.6% Ternary:  13.5% Other:  10.0%)
+
+DifferenceLogic
+  Time init(s): 12.2731
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 4.7364e+06
+  Variables  : 201
+  [Thread 0]
+    Propagation(s): 965.387
+    Dijkstra(s): 855.959
+    Undo(s)  : 1.95676
+    True edges: 4.02781e+07
+    False edges: 9.13131e+06
+    False edges (inverse): 79601
+    False edges (partial): 199633
+    False edges (partial+): 241
+    Edges added: 2.47962e+06
+    Edges skipped: 2.4735e+06
+    Edges propagated: 2.47907e+06
+    Cost consistency: 3.91285e+07
+    Cost forward: 5.02837e+10
+    Cost backward: 5.58683e+10

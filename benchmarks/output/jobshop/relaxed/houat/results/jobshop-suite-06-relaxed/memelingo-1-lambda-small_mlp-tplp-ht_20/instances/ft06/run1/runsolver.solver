@@ -1,0 +1,39 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...../examples/job-shop/instances/ft06.lp ...
+Solving...
+Answer: 1 (Time: 77.285s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpye6cvejn.lp']
+t(0,0) t(1,6) t(2,11) t(3,19) t(4,55) t(5,60) t(6,61) t(7,62) t(8,63) t(9,64) t(10,73) t(11,74) t(12,86) t(13,96) t(14,103) t(15,105) t(16,106) t(17,107) t(18,109) t(19,110) true(start_run(35),17) true(start_run(11),16) true(start_run(5),14) true(start_run(29),13) true(start_run(17),13) true(start_run(10),13) true(start_run(4),13) true(start_run(34),12) true(start_run(28),12) true(start_run(9),12) true(start_run(3),12) true(start_run(33),11) true(start_run(23),11) true(start_run(2),11) true(start_run(8),10) true(start_run(16),9) true(start_run(1),9) true(start_run(27),8) true(start_run(22),8) true(start_run(7),8) true(start_run(0),6) true(start_run(26),4) true(start_run(21),4) true(start_run(15),4) true(start_run(32),3) true(start_run(25),3) true(start_run(20),3) true(start_run(31),2) true(start_run(19),2) true(start_run(14),2) true(start_run(6),2) true(start_run(24),1) true(start_run(18),1) true(start_run(13),1) true(start_run(30),0) true(start_run(12),0)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 77.314s (Solving: 34.92s 1st Model: 34.90s Unsat: 0.00s)
+CPU Time     : 77.171s
+
+Choices      : 401884  
+Conflicts    : 7680     (Analyzed: 7680)
+Restarts     : 37       (Average: 207.57 Last: 292 Blocked: 0)
+Model-Level  : 613.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 12739    (Deleted: 6935)
+  Binary     : 194      (Ratio:   1.52%)
+  Ternary    : 78       (Ratio:   0.61%)
+  Conflict   : 7680     (Average Length: 2878.5 Ratio:  60.29%) 
+  Loop       : 5059     (Average Length:   23.7 Ratio:  39.71%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 7680     (Average: 44.90 Max: 23058 Sum: 344820)
+  Executed   : 7660     (Average: 44.90 Max: 23058 Sum: 344800 Ratio:  99.99%)
+  Bounded    : 20       (Average:  1.00 Max:   1 Sum:     20 Ratio:   0.01%)
+
+Rules        : 25836326 (Original: 25757880)
+Atoms        : 95623   
+Disjunctions : 0        (Original: 2512)
+Bodies       : 1999265  (Original: 1920819)
+Equivalences : 182048   (Atom=Atom: 43361 Body=Body: 29757 Other: 108930)
+Tight        : No       (SCCs: 72 Non-Hcfs: 0 Nodes: 46427 Gammas: 0)
+Variables    : 1651721  (Eliminated:    0 Frozen: 46469)
+Constraints  : 29699847 (Binary:  94.4% Ternary:   5.2% Other:   0.3%)
+
