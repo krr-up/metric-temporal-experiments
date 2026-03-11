@@ -894,7 +894,7 @@ def plot_multiple_instances_by_row(
 
 def plot_dentist_plain():
     # Example usage for dentist instance
-    path = f"resultsv8/dentist-plain.xlsx"
+    path = f"resultsv9/dentist-plain.xlsx"
     instance_prefix = "size"
     save_path = f"plots/dentist_plain_factor.pdf"
 
@@ -925,7 +925,7 @@ def plot_dentist_plain():
 
 def plot_dentist_general():
     # Example usage for dentist instance
-    path = f"resultsv8/dentist-general.xlsx"
+    path = f"resultsv9/dentist-general.xlsx"
     instance_prefix = "size"
     save_path = f"plots/dentist_general_factor.pdf"
 
@@ -950,37 +950,21 @@ def plot_dentist_general():
 
 
 def plot_jobshop_6():
-    path = "resultsv8/jobshop.xlsx"
-    instance_prefix = "ft06"
+    path = "resultsv9/jobshop.xlsx"
+    instance_prefix = "ft10"
     save_path = f"plots/{instance_prefix}_factor.pdf"
 
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
     # ------Job
-    # plot_instance_by_column(
-    #     instance_prefix,
-    #     ["ctime"],
-    #     df_instances,
-    #     grouping_function=get_lambda,
-    #     y="Time (s)",
-    #     x="Lambda",
-    #     thick_attr="stime",
-    #     figsize=(4, 3),
-    #     save_path=save_path,
-    #     dpi=300,
-    #     # group_skip={30, 35, 40, 45, 50},
-    #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
-    #     # title=f"Agents = {get_agents(instance_prefix)}",
-    # )
-
     plot_instance_by_column(
         instance_prefix,
-        ["rules"],
+        ["ctime"],
         df_instances,
         grouping_function=get_lambda,
-        y="Rules",
+        y="Time (s)",
         x="Lambda",
-        # thick_attr="stime",
+        thick_attr="stime",
         figsize=(4, 3),
         save_path=save_path,
         dpi=300,
@@ -989,9 +973,25 @@ def plot_jobshop_6():
         # title=f"Agents = {get_agents(instance_prefix)}",
     )
 
+    # plot_instance_by_column(
+    #     instance_prefix,
+    #     ["rules"],
+    #     df_instances,
+    #     grouping_function=get_lambda,
+    #     y="Rules",
+    #     x="Lambda",
+    #     # thick_attr="stime",
+    #     figsize=(4, 3),
+    #     save_path=save_path,
+    #     dpi=300,
+    #     # group_skip={30, 35, 40, 45, 50},
+    #     # approaches_skipped=["ht"],  # Skip clingo for better visibility
+    #     # title=f"Agents = {get_agents(instance_prefix)}",
+    # )
+
 
 def plot_all_mapf_empty():
-    path = "resultsv8/mapf.xlsx"
+    path = "resultsv9/mapf.xlsx"
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
@@ -1036,7 +1036,7 @@ def plot_all_mapf_empty():
 
 
 def plot_mapf_8():
-    path = "resultsv8/mapf-8.xlsx"
+    path = "resultsv9/mapf-8.xlsx"
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
