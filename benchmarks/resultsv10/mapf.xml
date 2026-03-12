@@ -1,0 +1,2634 @@
+<result>
+	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB"/>
+	<config name="seq-generic" template="templates/seq-generic.sh"/>
+	<system name="memelingo" version="1" measures="rp_tmp" config="seq-generic">
+		<setting name="allapproaches_mlp-tplp-ht" tag="allapproaches" cmdline="mlp-tplp-ht --models=1 --project=show --stats -c lambda=10" dist_template="templates/single.dist">
+		</setting>
+		<setting name="allapproaches_mlp-tplp-htc" tag="allapproaches" cmdline="mlp-tplp-htc --models=1 --project=show --stats -c lambda=10" dist_template="templates/single.dist">
+		</setting>
+		<setting name="allapproaches_mlp-tplp-htcdl" tag="allapproaches" cmdline="mlp-tplp-htcdl --models=1 --project=show --stats -c lambda=10" dist_template="templates/single.dist">
+		</setting>
+	</system>
+	<distjob name="dist-generic" timeout="1200" memout="20000" runs="1" template_options="--single" script_mode="timeout" walltime="86399" cpt="4" partition="kr"/>
+	<benchmark name="mapf-suite-x6_y6">
+		<class name="instances" id="0">
+			<instance name="x6_y6_a1_f1" id="0" cmdline="-c v=15">
+				<file name="x6_y6_a1_f1.lp"/>
+			</instance>
+			<instance name="x6_y6_a1_f10" id="1" cmdline="-c v=150">
+				<file name="x6_y6_a1_f10.lp"/>
+			</instance>
+			<instance name="x6_y6_a1_f15" id="2" cmdline="-c v=225">
+				<file name="x6_y6_a1_f15.lp"/>
+			</instance>
+			<instance name="x6_y6_a1_f20" id="3" cmdline="-c v=300">
+				<file name="x6_y6_a1_f20.lp"/>
+			</instance>
+			<instance name="x6_y6_a1_f25" id="4" cmdline="-c v=375">
+				<file name="x6_y6_a1_f25.lp"/>
+			</instance>
+			<instance name="x6_y6_a1_f30" id="5" cmdline="-c v=450">
+				<file name="x6_y6_a1_f30.lp"/>
+			</instance>
+			<instance name="x6_y6_a1_f35" id="6" cmdline="-c v=525">
+				<file name="x6_y6_a1_f35.lp"/>
+			</instance>
+			<instance name="x6_y6_a1_f40" id="7" cmdline="-c v=600">
+				<file name="x6_y6_a1_f40.lp"/>
+			</instance>
+			<instance name="x6_y6_a1_f5" id="8" cmdline="-c v=75">
+				<file name="x6_y6_a1_f5.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f1" id="9" cmdline="-c v=15">
+				<file name="x6_y6_a2_f1.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f10" id="10" cmdline="-c v=150">
+				<file name="x6_y6_a2_f10.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f15" id="11" cmdline="-c v=225">
+				<file name="x6_y6_a2_f15.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f20" id="12" cmdline="-c v=300">
+				<file name="x6_y6_a2_f20.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f25" id="13" cmdline="-c v=375">
+				<file name="x6_y6_a2_f25.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f30" id="14" cmdline="-c v=450">
+				<file name="x6_y6_a2_f30.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f35" id="15" cmdline="-c v=525">
+				<file name="x6_y6_a2_f35.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f40" id="16" cmdline="-c v=600">
+				<file name="x6_y6_a2_f40.lp"/>
+			</instance>
+			<instance name="x6_y6_a2_f5" id="17" cmdline="-c v=75">
+				<file name="x6_y6_a2_f5.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f1" id="18" cmdline="-c v=15">
+				<file name="x6_y6_a3_f1.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f10" id="19" cmdline="-c v=150">
+				<file name="x6_y6_a3_f10.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f15" id="20" cmdline="-c v=225">
+				<file name="x6_y6_a3_f15.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f20" id="21" cmdline="-c v=300">
+				<file name="x6_y6_a3_f20.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f25" id="22" cmdline="-c v=375">
+				<file name="x6_y6_a3_f25.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f30" id="23" cmdline="-c v=450">
+				<file name="x6_y6_a3_f30.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f35" id="24" cmdline="-c v=525">
+				<file name="x6_y6_a3_f35.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f40" id="25" cmdline="-c v=600">
+				<file name="x6_y6_a3_f40.lp"/>
+			</instance>
+			<instance name="x6_y6_a3_f5" id="26" cmdline="-c v=75">
+				<file name="x6_y6_a3_f5.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f1" id="27" cmdline="-c v=15">
+				<file name="x6_y6_a4_f1.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f10" id="28" cmdline="-c v=150">
+				<file name="x6_y6_a4_f10.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f15" id="29" cmdline="-c v=225">
+				<file name="x6_y6_a4_f15.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f20" id="30" cmdline="-c v=300">
+				<file name="x6_y6_a4_f20.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f25" id="31" cmdline="-c v=375">
+				<file name="x6_y6_a4_f25.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f30" id="32" cmdline="-c v=450">
+				<file name="x6_y6_a4_f30.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f35" id="33" cmdline="-c v=525">
+				<file name="x6_y6_a4_f35.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f40" id="34" cmdline="-c v=600">
+				<file name="x6_y6_a4_f40.lp"/>
+			</instance>
+			<instance name="x6_y6_a4_f5" id="35" cmdline="-c v=75">
+				<file name="x6_y6_a4_f5.lp"/>
+			</instance>
+		</class>
+	</benchmark>
+	<project name="clasp-seq" job="dist-generic">
+		<runspec machine="houat" system="memelingo" version="1" benchmark="mapf-suite-x6_y6" setting="allapproaches_mlp-tplp-ht">
+			<class id="0">
+				<instance id="24">
+					<run number="1">
+						<measure name="atoms" type="float" val="869750.0"/>
+						<measure name="choices" type="float" val="12300706.0"/>
+						<measure name="conflicts" type="float" val="22973.0"/>
+						<measure name="ctime" type="float" val="1192.857"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="219.45"/>
+						<measure name="mem" type="float" val="16309.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="7.14"/>
+						<measure name="restarts" type="float" val="86.0"/>
+						<measure name="roriginal" type="float" val="68210349.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="69282082.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="973.41"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="305128.0"/>
+						<measure name="choices" type="float" val="456544.0"/>
+						<measure name="conflicts" type="float" val="3730.0"/>
+						<measure name="ctime" type="float" val="97.577"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="44.56"/>
+						<measure name="gtime" type="float" val="52.9"/>
+						<measure name="mem" type="float" val="3799.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="107.78"/>
+						<measure name="ptime" type="float" val="10.2"/>
+						<measure name="restarts" type="float" val="20.0"/>
+						<measure name="roriginal" type="float" val="22017713.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="22360221.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="44.68"/>
+						<measure name="time" type="float" val="107.78"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="14">
+					<run number="1">
+						<measure name="atoms" type="float" val="587484.0"/>
+						<measure name="choices" type="float" val="4748878.0"/>
+						<measure name="conflicts" type="float" val="26812.0"/>
+						<measure name="ctime" type="float" val="904.211"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="758.98"/>
+						<measure name="gtime" type="float" val="144.98"/>
+						<measure name="mem" type="float" val="18234.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="915.49"/>
+						<measure name="ptime" type="float" val="11.28"/>
+						<measure name="restarts" type="float" val="90.0"/>
+						<measure name="roriginal" type="float" val="49904109.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="50687767.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="759.23"/>
+						<measure name="time" type="float" val="915.49"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="12">
+					<run number="1">
+						<measure name="error" type="float" val="1"/>
+						<measure name="mem" type="float" val="4523.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="22">
+					<run number="1">
+						<measure name="atoms" type="float" val="867050.0"/>
+						<measure name="choices" type="float" val="10442280.0"/>
+						<measure name="conflicts" type="float" val="48859.0"/>
+						<measure name="ctime" type="float" val="1191.131"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="95.32"/>
+						<measure name="mem" type="float" val="12971.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="8.87"/>
+						<measure name="restarts" type="float" val="152.0"/>
+						<measure name="roriginal" type="float" val="35124924.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="35665507.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1095.81"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="27">
+					<run number="1">
+						<measure name="atoms" type="float" val="1142746.0"/>
+						<measure name="choices" type="float" val="1334.0"/>
+						<measure name="conflicts" type="float" val="189.0"/>
+						<measure name="ctime" type="float" val="9.889"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.41"/>
+						<measure name="gtime" type="float" val="9.47"/>
+						<measure name="mem" type="float" val="845.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="19.83"/>
+						<measure name="ptime" type="float" val="9.94"/>
+						<measure name="restarts" type="float" val="1.0"/>
+						<measure name="roriginal" type="float" val="1534099.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1534322.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.42"/>
+						<measure name="time" type="float" val="19.83"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="34">
+					<run number="1">
+						<measure name="atoms" type="float" val="1153276.0"/>
+						<measure name="choices" type="float" val="38876.0"/>
+						<measure name="conflicts" type="float" val="1310.0"/>
+						<measure name="ctime" type="float" val="375.972"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="314.9"/>
+						<measure name="mem" type="float" val="20001.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="824.03"/>
+						<measure name="restarts" type="float" val="7.0"/>
+						<measure name="roriginal" type="float" val="89302584.0"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="rules" type="float" val="90707392.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="61.07"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="8">
+					<run number="1">
+						<measure name="atoms" type="float" val="301078.0"/>
+						<measure name="choices" type="float" val="8586.0"/>
+						<measure name="conflicts" type="float" val="783.0"/>
+						<measure name="ctime" type="float" val="5.677"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="1.44"/>
+						<measure name="gtime" type="float" val="4.23"/>
+						<measure name="mem" type="float" val="374.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="15.63"/>
+						<measure name="ptime" type="float" val="9.95"/>
+						<measure name="restarts" type="float" val="6.0"/>
+						<measure name="roriginal" type="float" val="1625527.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1643810.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="1.45"/>
+						<measure name="time" type="float" val="15.63"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="31">
+					<run number="1">
+						<measure name="atoms" type="float" val="1149226.0"/>
+						<measure name="choices" type="float" val="5264904.0"/>
+						<measure name="conflicts" type="float" val="43127.0"/>
+						<measure name="ctime" type="float" val="1190.88"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="97.61"/>
+						<measure name="mem" type="float" val="17665.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="9.12"/>
+						<measure name="restarts" type="float" val="126.0"/>
+						<measure name="roriginal" type="float" val="35497884.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="36038467.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1093.27"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="13">
+					<run number="1">
+						<measure name="atoms" type="float" val="586134.0"/>
+						<measure name="choices" type="float" val="12503461.0"/>
+						<measure name="conflicts" type="float" val="57680.0"/>
+						<measure name="ctime" type="float" val="1190.857"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="93.27"/>
+						<measure name="mem" type="float" val="11900.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="9.14"/>
+						<measure name="restarts" type="float" val="156.0"/>
+						<measure name="roriginal" type="float" val="34753584.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="35294167.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1097.59"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="4">
+					<run number="1">
+						<measure name="atoms" type="float" val="306478.0"/>
+						<measure name="choices" type="float" val="699087.0"/>
+						<measure name="conflicts" type="float" val="4913.0"/>
+						<measure name="ctime" type="float" val="163.399"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="72.35"/>
+						<measure name="gtime" type="float" val="90.87"/>
+						<measure name="mem" type="float" val="6250.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="173.61"/>
+						<measure name="ptime" type="float" val="10.21"/>
+						<measure name="restarts" type="float" val="27.0"/>
+						<measure name="roriginal" type="float" val="34383863.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="34924446.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="72.53"/>
+						<measure name="time" type="float" val="173.61"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="19">
+					<run number="1">
+						<measure name="atoms" type="float" val="863000.0"/>
+						<measure name="choices" type="float" val="11257087.0"/>
+						<measure name="conflicts" type="float" val="271435.0"/>
+						<measure name="ctime" type="float" val="1188.495"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="1171.73"/>
+						<measure name="gtime" type="float" val="16.74"/>
+						<measure name="mem" type="float" val="2398.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="1198.31"/>
+						<measure name="ptime" type="float" val="9.82"/>
+						<measure name="restarts" type="float" val="672.0"/>
+						<measure name="roriginal" type="float" val="6379599.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="6460957.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="1171.75"/>
+						<measure name="time" type="float" val="1198.31"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="10">
+					<run number="1">
+						<measure name="atoms" type="float" val="582084.0"/>
+						<measure name="choices" type="float" val="13721686.0"/>
+						<measure name="conflicts" type="float" val="293228.0"/>
+						<measure name="ctime" type="float" val="1192.264"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="14.29"/>
+						<measure name="mem" type="float" val="2229.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="7.74"/>
+						<measure name="restarts" type="float" val="763.0"/>
+						<measure name="roriginal" type="float" val="6008259.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="6089617.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1177.97"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="5">
+					<run number="1">
+						<measure name="atoms" type="float" val="307828.0"/>
+						<measure name="choices" type="float" val="6446979.0"/>
+						<measure name="conflicts" type="float" val="9895.0"/>
+						<measure name="ctime" type="float" val="423.408"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="281.55"/>
+						<measure name="gtime" type="float" val="141.64"/>
+						<measure name="mem" type="float" val="10643.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="433.14"/>
+						<measure name="ptime" type="float" val="9.73"/>
+						<measure name="restarts" type="float" val="40.0"/>
+						<measure name="roriginal" type="float" val="49534388.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="50318046.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="281.77"/>
+						<measure name="time" type="float" val="433.14"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="15">
+					<run number="1">
+						<measure name="atoms" type="float" val="588834.0"/>
+						<measure name="choices" type="float" val="6848992.0"/>
+						<measure name="conflicts" type="float" val="26606.0"/>
+						<measure name="ctime" type="float" val="1191.567"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="217.04"/>
+						<measure name="mem" type="float" val="18135.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="8.43"/>
+						<measure name="restarts" type="float" val="92.0"/>
+						<measure name="roriginal" type="float" val="67839009.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="68910742.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="974.53"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="9">
+					<run number="1">
+						<measure name="atoms" type="float" val="579654.0"/>
+						<measure name="choices" type="float" val="235.0"/>
+						<measure name="conflicts" type="float" val="60.0"/>
+						<measure name="ctime" type="float" val="4.986"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.11"/>
+						<measure name="gtime" type="float" val="4.88"/>
+						<measure name="mem" type="float" val="451.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="13.79"/>
+						<measure name="ptime" type="float" val="8.8"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="roriginal" type="float" val="789799.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="790022.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.11"/>
+						<measure name="time" type="float" val="13.79"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="299998.0"/>
+						<measure name="choices" type="float" val="99.0"/>
+						<measure name="conflicts" type="float" val="21.0"/>
+						<measure name="ctime" type="float" val="2.472"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="2.45"/>
+						<measure name="mem" type="float" val="252.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="12.56"/>
+						<measure name="ptime" type="float" val="10.09"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="roriginal" type="float" val="420078.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="420301.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="12.56"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="33">
+					<run number="1">
+						<measure name="atoms" type="float" val="1151926.0"/>
+						<measure name="choices" type="float" val="9618677.0"/>
+						<measure name="conflicts" type="float" val="26440.0"/>
+						<measure name="ctime" type="float" val="1193.345"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="256.94"/>
+						<measure name="mem" type="float" val="17573.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="6.65"/>
+						<measure name="restarts" type="float" val="93.0"/>
+						<measure name="roriginal" type="float" val="68583309.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="69655042.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="936.41"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="303778.0"/>
+						<measure name="choices" type="float" val="14563.0"/>
+						<measure name="conflicts" type="float" val="1344.0"/>
+						<measure name="ctime" type="float" val="34.872"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="7.57"/>
+						<measure name="gtime" type="float" val="27.26"/>
+						<measure name="mem" type="float" val="1870.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="44.05"/>
+						<measure name="ptime" type="float" val="9.18"/>
+						<measure name="restarts" type="float" val="8.0"/>
+						<measure name="roriginal" type="float" val="12435938.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="12625371.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="7.61"/>
+						<measure name="time" type="float" val="44.05"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="7">
+					<run number="1">
+						<measure name="atoms" type="float" val="310528.0"/>
+						<measure name="choices" type="float" val="534981.0"/>
+						<measure name="conflicts" type="float" val="4779.0"/>
+						<measure name="ctime" type="float" val="486.528"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="310.24"/>
+						<measure name="mem" type="float" val="20006.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="713.47"/>
+						<measure name="restarts" type="float" val="21.0"/>
+						<measure name="roriginal" type="float" val="88188563.0"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="rules" type="float" val="89593371.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="176.29"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="29">
+					<run number="1">
+						<measure name="atoms" type="float" val="1146526.0"/>
+						<measure name="choices" type="float" val="13179921.0"/>
+						<measure name="conflicts" type="float" val="131146.0"/>
+						<measure name="ctime" type="float" val="1191.897"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="34.01"/>
+						<measure name="mem" type="float" val="4050.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="8.1"/>
+						<measure name="restarts" type="float" val="348.0"/>
+						<measure name="roriginal" type="float" val="13549959.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="13739392.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1157.89"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="11">
+					<run number="1">
+						<measure name="atoms" type="float" val="583434.0"/>
+						<measure name="choices" type="float" val="11127384.0"/>
+						<measure name="conflicts" type="float" val="150935.0"/>
+						<measure name="ctime" type="float" val="1190.362"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="29.61"/>
+						<measure name="mem" type="float" val="2910.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="9.64"/>
+						<measure name="restarts" type="float" val="381.0"/>
+						<measure name="roriginal" type="float" val="12805659.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="12995092.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1160.75"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="18">
+					<run number="1">
+						<measure name="atoms" type="float" val="860570.0"/>
+						<measure name="choices" type="float" val="600.0"/>
+						<measure name="conflicts" type="float" val="204.0"/>
+						<measure name="ctime" type="float" val="7.885"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.49"/>
+						<measure name="gtime" type="float" val="7.38"/>
+						<measure name="mem" type="float" val="662.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="19.12"/>
+						<measure name="ptime" type="float" val="11.24"/>
+						<measure name="restarts" type="float" val="2.0"/>
+						<measure name="roriginal" type="float" val="1161139.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1161362.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.5"/>
+						<measure name="time" type="float" val="19.12"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="26">
+					<run number="1">
+						<measure name="atoms" type="float" val="861650.0"/>
+						<measure name="choices" type="float" val="2939003.0"/>
+						<measure name="conflicts" type="float" val="276354.0"/>
+						<measure name="ctime" type="float" val="631.713"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="621.99"/>
+						<measure name="gtime" type="float" val="9.72"/>
+						<measure name="mem" type="float" val="846.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="645.62"/>
+						<measure name="ptime" type="float" val="13.91"/>
+						<measure name="restarts" type="float" val="678.0"/>
+						<measure name="roriginal" type="float" val="2366588.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2384871.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="621.99"/>
+						<measure name="time" type="float" val="645.62"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="28">
+					<run number="1">
+						<measure name="atoms" type="float" val="1145176.0"/>
+						<measure name="choices" type="float" val="8554362.0"/>
+						<measure name="conflicts" type="float" val="251952.0"/>
+						<measure name="ctime" type="float" val="1190.422"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="18.71"/>
+						<measure name="mem" type="float" val="2570.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="9.58"/>
+						<measure name="restarts" type="float" val="542.0"/>
+						<measure name="roriginal" type="float" val="6752559.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="6833917.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1171.71"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="6">
+					<run number="1">
+						<measure name="atoms" type="float" val="309178.0"/>
+						<measure name="choices" type="float" val="577825.0"/>
+						<measure name="conflicts" type="float" val="1572.0"/>
+						<measure name="ctime" type="float" val="280.133"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="64.79"/>
+						<measure name="gtime" type="float" val="215.07"/>
+						<measure name="mem" type="float" val="14021.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="291.31"/>
+						<measure name="ptime" type="float" val="11.18"/>
+						<measure name="restarts" type="float" val="12.0"/>
+						<measure name="roriginal" type="float" val="67469288.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="68541021.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="65.06"/>
+						<measure name="time" type="float" val="291.31"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="21">
+					<run number="1">
+						<measure name="atoms" type="float" val="865700.0"/>
+						<measure name="choices" type="float" val="14992851.0"/>
+						<measure name="conflicts" type="float" val="87181.0"/>
+						<measure name="ctime" type="float" val="1190.701"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="57.31"/>
+						<measure name="mem" type="float" val="5689.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="9.3"/>
+						<measure name="restarts" type="float" val="253.0"/>
+						<measure name="roriginal" type="float" val="22758774.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="23101282.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1133.39"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="20">
+					<run number="1">
+						<measure name="atoms" type="float" val="864350.0"/>
+						<measure name="choices" type="float" val="8846766.0"/>
+						<measure name="conflicts" type="float" val="92247.0"/>
+						<measure name="ctime" type="float" val="829.347"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="796.9"/>
+						<measure name="gtime" type="float" val="32.38"/>
+						<measure name="mem" type="float" val="3560.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="839.59"/>
+						<measure name="ptime" type="float" val="10.24"/>
+						<measure name="restarts" type="float" val="254.0"/>
+						<measure name="roriginal" type="float" val="13176999.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="13366432.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="796.97"/>
+						<measure name="time" type="float" val="839.59"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="30">
+					<run number="1">
+						<measure name="atoms" type="float" val="1147876.0"/>
+						<measure name="choices" type="float" val="15442244.0"/>
+						<measure name="conflicts" type="float" val="81811.0"/>
+						<measure name="ctime" type="float" val="1189.929"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="59.51"/>
+						<measure name="mem" type="float" val="5569.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="10.07"/>
+						<measure name="restarts" type="float" val="253.0"/>
+						<measure name="roriginal" type="float" val="23131734.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="23474242.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1130.42"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="23">
+					<run number="1">
+						<measure name="atoms" type="float" val="868400.0"/>
+						<measure name="choices" type="float" val="9295439.0"/>
+						<measure name="conflicts" type="float" val="44576.0"/>
+						<measure name="ctime" type="float" val="1190.401"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="147.48"/>
+						<measure name="mem" type="float" val="14131.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="9.6"/>
+						<measure name="restarts" type="float" val="126.0"/>
+						<measure name="roriginal" type="float" val="50275449.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="51059107.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1042.92"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="35">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143826.0"/>
+						<measure name="choices" type="float" val="1523543.0"/>
+						<measure name="conflicts" type="float" val="145525.0"/>
+						<measure name="ctime" type="float" val="413.881"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="402.47"/>
+						<measure name="gtime" type="float" val="11.4"/>
+						<measure name="mem" type="float" val="969.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="423.71"/>
+						<measure name="ptime" type="float" val="9.83"/>
+						<measure name="restarts" type="float" val="440.0"/>
+						<measure name="roriginal" type="float" val="2739548.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2757831.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="402.48"/>
+						<measure name="time" type="float" val="423.71"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="302428.0"/>
+						<measure name="choices" type="float" val="119664.0"/>
+						<measure name="conflicts" type="float" val="1521.0"/>
+						<measure name="ctime" type="float" val="16.727"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="4.75"/>
+						<measure name="gtime" type="float" val="11.96"/>
+						<measure name="mem" type="float" val="856.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="25.97"/>
+						<measure name="ptime" type="float" val="9.24"/>
+						<measure name="restarts" type="float" val="9.0"/>
+						<measure name="roriginal" type="float" val="5638538.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="5719896.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="4.77"/>
+						<measure name="time" type="float" val="25.97"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="16">
+					<run number="1">
+						<measure name="error" type="float" val="0"/>
+						<measure name="mem" type="float" val="20001.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="32">
+					<run number="1">
+						<measure name="atoms" type="float" val="1150576.0"/>
+						<measure name="choices" type="float" val="9806718.0"/>
+						<measure name="conflicts" type="float" val="38291.0"/>
+						<measure name="ctime" type="float" val="1193.734"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="149.11"/>
+						<measure name="mem" type="float" val="15242.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="6.27"/>
+						<measure name="restarts" type="float" val="126.0"/>
+						<measure name="roriginal" type="float" val="50648409.0"/>
+						<measure name="rstatus" type="string" val="out of time"/>
+						<measure name="rules" type="float" val="51432067.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="1044.62"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+				<instance id="17">
+					<run number="1">
+						<measure name="atoms" type="float" val="580734.0"/>
+						<measure name="choices" type="float" val="789603.0"/>
+						<measure name="conflicts" type="float" val="67879.0"/>
+						<measure name="ctime" type="float" val="133.375"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="126.75"/>
+						<measure name="gtime" type="float" val="6.61"/>
+						<measure name="mem" type="float" val="623.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="142.94"/>
+						<measure name="ptime" type="float" val="9.56"/>
+						<measure name="restarts" type="float" val="207.0"/>
+						<measure name="roriginal" type="float" val="1995248.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="2013531.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="126.76"/>
+						<measure name="time" type="float" val="142.94"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="25">
+					<run number="1">
+						<measure name="atoms" type="float" val="871100.0"/>
+						<measure name="choices" type="float" val="125227.0"/>
+						<measure name="conflicts" type="float" val="2318.0"/>
+						<measure name="ctime" type="float" val="424.748"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.0"/>
+						<measure name="gtime" type="float" val="313.07"/>
+						<measure name="mem" type="float" val="20007.0"/>
+						<measure name="memout" type="float" val="1"/>
+						<measure name="models" type="float" val="0.0"/>
+						<measure name="par2" type="float" val="2400"/>
+						<measure name="ptime" type="float" val="775.25"/>
+						<measure name="restarts" type="float" val="13.0"/>
+						<measure name="roriginal" type="float" val="88929624.0"/>
+						<measure name="rstatus" type="string" val="out of memory"/>
+						<measure name="rules" type="float" val="90334432.0"/>
+						<measure name="status" type="string" val="UNKNOWN"/>
+						<measure name="stime" type="float" val="111.68"/>
+						<measure name="time" type="float" val="1200"/>
+						<measure name="timeout" type="float" val="1"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="mapf-suite-x6_y6" setting="allapproaches_mlp-tplp-htc">
+			<class id="0">
+				<instance id="24">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="22247.0"/>
+						<measure name="conflicts" type="float" val="16659.0"/>
+						<measure name="ctime" type="float" val="38.398"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="29.76"/>
+						<measure name="gtime" type="float" val="8.63"/>
+						<measure name="mem" type="float" val="691.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="49.23"/>
+						<measure name="ptime" type="float" val="10.83"/>
+						<measure name="restarts" type="float" val="62.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="29.77"/>
+						<measure name="time" type="float" val="49.23"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="3542.0"/>
+						<measure name="conflicts" type="float" val="2624.0"/>
+						<measure name="ctime" type="float" val="5.116"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="1.7"/>
+						<measure name="gtime" type="float" val="3.42"/>
+						<measure name="mem" type="float" val="265.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="11.73"/>
+						<measure name="ptime" type="float" val="6.61"/>
+						<measure name="restarts" type="float" val="14.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="1.7"/>
+						<measure name="time" type="float" val="11.73"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="14">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="7918.0"/>
+						<measure name="conflicts" type="float" val="5898.0"/>
+						<measure name="ctime" type="float" val="12.935"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="7.21"/>
+						<measure name="gtime" type="float" val="5.73"/>
+						<measure name="mem" type="float" val="467.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="22.6"/>
+						<measure name="ptime" type="float" val="9.67"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="7.21"/>
+						<measure name="time" type="float" val="22.6"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="12">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="17082.0"/>
+						<measure name="conflicts" type="float" val="12699.0"/>
+						<measure name="ctime" type="float" val="24.201"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="17.83"/>
+						<measure name="gtime" type="float" val="6.37"/>
+						<measure name="mem" type="float" val="462.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="31.23"/>
+						<measure name="ptime" type="float" val="7.03"/>
+						<measure name="restarts" type="float" val="57.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="17.83"/>
+						<measure name="time" type="float" val="31.23"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="22">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="30050.0"/>
+						<measure name="conflicts" type="float" val="21939.0"/>
+						<measure name="ctime" type="float" val="47.997"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="39.45"/>
+						<measure name="gtime" type="float" val="8.55"/>
+						<measure name="mem" type="float" val="683.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="59.28"/>
+						<measure name="ptime" type="float" val="11.28"/>
+						<measure name="restarts" type="float" val="84.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="39.45"/>
+						<measure name="time" type="float" val="59.28"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="27">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="660.0"/>
+						<measure name="conflicts" type="float" val="53.0"/>
+						<measure name="ctime" type="float" val="13.184"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.1"/>
+						<measure name="gtime" type="float" val="13.08"/>
+						<measure name="mem" type="float" val="852.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="20.16"/>
+						<measure name="ptime" type="float" val="6.98"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.1"/>
+						<measure name="time" type="float" val="20.16"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="34">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="6630.0"/>
+						<measure name="conflicts" type="float" val="4644.0"/>
+						<measure name="ctime" type="float" val="26.932"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="14.07"/>
+						<measure name="gtime" type="float" val="12.86"/>
+						<measure name="mem" type="float" val="871.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="34.28"/>
+						<measure name="ptime" type="float" val="7.35"/>
+						<measure name="restarts" type="float" val="24.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="14.07"/>
+						<measure name="time" type="float" val="34.28"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="8">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="32.0"/>
+						<measure name="conflicts" type="float" val="12.0"/>
+						<measure name="ctime" type="float" val="2.957"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="2.93"/>
+						<measure name="mem" type="float" val="253.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="11.93"/>
+						<measure name="ptime" type="float" val="8.97"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.03"/>
+						<measure name="time" type="float" val="11.93"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="31">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="22325.0"/>
+						<measure name="conflicts" type="float" val="16295.0"/>
+						<measure name="ctime" type="float" val="48.734"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="37.69"/>
+						<measure name="gtime" type="float" val="11.03"/>
+						<measure name="mem" type="float" val="865.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="55.53"/>
+						<measure name="ptime" type="float" val="6.8"/>
+						<measure name="restarts" type="float" val="62.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="37.7"/>
+						<measure name="time" type="float" val="55.53"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="13">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="14354.0"/>
+						<measure name="conflicts" type="float" val="10799.0"/>
+						<measure name="ctime" type="float" val="19.289"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="13.58"/>
+						<measure name="gtime" type="float" val="5.71"/>
+						<measure name="mem" type="float" val="464.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="29.22"/>
+						<measure name="ptime" type="float" val="9.93"/>
+						<measure name="restarts" type="float" val="47.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="13.58"/>
+						<measure name="time" type="float" val="29.22"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="4">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="2228.0"/>
+						<measure name="conflicts" type="float" val="1531.0"/>
+						<measure name="ctime" type="float" val="4.509"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="1.02"/>
+						<measure name="gtime" type="float" val="3.49"/>
+						<measure name="mem" type="float" val="267.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="11.44"/>
+						<measure name="ptime" type="float" val="6.93"/>
+						<measure name="restarts" type="float" val="8.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="1.02"/>
+						<measure name="time" type="float" val="11.44"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="19">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="8736.0"/>
+						<measure name="conflicts" type="float" val="6386.0"/>
+						<measure name="ctime" type="float" val="20.977"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="11.98"/>
+						<measure name="gtime" type="float" val="9.0"/>
+						<measure name="mem" type="float" val="677.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="35.07"/>
+						<measure name="ptime" type="float" val="14.09"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="11.98"/>
+						<measure name="time" type="float" val="35.07"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="10">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="7883.0"/>
+						<measure name="conflicts" type="float" val="5746.0"/>
+						<measure name="ctime" type="float" val="13.658"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="7.07"/>
+						<measure name="gtime" type="float" val="6.59"/>
+						<measure name="mem" type="float" val="461.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="20.55"/>
+						<measure name="ptime" type="float" val="6.89"/>
+						<measure name="restarts" type="float" val="29.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="7.07"/>
+						<measure name="time" type="float" val="20.55"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="5">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="657.0"/>
+						<measure name="conflicts" type="float" val="456.0"/>
+						<measure name="ctime" type="float" val="3.66"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.31"/>
+						<measure name="gtime" type="float" val="3.35"/>
+						<measure name="mem" type="float" val="272.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="10.75"/>
+						<measure name="ptime" type="float" val="7.09"/>
+						<measure name="restarts" type="float" val="2.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.31"/>
+						<measure name="time" type="float" val="10.75"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="15">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="27645.0"/>
+						<measure name="conflicts" type="float" val="20069.0"/>
+						<measure name="ctime" type="float" val="38.216"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="31.62"/>
+						<measure name="gtime" type="float" val="6.59"/>
+						<measure name="mem" type="float" val="470.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="45.27"/>
+						<measure name="ptime" type="float" val="7.05"/>
+						<measure name="restarts" type="float" val="77.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="31.63"/>
+						<measure name="time" type="float" val="45.27"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="9">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="184.0"/>
+						<measure name="conflicts" type="float" val="42.0"/>
+						<measure name="ctime" type="float" val="5.756"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.03"/>
+						<measure name="gtime" type="float" val="5.72"/>
+						<measure name="mem" type="float" val="457.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="15.1"/>
+						<measure name="ptime" type="float" val="9.34"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.04"/>
+						<measure name="time" type="float" val="15.1"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="58.0"/>
+						<measure name="conflicts" type="float" val="19.0"/>
+						<measure name="ctime" type="float" val="2.961"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="2.93"/>
+						<measure name="mem" type="float" val="259.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="12.84"/>
+						<measure name="ptime" type="float" val="9.88"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.03"/>
+						<measure name="time" type="float" val="12.84"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="33">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="58813.0"/>
+						<measure name="conflicts" type="float" val="43020.0"/>
+						<measure name="ctime" type="float" val="114.577"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="103.33"/>
+						<measure name="gtime" type="float" val="11.25"/>
+						<measure name="mem" type="float" val="872.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="126.48"/>
+						<measure name="ptime" type="float" val="11.9"/>
+						<measure name="restarts" type="float" val="140.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="103.33"/>
+						<measure name="time" type="float" val="126.48"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="359.0"/>
+						<measure name="conflicts" type="float" val="271.0"/>
+						<measure name="ctime" type="float" val="3.555"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.19"/>
+						<measure name="gtime" type="float" val="3.37"/>
+						<measure name="mem" type="float" val="256.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="10.54"/>
+						<measure name="ptime" type="float" val="6.98"/>
+						<measure name="restarts" type="float" val="2.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.19"/>
+						<measure name="time" type="float" val="10.54"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="7">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="439.0"/>
+						<measure name="conflicts" type="float" val="300.0"/>
+						<measure name="ctime" type="float" val="3.241"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.23"/>
+						<measure name="gtime" type="float" val="3.01"/>
+						<measure name="mem" type="float" val="277.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="12.55"/>
+						<measure name="ptime" type="float" val="9.31"/>
+						<measure name="restarts" type="float" val="2.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.23"/>
+						<measure name="time" type="float" val="12.55"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="29">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="49148.0"/>
+						<measure name="conflicts" type="float" val="36312.0"/>
+						<measure name="ctime" type="float" val="109.984"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="97.29"/>
+						<measure name="gtime" type="float" val="12.69"/>
+						<measure name="mem" type="float" val="862.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="118.02"/>
+						<measure name="ptime" type="float" val="8.04"/>
+						<measure name="restarts" type="float" val="126.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="97.29"/>
+						<measure name="time" type="float" val="118.02"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="11">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="22608.0"/>
+						<measure name="conflicts" type="float" val="16752.0"/>
+						<measure name="ctime" type="float" val="27.946"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="21.33"/>
+						<measure name="gtime" type="float" val="6.61"/>
+						<measure name="mem" type="float" val="465.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="35.21"/>
+						<measure name="ptime" type="float" val="7.26"/>
+						<measure name="restarts" type="float" val="62.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="21.34"/>
+						<measure name="time" type="float" val="35.21"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="18">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="310.0"/>
+						<measure name="conflicts" type="float" val="47.0"/>
+						<measure name="ctime" type="float" val="8.66"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.06"/>
+						<measure name="gtime" type="float" val="8.59"/>
+						<measure name="mem" type="float" val="673.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="19.13"/>
+						<measure name="ptime" type="float" val="10.47"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.07"/>
+						<measure name="time" type="float" val="19.13"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="26">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="1739.0"/>
+						<measure name="conflicts" type="float" val="1285.0"/>
+						<measure name="ctime" type="float" val="10.327"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="1.75"/>
+						<measure name="gtime" type="float" val="8.58"/>
+						<measure name="mem" type="float" val="678.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="20.62"/>
+						<measure name="ptime" type="float" val="10.29"/>
+						<measure name="restarts" type="float" val="7.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="1.75"/>
+						<measure name="time" type="float" val="20.62"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="28">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="26756.0"/>
+						<measure name="conflicts" type="float" val="19382.0"/>
+						<measure name="ctime" type="float" val="63.27"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="50.18"/>
+						<measure name="gtime" type="float" val="13.08"/>
+						<measure name="mem" type="float" val="861.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="70.48"/>
+						<measure name="ptime" type="float" val="7.21"/>
+						<measure name="restarts" type="float" val="77.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="50.19"/>
+						<measure name="time" type="float" val="70.48"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="6">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="3370.0"/>
+						<measure name="conflicts" type="float" val="2379.0"/>
+						<measure name="ctime" type="float" val="4.235"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="1.24"/>
+						<measure name="gtime" type="float" val="2.99"/>
+						<measure name="mem" type="float" val="264.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="14.46"/>
+						<measure name="ptime" type="float" val="10.23"/>
+						<measure name="restarts" type="float" val="14.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="1.25"/>
+						<measure name="time" type="float" val="14.46"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="21">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="13996.0"/>
+						<measure name="conflicts" type="float" val="10191.0"/>
+						<measure name="ctime" type="float" val="29.972"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="20.07"/>
+						<measure name="gtime" type="float" val="9.89"/>
+						<measure name="mem" type="float" val="680.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="36.78"/>
+						<measure name="ptime" type="float" val="6.81"/>
+						<measure name="restarts" type="float" val="44.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="20.08"/>
+						<measure name="time" type="float" val="36.78"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="20">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="25798.0"/>
+						<measure name="conflicts" type="float" val="19337.0"/>
+						<measure name="ctime" type="float" val="38.011"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="29.54"/>
+						<measure name="gtime" type="float" val="8.47"/>
+						<measure name="mem" type="float" val="681.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="47.99"/>
+						<measure name="ptime" type="float" val="9.98"/>
+						<measure name="restarts" type="float" val="76.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="29.54"/>
+						<measure name="time" type="float" val="47.99"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="30">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="9943.0"/>
+						<measure name="conflicts" type="float" val="7336.0"/>
+						<measure name="ctime" type="float" val="27.656"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="16.48"/>
+						<measure name="gtime" type="float" val="11.18"/>
+						<measure name="mem" type="float" val="864.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="38.36"/>
+						<measure name="ptime" type="float" val="10.7"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="16.48"/>
+						<measure name="time" type="float" val="38.36"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="23">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="65972.0"/>
+						<measure name="conflicts" type="float" val="48969.0"/>
+						<measure name="ctime" type="float" val="94.476"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="85.89"/>
+						<measure name="gtime" type="float" val="8.58"/>
+						<measure name="mem" type="float" val="689.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="104.82"/>
+						<measure name="ptime" type="float" val="10.34"/>
+						<measure name="restarts" type="float" val="157.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="85.9"/>
+						<measure name="time" type="float" val="104.82"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="35">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="2580.0"/>
+						<measure name="conflicts" type="float" val="1785.0"/>
+						<measure name="ctime" type="float" val="16.636"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="4.0"/>
+						<measure name="gtime" type="float" val="12.64"/>
+						<measure name="mem" type="float" val="858.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="24.43"/>
+						<measure name="ptime" type="float" val="7.79"/>
+						<measure name="restarts" type="float" val="10.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="4.0"/>
+						<measure name="time" type="float" val="24.43"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="688.0"/>
+						<measure name="conflicts" type="float" val="522.0"/>
+						<measure name="ctime" type="float" val="3.175"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.22"/>
+						<measure name="gtime" type="float" val="2.94"/>
+						<measure name="mem" type="float" val="264.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="13.36"/>
+						<measure name="ptime" type="float" val="10.18"/>
+						<measure name="restarts" type="float" val="4.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.23"/>
+						<measure name="time" type="float" val="13.36"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="16">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="52096.0"/>
+						<measure name="conflicts" type="float" val="38727.0"/>
+						<measure name="ctime" type="float" val="57.746"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="51.97"/>
+						<measure name="gtime" type="float" val="5.77"/>
+						<measure name="mem" type="float" val="473.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="67.74"/>
+						<measure name="ptime" type="float" val="9.99"/>
+						<measure name="restarts" type="float" val="126.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="51.98"/>
+						<measure name="time" type="float" val="67.74"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="32">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="26963.0"/>
+						<measure name="conflicts" type="float" val="19768.0"/>
+						<measure name="ctime" type="float" val="59.602"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="48.44"/>
+						<measure name="gtime" type="float" val="11.16"/>
+						<measure name="mem" type="float" val="868.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="69.52"/>
+						<measure name="ptime" type="float" val="9.92"/>
+						<measure name="restarts" type="float" val="67.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="48.44"/>
+						<measure name="time" type="float" val="69.52"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="17">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="16827.0"/>
+						<measure name="conflicts" type="float" val="13323.0"/>
+						<measure name="ctime" type="float" val="18.466"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="12.89"/>
+						<measure name="gtime" type="float" val="5.58"/>
+						<measure name="mem" type="float" val="456.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="28.3"/>
+						<measure name="ptime" type="float" val="9.83"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="12.89"/>
+						<measure name="time" type="float" val="28.3"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="25">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="18741.0"/>
+						<measure name="conflicts" type="float" val="13457.0"/>
+						<measure name="ctime" type="float" val="33.786"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="25.25"/>
+						<measure name="gtime" type="float" val="8.53"/>
+						<measure name="mem" type="float" val="689.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="44.57"/>
+						<measure name="ptime" type="float" val="10.78"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="25.26"/>
+						<measure name="time" type="float" val="44.57"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+		<runspec machine="houat" system="memelingo" version="1" benchmark="mapf-suite-x6_y6" setting="allapproaches_mlp-tplp-htcdl">
+			<class id="0">
+				<instance id="24">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="9181.0"/>
+						<measure name="conflicts" type="float" val="7090.0"/>
+						<measure name="ctime" type="float" val="24.863"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="16.65"/>
+						<measure name="gtime" type="float" val="8.2"/>
+						<measure name="mem" type="float" val="663.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="32.64"/>
+						<measure name="ptime" type="float" val="7.78"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="16.66"/>
+						<measure name="time" type="float" val="32.64"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="3">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="51.0"/>
+						<measure name="conflicts" type="float" val="14.0"/>
+						<measure name="ctime" type="float" val="3.166"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="3.15"/>
+						<measure name="mem" type="float" val="252.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="9.65"/>
+						<measure name="ptime" type="float" val="6.48"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="9.65"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="14">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="6507.0"/>
+						<measure name="conflicts" type="float" val="4668.0"/>
+						<measure name="ctime" type="float" val="11.685"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="6.05"/>
+						<measure name="gtime" type="float" val="5.64"/>
+						<measure name="mem" type="float" val="449.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="18.63"/>
+						<measure name="ptime" type="float" val="6.94"/>
+						<measure name="restarts" type="float" val="26.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="6.05"/>
+						<measure name="time" type="float" val="18.63"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="12">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="6507.0"/>
+						<measure name="conflicts" type="float" val="4668.0"/>
+						<measure name="ctime" type="float" val="15.074"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="8.24"/>
+						<measure name="gtime" type="float" val="6.82"/>
+						<measure name="mem" type="float" val="451.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="21.99"/>
+						<measure name="ptime" type="float" val="6.92"/>
+						<measure name="restarts" type="float" val="26.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="8.25"/>
+						<measure name="time" type="float" val="21.99"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="22">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="9181.0"/>
+						<measure name="conflicts" type="float" val="7090.0"/>
+						<measure name="ctime" type="float" val="26.68"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="17.3"/>
+						<measure name="gtime" type="float" val="9.37"/>
+						<measure name="mem" type="float" val="664.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="33.53"/>
+						<measure name="ptime" type="float" val="6.85"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="17.31"/>
+						<measure name="time" type="float" val="33.53"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="27">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="729.0"/>
+						<measure name="conflicts" type="float" val="183.0"/>
+						<measure name="ctime" type="float" val="12.34"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.26"/>
+						<measure name="gtime" type="float" val="12.07"/>
+						<measure name="mem" type="float" val="846.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="19.12"/>
+						<measure name="ptime" type="float" val="6.78"/>
+						<measure name="restarts" type="float" val="1.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.27"/>
+						<measure name="time" type="float" val="19.12"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="34">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="5138.0"/>
+						<measure name="conflicts" type="float" val="3890.0"/>
+						<measure name="ctime" type="float" val="24.395"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="12.51"/>
+						<measure name="gtime" type="float" val="11.88"/>
+						<measure name="mem" type="float" val="844.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="31.51"/>
+						<measure name="ptime" type="float" val="7.12"/>
+						<measure name="restarts" type="float" val="16.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="12.52"/>
+						<measure name="time" type="float" val="31.51"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="8">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="149.0"/>
+						<measure name="conflicts" type="float" val="42.0"/>
+						<measure name="ctime" type="float" val="3.157"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.04"/>
+						<measure name="gtime" type="float" val="3.11"/>
+						<measure name="mem" type="float" val="252.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="9.75"/>
+						<measure name="ptime" type="float" val="6.59"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.05"/>
+						<measure name="time" type="float" val="9.75"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="31">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="5138.0"/>
+						<measure name="conflicts" type="float" val="3890.0"/>
+						<measure name="ctime" type="float" val="24.28"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="12.84"/>
+						<measure name="gtime" type="float" val="11.44"/>
+						<measure name="mem" type="float" val="845.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="31.29"/>
+						<measure name="ptime" type="float" val="7.01"/>
+						<measure name="restarts" type="float" val="16.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="12.84"/>
+						<measure name="time" type="float" val="31.29"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="13">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="6507.0"/>
+						<measure name="conflicts" type="float" val="4668.0"/>
+						<measure name="ctime" type="float" val="12.583"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="5.99"/>
+						<measure name="gtime" type="float" val="6.59"/>
+						<measure name="mem" type="float" val="451.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="19.83"/>
+						<measure name="ptime" type="float" val="7.25"/>
+						<measure name="restarts" type="float" val="26.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="5.99"/>
+						<measure name="time" type="float" val="19.83"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="4">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="51.0"/>
+						<measure name="conflicts" type="float" val="14.0"/>
+						<measure name="ctime" type="float" val="3.266"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="3.25"/>
+						<measure name="mem" type="float" val="252.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="10.25"/>
+						<measure name="ptime" type="float" val="6.98"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="10.25"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="19">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="9181.0"/>
+						<measure name="conflicts" type="float" val="7090.0"/>
+						<measure name="ctime" type="float" val="25.706"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="16.66"/>
+						<measure name="gtime" type="float" val="9.05"/>
+						<measure name="mem" type="float" val="666.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="32.66"/>
+						<measure name="ptime" type="float" val="6.95"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="16.66"/>
+						<measure name="time" type="float" val="32.66"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="10">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="6507.0"/>
+						<measure name="conflicts" type="float" val="4668.0"/>
+						<measure name="ctime" type="float" val="13.309"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="7.19"/>
+						<measure name="gtime" type="float" val="6.12"/>
+						<measure name="mem" type="float" val="451.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="20.33"/>
+						<measure name="ptime" type="float" val="7.02"/>
+						<measure name="restarts" type="float" val="26.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="7.19"/>
+						<measure name="time" type="float" val="20.33"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="5">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="51.0"/>
+						<measure name="conflicts" type="float" val="14.0"/>
+						<measure name="ctime" type="float" val="3.281"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="3.26"/>
+						<measure name="mem" type="float" val="251.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="10.34"/>
+						<measure name="ptime" type="float" val="7.06"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="10.34"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="15">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="6507.0"/>
+						<measure name="conflicts" type="float" val="4668.0"/>
+						<measure name="ctime" type="float" val="13.343"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="6.87"/>
+						<measure name="gtime" type="float" val="6.47"/>
+						<measure name="mem" type="float" val="451.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="20.11"/>
+						<measure name="ptime" type="float" val="6.77"/>
+						<measure name="restarts" type="float" val="26.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="6.87"/>
+						<measure name="time" type="float" val="20.11"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="9">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="206.0"/>
+						<measure name="conflicts" type="float" val="79.0"/>
+						<measure name="ctime" type="float" val="6.548"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.07"/>
+						<measure name="gtime" type="float" val="6.47"/>
+						<measure name="mem" type="float" val="449.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="13.4"/>
+						<measure name="ptime" type="float" val="6.85"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.08"/>
+						<measure name="time" type="float" val="13.4"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="0">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="92.0"/>
+						<measure name="conflicts" type="float" val="26.0"/>
+						<measure name="ctime" type="float" val="2.684"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="2.66"/>
+						<measure name="mem" type="float" val="256.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="9.67"/>
+						<measure name="ptime" type="float" val="6.99"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="9.67"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="33">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="5138.0"/>
+						<measure name="conflicts" type="float" val="3890.0"/>
+						<measure name="ctime" type="float" val="25.463"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="12.98"/>
+						<measure name="gtime" type="float" val="12.47"/>
+						<measure name="mem" type="float" val="847.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="32.62"/>
+						<measure name="ptime" type="float" val="7.16"/>
+						<measure name="restarts" type="float" val="16.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="12.99"/>
+						<measure name="time" type="float" val="32.62"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="2">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="51.0"/>
+						<measure name="conflicts" type="float" val="14.0"/>
+						<measure name="ctime" type="float" val="3.288"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="3.27"/>
+						<measure name="mem" type="float" val="256.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="9.98"/>
+						<measure name="ptime" type="float" val="6.69"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="9.98"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="7">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="51.0"/>
+						<measure name="conflicts" type="float" val="14.0"/>
+						<measure name="ctime" type="float" val="2.928"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="2.91"/>
+						<measure name="mem" type="float" val="255.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="10.32"/>
+						<measure name="ptime" type="float" val="7.39"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="10.32"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="29">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="5138.0"/>
+						<measure name="conflicts" type="float" val="3890.0"/>
+						<measure name="ctime" type="float" val="24.84"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="12.6"/>
+						<measure name="gtime" type="float" val="12.23"/>
+						<measure name="mem" type="float" val="844.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="31.88"/>
+						<measure name="ptime" type="float" val="7.04"/>
+						<measure name="restarts" type="float" val="16.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="12.61"/>
+						<measure name="time" type="float" val="31.88"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="11">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="6507.0"/>
+						<measure name="conflicts" type="float" val="4668.0"/>
+						<measure name="ctime" type="float" val="12.984"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="6.79"/>
+						<measure name="gtime" type="float" val="6.19"/>
+						<measure name="mem" type="float" val="451.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="20.04"/>
+						<measure name="ptime" type="float" val="7.06"/>
+						<measure name="restarts" type="float" val="26.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="6.79"/>
+						<measure name="time" type="float" val="20.04"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="18">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="512.0"/>
+						<measure name="conflicts" type="float" val="161.0"/>
+						<measure name="ctime" type="float" val="9.417"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.28"/>
+						<measure name="gtime" type="float" val="9.14"/>
+						<measure name="mem" type="float" val="666.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="16.77"/>
+						<measure name="ptime" type="float" val="7.35"/>
+						<measure name="restarts" type="float" val="1.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.28"/>
+						<measure name="time" type="float" val="16.77"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="26">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="17214.0"/>
+						<measure name="conflicts" type="float" val="13461.0"/>
+						<measure name="ctime" type="float" val="42.823"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="33.08"/>
+						<measure name="gtime" type="float" val="9.73"/>
+						<measure name="mem" type="float" val="663.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="49.76"/>
+						<measure name="ptime" type="float" val="6.94"/>
+						<measure name="restarts" type="float" val="61.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="33.09"/>
+						<measure name="time" type="float" val="49.76"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="28">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="5138.0"/>
+						<measure name="conflicts" type="float" val="3890.0"/>
+						<measure name="ctime" type="float" val="24.974"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="12.64"/>
+						<measure name="gtime" type="float" val="12.32"/>
+						<measure name="mem" type="float" val="846.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="31.74"/>
+						<measure name="ptime" type="float" val="6.77"/>
+						<measure name="restarts" type="float" val="16.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="12.65"/>
+						<measure name="time" type="float" val="31.74"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="6">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="51.0"/>
+						<measure name="conflicts" type="float" val="14.0"/>
+						<measure name="ctime" type="float" val="2.837"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="2.82"/>
+						<measure name="mem" type="float" val="250.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="10.17"/>
+						<measure name="ptime" type="float" val="7.33"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="10.17"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="21">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="9181.0"/>
+						<measure name="conflicts" type="float" val="7090.0"/>
+						<measure name="ctime" type="float" val="24.954"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="15.84"/>
+						<measure name="gtime" type="float" val="9.1"/>
+						<measure name="mem" type="float" val="663.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="31.83"/>
+						<measure name="ptime" type="float" val="6.88"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="15.85"/>
+						<measure name="time" type="float" val="31.83"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="20">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="9181.0"/>
+						<measure name="conflicts" type="float" val="7090.0"/>
+						<measure name="ctime" type="float" val="25.892"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="16.59"/>
+						<measure name="gtime" type="float" val="9.3"/>
+						<measure name="mem" type="float" val="668.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="32.87"/>
+						<measure name="ptime" type="float" val="6.98"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="16.59"/>
+						<measure name="time" type="float" val="32.87"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="30">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="5138.0"/>
+						<measure name="conflicts" type="float" val="3890.0"/>
+						<measure name="ctime" type="float" val="22.96"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="11.83"/>
+						<measure name="gtime" type="float" val="11.12"/>
+						<measure name="mem" type="float" val="841.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="30.12"/>
+						<measure name="ptime" type="float" val="7.16"/>
+						<measure name="restarts" type="float" val="16.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="11.84"/>
+						<measure name="time" type="float" val="30.12"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="23">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="9181.0"/>
+						<measure name="conflicts" type="float" val="7090.0"/>
+						<measure name="ctime" type="float" val="25.45"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="16.24"/>
+						<measure name="gtime" type="float" val="9.21"/>
+						<measure name="mem" type="float" val="665.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="32.37"/>
+						<measure name="ptime" type="float" val="6.92"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="16.24"/>
+						<measure name="time" type="float" val="32.37"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="35">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="17139.0"/>
+						<measure name="conflicts" type="float" val="13183.0"/>
+						<measure name="ctime" type="float" val="51.08"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="38.34"/>
+						<measure name="gtime" type="float" val="12.73"/>
+						<measure name="mem" type="float" val="847.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="58.01"/>
+						<measure name="ptime" type="float" val="6.93"/>
+						<measure name="restarts" type="float" val="59.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="38.35"/>
+						<measure name="time" type="float" val="58.01"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="1">
+					<run number="1">
+						<measure name="atoms" type="float" val="300424.0"/>
+						<measure name="choices" type="float" val="51.0"/>
+						<measure name="conflicts" type="float" val="14.0"/>
+						<measure name="ctime" type="float" val="3.197"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.02"/>
+						<measure name="gtime" type="float" val="3.18"/>
+						<measure name="mem" type="float" val="252.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="9.76"/>
+						<measure name="ptime" type="float" val="6.56"/>
+						<measure name="restarts" type="float" val="0.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="392635.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.02"/>
+						<measure name="time" type="float" val="9.76"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="16">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="6507.0"/>
+						<measure name="conflicts" type="float" val="4668.0"/>
+						<measure name="ctime" type="float" val="10.945"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="5.71"/>
+						<measure name="gtime" type="float" val="5.24"/>
+						<measure name="mem" type="float" val="450.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="17.27"/>
+						<measure name="ptime" type="float" val="6.32"/>
+						<measure name="restarts" type="float" val="26.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="5.71"/>
+						<measure name="time" type="float" val="17.27"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="32">
+					<run number="1">
+						<measure name="atoms" type="float" val="1143172.0"/>
+						<measure name="choices" type="float" val="5138.0"/>
+						<measure name="conflicts" type="float" val="3890.0"/>
+						<measure name="ctime" type="float" val="23.363"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="12.58"/>
+						<measure name="gtime" type="float" val="10.77"/>
+						<measure name="mem" type="float" val="845.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="31.05"/>
+						<measure name="ptime" type="float" val="7.69"/>
+						<measure name="restarts" type="float" val="16.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1506938.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="12.59"/>
+						<measure name="time" type="float" val="31.05"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="17">
+					<run number="1">
+						<measure name="atoms" type="float" val="580080.0"/>
+						<measure name="choices" type="float" val="946.0"/>
+						<measure name="conflicts" type="float" val="558.0"/>
+						<measure name="ctime" type="float" val="6.163"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="0.65"/>
+						<measure name="gtime" type="float" val="5.51"/>
+						<measure name="mem" type="float" val="451.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="13.44"/>
+						<measure name="ptime" type="float" val="7.28"/>
+						<measure name="restarts" type="float" val="3.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="762450.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="0.65"/>
+						<measure name="time" type="float" val="13.44"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+				<instance id="25">
+					<run number="1">
+						<measure name="atoms" type="float" val="860996.0"/>
+						<measure name="choices" type="float" val="9181.0"/>
+						<measure name="conflicts" type="float" val="7090.0"/>
+						<measure name="ctime" type="float" val="23.223"/>
+						<measure name="error" type="float" val="0"/>
+						<measure name="fmtime" type="float" val="14.72"/>
+						<measure name="gtime" type="float" val="8.49"/>
+						<measure name="mem" type="float" val="665.0"/>
+						<measure name="memout" type="float" val="0"/>
+						<measure name="models" type="float" val="1.0"/>
+						<measure name="par2" type="float" val="30.61"/>
+						<measure name="ptime" type="float" val="7.39"/>
+						<measure name="restarts" type="float" val="30.0"/>
+						<measure name="rstatus" type="string" val="ok"/>
+						<measure name="rules" type="float" val="1133884.0"/>
+						<measure name="status" type="string" val="SATISFIABLE"/>
+						<measure name="stime" type="float" val="14.73"/>
+						<measure name="time" type="float" val="30.61"/>
+						<measure name="timeout" type="float" val="0"/>
+					</run>
+				</instance>
+			</class>
+		</runspec>
+	</project>
+</result>

@@ -894,7 +894,7 @@ def plot_multiple_instances_by_row(
 
 def plot_dentist_plain():
     # Example usage for dentist instance
-    path = f"resultsv9/dentist-plain.xlsx"
+    path = f"resultsv10/dentist-plain.xlsx"
     instance_prefix = "size"
     save_path = f"plots/dentist_plain_factor.pdf"
 
@@ -925,7 +925,7 @@ def plot_dentist_plain():
 
 def plot_dentist_general():
     # Example usage for dentist instance
-    path = f"resultsv9/dentist-general.xlsx"
+    path = f"resultsv10/dentist-general.xlsx"
     instance_prefix = "size"
     save_path = f"plots/dentist_general_factor.pdf"
 
@@ -950,7 +950,7 @@ def plot_dentist_general():
 
 
 def plot_jobshop_6():
-    path = "resultsv9/jobshop.xlsx"
+    path = "resultsv10/jobshop.xlsx"
     instance_prefix = "ft10"
     save_path = f"plots/{instance_prefix}_factor.pdf"
 
@@ -991,7 +991,7 @@ def plot_jobshop_6():
 
 
 def plot_all_mapf_empty():
-    path = "resultsv9/mapf.xlsx"
+    path = "resultsv10/mapf.xlsx"
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
@@ -1002,30 +1002,14 @@ def plot_all_mapf_empty():
     # Generate subplot titles
     subplot_titles = [f"Agents = {get_agents(inst)}" for inst in instances]
 
-    # plot_multiple_instances_by_row(
-    #     instances,
-    #     ["ctime"],
-    #     df_instances,
-    #     grouping_function=get_factor,
-    #     y="Time (s)",
-    #     x="Factor",
-    #     thick_attr="stime",
-    #     figsize=(12, 3),  # 4 subplots × 3 inches each
-    #     save_path=save_path,
-    #     dpi=300,
-    #     # group_skip={30, 35, 40, 45, 50},
-    #     # approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
-    #     subplot_titles=subplot_titles,
-    # )
-
     plot_multiple_instances_by_row(
         instances,
-        ["rules"],
+        ["ctime"],
         df_instances,
         grouping_function=get_factor,
-        y="Rules",
+        y="Time (s)",
         x="Factor",
-        # thick_attr="stime",
+        thick_attr="stime",
         figsize=(12, 3),  # 4 subplots × 3 inches each
         save_path=save_path,
         dpi=300,
@@ -1034,9 +1018,25 @@ def plot_all_mapf_empty():
         subplot_titles=subplot_titles,
     )
 
+    # plot_multiple_instances_by_row(
+    #     instances,
+    #     ["rules"],
+    #     df_instances,
+    #     grouping_function=get_factor,
+    #     y="Rules",
+    #     x="Factor",
+    #     # thick_attr="stime",
+    #     figsize=(12, 3),  # 4 subplots × 3 inches each
+    #     save_path=save_path,
+    #     dpi=300,
+    #     # group_skip={30, 35, 40, 45, 50},
+    #     # approaches_skipped=["ht"],  # Skip clingo-dl for better visibility
+    #     subplot_titles=subplot_titles,
+    # )
+
 
 def plot_mapf_8():
-    path = "resultsv9/mapf-8.xlsx"
+    path = "resultsv10/mapf-8.xlsx"
     df = load_xlsx(path)
     df_instances = load_and_clean(df)
 
@@ -1063,6 +1063,6 @@ def plot_mapf_8():
 if __name__ == "__main__":
     # plot_dentist_general()
     # plot_dentist_plain()
-    plot_jobshop_6()
+    # plot_jobshop_6()
     # plot_all_mapf_empty()
-    # plot_mapf_8()
+    plot_mapf_8()
