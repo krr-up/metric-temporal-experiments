@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 30.357s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpc__rlmcc.lp']
+t(0,0) t(1,1) t(2,20) t(3,22) t(4,41) t(5,52) t(6,53) t(7,54) t(8,55) t(9,56) t(10,57) t(11,60) t(12,61) t(13,62) t(14,63) t(15,65) t(16,66) t(17,67) t(18,68) t(19,71) true(at(3,(1,8)),0) true(at(2,(7,8)),0) true(at(1,(5,7)),0) true(move(1,(5,7),(6,7)),0) true(move(2,(7,8),(7,7)),5) true(move(3,(1,8),(1,7)),5) true(move(1,(6,7),(7,7)),6) true(move(1,(7,7),(7,6)),9) true(move(3,(1,7),(2,7)),9) true(move(2,(7,7),(6,7)),10) true(move(3,(2,7),(3,7)),10) true(move(1,(7,6),(7,5)),12) true(move(2,(6,7),(5,7)),12) true(move(3,(3,7),(4,7)),13) true(move(1,(7,5),(7,4)),14) true(move(2,(5,7),(4,7)),15) true(move(3,(4,7),(5,7)),15) true(move(3,(5,7),(6,7)),17) true(move(1,(7,4),(8,4)),18) true(move(3,(6,7),(7,7)),18) true(at(3,(1,8)),1) true(at(2,(7,8)),1) true(at(3,(4,7)),14) true(at(3,(4,7)),15) true(at(3,(7,7)),19) true(at(3,(1,8)),2) true(at(3,(1,8)),3) true(at(3,(1,8)),4) true(at(3,(1,8)),5) true(at(3,(6,7)),18) true(at(3,(5,7)),17) true(at(3,(3,7)),11) true(at(3,(3,7)),12) true(at(3,(3,7)),13) true(at(3,(2,7)),10) true(at(3,(1,7)),9) true(at(2,(4,7)),16) true(at(2,(4,7)),17) true(at(2,(4,7)),18) true(at(2,(4,7)),19) true(at(2,(7,8)),2) true(at(2,(7,8)),3) true(at(2,(7,8)),4) true(at(2,(7,8)),5) true(at(2,(7,7)),10) true(at(2,(6,7)),12) true(at(2,(5,7)),13) true(at(2,(5,7)),14) true(at(2,(5,7)),15) true(at(1,(8,4)),19) true(at(1,(7,7)),9) true(at(1,(7,6)),12) true(at(1,(7,5)),14) true(at(1,(6,7)),1) true(at(1,(6,7)),2) true(at(1,(6,7)),3) true(at(1,(6,7)),4) true(at(1,(6,7)),5) true(at(1,(6,7)),6) true(at(1,(7,4)),18)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 30.380s (Solving: 3.20s 1st Model: 3.18s Unsat: 0.00s)
+CPU Time     : 30.252s
+
+Choices      : 26313   
+Conflicts    : 467      (Analyzed: 467)
+Restarts     : 3        (Average: 155.67 Last: 69 Blocked: 0)
+Stab. Tests  : 204      (Full: 102 Partial: 102)
+Model-Level  : 772.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 3199     (Deleted: 0)
+  Binary     : 7        (Ratio:   0.22%)
+  Ternary    : 0        (Ratio:   0.00%)
+  Conflict   : 467      (Average Length: 2521.7 Ratio:  14.60%) 
+  Loop       : 2732     (Average Length:   49.7 Ratio:  85.40%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 467      (Average: 50.82 Max: 1428 Sum:  23731)
+  Executed   : 467      (Average: 50.82 Max: 1428 Sum:  23731 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 9586915  (Original: 9525597)
+Atoms        : 699992  
+Disjunctions : 3534     (Original: 5146)
+Bodies       : 2454336  (Original: 2354330)
+Equivalences : 623657   (Atom=Atom: 134156 Body=Body: 103169 Other: 386332)
+Tight        : No       (SCCs: 102 Non-Hcfs: 102 Nodes: 149832 Gammas: 38688)
+Variables    : 1415205  (Eliminated:    0 Frozen: 102296)
+Constraints  : 14795304 (Binary:  90.5% Ternary:   8.8% Other:   0.7%)
+

@@ -1,0 +1,68 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node8
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		mlp-tplp-ht
+[runlim] argv[2]:		-c
+[runlim] argv[3]:		lambda=45
+[runlim] argv[4]:		-c
+[runlim] argv[5]:		v=150
+[runlim] argv[6]:		--models=1
+[runlim] argv[7]:		--project=show
+[runlim] argv[8]:		--stats
+[runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/warehouse_x8_y8_a3.lp
+[runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf_javier.lp
+[runlim] start:			Thu Mar 12 03:24:27 2026
+[runlim] child:			27976
+[runlim] sample:		3.84 time, 10.01 real, 416 MB, 1.99 load
+[runlim] sample:		13.84 time, 20.01 real, 1255 MB, 1.99 load
+[runlim] sample:		23.84 time, 30.01 real, 1417 MB, 1.99 load
+[runlim] sample:		33.84 time, 40.01 real, 1922 MB, 2.07 load
+[runlim] sample:		43.85 time, 50.01 real, 1960 MB, 2.06 load
+[runlim] sample:		53.84 time, 60.01 real, 1997 MB, 2.05 load
+[runlim] sample:		63.84 time, 70.01 real, 2611 MB, 2.04 load
+[runlim] sample:		73.84 time, 80.01 real, 2908 MB, 2.04 load
+[runlim] sample:		83.85 time, 90.01 real, 3148 MB, 2.03 load
+[runlim] sample:		93.85 time, 100.01 real, 3590 MB, 2.02 load
+[runlim] sample:		103.84 time, 110.01 real, 3645 MB, 2.02 load
+[runlim] sample:		113.84 time, 120.01 real, 4156 MB, 2.02 load
+[runlim] sample:		123.84 time, 130.01 real, 4523 MB, 2.01 load
+[runlim] sample:		133.84 time, 140.01 real, 4523 MB, 2.01 load
+[runlim] sample:		143.83 time, 150.01 real, 4509 MB, 1.93 load
+[runlim] sample:		153.83 time, 160.01 real, 4511 MB, 1.94 load
+[runlim] sample:		163.83 time, 170.01 real, 4511 MB, 1.95 load
+[runlim] sample:		173.83 time, 180.01 real, 4511 MB, 1.96 load
+[runlim] sample:		183.83 time, 190.01 real, 4512 MB, 1.96 load
+[runlim] sample:		193.83 time, 200.01 real, 4512 MB, 1.97 load
+[runlim] sample:		203.83 time, 210.01 real, 4512 MB, 1.98 load
+[runlim] sample:		213.83 time, 220.01 real, 4512 MB, 1.98 load
+[runlim] sample:		223.83 time, 230.01 real, 4512 MB, 1.98 load
+[runlim] sample:		233.83 time, 240.01 real, 4512 MB, 1.99 load
+[runlim] sample:		243.83 time, 250.01 real, 4512 MB, 1.99 load
+[runlim] sample:		253.83 time, 260.01 real, 4611 MB, 1.99 load
+[runlim] sample:		263.83 time, 270.01 real, 4853 MB, 1.99 load
+[runlim] sample:		273.83 time, 280.01 real, 4853 MB, 1.99 load
+[runlim] sample:		283.83 time, 290.01 real, 6866 MB, 2.07 load
+[runlim] sample:		293.83 time, 300.01 real, 7572 MB, 2.06 load
+[runlim] sample:		303.83 time, 310.01 real, 8114 MB, 2.05 load
+[runlim] sample:		313.83 time, 320.01 real, 8193 MB, 2.04 load
+[runlim] sample:		323.83 time, 330.01 real, 8193 MB, 2.03 load
+[runlim] sample:		333.83 time, 340.01 real, 8193 MB, 2.03 load
+[runlim] sample:		343.83 time, 350.01 real, 8193 MB, 2.02 load
+[runlim] sample:		353.83 time, 360.01 real, 8193 MB, 2.02 load
+[runlim] sample:		363.83 time, 370.01 real, 8193 MB, 2.02 load
+[runlim] sample:		373.83 time, 380.01 real, 8193 MB, 2.01 load
+[runlim] sample:		383.83 time, 390.01 real, 8193 MB, 2.01 load
+[runlim] sample:		393.83 time, 400.01 real, 8193 MB, 2.01 load
+[runlim] end:			Thu Mar 12 03:31:10 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			403.09 seconds
+[runlim] time:			396.83 seconds
+[runlim] space:			8252 MB
+[runlim] load:			2.08 maximum
+[runlim] samples:		4031

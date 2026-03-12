@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...examples/mapf/instances/x6_y6_a1_f1.lp ...
+Solving...
+Answer: 1 (Time: 2.471s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpl0l9v10s.lp']
+t(0,0) t(1,3) t(2,4) t(3,5) t(4,7) t(5,8) t(6,9) t(7,10) t(8,11) t(9,12) true(at(1,(1,1)),0) true(move(1,(1,1),(1,2)),1) true(move(1,(1,2),(1,3)),3) true(move(1,(1,3),(2,3)),4) true(at(1,(1,1)),1) true(at(1,(2,3)),9) true(at(1,(1,3)),4) true(at(1,(1,2)),3)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 2.472s (Solving: 0.02s 1st Model: 0.02s Unsat: 0.00s)
+CPU Time     : 2.300s
+
+Choices      : 99      
+Conflicts    : 21       (Analyzed: 21)
+Restarts     : 0       
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 27.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 251      (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 0        (Ratio:   0.00%)
+  Conflict   : 21       (Average Length:   17.0 Ratio:   8.37%) 
+  Loop       : 230      (Average Length:   33.2 Ratio:  91.63%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 21       (Average:  3.48 Max:  18 Sum:     73)
+  Executed   : 21       (Average:  3.48 Max:  18 Sum:     73 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 420301   (Original: 420078)
+Atoms        : 299998  
+Disjunctions : 846      (Original: 923)
+Bodies       : 334241   (Original: 329036)
+Equivalences : 154174   (Atom=Atom: 40407 Body=Body: 29257 Other: 84510)
+Tight        : No       (SCCs: 36 Non-Hcfs: 36 Nodes: 21534 Gammas: 4982)
+Variables    : 22091    (Eliminated:    0 Frozen: 14937)
+Constraints  : 170653   (Binary:  87.6% Ternary:   8.3% Other:   4.0%)
+

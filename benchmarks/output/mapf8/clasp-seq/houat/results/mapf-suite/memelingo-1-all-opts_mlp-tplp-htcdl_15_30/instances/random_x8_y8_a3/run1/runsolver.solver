@@ -1,0 +1,58 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 54.789s (Solving: 40.23s 1st Model: 0.00s Unsat: 40.23s)
+CPU Time     : 54.616s
+
+Choices      : 28648   
+Conflicts    : 18973    (Analyzed: 18972)
+Restarts     : 77       (Average: 246.39 Last: 446 Blocked: 0)
+Stab. Tests  : 144      (Full: 0 Partial: 144)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 93647    (Deleted: 77656)
+  Binary     : 2163     (Ratio:   2.31%)
+  Ternary    : 1597     (Ratio:   1.71%)
+  Conflict   : 18972    (Average Length:  203.8 Ratio:  20.26%) 
+  Loop       : 67770    (Average Length:   19.6 Ratio:  72.37%) 
+  Other      : 6905     (Average Length:    4.1 Ratio:   7.37%) 
+Backjumps    : 18972    (Average:  1.50 Max:  70 Sum:  28533)
+  Executed   : 18642    (Average:  1.49 Max:  70 Sum:  28203 Ratio:  98.84%)
+  Bounded    : 330      (Average:  1.00 Max:   1 Sum:    330 Ratio:   1.16%)
+
+Rules        : 2172450 
+Atoms        : 1609746 
+Disjunctions : 4494     (Original: 4494)
+Bodies       : 1943894  (Original: 1905703)
+Equivalences : 767469   (Atom=Atom: 175379 Body=Body: 134665 Other: 457425)
+Tight        : No       (SCCs: 144 Non-Hcfs: 144 Nodes: 155211 Gammas: 38191)
+Variables    : 144598   (Eliminated:    0 Frozen: 106407)
+Constraints  : 1093927  (Binary:  88.5% Ternary:   7.5% Other:   4.0%)
+
+DifferenceLogic
+  Time init(s): 0.00425676
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 2341
+  Variables  : 16
+  [Thread 0]
+    Propagation(s): 2.26575
+    Dijkstra(s): 0.39171
+    Undo(s)  : 0.0196509
+    True edges: 178568
+    False edges: 9891
+    False edges (inverse): 320
+    False edges (partial): 1256
+    False edges (partial+): 18
+    Edges added: 108429
+    Edges skipped: 87325
+    Edges propagated: 108102
+    Cost consistency: 153500
+    Cost forward: 7.48101e+06
+    Cost backward: 8.37548e+06
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpq8awwboj.lp']

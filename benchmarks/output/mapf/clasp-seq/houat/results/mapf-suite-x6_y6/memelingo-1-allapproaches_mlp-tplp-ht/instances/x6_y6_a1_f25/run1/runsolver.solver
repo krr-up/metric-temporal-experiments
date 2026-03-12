@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...xamples/mapf/instances/x6_y6_a1_f25.lp ...
+Solving...
+Answer: 1 (Time: 163.226s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpmsi2uy9e.lp']
+t(0,0) t(1,123) t(2,173) t(3,223) t(4,226) t(5,267) t(6,292) t(7,301) t(8,346) t(9,348) true(at(1,(1,1)),0) true(move(1,(1,1),(1,2)),1) true(move(1,(1,2),(1,3)),2) true(move(1,(1,3),(2,3)),3) true(at(1,(1,1)),1) true(at(1,(2,3)),9) true(at(1,(1,3)),3) true(at(1,(1,2)),2)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 163.399s (Solving: 72.53s 1st Model: 72.35s Unsat: 0.00s)
+CPU Time     : 163.233s
+
+Choices      : 699087  
+Conflicts    : 4913     (Analyzed: 4913)
+Restarts     : 27       (Average: 181.96 Last: 21 Blocked: 0)
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 159779.0
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 6625     (Deleted: 3447)
+  Binary     : 23       (Ratio:   0.35%)
+  Ternary    : 27       (Ratio:   0.41%)
+  Conflict   : 4913     (Average Length: 45241.4 Ratio:  74.16%) 
+  Loop       : 1712     (Average Length:   51.6 Ratio:  25.84%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 4913     (Average: 80.48 Max: 87829 Sum: 395404)
+  Executed   : 4912     (Average: 80.48 Max: 87829 Sum: 395403 Ratio: 100.00%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.00%)
+
+Rules        : 34924446 (Original: 34383863)
+Atoms        : 306478  
+Disjunctions : 846      (Original: 3803)
+Bodies       : 6448661  (Original: 5903096)
+Equivalences : 181162   (Atom=Atom: 43287 Body=Body: 32137 Other: 105738)
+Tight        : No       (SCCs: 36 Non-Hcfs: 36 Nodes: 21534 Gammas: 4982)
+Variables    : 6017001  (Eliminated:    0 Frozen: 18183)
+Constraints  : 180311288 (Binary:  96.7% Ternary:   3.0% Other:   0.3%)
+

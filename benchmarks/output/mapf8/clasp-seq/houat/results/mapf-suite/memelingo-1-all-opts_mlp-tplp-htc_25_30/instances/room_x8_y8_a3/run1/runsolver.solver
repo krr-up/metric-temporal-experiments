@@ -1,0 +1,67 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 38.860s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmprisz7azc.lp']
+true(at(1,(5,1)),24) true(at(1,(6,1)),23) true(at(1,(7,1)),19) true(at(1,(7,2)),1) true(at(1,(7,2)),2) true(at(1,(7,2)),3) true(at(1,(7,2)),10) true(at(1,(7,2)),18) true(at(1,(7,3)),0) true(at(1,(7,3)),13) true(at(1,(7,3)),14) true(at(1,(7,3)),15) true(at(1,(7,3)),16) true(at(1,(7,3)),17) true(at(1,(8,2)),7) true(at(1,(8,2)),8) true(at(1,(8,2)),9) true(at(2,(1,7)),4) true(at(2,(1,7)),5) true(at(2,(1,8)),0) true(at(2,(1,8)),1) true(at(2,(2,5)),17) true(at(2,(2,6)),10) true(at(2,(2,6)),11) true(at(2,(2,6)),12) true(at(2,(2,6)),13) true(at(2,(2,6)),14) true(at(2,(2,6)),15) true(at(2,(2,7)),6) true(at(2,(2,7)),7) true(at(2,(3,4)),24) true(at(2,(3,5)),18) true(at(2,(3,5)),19) true(at(2,(3,5)),20) true(at(3,(4,2)),7) true(at(3,(4,3)),8) true(at(3,(4,3)),9) true(at(3,(4,3)),24) true(at(3,(4,4)),11) true(at(3,(4,4)),20) true(at(3,(4,5)),13) true(at(3,(4,5)),17) true(at(3,(5,1)),1) true(at(3,(5,2)),3) true(at(3,(5,2)),4) true(at(3,(5,2)),5) true(at(3,(5,5)),15) true(at(3,(6,1)),0) true(move(1,(6,1),(5,1)),23) true(move(1,(7,1),(6,1)),19) true(move(1,(7,2),(7,1)),18) true(move(1,(7,2),(7,3)),10) true(move(1,(7,2),(8,2)),3) true(move(1,(7,3),(7,2)),0) true(move(1,(7,3),(7,2)),17) true(move(1,(8,2),(7,2)),9) true(move(2,(1,7),(2,7)),5) true(move(2,(1,8),(1,7)),1) true(move(2,(2,5),(3,5)),17) true(move(2,(2,6),(2,5)),15) true(move(2,(2,7),(2,6)),7) true(move(2,(3,5),(3,4)),20) true(move(3,(4,2),(4,3)),7) true(move(3,(4,3),(4,4)),9) true(move(3,(4,4),(4,3)),20) true(move(3,(4,4),(4,5)),11) true(move(3,(4,5),(4,4)),17) true(move(3,(4,5),(5,5)),13) true(move(3,(5,1),(5,2)),1) true(move(3,(5,2),(4,2)),5) true(move(3,(5,5),(4,5)),15) true(move(3,(6,1),(5,1)),0)
+Assignment:
+t(0)=0 t(1)=1 t(2)=3 t(3)=5 t(4)=6 t(5)=7 t(6)=9 t(7)=10 t(8)=11 t(9)=12 t(10)=13 t(11)=15 t(12)=16 t(13)=17 t(14)=18 t(15)=20 t(16)=21 t(17)=22 t(18)=23 t(19)=24 t(20)=25 t(21)=27 t(22)=28 t(23)=29 t(24)=30
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 38.877s (Solving: 3.30s 1st Model: 3.28s Unsat: 0.00s)
+CPU Time     : 38.731s
+
+Choices      : 34438   
+Conflicts    : 394      (Analyzed: 394)
+Restarts     : 3        (Average: 131.33 Last: 3 Blocked: 0)
+Stab. Tests  : 318      (Full: 159 Partial: 159)
+Model-Level  : 6803.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 11206    (Deleted: 0)
+  Binary     : 98       (Ratio:   0.87%)
+  Ternary    : 171      (Ratio:   1.53%)
+  Conflict   : 394      (Average Length:  159.7 Ratio:   3.52%) 
+  Loop       : 10806    (Average Length:   40.4 Ratio:  96.43%) 
+  Other      : 6        (Average Length:    2.0 Ratio:   0.05%) 
+Backjumps    : 394      (Average: 65.84 Max: 7082 Sum:  25939)
+  Executed   : 394      (Average: 65.84 Max: 7082 Sum:  25939 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 4782082 
+Atoms        : 3433348 
+Disjunctions : 8856     (Original: 8856)
+Bodies       : 4440514  (Original: 4320970)
+Equivalences : 1622475  (Atom=Atom: 338100 Body=Body: 260099 Other: 1024276)
+Tight        : No       (SCCs: 159 Non-Hcfs: 159 Nodes: 437290 Gammas: 119544)
+Variables    : 418730   (Eliminated:    0 Frozen: 299186)
+Constraints  : 2218713  (Binary:  86.5% Ternary:   7.7% Other:   5.8%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.140366
+    Simplify : 0.0275232
+    Translate: 0.025902
+  Problem
+    Constraints: 0
+    Variables: 25
+    Clauses  : 86167
+    Literals : 420
+  Translate
+    Constraints removed: 7174
+    Constraints added: 0
+    Clauses  : 85326
+    Weight constraints: 9
+    Literals : 420
+  [Thread 0]
+    Time in seconds
+      Total  : 0.0227518
+      Propagation: 0.0211226
+      Check  : 0.00149907
+      Undo   : 0.000130143
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

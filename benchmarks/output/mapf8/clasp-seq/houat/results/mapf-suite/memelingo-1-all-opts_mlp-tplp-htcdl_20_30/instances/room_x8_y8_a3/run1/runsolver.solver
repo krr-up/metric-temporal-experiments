@@ -1,0 +1,63 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 38.117s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpkvooi9wi.lp']
+true(at(1,(5,1)),19) true(at(1,(6,1)),17) true(at(1,(6,1)),18) true(at(1,(7,1)),14) true(at(1,(7,2)),13) true(at(1,(7,3)),0) true(at(1,(8,2)),12) true(at(1,(8,3)),2) true(at(1,(8,3)),11) true(at(1,(8,4)),5) true(at(1,(8,4)),6) true(at(1,(8,4)),7) true(at(1,(8,4)),8) true(at(2,(1,8)),0) true(at(2,(2,4)),18) true(at(2,(2,5)),16) true(at(2,(2,6)),15) true(at(2,(2,7)),9) true(at(2,(2,7)),10) true(at(2,(2,7)),11) true(at(2,(2,7)),12) true(at(2,(2,8)),3) true(at(2,(2,8)),4) true(at(2,(2,8)),5) true(at(2,(2,8)),6) true(at(2,(3,4)),19) true(at(3,(4,1)),3) true(at(3,(4,1)),4) true(at(3,(4,1)),5) true(at(3,(4,2)),6) true(at(3,(4,2)),12) true(at(3,(4,2)),14) true(at(3,(4,2)),15) true(at(3,(4,2)),18) true(at(3,(4,3)),7) true(at(3,(4,3)),13) true(at(3,(4,3)),19) true(at(3,(5,1)),1) true(at(3,(5,2)),10) true(at(3,(5,2)),17) true(at(3,(5,3)),9) true(at(3,(6,1)),0) true(move(1,(6,1),(5,1)),18) true(move(1,(7,1),(6,1)),14) true(move(1,(7,2),(7,1)),13) true(move(1,(7,3),(8,3)),0) true(move(1,(8,2),(7,2)),12) true(move(1,(8,3),(8,2)),11) true(move(1,(8,3),(8,4)),2) true(move(1,(8,4),(8,3)),8) true(move(2,(1,8),(2,8)),0) true(move(2,(2,4),(3,4)),18) true(move(2,(2,5),(2,4)),16) true(move(2,(2,6),(2,5)),15) true(move(2,(2,7),(2,6)),12) true(move(2,(2,8),(2,7)),6) true(move(3,(4,1),(4,2)),5) true(move(3,(4,2),(4,3)),6) true(move(3,(4,2),(4,3)),12) true(move(3,(4,2),(4,3)),18) true(move(3,(4,2),(5,2)),15) true(move(3,(4,3),(4,2)),13) true(move(3,(4,3),(5,3)),7) true(move(3,(5,1),(4,1)),1) true(move(3,(5,2),(4,2)),10) true(move(3,(5,2),(4,2)),17) true(move(3,(5,3),(5,2)),9) true(move(3,(6,1),(5,1)),0)
+Assignment:
+t(0)=0 t(1)=1 t(2)=2 t(3)=3 t(4)=4 t(5)=5 t(6)=9 t(7)=10 t(8)=11 t(9)=12 t(10)=13 t(11)=14 t(12)=16 t(13)=17 t(14)=18 t(15)=19 t(16)=21 t(17)=23 t(18)=26 t(19)=27
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 38.130s (Solving: 12.60s 1st Model: 12.59s Unsat: 0.00s)
+CPU Time     : 37.979s
+
+Choices      : 10561   
+Conflicts    : 4819     (Analyzed: 4819)
+Restarts     : 24       (Average: 200.79 Last: 239 Blocked: 0)
+Stab. Tests  : 318      (Full: 159 Partial: 159)
+Model-Level  : 46.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 58509    (Deleted: 29740)
+  Binary     : 2059     (Ratio:   3.52%)
+  Ternary    : 1380     (Ratio:   2.36%)
+  Conflict   : 4819     (Average Length:   87.0 Ratio:   8.24%) 
+  Loop       : 46631    (Average Length:   19.2 Ratio:  79.70%) 
+  Other      : 7059     (Average Length:    3.0 Ratio:  12.06%) 
+Backjumps    : 4819     (Average:  2.10 Max:  63 Sum:  10109)
+  Executed   : 4785     (Average:  2.09 Max:  63 Sum:  10075 Ratio:  99.66%)
+  Bounded    : 34       (Average:  1.00 Max:   1 Sum:     34 Ratio:   0.34%)
+
+Rules        : 3759937 
+Atoms        : 2744068 
+Disjunctions : 7011     (Original: 7011)
+Bodies       : 3446829  (Original: 3369720)
+Equivalences : 1235455  (Atom=Atom: 269230 Body=Body: 207124 Other: 759101)
+Tight        : No       (SCCs: 159 Non-Hcfs: 159 Nodes: 293605 Gammas: 77109)
+Variables    : 277905   (Eliminated:    0 Frozen: 200796)
+Constraints  : 2372963  (Binary:  89.5% Ternary:   6.8% Other:   3.7%)
+
+DifferenceLogic
+  Time init(s): 0.0107354
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 4221
+  Variables  : 21
+  [Thread 0]
+    Propagation(s): 2.36191
+    Dijkstra(s): 0.0776085
+    Undo(s)  : 0.00397002
+    True edges: 36334
+    False edges: 12321
+    False edges (inverse): 488
+    False edges (partial): 682
+    False edges (partial+): 30
+    Edges added: 14444
+    Edges skipped: 12592
+    Edges propagated: 14235
+    Cost consistency: 40904
+    Cost forward: 1.45384e+06
+    Cost backward: 1.48846e+06

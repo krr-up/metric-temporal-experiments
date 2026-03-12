@@ -1,0 +1,67 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...xamples/mapf/instances/x6_y6_a2_f35.lp ...
+Solving...
+Answer: 1 (Time: 38.212s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmpo44x97t1.lp']
+true(at(1,(1,1)),0) true(at(1,(2,1)),2) true(at(1,(2,2)),6) true(at(1,(2,3)),7) true(at(1,(2,3)),8) true(at(1,(2,3)),9) true(at(2,(2,1)),0) true(at(2,(2,2)),2) true(at(2,(2,3)),4) true(at(2,(3,3)),6) true(at(2,(3,3)),7) true(at(2,(4,3)),8) true(at(2,(4,3)),9) true(move(1,(1,1),(2,1)),0) true(move(1,(2,1),(2,2)),2) true(move(1,(2,2),(2,3)),6) true(move(2,(2,1),(2,2)),0) true(move(2,(2,2),(2,3)),2) true(move(2,(2,3),(3,3)),4) true(move(2,(3,3),(4,3)),7)
+Assignment:
+t(0)=0 t(1)=48 t(2)=140 t(3)=174 t(4)=175 t(5)=177 t(6)=280 t(7)=315 t(8)=420 t(9)=421
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 38.216s (Solving: 31.63s 1st Model: 31.62s Unsat: 0.00s)
+CPU Time     : 38.034s
+
+Choices      : 27645   
+Conflicts    : 20069    (Analyzed: 20069)
+Restarts     : 77       (Average: 260.64 Last: 426 Blocked: 0)
+Stab. Tests  : 144      (Full: 72 Partial: 72)
+Model-Level  : 33.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 81621    (Deleted: 61533)
+  Binary     : 4801     (Ratio:   5.88%)
+  Ternary    : 828      (Ratio:   1.01%)
+  Conflict   : 20069    (Average Length:   55.2 Ratio:  24.59%) 
+  Loop       : 56917    (Average Length:   46.0 Ratio:  69.73%) 
+  Other      : 4635     (Average Length:    2.0 Ratio:   5.68%) 
+Backjumps    : 20069    (Average:  1.35 Max:  15 Sum:  27066)
+  Executed   : 20063    (Average:  1.35 Max:  15 Sum:  27060 Ratio:  99.98%)
+  Bounded    : 6        (Average:  1.00 Max:   1 Sum:      6 Ratio:   0.02%)
+
+Rules        : 762450  
+Atoms        : 580080  
+Disjunctions : 1692     (Original: 1692)
+Bodies       : 649586   (Original: 639436)
+Equivalences : 283694   (Atom=Atom: 69624 Body=Body: 52600 Other: 161470)
+Tight        : No       (SCCs: 72 Non-Hcfs: 72 Nodes: 44780 Gammas: 10150)
+Variables    : 46051    (Eliminated:    0 Frozen: 35901)
+Constraints  : 618215   (Binary:  40.3% Ternary:  57.8% Other:   1.9%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.0965033
+    Simplify : 0.00192699
+    Translate: 0.0429488
+  Problem
+    Constraints: 0
+    Variables: 10
+    Clauses  : 342596
+    Literals : 4680
+  Translate
+    Constraints removed: 1219
+    Constraints added: 0
+    Clauses  : 342420
+    Weight constraints: 0
+    Literals : 4680
+  [Thread 0]
+    Time in seconds
+      Total  : 0.15726
+      Propagation: 0.14901
+      Check  : 0.00468008
+      Undo   : 0.00357043
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

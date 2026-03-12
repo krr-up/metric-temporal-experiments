@@ -1,0 +1,67 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...xamples/mapf/instances/x6_y6_a1_f15.lp ...
+Solving...
+Answer: 1 (Time: 3.553s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmp5_bx4tto.lp']
+true(at(1,(1,1)),0) true(at(1,(1,1)),1) true(at(1,(2,1)),4) true(at(1,(2,2)),8) true(at(1,(2,3)),9) true(move(1,(1,1),(2,1)),1) true(move(1,(2,1),(2,2)),4) true(move(1,(2,2),(2,3)),8)
+Assignment:
+t(0)=0 t(1)=7 t(2)=8 t(3)=52 t(4)=67 t(5)=84 t(6)=85 t(7)=115 t(8)=127 t(9)=142
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 3.555s (Solving: 0.19s 1st Model: 0.19s Unsat: 0.00s)
+CPU Time     : 3.397s
+
+Choices      : 359     
+Conflicts    : 271      (Analyzed: 271)
+Restarts     : 2        (Average: 135.50 Last: 131 Blocked: 0)
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 21.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 2286     (Deleted: 0)
+  Binary     : 539      (Ratio:  23.58%)
+  Ternary    : 39       (Ratio:   1.71%)
+  Conflict   : 271      (Average Length:   28.9 Ratio:  11.85%) 
+  Loop       : 1484     (Average Length:   35.4 Ratio:  64.92%) 
+  Other      : 531      (Average Length:    2.0 Ratio:  23.23%) 
+Backjumps    : 271      (Average:  1.20 Max:   9 Sum:    324)
+  Executed   : 271      (Average:  1.20 Max:   9 Sum:    324 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 392635  
+Atoms        : 300424  
+Disjunctions : 846      (Original: 846)
+Bodies       : 329908   (Original: 324832)
+Equivalences : 156623   (Atom=Atom: 40371 Body=Body: 29068 Other: 87184)
+Tight        : No       (SCCs: 36 Non-Hcfs: 36 Nodes: 22403 Gammas: 5076)
+Variables    : 23125    (Eliminated:    0 Frozen: 18049)
+Constraints  : 284044   (Binary:  44.4% Ternary:  53.5% Other:   2.1%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.0430713
+    Simplify : 0.00114372
+    Translate: 0.0200414
+  Problem
+    Constraints: 0
+    Variables: 10
+    Clauses  : 145796
+    Literals : 1980
+  Translate
+    Constraints removed: 1219
+    Constraints added: 0
+    Clauses  : 145620
+    Weight constraints: 0
+    Literals : 1980
+  [Thread 0]
+    Time in seconds
+      Total  : 0.0159337
+      Propagation: 0.0158654
+      Check  : 4.3721e-05
+      Undo   : 2.4591e-05
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

@@ -1,0 +1,58 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 233.913s (Solving: 215.17s 1st Model: 0.00s Unsat: 215.17s)
+CPU Time     : 233.496s
+
+Choices      : 97327   
+Conflicts    : 66797    (Analyzed: 66796)
+Restarts     : 237      (Average: 281.84 Last: 44 Blocked: 0)
+Stab. Tests  : 144      (Full: 0 Partial: 144)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 328786   (Deleted: 288365)
+  Binary     : 3300     (Ratio:   1.00%)
+  Ternary    : 3390     (Ratio:   1.03%)
+  Conflict   : 66796    (Average Length:  182.0 Ratio:  20.32%) 
+  Loop       : 213405   (Average Length:   21.9 Ratio:  64.91%) 
+  Other      : 48585    (Average Length:    4.7 Ratio:  14.78%) 
+Backjumps    : 66796    (Average:  1.44 Max:  38 Sum:  96230)
+  Executed   : 66280    (Average:  1.43 Max:  38 Sum:  95714 Ratio:  99.46%)
+  Bounded    : 516      (Average:  1.00 Max:   1 Sum:    516 Ratio:   0.54%)
+
+Rules        : 2950180 
+Atoms        : 2141686 
+Disjunctions : 6099     (Original: 6099)
+Bodies       : 2696569  (Original: 2629488)
+Equivalences : 1081184  (Atom=Atom: 235644 Body=Body: 180950 Other: 664590)
+Tight        : No       (SCCs: 144 Non-Hcfs: 144 Nodes: 256386 Gammas: 67081)
+Variables    : 242618   (Eliminated:    0 Frozen: 175537)
+Constraints  : 1998867  (Binary:  89.1% Ternary:   7.1% Other:   3.8%)
+
+DifferenceLogic
+  Time init(s): 0.00964311
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 4221
+  Variables  : 21
+  [Thread 0]
+    Propagation(s): 17.4946
+    Dijkstra(s): 2.47341
+    Undo(s)  : 0.1106
+    True edges: 970559
+    False edges: 112203
+    False edges (inverse): 519
+    False edges (partial): 802
+    False edges (partial+): 39
+    Edges added: 453211
+    Edges skipped: 389392
+    Edges propagated: 452415
+    Cost consistency: 732423
+    Cost forward: 4.14845e+07
+    Cost backward: 4.72881e+07
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpagw20z2i.lp']

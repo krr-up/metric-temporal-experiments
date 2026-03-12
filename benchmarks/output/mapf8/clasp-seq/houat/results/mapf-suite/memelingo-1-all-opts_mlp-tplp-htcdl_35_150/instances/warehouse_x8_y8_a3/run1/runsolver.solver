@@ -1,0 +1,63 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 17.394s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpsbq1r7ok.lp']
+true(at(1,(5,7)),0) true(at(1,(6,7)),1) true(at(1,(7,4)),29) true(at(1,(7,5)),25) true(at(1,(7,5)),26) true(at(1,(7,6)),3) true(at(1,(7,6)),4) true(at(1,(7,6)),22) true(at(1,(7,6)),23) true(at(1,(7,7)),2) true(at(1,(7,7)),6) true(at(1,(7,7)),7) true(at(1,(7,7)),18) true(at(1,(7,8)),8) true(at(1,(7,8)),9) true(at(1,(7,8)),10) true(at(1,(7,8)),11) true(at(1,(7,8)),12) true(at(1,(7,8)),13) true(at(1,(7,8)),14) true(at(1,(7,8)),15) true(at(1,(8,4)),32) true(at(1,(8,4)),33) true(at(1,(8,4)),34) true(at(2,(3,7)),18) true(at(2,(3,7)),19) true(at(2,(3,7)),20) true(at(2,(3,7)),21) true(at(2,(3,7)),25) true(at(2,(3,7)),26) true(at(2,(3,7)),27) true(at(2,(3,7)),28) true(at(2,(4,7)),16) true(at(2,(4,7)),22) true(at(2,(4,7)),29) true(at(2,(4,7)),30) true(at(2,(4,7)),31) true(at(2,(4,7)),32) true(at(2,(4,7)),33) true(at(2,(4,7)),34) true(at(2,(5,7)),14) true(at(2,(5,7)),15) true(at(2,(6,7)),13) true(at(2,(7,7)),11) true(at(2,(7,8)),0) true(at(2,(7,8)),1) true(at(2,(7,8)),2) true(at(2,(7,8)),3) true(at(2,(7,8)),4) true(at(2,(7,8)),5) true(at(2,(7,8)),6) true(at(3,(1,7)),2) true(at(3,(1,7)),3) true(at(3,(1,8)),0) true(at(3,(2,7)),4) true(at(3,(3,7)),5) true(at(3,(3,7)),6) true(at(3,(3,7)),7) true(at(3,(4,7)),8) true(at(3,(5,7)),10) true(at(3,(6,7)),11) true(at(3,(6,7)),12) true(at(3,(7,7)),13) true(at(3,(7,7)),21) true(at(3,(7,7)),34) true(at(3,(8,7)),14) true(at(3,(8,7)),15) true(at(3,(8,7)),16) true(at(3,(8,7)),17) true(at(3,(8,7)),22) true(at(3,(8,7)),23) true(at(3,(8,7)),24) true(at(3,(8,7)),25) true(at(3,(8,7)),26) true(at(3,(8,7)),27) true(at(3,(8,7)),28) true(at(3,(8,7)),29) true(at(3,(8,7)),30) true(at(3,(8,7)),31) true(move(1,(5,7),(6,7)),0) true(move(1,(6,7),(7,7)),1) true(move(1,(7,4),(8,4)),29) true(move(1,(7,5),(7,4)),26) true(move(1,(7,6),(7,5)),23) true(move(1,(7,6),(7,7)),4) true(move(1,(7,7),(7,6)),2) true(move(1,(7,7),(7,6)),18) true(move(1,(7,7),(7,8)),7) true(move(1,(7,8),(7,7)),15) true(move(2,(3,7),(4,7)),21) true(move(2,(3,7),(4,7)),28) true(move(2,(4,7),(3,7)),16) true(move(2,(4,7),(3,7)),22) true(move(2,(5,7),(4,7)),15) true(move(2,(6,7),(5,7)),13) true(move(2,(7,7),(6,7)),11) true(move(2,(7,8),(7,7)),6) true(move(3,(1,7),(2,7)),3) true(move(3,(1,8),(1,7)),0) true(move(3,(2,7),(3,7)),4) true(move(3,(3,7),(4,7)),7) true(move(3,(4,7),(5,7)),8) true(move(3,(5,7),(6,7)),10) true(move(3,(6,7),(7,7)),12) true(move(3,(7,7),(8,7)),13) true(move(3,(7,7),(8,7)),21) true(move(3,(8,7),(7,7)),17) true(move(3,(8,7),(7,7)),31)
+Assignment:
+t(0)=0 t(1)=1 t(2)=4 t(3)=9 t(4)=10 t(5)=13 t(6)=15 t(7)=16 t(8)=17 t(9)=18 t(10)=19 t(11)=20 t(12)=21 t(13)=24 t(14)=25 t(15)=28 t(16)=29 t(17)=32 t(18)=33 t(19)=34 t(20)=35 t(21)=37 t(22)=38 t(23)=40 t(24)=41 t(25)=42 t(26)=43 t(27)=44 t(28)=47 t(29)=48 t(30)=49 t(31)=50 t(32)=51 t(33)=52 t(34)=55
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 17.406s (Solving: 4.28s 1st Model: 4.26s Unsat: 0.00s)
+CPU Time     : 17.242s
+
+Choices      : 30502   
+Conflicts    : 1829     (Analyzed: 1829)
+Restarts     : 12       (Average: 152.42 Last: 6 Blocked: 0)
+Stab. Tests  : 204      (Full: 102 Partial: 102)
+Model-Level  : 1076.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 27280    (Deleted: 0)
+  Binary     : 2524     (Ratio:   9.25%)
+  Ternary    : 1695     (Ratio:   6.21%)
+  Conflict   : 1829     (Average Length:  117.1 Ratio:   6.70%) 
+  Loop       : 15737    (Average Length:   14.9 Ratio:  57.69%) 
+  Other      : 9714     (Average Length:    1.7 Ratio:  35.61%) 
+Backjumps    : 1829     (Average: 10.78 Max: 1023 Sum:  19722)
+  Executed   : 1822     (Average: 10.78 Max: 1023 Sum:  19715 Ratio:  99.96%)
+  Bounded    : 7        (Average:  1.00 Max:   1 Sum:      7 Ratio:   0.04%)
+
+Rules        : 1942511 
+Atoms        : 1261323 
+Disjunctions : 6324     (Original: 6324)
+Bodies       : 1796802  (Original: 1679816)
+Equivalences : 1250693  (Atom=Atom: 235166 Body=Body: 179485 Other: 836042)
+Tight        : No       (SCCs: 102 Non-Hcfs: 102 Nodes: 413774 Gammas: 116986)
+Variables    : 402102   (Eliminated:    0 Frozen: 285116)
+Constraints  : 4001792  (Binary:  90.7% Ternary:   6.2% Other:   3.2%)
+
+DifferenceLogic
+  Time init(s): 0.0428402
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 13161
+  Variables  : 36
+  [Thread 0]
+    Propagation(s): 1.04766
+    Dijkstra(s): 0.0655859
+    Undo(s)  : 0.00245103
+    True edges: 26902
+    False edges: 7099
+    False edges (inverse): 726
+    False edges (partial): 3298
+    False edges (partial+): 67
+    Edges added: 8433
+    Edges skipped: 6600
+    Edges propagated: 8232
+    Cost consistency: 66755
+    Cost forward: 991615
+    Cost backward: 1.02819e+06

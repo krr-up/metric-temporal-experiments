@@ -1,0 +1,61 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 15.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 14.835s
+
+Choices      : 0       
+Conflicts    : 1        (Analyzed: 0)
+Restarts     : 0       
+Problems     : 0        (Average Length: 0.00 Splits: 0)
+Lemmas       : 0        (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 0        (Ratio:   0.00%)
+  Conflict   : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
+  Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
+
+Rules        : 4587942 
+Atoms        : 2917906 
+Disjunctions : 14508    (Original: 14508)
+Bodies       : 4267794  (Original: 3963142)
+Equivalences : 2980836  (Atom=Atom: 538542 Body=Body: 410910 Other: 2031384)
+Tight        : No       (SCCs: 204 Non-Hcfs: 204 Nodes: 1058068 Gammas: 304652)
+Variables    : 517172   (Eliminated:    0 Frozen: 364846)
+Constraints  : 0        (Binary:   0.0% Ternary:   0.0% Other:   0.0%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.0709396
+    Simplify : 0.0309704
+    Translate: 0
+  Problem
+    Constraints: 18079
+    Variables: 40
+    Clauses  : 1958
+    Literals : 0
+  Translate
+    Constraints removed: 0
+    Constraints added: 0
+    Clauses  : 0
+    Weight constraints: 0
+    Literals : 0
+  [Thread 0]
+    Time in seconds
+      Total  : 0
+      Propagation: 0
+      Check  : 0
+      Undo   : 0
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmpwr6py9t1.lp']

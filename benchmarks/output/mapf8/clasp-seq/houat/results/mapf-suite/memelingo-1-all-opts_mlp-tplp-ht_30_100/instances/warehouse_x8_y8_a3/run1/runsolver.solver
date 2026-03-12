@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 111.797s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmp8dlka6l6.lp']
+t(0,0) t(1,1) t(2,2) t(3,3) t(4,4) t(5,5) t(6,6) t(7,7) t(8,8) t(9,9) t(10,42) t(11,44) t(12,52) t(13,53) t(14,54) t(15,55) t(16,58) t(17,68) t(18,75) t(19,78) t(20,81) t(21,82) t(22,84) t(23,85) t(24,89) t(25,90) t(26,91) t(27,92) t(28,98) t(29,100) true(at(3,(1,8)),0) true(at(2,(7,8)),0) true(at(1,(5,7)),0) true(move(1,(5,7),(6,7)),0) true(move(2,(7,8),(7,7)),0) true(move(3,(1,8),(1,7)),0) true(move(1,(6,7),(7,7)),1) true(move(1,(7,7),(7,6)),4) true(move(3,(1,7),(2,7)),4) true(move(2,(7,7),(6,7)),5) true(move(3,(2,7),(3,7)),5) true(move(3,(3,7),(4,7)),8) true(move(1,(7,6),(7,5)),10) true(move(2,(6,7),(5,7)),12) true(move(3,(4,7),(5,7)),12) true(move(1,(7,5),(7,4)),13) true(move(2,(5,7),(4,7)),13) true(move(2,(4,7),(3,7)),14) true(move(3,(5,7),(6,7)),14) true(move(3,(6,7),(7,7)),15) true(move(2,(3,7),(2,7)),18) true(move(2,(2,7),(3,7)),19) true(move(2,(3,7),(4,7)),20) true(move(3,(7,7),(7,8)),20) true(move(2,(4,7),(5,7)),21) true(move(3,(7,8),(7,7)),22) true(move(1,(7,4),(8,4)),24) true(move(2,(5,7),(4,7)),25) true(at(3,(4,7)),9) true(at(3,(4,7)),10) true(at(3,(4,7)),11) true(at(3,(4,7)),12) true(at(3,(7,8)),21) true(at(3,(7,8)),22) true(at(3,(7,7)),16) true(at(3,(7,7)),17) true(at(3,(7,7)),18) true(at(3,(7,7)),19) true(at(3,(7,7)),20) true(at(3,(7,7)),24) true(at(3,(7,7)),25) true(at(3,(7,7)),26) true(at(3,(7,7)),27) true(at(3,(7,7)),28) true(at(3,(7,7)),29) true(at(3,(6,7)),15) true(at(3,(5,7)),14) true(at(3,(3,7)),8) true(at(3,(2,7)),5) true(at(3,(1,7)),4) true(at(2,(4,7)),14) true(at(2,(4,7)),21) true(at(2,(4,7)),26) true(at(2,(4,7)),27) true(at(2,(4,7)),28) true(at(2,(4,7)),29) true(at(2,(7,7)),5) true(at(2,(6,7)),9) true(at(2,(6,7)),10) true(at(2,(6,7)),11) true(at(2,(6,7)),12) true(at(2,(5,7)),13) true(at(2,(5,7)),22) true(at(2,(5,7)),23) true(at(2,(5,7)),24) true(at(2,(5,7)),25) true(at(2,(3,7)),16) true(at(2,(3,7)),17) true(at(2,(3,7)),18) true(at(2,(3,7)),20) true(at(2,(2,7)),19) true(at(1,(8,4)),27) true(at(1,(8,4)),28) true(at(1,(8,4)),29) true(at(1,(7,7)),4) true(at(1,(7,6)),9) true(at(1,(7,6)),10) true(at(1,(7,5)),11) true(at(1,(7,5)),12) true(at(1,(7,5)),13) true(at(1,(6,7)),1) true(at(1,(7,4)),16) true(at(1,(7,4)),17) true(at(1,(7,4)),18) true(at(1,(7,4)),19) true(at(1,(7,4)),20) true(at(1,(7,4)),21) true(at(1,(7,4)),22) true(at(1,(7,4)),23) true(at(1,(7,4)),24)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 111.854s (Solving: 69.58s 1st Model: 69.52s Unsat: 0.00s)
+CPU Time     : 111.700s
+
+Choices      : 690489  
+Conflicts    : 9265     (Analyzed: 9265)
+Restarts     : 44       (Average: 210.57 Last: 96 Blocked: 0)
+Stab. Tests  : 204      (Full: 102 Partial: 102)
+Model-Level  : 852.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 22622    (Deleted: 14233)
+  Binary     : 159      (Ratio:   0.70%)
+  Ternary    : 110      (Ratio:   0.49%)
+  Conflict   : 9265     (Average Length: 3669.3 Ratio:  40.96%) 
+  Loop       : 13357    (Average Length:   66.2 Ratio:  59.04%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 9265     (Average: 59.35 Max: 11256 Sum: 549873)
+  Executed   : 9223     (Average: 59.34 Max: 11256 Sum: 549831 Ratio:  99.99%)
+  Bounded    : 42       (Average:  1.00 Max:   1 Sum:     42 Ratio:   0.01%)
+
+Rules        : 19042640 (Original: 18969012)
+Atoms        : 1068582 
+Disjunctions : 5394     (Original: 7761)
+Bodies       : 4660101  (Original: 4500355)
+Equivalences : 1025587  (Atom=Atom: 202526 Body=Body: 155649 Other: 667412)
+Tight        : No       (SCCs: 102 Non-Hcfs: 102 Nodes: 310602 Gammas: 86118)
+Variables    : 2549800  (Eliminated:    0 Frozen: 211226)
+Constraints  : 24778959 (Binary:  89.7% Ternary:   9.6% Other:   0.7%)
+

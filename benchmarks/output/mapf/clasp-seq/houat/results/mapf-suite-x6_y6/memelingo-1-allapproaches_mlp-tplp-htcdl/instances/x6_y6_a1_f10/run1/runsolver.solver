@@ -1,0 +1,63 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...xamples/mapf/instances/x6_y6_a1_f10.lp ...
+Solving...
+Answer: 1 (Time: 3.193s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmplmu9ft_g.lp']
+true(at(1,(1,1)),0) true(at(1,(1,2)),1) true(at(1,(2,2)),5) true(at(1,(2,3)),6) true(at(1,(2,3)),7) true(at(1,(2,3)),8) true(at(1,(2,3)),9) true(move(1,(1,1),(1,2)),0) true(move(1,(1,2),(2,2)),1) true(move(1,(2,2),(2,3)),5)
+Assignment:
+t(0)=0 t(1)=20 t(2)=21 t(3)=30 t(4)=41 t(5)=50 t(6)=60 t(7)=61 t(8)=70 t(9)=81
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 3.197s (Solving: 0.02s 1st Model: 0.02s Unsat: 0.00s)
+CPU Time     : 3.040s
+
+Choices      : 51      
+Conflicts    : 14       (Analyzed: 14)
+Restarts     : 0       
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 12.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 716      (Deleted: 0)
+  Binary     : 262      (Ratio:  36.59%)
+  Ternary    : 144      (Ratio:  20.11%)
+  Conflict   : 14       (Average Length:   27.1 Ratio:   1.96%) 
+  Loop       : 211      (Average Length:   30.1 Ratio:  29.47%) 
+  Other      : 491      (Average Length:    2.4 Ratio:  68.58%) 
+Backjumps    : 14       (Average:  2.86 Max:  12 Sum:     40)
+  Executed   : 14       (Average:  2.86 Max:  12 Sum:     40 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 392635  
+Atoms        : 300424  
+Disjunctions : 846      (Original: 846)
+Bodies       : 329908   (Original: 324832)
+Equivalences : 156623   (Atom=Atom: 40371 Body=Body: 29068 Other: 87184)
+Tight        : No       (SCCs: 36 Non-Hcfs: 36 Nodes: 22403 Gammas: 5076)
+Variables    : 21145    (Eliminated:    0 Frozen: 16069)
+Constraints  : 139625   (Binary:  87.7% Ternary:   8.0% Other:   4.3%)
+
+DifferenceLogic
+  Time init(s): 0.00277504
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 1011
+  Variables  : 11
+  [Thread 0]
+    Propagation(s): 0.0130379
+    Dijkstra(s): 0.000106164
+    Undo(s)  : 2.248e-05
+    True edges: 482
+    False edges: 335
+    False edges (inverse): 48
+    False edges (partial): 111
+    False edges (partial+): 0
+    Edges added: 71
+    Edges skipped: 51
+    Edges propagated: 70
+    Cost consistency: 78
+    Cost forward: 2059
+    Cost backward: 2165

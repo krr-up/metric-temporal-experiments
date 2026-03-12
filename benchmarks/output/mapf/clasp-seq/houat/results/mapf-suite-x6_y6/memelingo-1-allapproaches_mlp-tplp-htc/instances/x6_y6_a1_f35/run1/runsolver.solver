@@ -1,0 +1,67 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...xamples/mapf/instances/x6_y6_a1_f35.lp ...
+Solving...
+Answer: 1 (Time: 4.233s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmp7fd13e62.lp']
+true(at(1,(1,1)),0) true(at(1,(1,2)),2) true(at(1,(2,2)),5) true(at(1,(2,2)),6) true(at(1,(2,2)),7) true(at(1,(2,3)),8) true(at(1,(2,3)),9) true(move(1,(1,1),(1,2)),0) true(move(1,(1,2),(2,2)),2) true(move(1,(2,2),(2,3)),7)
+Assignment:
+t(0)=0 t(1)=49 t(2)=70 t(3)=104 t(4)=109 t(5)=175 t(6)=176 t(7)=210 t(8)=245 t(9)=350
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 4.235s (Solving: 1.25s 1st Model: 1.24s Unsat: 0.00s)
+CPU Time     : 4.019s
+
+Choices      : 3370    
+Conflicts    : 2379     (Analyzed: 2379)
+Restarts     : 14       (Average: 169.93 Last: 452 Blocked: 0)
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 40.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 11255    (Deleted: 3256)
+  Binary     : 3251     (Ratio:  28.88%)
+  Ternary    : 146      (Ratio:   1.30%)
+  Conflict   : 2379     (Average Length:   43.5 Ratio:  21.14%) 
+  Loop       : 5647     (Average Length:   41.2 Ratio:  50.17%) 
+  Other      : 3229     (Average Length:    2.0 Ratio:  28.69%) 
+Backjumps    : 2379     (Average:  1.35 Max:  15 Sum:   3211)
+  Executed   : 2376     (Average:  1.35 Max:  15 Sum:   3208 Ratio:  99.91%)
+  Bounded    : 3        (Average:  1.00 Max:   1 Sum:      3 Ratio:   0.09%)
+
+Rules        : 392635  
+Atoms        : 300424  
+Disjunctions : 846      (Original: 846)
+Bodies       : 329908   (Original: 324832)
+Equivalences : 156623   (Atom=Atom: 40371 Body=Body: 29068 Other: 87184)
+Tight        : No       (SCCs: 36 Non-Hcfs: 36 Nodes: 22403 Gammas: 5076)
+Variables    : 25825    (Eliminated:    0 Frozen: 20749)
+Constraints  : 480844   (Binary:  26.7% Ternary:  72.0% Other:   1.2%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.0707377
+    Simplify : 0.00102857
+    Translate: 0.0337583
+  Problem
+    Constraints: 0
+    Variables: 10
+    Clauses  : 342596
+    Literals : 4680
+  Translate
+    Constraints removed: 1219
+    Constraints added: 0
+    Clauses  : 342420
+    Weight constraints: 0
+    Literals : 4680
+  [Thread 0]
+    Time in seconds
+      Total  : 0.0229716
+      Propagation: 0.0225332
+      Check  : 0.000256406
+      Undo   : 0.000182011
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

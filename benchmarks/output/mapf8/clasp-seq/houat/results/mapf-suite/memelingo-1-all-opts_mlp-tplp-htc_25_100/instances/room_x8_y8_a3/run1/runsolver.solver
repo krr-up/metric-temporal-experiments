@@ -1,0 +1,67 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 46.708s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmpg6bw185z.lp']
+true(at(1,(5,1)),24) true(at(1,(6,1)),23) true(at(1,(7,1)),18) true(at(1,(7,2)),17) true(at(1,(7,3)),0) true(at(1,(7,3)),1) true(at(1,(7,3)),2) true(at(1,(7,3)),3) true(at(1,(7,3)),4) true(at(1,(7,3)),5) true(at(1,(7,3)),6) true(at(1,(8,2)),16) true(at(1,(8,3)),8) true(at(1,(8,3)),14) true(at(1,(8,4)),11) true(at(2,(1,7)),10) true(at(2,(1,8)),0) true(at(2,(1,8)),1) true(at(2,(1,8)),2) true(at(2,(1,8)),3) true(at(2,(2,5)),17) true(at(2,(2,6)),15) true(at(2,(2,7)),9) true(at(2,(2,7)),12) true(at(2,(2,8)),6) true(at(2,(3,4)),23) true(at(2,(3,4)),24) true(at(2,(3,5)),18) true(at(3,(4,1)),19) true(at(3,(4,2)),23) true(at(3,(4,3)),24) true(at(3,(5,1)),17) true(at(3,(6,1)),0) true(at(3,(6,1)),1) true(at(3,(6,1)),2) true(at(3,(6,1)),3) true(at(3,(6,1)),4) true(at(3,(6,1)),16) true(at(3,(7,1)),8) true(at(3,(7,1)),10) true(at(3,(7,1)),11) true(at(3,(7,2)),9) true(move(1,(6,1),(5,1)),23) true(move(1,(7,1),(6,1)),18) true(move(1,(7,2),(7,1)),17) true(move(1,(7,3),(8,3)),6) true(move(1,(8,2),(7,2)),16) true(move(1,(8,3),(8,2)),14) true(move(1,(8,3),(8,4)),8) true(move(1,(8,4),(8,3)),11) true(move(2,(1,7),(2,7)),10) true(move(2,(1,8),(2,8)),3) true(move(2,(2,5),(3,5)),17) true(move(2,(2,6),(2,5)),15) true(move(2,(2,7),(1,7)),9) true(move(2,(2,7),(2,6)),12) true(move(2,(2,8),(2,7)),6) true(move(2,(3,5),(3,4)),18) true(move(3,(4,1),(4,2)),19) true(move(3,(4,2),(4,3)),23) true(move(3,(5,1),(4,1)),17) true(move(3,(6,1),(5,1)),16) true(move(3,(6,1),(7,1)),4) true(move(3,(7,1),(6,1)),11) true(move(3,(7,1),(7,2)),8) true(move(3,(7,2),(7,1)),9)
+Assignment:
+t(0)=0 t(1)=59 t(2)=64 t(3)=79 t(4)=80 t(5)=81 t(6)=82 t(7)=83 t(8)=84 t(9)=85 t(10)=86 t(11)=87 t(12)=88 t(13)=89 t(14)=90 t(15)=91 t(16)=92 t(17)=93 t(18)=94 t(19)=95 t(20)=96 t(21)=97 t(22)=98 t(23)=99 t(24)=100
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 46.723s (Solving: 15.37s 1st Model: 15.36s Unsat: 0.00s)
+CPU Time     : 46.543s
+
+Choices      : 19110   
+Conflicts    : 3841     (Analyzed: 3841)
+Restarts     : 17       (Average: 225.94 Last: 259 Blocked: 0)
+Stab. Tests  : 318      (Full: 159 Partial: 159)
+Model-Level  : 70.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 39655    (Deleted: 11490)
+  Binary     : 1459     (Ratio:   3.68%)
+  Ternary    : 429      (Ratio:   1.08%)
+  Conflict   : 3841     (Average Length:  330.5 Ratio:   9.69%) 
+  Loop       : 34701    (Average Length:   67.3 Ratio:  87.51%) 
+  Other      : 1113     (Average Length:    2.0 Ratio:   2.81%) 
+Backjumps    : 3841     (Average:  4.86 Max: 272 Sum:  18678)
+  Executed   : 3768     (Average:  4.84 Max: 272 Sum:  18605 Ratio:  99.61%)
+  Bounded    : 73       (Average:  1.00 Max:   1 Sum:     73 Ratio:   0.39%)
+
+Rules        : 4782082 
+Atoms        : 3433348 
+Disjunctions : 8856     (Original: 8856)
+Bodies       : 4440514  (Original: 4320970)
+Equivalences : 1622475  (Atom=Atom: 338100 Body=Body: 260099 Other: 1024276)
+Tight        : No       (SCCs: 159 Non-Hcfs: 159 Nodes: 437290 Gammas: 119544)
+Variables    : 420410   (Eliminated:    0 Frozen: 300866)
+Constraints  : 4055831  (Binary:  80.6% Ternary:  16.2% Other:   3.2%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.189498
+    Simplify : 0.0220904
+    Translate: 0.0585518
+  Problem
+    Constraints: 0
+    Variables: 25
+    Clauses  : 512817
+    Literals : 2100
+  Translate
+    Constraints removed: 7174
+    Constraints added: 0
+    Clauses  : 511976
+    Weight constraints: 9
+    Literals : 2100
+  [Thread 0]
+    Time in seconds
+      Total  : 0.166778
+      Propagation: 0.163009
+      Check  : 0.00156009
+      Undo   : 0.00220873
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 0

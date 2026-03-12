@@ -1,0 +1,63 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...examples/mapf/instances/x6_y6_a1_f1.lp ...
+Solving...
+Answer: 1 (Time: 2.681s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmprnfq671o.lp']
+true(at(1,(1,1)),0) true(at(1,(2,1)),2) true(at(1,(2,1)),3) true(at(1,(2,2)),5) true(at(1,(2,2)),6) true(at(1,(2,2)),7) true(at(1,(2,3)),8) true(at(1,(2,3)),9) true(move(1,(1,1),(2,1)),0) true(move(1,(2,1),(2,2)),3) true(move(1,(2,2),(2,3)),7)
+Assignment:
+t(0)=0 t(1)=2 t(2)=4 t(3)=6 t(4)=9 t(5)=10 t(6)=11 t(7)=12 t(8)=13 t(9)=15
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 2.684s (Solving: 0.02s 1st Model: 0.02s Unsat: 0.00s)
+CPU Time     : 2.533s
+
+Choices      : 92      
+Conflicts    : 26       (Analyzed: 26)
+Restarts     : 0       
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 17.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 1013     (Deleted: 0)
+  Binary     : 145      (Ratio:  14.31%)
+  Ternary    : 88       (Ratio:   8.69%)
+  Conflict   : 26       (Average Length:   22.3 Ratio:   2.57%) 
+  Loop       : 412      (Average Length:   14.7 Ratio:  40.67%) 
+  Other      : 575      (Average Length:    1.9 Ratio:  56.76%) 
+Backjumps    : 26       (Average:  2.73 Max:  12 Sum:     71)
+  Executed   : 26       (Average:  2.73 Max:  12 Sum:     71 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 392635  
+Atoms        : 300424  
+Disjunctions : 846      (Original: 846)
+Bodies       : 329908   (Original: 324832)
+Equivalences : 156623   (Atom=Atom: 40371 Body=Body: 29068 Other: 87184)
+Tight        : No       (SCCs: 36 Non-Hcfs: 36 Nodes: 22403 Gammas: 5076)
+Variables    : 21145    (Eliminated:    0 Frozen: 16069)
+Constraints  : 139625   (Binary:  87.7% Ternary:   8.0% Other:   4.3%)
+
+DifferenceLogic
+  Time init(s): 0.00196527
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 1011
+  Variables  : 11
+  [Thread 0]
+    Propagation(s): 0.0132178
+    Dijkstra(s): 0.000318342
+    Undo(s)  : 1.7336e-05
+    True edges: 554
+    False edges: 234
+    False edges (inverse): 69
+    False edges (partial): 270
+    False edges (partial+): 2
+    Edges added: 182
+    Edges skipped: 145
+    Edges propagated: 169
+    Cost consistency: 656
+    Cost forward: 8504
+    Cost backward: 8152

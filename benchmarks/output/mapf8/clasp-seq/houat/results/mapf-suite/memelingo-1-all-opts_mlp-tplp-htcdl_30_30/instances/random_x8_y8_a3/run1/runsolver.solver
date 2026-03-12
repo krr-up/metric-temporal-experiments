@@ -1,0 +1,58 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 31.238s (Solving: 0.62s 1st Model: 0.00s Unsat: 0.62s)
+CPU Time     : 31.049s
+
+Choices      : 676     
+Conflicts    : 122      (Analyzed: 121)
+Restarts     : 1        (Average: 121.00 Last: 38 Blocked: 0)
+Stab. Tests  : 144      (Full: 0 Partial: 144)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 11683    (Deleted: 0)
+  Binary     : 1605     (Ratio:  13.74%)
+  Ternary    : 377      (Ratio:   3.23%)
+  Conflict   : 121      (Average Length:   35.1 Ratio:   1.04%) 
+  Loop       : 5570     (Average Length:   10.5 Ratio:  47.68%) 
+  Other      : 5992     (Average Length:    1.3 Ratio:  51.29%) 
+Backjumps    : 121      (Average:  5.73 Max: 281 Sum:    693)
+  Executed   : 102      (Average:  5.57 Max: 281 Sum:    674 Ratio:  97.26%)
+  Bounded    : 19       (Average:  1.00 Max:   1 Sum:     19 Ratio:   2.74%)
+
+Rules        : 4602765 
+Atoms        : 3230916 
+Disjunctions : 9309     (Original: 9309)
+Bodies       : 4299044  (Original: 4150108)
+Equivalences : 1783314  (Atom=Atom: 356249 Body=Body: 273520 Other: 1153545)
+Tight        : No       (SCCs: 144 Non-Hcfs: 144 Nodes: 530961 Gammas: 148936)
+Variables    : 512083   (Eliminated:    0 Frozen: 363147)
+Constraints  : 5068597  (Binary:  90.7% Ternary:   6.1% Other:   3.2%)
+
+DifferenceLogic
+  Time init(s): 0.0208146
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 9631
+  Variables  : 31
+  [Thread 0]
+    Propagation(s): 0.5979
+    Dijkstra(s): 0.00114942
+    Undo(s)  : 0.000238647
+    True edges: 7088
+    False edges: 5699
+    False edges (inverse): 23
+    False edges (partial): 413
+    False edges (partial+): 0
+    Edges added: 166
+    Edges skipped: 92
+    Edges propagated: 153
+    Cost consistency: 742
+    Cost forward: 5939
+    Cost backward: 5859
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmprhnrelhk.lp']

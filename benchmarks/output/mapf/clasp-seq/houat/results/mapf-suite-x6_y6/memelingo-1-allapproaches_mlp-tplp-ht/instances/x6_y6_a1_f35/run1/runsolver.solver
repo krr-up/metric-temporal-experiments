@@ -1,0 +1,40 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...xamples/mapf/instances/x6_y6_a1_f35.lp ...
+Solving...
+Answer: 1 (Time: 279.866s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpdxf5kfio.lp']
+t(0,0) t(1,70) t(2,156) t(3,237) t(4,342) t(5,377) t(6,386) t(7,388) t(8,392) t(9,398) true(at(1,(1,1)),0) true(move(1,(1,1),(1,2)),0) true(move(1,(1,2),(2,2)),3) true(move(1,(2,2),(2,3)),4) true(at(1,(2,3)),5) true(at(1,(2,3)),6) true(at(1,(2,3)),7) true(at(1,(2,3)),8) true(at(1,(2,3)),9) true(at(1,(1,2)),1) true(at(1,(1,2)),2) true(at(1,(1,2)),3) true(at(1,(2,2)),4)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 280.133s (Solving: 65.06s 1st Model: 64.79s Unsat: 0.00s)
+CPU Time     : 279.938s
+
+Choices      : 577825  
+Conflicts    : 1572     (Analyzed: 1572)
+Restarts     : 12       (Average: 131.00 Last: 41 Blocked: 0)
+Stab. Tests  : 72       (Full: 36 Partial: 36)
+Model-Level  : 422.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 2549     (Deleted: 0)
+  Binary     : 6        (Ratio:   0.24%)
+  Ternary    : 19       (Ratio:   0.75%)
+  Conflict   : 1572     (Average Length: 123730.9 Ratio:  61.67%) 
+  Loop       : 977      (Average Length:   41.5 Ratio:  38.33%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1572     (Average: 254.75 Max: 88418 Sum: 400472)
+  Executed   : 1572     (Average: 254.75 Max: 88418 Sum: 400472 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 68541021 (Original: 67469288)
+Atoms        : 309178  
+Disjunctions : 846      (Original: 5003)
+Bodies       : 12400586 (Original: 11323871)
+Equivalences : 192412   (Atom=Atom: 44487 Body=Body: 33337 Other: 114588)
+Tight        : No       (SCCs: 36 Non-Hcfs: 36 Nodes: 21534 Gammas: 4982)
+Variables    : 11919126 (Eliminated:    0 Frozen: 19533)
+Constraints  : 464635813 (Binary:  97.4% Ternary:   2.3% Other:   0.2%)
+

@@ -1,0 +1,67 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+Answer: 1 (Time: 133.181s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmp534stgrt.lp']
+true(at(1,(6,6)),1) true(at(1,(6,7)),0) true(at(1,(7,1)),43) true(at(1,(7,2)),40) true(at(1,(7,3)),39) true(at(1,(7,4)),38) true(at(1,(7,5)),21) true(at(1,(7,5)),26) true(at(1,(7,5)),27) true(at(1,(7,5)),35) true(at(1,(7,6)),2) true(at(1,(7,6)),3) true(at(1,(7,6)),28) true(at(1,(7,6)),29) true(at(1,(7,6)),34) true(at(1,(7,7)),32) true(at(1,(8,1)),44) true(at(1,(8,4)),13) true(at(1,(8,5)),10) true(at(1,(8,5)),11) true(at(1,(8,5)),12) true(at(1,(8,5)),18) true(at(1,(8,5)),19) true(at(1,(8,5)),20) true(at(1,(8,5)),23) true(at(1,(8,5)),24) true(at(1,(8,5)),25) true(at(1,(8,6)),4) true(at(1,(8,6)),5) true(at(1,(8,6)),6) true(at(1,(8,6)),7) true(at(1,(8,6)),8) true(at(2,(5,5)),26) true(at(2,(6,2)),40) true(at(2,(6,3)),37) true(at(2,(6,4)),32) true(at(2,(6,4)),33) true(at(2,(6,5)),24) true(at(2,(6,5)),28) true(at(2,(6,6)),22) true(at(2,(6,7)),20) true(at(2,(6,8)),16) true(at(2,(7,2)),41) true(at(2,(7,2)),42) true(at(2,(7,2)),43) true(at(2,(7,2)),44) true(at(2,(7,8)),0) true(at(2,(7,8)),1) true(at(2,(7,8)),2) true(at(2,(7,8)),3) true(at(2,(7,8)),4) true(at(2,(7,8)),5) true(at(2,(7,8)),6) true(at(2,(7,8)),7) true(at(2,(7,8)),8) true(at(2,(7,8)),9) true(at(2,(7,8)),10) true(at(2,(7,8)),11) true(at(2,(7,8)),12) true(at(3,(2,5)),22) true(at(3,(2,6)),20) true(at(3,(2,7)),15) true(at(3,(2,8)),11) true(at(3,(3,5)),24) true(at(3,(3,8)),0) true(at(3,(3,8)),1) true(at(3,(3,8)),2) true(at(3,(3,8)),3) true(at(3,(3,8)),4) true(at(3,(3,8)),5) true(at(3,(3,8)),6) true(at(3,(3,8)),7) true(at(3,(3,8)),8) true(at(3,(3,8)),9) true(at(3,(3,8)),10) true(at(3,(4,5)),26) true(at(3,(5,5)),27) true(at(3,(5,8)),44) true(at(3,(6,5)),29) true(at(3,(6,6)),33) true(at(3,(6,7)),36) true(at(3,(6,8)),40) true(move(1,(6,6),(7,6)),1) true(move(1,(6,7),(6,6)),0) true(move(1,(7,1),(8,1)),43) true(move(1,(7,2),(7,1)),40) true(move(1,(7,3),(7,2)),39) true(move(1,(7,4),(7,3)),38) true(move(1,(7,5),(7,4)),35) true(move(1,(7,5),(7,6)),27) true(move(1,(7,5),(8,5)),21) true(move(1,(7,6),(7,5)),34) true(move(1,(7,6),(7,7)),29) true(move(1,(7,6),(8,6)),3) true(move(1,(7,7),(7,6)),32) true(move(1,(8,4),(8,5)),13) true(move(1,(8,5),(7,5)),20) true(move(1,(8,5),(7,5)),25) true(move(1,(8,5),(8,4)),12) true(move(1,(8,6),(8,5)),8) true(move(2,(5,5),(6,5)),26) true(move(2,(6,2),(7,2)),40) true(move(2,(6,3),(6,2)),37) true(move(2,(6,4),(6,3)),33) true(move(2,(6,5),(5,5)),24) true(move(2,(6,5),(6,4)),28) true(move(2,(6,6),(6,5)),22) true(move(2,(6,7),(6,6)),20) true(move(2,(6,8),(6,7)),16) true(move(2,(7,8),(6,8)),12) true(move(3,(2,5),(3,5)),22) true(move(3,(2,6),(2,5)),20) true(move(3,(2,7),(2,6)),15) true(move(3,(2,8),(2,7)),11) true(move(3,(3,5),(4,5)),24) true(move(3,(3,8),(2,8)),10) true(move(3,(4,5),(5,5)),26) true(move(3,(5,5),(6,5)),27) true(move(3,(6,5),(6,6)),29) true(move(3,(6,6),(6,7)),33) true(move(3,(6,7),(6,8)),36) true(move(3,(6,8),(5,8)),40)
+Assignment:
+t(0)=0 t(1)=2 t(2)=5 t(3)=101 t(4)=102 t(5)=103 t(6)=104 t(7)=107 t(8)=109 t(9)=113 t(10)=114 t(11)=116 t(12)=117 t(13)=118 t(14)=119 t(15)=120 t(16)=121 t(17)=122 t(18)=123 t(19)=124 t(20)=125 t(21)=126 t(22)=127 t(23)=128 t(24)=129 t(25)=131 t(26)=132 t(27)=133 t(28)=134 t(29)=135 t(30)=136 t(31)=137 t(32)=138 t(33)=139 t(34)=140 t(35)=141 t(36)=142 t(37)=143 t(38)=144 t(39)=145 t(40)=146 t(41)=147 t(42)=148 t(43)=149 t(44)=150
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 133.224s (Solving: 83.62s 1st Model: 83.58s Unsat: 0.00s)
+CPU Time     : 133.048s
+
+Choices      : 366201  
+Conflicts    : 9074     (Analyzed: 9074)
+Restarts     : 34       (Average: 266.88 Last: 75 Blocked: 0)
+Stab. Tests  : 288      (Full: 144 Partial: 144)
+Model-Level  : 3802.0  
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 193185   (Deleted: 42563)
+  Binary     : 15620    (Ratio:   8.09%)
+  Ternary    : 120361   (Ratio:  62.30%)
+  Conflict   : 9074     (Average Length: 3490.1 Ratio:   4.70%) 
+  Loop       : 48587    (Average Length:  124.4 Ratio:  25.15%) 
+  Other      : 135524   (Average Length:    2.9 Ratio:  70.15%) 
+Backjumps    : 9074     (Average: 19.32 Max: 6174 Sum: 175317)
+  Executed   : 9068     (Average: 19.32 Max: 6174 Sum: 175311 Ratio: 100.00%)
+  Bounded    : 6        (Average:  1.00 Max:   1 Sum:      6 Ratio:   0.00%)
+
+Rules        : 7324455 
+Atoms        : 4928136 
+Disjunctions : 14124    (Original: 14124)
+Bodies       : 6945569  (Original: 6613663)
+Equivalences : 3023259  (Atom=Atom: 537344 Body=Body: 412375 Other: 2073540)
+Tight        : No       (SCCs: 144 Non-Hcfs: 144 Nodes: 1123386 Gammas: 331906)
+Variables    : 1105453  (Eliminated:    0 Frozen: 773547)
+Constraints  : 14290579 (Binary:  86.0% Ternary:  11.6% Other:   2.4%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.445349
+    Simplify : 0.0848441
+    Translate: 0.116278
+  Problem
+    Constraints: 12636
+    Variables: 45
+    Clauses  : 1.00204e+06
+    Literals : 5610
+  Translate
+    Constraints removed: 10178
+    Constraints added: 0
+    Clauses  : 1.00005e+06
+    Weight constraints: 9
+    Literals : 5610
+  [Thread 0]
+    Time in seconds
+      Total  : 26.3743
+      Propagation: 0.615583
+      Check  : 25.4985
+      Undo   : 0.260215
+    Refined reason: 71538
+    Introduced reason: 0
+    Literals introduced: 0
