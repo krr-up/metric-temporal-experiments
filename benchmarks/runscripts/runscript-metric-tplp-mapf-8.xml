@@ -20,7 +20,7 @@
 
 	<benchmark name="mapf-suite">
 		<files path="../examples/mapf">
-			<encoding file="../examples/mapf/mapf.lp" />
+			<encoding file="../examples/mapf/mapf_javier.lp" />
 			<add file="instances/random_x8_y8_a3.lp" />
 			<add file="instances/room_x8_y8_a3.lp" />
 			<add file="instances/warehouse_x8_y8_a3.lp" />

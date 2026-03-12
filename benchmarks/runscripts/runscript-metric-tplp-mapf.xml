@@ -19,7 +19,7 @@
 
 	<benchmark name="mapf-suite-x6_y6">
 		<files path="../examples/mapf">
-			<encoding file="../examples/mapf/mapf.lp" />
+			<encoding file="../examples/mapf/mapf_javier.lp" />
 			<add file="instances/x6_y6_a1_f1.lp" cmdline="-c v=15" />
 			<add file="instances/x6_y6_a1_f5.lp" cmdline="-c v=75" />
 			<add file="instances/x6_y6_a1_f10.lp" cmdline="-c v=150" />
