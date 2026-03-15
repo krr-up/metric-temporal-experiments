@@ -6,30 +6,30 @@ UNKNOWN
 INTERRUPTED  : 1
 Models       : 0+
 Calls        : 1
-Time         : 1190.880s (Solving: 1093.27s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 1190.617s
+Time         : 1192.391s (Solving: 1042.48s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1192.144s
 
-Choices      : 5264904 
-Conflicts    : 43127    (Analyzed: 43127)
-Restarts     : 126      (Average: 342.28 Last: 4366 Blocked: 0)
-Stab. Tests  : 144      (Full: 0 Partial: 144)
+Choices      : 10409654
+Conflicts    : 49365    (Analyzed: 49365)
+Restarts     : 147      (Average: 335.82 Last: 63 Blocked: 0)
+Stab. Tests  : 624      (Full: 0 Partial: 624)
 Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 63646    (Deleted: 56319)
-  Binary     : 187      (Ratio:   0.29%)
-  Ternary    : 79       (Ratio:   0.12%)
-  Conflict   : 43127    (Average Length: 132089.9 Ratio:  67.76%) 
-  Loop       : 20519    (Average Length:   57.5 Ratio:  32.24%) 
+Lemmas       : 73912    (Deleted: 64361)
+  Binary     : 1313     (Ratio:   1.78%)
+  Ternary    : 337      (Ratio:   0.46%)
+  Conflict   : 49365    (Average Length: 46009.9 Ratio:  66.79%) 
+  Loop       : 24547    (Average Length:   50.4 Ratio:  33.21%) 
   Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
-Backjumps    : 43127    (Average: 90.37 Max: 113076 Sum: 3897188)
-  Executed   : 43124    (Average: 90.37 Max: 113076 Sum: 3897185 Ratio: 100.00%)
-  Bounded    : 3        (Average:  1.00 Max:   1 Sum:      3 Ratio:   0.00%)
+Backjumps    : 49365    (Average: 160.29 Max: 168093 Sum: 7912793)
+  Executed   : 49363    (Average: 160.29 Max: 168093 Sum: 7912791 Ratio: 100.00%)
+  Bounded    : 2        (Average:  1.00 Max:   1 Sum:      2 Ratio:   0.00%)
 
-Rules        : 36038467 (Original: 35497884)
-Atoms        : 1149226 
-Disjunctions : 3384     (Original: 6341)
-Bodies       : 7411061  (Original: 6850550)
-Equivalences : 558830   (Atom=Atom: 131070 Body=Body: 103044 Other: 324716)
-Tight        : No       (SCCs: 144 Non-Hcfs: 144 Nodes: 86151 Gammas: 19928)
-Variables    : 6075598  (Eliminated:    0 Frozen: 61834)
-Constraints  : 180766319 (Binary:  96.6% Ternary:   3.0% Other:   0.3%)
+Rules        : 61766389 (Original: 61225806)
+Atoms        : 1306333 
+Disjunctions : 7704     (Original: 10661)
+Bodies       : 7644119  (Original: 7057688)
+Equivalences : 789523   (Atom=Atom: 167582 Body=Body: 122062 Other: 499879)
+Tight        : No       (SCCs: 624 Non-Hcfs: 624 Nodes: 191509 Gammas: 45848)
+Variables    : 6167467  (Eliminated:    0 Frozen: 127783)
+Constraints  : 204131797 (Binary:  97.0% Ternary:   2.7% Other:   0.3%)
 

@@ -1,5 +1,5 @@
 [runlim] version:		2.0.0rc12
-[runlim] host:			kr-node7
+[runlim] host:			kr-node1
 [runlim] time limit:		311040000 seconds
 [runlim] real time limit:	1200 seconds
 [runlim] space limit:		20000 MB
@@ -14,18 +14,19 @@
 [runlim] argv[8]:		v=225
 [runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/x6_y6_a3_f15.lp
 [runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf_javier.lp
-[runlim] start:			Thu Mar 12 02:18:26 2026
-[runlim] child:			14543
-[runlim] sample:		4.31 time, 10.01 real, 123 MB, 1.59 load
-[runlim] sample:		14.31 time, 20.01 real, 617 MB, 1.66 load
-[runlim] sample:		24.31 time, 30.01 real, 617 MB, 1.71 load
-[runlim] end:			Thu Mar 12 02:18:59 2026
+[runlim] start:			Thu Mar 12 21:42:07 2026
+[runlim] child:			5668
+[runlim] sample:		4.85 time, 10.01 real, 277 MB, 1.75 load
+[runlim] sample:		14.85 time, 20.01 real, 739 MB, 1.79 load
+[runlim] sample:		24.84 time, 30.01 real, 739 MB, 1.82 load
+[runlim] sample:		34.83 time, 40.01 real, 739 MB, 1.85 load
+[runlim] end:			Thu Mar 12 21:42:48 2026
 [runlim] status:		ok
 [runlim] result:		10
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			32.87 seconds
-[runlim] time:			27.10 seconds
-[runlim] space:			668 MB
-[runlim] load:			1.73 maximum
-[runlim] samples:		329
+[runlim] real:			40.70 seconds
+[runlim] time:			35.43 seconds
+[runlim] space:			793 MB
+[runlim] load:			1.85 maximum
+[runlim] samples:		407

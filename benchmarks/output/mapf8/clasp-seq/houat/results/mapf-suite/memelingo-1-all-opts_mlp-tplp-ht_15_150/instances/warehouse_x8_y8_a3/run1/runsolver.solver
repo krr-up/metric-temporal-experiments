@@ -1,40 +1,35 @@
 Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
 Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
 Solving...
-Answer: 1 (Time: 885.053s)
-Reifing...
-Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmploxxjqqd.lp']
-t(0,0) t(1,4) t(2,5) t(3,8) t(4,13) t(5,14) t(6,16) t(7,17) t(8,19) t(9,20) t(10,21) t(11,25) t(12,35) t(13,38) t(14,135) true(at(3,(1,8)),0) true(at(2,(7,8)),0) true(at(1,(5,7)),0) true(move(3,(1,8),(1,7)),0) true(move(1,(5,7),(6,7)),1) true(move(3,(1,7),(2,7)),1) true(move(1,(6,7),(7,7)),2) true(move(1,(7,7),(7,6)),3) true(move(2,(7,8),(7,7)),3) true(move(2,(7,7),(6,7)),4) true(move(3,(2,7),(3,7)),4) true(move(1,(7,6),(7,5)),5) true(move(1,(7,5),(7,4)),6) true(move(3,(3,7),(4,7)),6) true(move(3,(4,7),(5,7)),7) true(move(2,(6,7),(5,7)),8) true(move(3,(5,7),(6,7)),8) true(move(2,(5,7),(4,7)),9) true(move(1,(7,4),(8,4)),12) true(move(3,(6,7),(7,7)),12) true(at(1,(5,7)),1) true(at(2,(7,8)),1) true(at(3,(4,7)),7) true(at(3,(7,7)),13) true(at(3,(7,7)),14) true(at(3,(6,7)),9) true(at(3,(6,7)),10) true(at(3,(6,7)),11) true(at(3,(6,7)),12) true(at(3,(5,7)),8) true(at(3,(3,7)),6) true(at(3,(2,7)),2) true(at(3,(2,7)),3) true(at(3,(2,7)),4) true(at(3,(1,7)),1) true(at(2,(4,7)),10) true(at(2,(4,7)),11) true(at(2,(4,7)),12) true(at(2,(4,7)),13) true(at(2,(4,7)),14) true(at(2,(7,8)),2) true(at(2,(7,8)),3) true(at(2,(7,7)),4) true(at(2,(6,7)),7) true(at(2,(6,7)),8) true(at(2,(5,7)),9) true(at(1,(8,4)),13) true(at(1,(8,4)),14) true(at(1,(7,7)),3) true(at(1,(7,6)),4) true(at(1,(7,6)),5) true(at(1,(7,5)),6) true(at(1,(6,7)),2) true(at(1,(7,4)),10) true(at(1,(7,4)),11) true(at(1,(7,4)),12)
-SATISFIABLE
+UNKNOWN
 
-Models       : 1+
+INTERRUPTED  : 1
+Models       : 0+
 Calls        : 1
-Time         : 885.108s (Solving: 857.08s 1st Model: 857.03s Unsat: 0.00s)
-CPU Time     : 884.818s
+Time         : 1193.569s (Solving: 1143.66s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1193.315s
 
-Choices      : 2273806 
-Conflicts    : 109670   (Analyzed: 109670)
-Restarts     : 269      (Average: 407.70 Last: 205 Blocked: 0)
-Stab. Tests  : 204      (Full: 102 Partial: 102)
-Model-Level  : 1648.0  
+Choices      : 2180430 
+Conflicts    : 107919   (Analyzed: 107919)
+Restarts     : 254      (Average: 424.88 Last: 14832 Blocked: 0)
+Stab. Tests  : 312      (Full: 0 Partial: 312)
 Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 205591   (Deleted: 192442)
-  Binary     : 147      (Ratio:   0.07%)
-  Ternary    : 190      (Ratio:   0.09%)
-  Conflict   : 109670   (Average Length: 22929.5 Ratio:  53.34%) 
-  Loop       : 95921    (Average Length:   49.5 Ratio:  46.66%) 
+Lemmas       : 203276   (Deleted: 191427)
+  Binary     : 359      (Ratio:   0.18%)
+  Ternary    : 199      (Ratio:   0.10%)
+  Conflict   : 107919   (Average Length: 19585.3 Ratio:  53.09%) 
+  Loop       : 95357    (Average Length:   47.0 Ratio:  46.91%) 
   Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
-Backjumps    : 109670   (Average: 17.39 Max: 33009 Sum: 1907052)
-  Executed   : 109659   (Average: 17.39 Max: 33009 Sum: 1907041 Ratio: 100.00%)
-  Bounded    : 11       (Average:  1.00 Max:   1 Sum:     11 Ratio:   0.00%)
+Backjumps    : 107919   (Average: 16.18 Max: 37237 Sum: 1745827)
+  Executed   : 107917   (Average: 16.18 Max: 37237 Sum: 1745825 Ratio: 100.00%)
+  Bounded    : 2        (Average:  1.00 Max:   1 Sum:      2 Ratio:   0.00%)
 
-Rules        : 12640465 (Original: 12517452)
-Atoms        : 524222  
-Disjunctions : 2604     (Original: 4451)
-Bodies       : 2779116  (Original: 2634155)
-Equivalences : 448942   (Atom=Atom: 100546 Body=Body: 77504 Other: 270892)
-Tight        : No       (SCCs: 102 Non-Hcfs: 102 Nodes: 90372 Gammas: 21948)
-Variables    : 2045995  (Eliminated:    0 Frozen: 62631)
-Constraints  : 27694214 (Binary:  92.6% Ternary:   6.8% Other:   0.5%)
+Rules        : 23392948 (Original: 23269935)
+Atoms        : 599651  
+Disjunctions : 5544     (Original: 7391)
+Bodies       : 2913946  (Original: 2743995)
+Equivalences : 624470   (Atom=Atom: 125343 Body=Body: 89745 Other: 409382)
+Tight        : No       (SCCs: 312 Non-Hcfs: 312 Nodes: 183437 Gammas: 46938)
+Variables    : 2130848  (Eliminated:    0 Frozen: 122494)
+Constraints  : 37236894 (Binary:  94.3% Ternary:   5.2% Other:   0.5%)
 

@@ -1,5 +1,5 @@
 [runlim] version:		2.0.0rc12
-[runlim] host:			kr-node7
+[runlim] host:			kr-node1
 [runlim] time limit:		311040000 seconds
 [runlim] real time limit:	1200 seconds
 [runlim] space limit:		20000 MB
@@ -14,29 +14,25 @@
 [runlim] argv[8]:		v=75
 [runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/x6_y6_a2_f5.lp
 [runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf_javier.lp
-[runlim] start:			Thu Mar 12 04:08:54 2026
-[runlim] child:			15102
-[runlim] sample:		3.10 time, 10.01 real, 74 MB, 1.00 load
-[runlim] sample:		12.94 time, 20.01 real, 545 MB, 1.00 load
-[runlim] sample:		22.94 time, 30.01 real, 551 MB, 1.00 load
-[runlim] sample:		32.94 time, 40.01 real, 551 MB, 1.00 load
-[runlim] sample:		42.94 time, 50.01 real, 551 MB, 1.00 load
-[runlim] sample:		52.94 time, 60.01 real, 610 MB, 1.00 load
-[runlim] sample:		62.94 time, 70.01 real, 622 MB, 1.00 load
-[runlim] sample:		72.94 time, 80.01 real, 623 MB, 1.00 load
-[runlim] sample:		82.94 time, 90.01 real, 623 MB, 1.00 load
-[runlim] sample:		92.94 time, 100.01 real, 623 MB, 1.00 load
-[runlim] sample:		102.94 time, 110.01 real, 623 MB, 1.00 load
-[runlim] sample:		112.94 time, 120.01 real, 623 MB, 1.00 load
-[runlim] sample:		122.94 time, 130.01 real, 623 MB, 1.00 load
-[runlim] sample:		132.94 time, 140.01 real, 623 MB, 1.00 load
-[runlim] end:			Thu Mar 12 04:11:17 2026
+[runlim] start:			Fri Mar 13 02:35:11 2026
+[runlim] child:			7105
+[runlim] sample:		3.70 time, 10.01 real, 242 MB, 0.74 load
+[runlim] sample:		13.70 time, 20.01 real, 681 MB, 0.78 load
+[runlim] sample:		23.70 time, 30.01 real, 682 MB, 0.81 load
+[runlim] sample:		33.71 time, 40.01 real, 690 MB, 0.84 load
+[runlim] sample:		43.71 time, 50.01 real, 712 MB, 0.87 load
+[runlim] sample:		53.71 time, 60.01 real, 712 MB, 0.89 load
+[runlim] sample:		63.71 time, 70.01 real, 714 MB, 0.91 load
+[runlim] sample:		73.71 time, 80.01 real, 738 MB, 0.92 load
+[runlim] sample:		83.71 time, 90.01 real, 738 MB, 0.93 load
+[runlim] sample:		93.70 time, 100.01 real, 0 MB, 0.94 load
+[runlim] end:			Fri Mar 13 02:36:52 2026
 [runlim] status:		ok
 [runlim] result:		10
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			142.94 seconds
-[runlim] time:			135.83 seconds
-[runlim] space:			623 MB
-[runlim] load:			1.00 maximum
-[runlim] samples:		1430
+[runlim] real:			100.07 seconds
+[runlim] time:			93.70 seconds
+[runlim] space:			738 MB
+[runlim] load:			0.94 maximum
+[runlim] samples:		1001

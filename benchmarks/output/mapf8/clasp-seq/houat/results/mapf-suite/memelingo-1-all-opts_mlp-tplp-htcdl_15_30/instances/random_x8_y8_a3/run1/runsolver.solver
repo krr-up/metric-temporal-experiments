@@ -5,54 +5,54 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 54.789s (Solving: 40.23s 1st Model: 0.00s Unsat: 40.23s)
-CPU Time     : 54.616s
+Time         : 85.194s (Solving: 69.16s 1st Model: 0.00s Unsat: 69.16s)
+CPU Time     : 84.998s
 
-Choices      : 28648   
-Conflicts    : 18973    (Analyzed: 18972)
-Restarts     : 77       (Average: 246.39 Last: 446 Blocked: 0)
-Stab. Tests  : 144      (Full: 0 Partial: 144)
+Choices      : 26089   
+Conflicts    : 16973    (Analyzed: 16972)
+Restarts     : 69       (Average: 245.97 Last: 199 Blocked: 0)
+Stab. Tests  : 552      (Full: 0 Partial: 552)
 Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 93647    (Deleted: 77656)
-  Binary     : 2163     (Ratio:   2.31%)
-  Ternary    : 1597     (Ratio:   1.71%)
-  Conflict   : 18972    (Average Length:  203.8 Ratio:  20.26%) 
-  Loop       : 67770    (Average Length:   19.6 Ratio:  72.37%) 
-  Other      : 6905     (Average Length:    4.1 Ratio:   7.37%) 
-Backjumps    : 18972    (Average:  1.50 Max:  70 Sum:  28533)
-  Executed   : 18642    (Average:  1.49 Max:  70 Sum:  28203 Ratio:  98.84%)
-  Bounded    : 330      (Average:  1.00 Max:   1 Sum:    330 Ratio:   1.16%)
+Lemmas       : 84778    (Deleted: 67041)
+  Binary     : 2040     (Ratio:   2.41%)
+  Ternary    : 1456     (Ratio:   1.72%)
+  Conflict   : 16972    (Average Length:  185.2 Ratio:  20.02%) 
+  Loop       : 61406    (Average Length:   19.6 Ratio:  72.43%) 
+  Other      : 6400     (Average Length:    4.0 Ratio:   7.55%) 
+Backjumps    : 16972    (Average:  1.53 Max:  59 Sum:  26031)
+  Executed   : 16648    (Average:  1.51 Max:  59 Sum:  25707 Ratio:  98.76%)
+  Bounded    : 324      (Average:  1.00 Max:   1 Sum:    324 Ratio:   1.24%)
 
-Rules        : 2172450 
-Atoms        : 1609746 
-Disjunctions : 4494     (Original: 4494)
-Bodies       : 1943894  (Original: 1905703)
-Equivalences : 767469   (Atom=Atom: 175379 Body=Body: 134665 Other: 457425)
-Tight        : No       (SCCs: 144 Non-Hcfs: 144 Nodes: 155211 Gammas: 38191)
-Variables    : 144598   (Eliminated:    0 Frozen: 106407)
-Constraints  : 1093927  (Binary:  88.5% Ternary:   7.5% Other:   4.0%)
+Rules        : 2529416 
+Atoms        : 1797884 
+Disjunctions : 10206    (Original: 10206)
+Bodies       : 2265564  (Original: 2178821)
+Equivalences : 1107856  (Atom=Atom: 222682 Body=Body: 158618 Other: 726556)
+Tight        : No       (SCCs: 552 Non-Hcfs: 552 Nodes: 340001 Gammas: 86743)
+Variables    : 308872   (Eliminated:    0 Frozen: 222129)
+Constraints  : 1953608  (Binary:  86.3% Ternary:   8.4% Other:   5.3%)
 
 DifferenceLogic
-  Time init(s): 0.00425676
+  Time init(s): 0.00515055
   CCs        : 1
   Mutexes    : 0
-  Edges      : 2341
+  Edges      : 2551
   Variables  : 16
   [Thread 0]
-    Propagation(s): 2.26575
-    Dijkstra(s): 0.39171
-    Undo(s)  : 0.0196509
-    True edges: 178568
-    False edges: 9891
-    False edges (inverse): 320
-    False edges (partial): 1256
-    False edges (partial+): 18
-    Edges added: 108429
-    Edges skipped: 87325
-    Edges propagated: 108102
-    Cost consistency: 153500
-    Cost forward: 7.48101e+06
-    Cost backward: 8.37548e+06
+    Propagation(s): 3.39105
+    Dijkstra(s): 0.354595
+    Undo(s)  : 0.0210435
+    True edges: 158142
+    False edges: 9050
+    False edges (inverse): 342
+    False edges (partial): 1266
+    False edges (partial+): 16
+    Edges added: 87160
+    Edges skipped: 69197
+    Edges propagated: 86900
+    Cost consistency: 115512
+    Cost forward: 5.64099e+06
+    Cost backward: 6.42242e+06
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpq8awwboj.lp']
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpe8o76or8.lp']

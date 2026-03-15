@@ -1,40 +1,38 @@
 Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
 Reading from ...xamples/mapf/instances/x6_y6_a3_f10.lp ...
 Solving...
-Answer: 1 (Time: 1188.472s)
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1194.085s (Solving: 1171.55s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1193.883s
+
+Choices      : 6954536 
+Conflicts    : 219111   (Analyzed: 219111)
+Restarts     : 510      (Average: 429.63 Last: 10316 Blocked: 0)
+Stab. Tests  : 468      (Full: 0 Partial: 468)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 368102   (Deleted: 356118)
+  Binary     : 1021     (Ratio:   0.28%)
+  Ternary    : 547      (Ratio:   0.15%)
+  Conflict   : 219111   (Average Length: 18330.6 Ratio:  59.52%) 
+  Loop       : 148991   (Average Length:   54.3 Ratio:  40.48%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 219111   (Average: 27.42 Max: 33464 Sum: 6007534)
+  Executed   : 219093   (Average: 27.42 Max: 33464 Sum: 6007516 Ratio: 100.00%)
+  Bounded    : 18       (Average:  1.00 Max:   1 Sum:     18 Ratio:   0.00%)
+
+Rules        : 10588356 (Original: 10506998)
+Atoms        : 983269  
+Disjunctions : 5778     (Original: 6935)
+Bodies       : 2091526  (Original: 1975782)
+Equivalences : 593010   (Atom=Atom: 128700 Body=Body: 92571 Other: 371739)
+Tight        : No       (SCCs: 468 Non-Hcfs: 468 Nodes: 143625 Gammas: 34386)
+Variables    : 1027105  (Eliminated:    0 Frozen: 95358)
+Constraints  : 19071860 (Binary:  94.6% Ternary:   4.7% Other:   0.7%)
+
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpjzflho7z.lp']
-t(0,0) t(1,20) t(2,29) t(3,37) t(4,50) t(5,77) t(6,87) t(7,117) t(8,127) t(9,147) true(at(3,(4,4)),0) true(at(2,(2,1)),0) true(at(1,(1,1)),0) true(move(3,(4,4),(4,3)),1) true(move(1,(1,1),(2,1)),3) true(move(2,(2,1),(2,2)),3) true(move(1,(2,1),(2,2)),5) true(move(2,(2,2),(2,3)),5) true(move(3,(4,3),(4,2)),5) true(move(2,(2,3),(3,3)),6) true(move(1,(2,2),(2,3)),7) true(move(2,(3,3),(4,3)),7) true(move(3,(4,2),(4,1)),8) true(at(3,(4,4)),1) true(at(2,(2,1)),1) true(at(1,(1,1)),1) true(at(3,(4,1)),9) true(at(3,(4,3)),4) true(at(3,(4,3)),5) true(at(3,(4,2)),8) true(at(2,(2,1)),2) true(at(2,(2,1)),3) true(at(2,(3,3)),7) true(at(2,(2,3)),6) true(at(2,(4,3)),9) true(at(2,(2,2)),5) true(at(1,(2,1)),5) true(at(1,(2,3)),8) true(at(1,(2,3)),9) true(at(1,(1,1)),2) true(at(1,(1,1)),3) true(at(1,(2,2)),7)
-SATISFIABLE
-
-Models       : 1+
-Calls        : 1
-Time         : 1188.495s (Solving: 1171.75s 1st Model: 1171.73s Unsat: 0.00s)
-CPU Time     : 1188.217s
-
-Choices      : 11257087
-Conflicts    : 271435   (Analyzed: 271435)
-Restarts     : 672      (Average: 403.92 Last: 26 Blocked: 0)
-Stab. Tests  : 216      (Full: 108 Partial: 108)
-Model-Level  : 4727.0  
-Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 453425   (Deleted: 439001)
-  Binary     : 882      (Ratio:   0.19%)
-  Ternary    : 436      (Ratio:   0.10%)
-  Conflict   : 271435   (Average Length: 11635.3 Ratio:  59.86%) 
-  Loop       : 181990   (Average Length:   55.1 Ratio:  40.14%) 
-  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
-Backjumps    : 271435   (Average: 37.61 Max: 35514 Sum: 10208115)
-  Executed   : 271419   (Average: 37.61 Max: 35514 Sum: 10208099 Ratio: 100.00%)
-  Bounded    : 16       (Average:  1.00 Max:   1 Sum:     16 Ratio:   0.00%)
-
-Rules        : 6460957  (Original: 6379599)
-Atoms        : 863000  
-Disjunctions : 2538     (Original: 3695)
-Bodies       : 1915623  (Original: 1819319)
-Equivalences : 416155   (Atom=Atom: 100038 Body=Body: 77629 Other: 238488)
-Tight        : No       (SCCs: 108 Non-Hcfs: 108 Nodes: 64611 Gammas: 14946)
-Variables    : 957565   (Eliminated:    0 Frozen: 45258)
-Constraints  : 15311482 (Binary:  93.8% Ternary:   5.6% Other:   0.7%)
-
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpqyzvpf0s.lp']

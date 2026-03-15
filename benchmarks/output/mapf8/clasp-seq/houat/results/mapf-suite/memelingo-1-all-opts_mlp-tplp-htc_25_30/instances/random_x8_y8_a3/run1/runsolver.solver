@@ -5,58 +5,58 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 483.894s (Solving: 455.27s 1st Model: 0.00s Unsat: 455.27s)
-CPU Time     : 483.744s
+Time         : 241.638s (Solving: 205.90s 1st Model: 0.00s Unsat: 205.90s)
+CPU Time     : 241.485s
 
-Choices      : 404188  
-Conflicts    : 101111   (Analyzed: 101110)
-Restarts     : 292      (Average: 346.27 Last: 99 Blocked: 0)
-Stab. Tests  : 144      (Full: 0 Partial: 144)
+Choices      : 29081   
+Conflicts    : 18650    (Analyzed: 18649)
+Restarts     : 73       (Average: 255.47 Last: 56 Blocked: 0)
+Stab. Tests  : 552      (Full: 0 Partial: 552)
 Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 446068   (Deleted: 427671)
-  Binary     : 532      (Ratio:   0.12%)
-  Ternary    : 709      (Ratio:   0.16%)
-  Conflict   : 101110   (Average Length:  349.8 Ratio:  22.67%) 
-  Loop       : 344859   (Average Length:   57.5 Ratio:  77.31%) 
-  Other      : 99       (Average Length:    2.0 Ratio:   0.02%) 
-Backjumps    : 101110   (Average:  3.71 Max: 1234 Sum: 375561)
-  Executed   : 101089   (Average:  3.71 Max: 1234 Sum: 375540 Ratio:  99.99%)
-  Bounded    : 21       (Average:  1.00 Max:   1 Sum:     21 Ratio:   0.01%)
+Lemmas       : 119614   (Deleted: 90204)
+  Binary     : 881      (Ratio:   0.74%)
+  Ternary    : 1023     (Ratio:   0.86%)
+  Conflict   : 18649    (Average Length:  284.5 Ratio:  15.59%) 
+  Loop       : 100896   (Average Length:   49.2 Ratio:  84.35%) 
+  Other      : 69       (Average Length:    2.0 Ratio:   0.06%) 
+Backjumps    : 18649    (Average:  1.54 Max:  88 Sum:  28801)
+  Executed   : 18593    (Average:  1.54 Max:  88 Sum:  28745 Ratio:  99.81%)
+  Bounded    : 56       (Average:  1.00 Max:   1 Sum:     56 Ratio:   0.19%)
 
-Rules        : 3760285 
-Atoms        : 2682076 
-Disjunctions : 7704     (Original: 7704)
-Bodies       : 3481619  (Original: 3377623)
-Equivalences : 1419799  (Atom=Atom: 295934 Body=Body: 227235 Other: 896630)
-Tight        : No       (SCCs: 144 Non-Hcfs: 144 Nodes: 381636 Gammas: 103996)
-Variables    : 365533   (Eliminated:    0 Frozen: 261537)
-Constraints  : 1867063  (Binary:  85.8% Ternary:   8.1% Other:   6.0%)
+Rules        : 4479301 
+Atoms        : 2986204 
+Disjunctions : 17496    (Original: 17496)
+Bodies       : 4144754  (Original: 3908566)
+Equivalences : 2134261  (Atom=Atom: 372857 Body=Body: 265398 Other: 1496006)
+Tight        : No       (SCCs: 552 Non-Hcfs: 552 Nodes: 843236 Gammas: 236188)
+Variables    : 792837   (Eliminated:    0 Frozen: 556649)
+Constraints  : 3290927  (Binary:  83.3% Ternary:   8.8% Other:   8.0%)
 
 Clingcon
   Init time in seconds
-    Total    : 0.134037
-    Simplify : 0.0258699
-    Translate: 0.0261506
+    Total    : 0.2145
+    Simplify : 0.0484173
+    Translate: 0.0296208
   Problem
     Constraints: 0
     Variables: 25
-    Clauses  : 86167
+    Clauses  : 94128
     Literals : 420
   Translate
-    Constraints removed: 7174
+    Constraints removed: 7824
     Constraints added: 0
-    Clauses  : 85326
+    Clauses  : 93238
     Weight constraints: 9
     Literals : 420
   [Thread 0]
     Time in seconds
-      Total  : 0.264415
-      Propagation: 0.193275
-      Check  : 0.0401668
-      Undo   : 0.0309731
+      Total  : 0.291721
+      Propagation: 0.276765
+      Check  : 0.00792724
+      Undo   : 0.00702833
     Refined reason: 0
     Introduced reason: 0
     Literals introduced: 0
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmptut9v2a4.lp']
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmp6b6qzvle.lp']

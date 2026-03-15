@@ -5,8 +5,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 42.468s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 42.315s
+Time         : 49.292s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 49.094s
 
 Choices      : 0       
 Conflicts    : 1        (Analyzed: 0)
@@ -22,24 +22,24 @@ Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
   Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
   Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
 
-Rules        : 12769700
-Atoms        : 8707892 
-Disjunctions : 25038    (Original: 25038)
-Bodies       : 12062038 (Original: 11536256)
-Equivalences : 5170088  (Atom=Atom: 953908 Body=Body: 732180 Other: 3484000)
-Tight        : No       (SCCs: 288 Non-Hcfs: 288 Nodes: 1803672 Gammas: 525782)
-Variables    : 879448   (Eliminated:    0 Frozen: 616557)
+Rules        : 15909632
+Atoms        : 9819368 
+Disjunctions : 56862    (Original: 56862)
+Bodies       : 15025078 (Original: 13830992)
+Equivalences : 8182112  (Atom=Atom: 1196614 Body=Body: 851136 Other: 6134362)
+Tight        : No       (SCCs: 1104 Non-Hcfs: 1104 Nodes: 4016302 Gammas: 1194086)
+Variables    : 1931922  (Eliminated:    0 Frozen: 1334879)
 Constraints  : 0        (Binary:   0.0% Ternary:   0.0% Other:   0.0%)
 
 Clingcon
   Init time in seconds
-    Total    : 0.093628
-    Simplify : 0.0421398
+    Total    : 0.0833361
+    Simplify : 0.0392294
     Translate: 0
   Problem
-    Constraints: 18079
+    Constraints: 19719
     Variables: 40
-    Clauses  : 1958
+    Clauses  : 2037
     Literals : 0
   Translate
     Constraints removed: 0
@@ -58,4 +58,4 @@ Clingcon
     Literals introduced: 0
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmphaiq7cq5.lp']
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmpd2yyis93.lp']

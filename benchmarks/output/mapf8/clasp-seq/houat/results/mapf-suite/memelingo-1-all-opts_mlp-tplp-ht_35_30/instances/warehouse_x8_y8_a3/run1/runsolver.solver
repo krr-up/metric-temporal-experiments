@@ -5,8 +5,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 8.352s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 8.196s
+Time         : 10.302s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 10.152s
 
 Choices      : 0       
 Conflicts    : 1        (Analyzed: 0)
@@ -22,14 +22,14 @@ Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
   Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
   Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
 
-Rules        : 4980028 
+Rules        : 7118480 
 Atoms        : 0       
-Disjunctions : 0        (Original: 13462)
-Bodies       : 3461656 
+Disjunctions : 0        (Original: 27742)
+Bodies       : 4215672 
 Tight        : Yes
 Variables    : 0        (Eliminated:    0 Frozen:    0)
 Constraints  : 0        (Binary:   0.0% Ternary:   0.0% Other:   0.0%)
 
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpyrtmjid9.lp']
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpgvk54b7v.lp']

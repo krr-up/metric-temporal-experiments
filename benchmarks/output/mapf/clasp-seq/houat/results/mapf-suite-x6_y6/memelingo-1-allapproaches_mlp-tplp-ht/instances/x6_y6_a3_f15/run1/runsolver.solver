@@ -1,40 +1,38 @@
 Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
 Reading from ...xamples/mapf/instances/x6_y6_a3_f15.lp ...
 Solving...
-Answer: 1 (Time: 829.278s)
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1191.771s (Solving: 1144.31s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1191.531s
+
+Choices      : 7080508 
+Conflicts    : 128103   (Analyzed: 128103)
+Restarts     : 285      (Average: 449.48 Last: 966 Blocked: 0)
+Stab. Tests  : 468      (Full: 0 Partial: 468)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 199054   (Deleted: 190439)
+  Binary     : 346      (Ratio:   0.17%)
+  Ternary    : 311      (Ratio:   0.16%)
+  Conflict   : 128103   (Average Length: 25799.9 Ratio:  64.36%) 
+  Loop       : 70951    (Average Length:   53.2 Ratio:  35.64%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 128103   (Average: 48.85 Max: 62457 Sum: 6257511)
+  Executed   : 128095   (Average: 48.85 Max: 62457 Sum: 6257503 Ratio: 100.00%)
+  Bounded    : 8        (Average:  1.00 Max:   1 Sum:      8 Ratio:   0.00%)
+
+Rules        : 22586031 (Original: 22396598)
+Atoms        : 984619  
+Disjunctions : 5778     (Original: 7535)
+Bodies       : 3315301  (Original: 3091482)
+Equivalences : 598635   (Atom=Atom: 129300 Body=Body: 93171 Other: 376164)
+Tight        : No       (SCCs: 468 Non-Hcfs: 468 Nodes: 143625 Gammas: 34386)
+Variables    : 2225980  (Eliminated:    0 Frozen: 96033)
+Constraints  : 52924635 (Binary:  95.8% Ternary:   3.7% Other:   0.4%)
+
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmp5dcklnrq.lp']
-t(0,0) t(1,15) t(2,60) t(3,94) t(4,109) t(5,135) t(6,139) t(7,154) t(8,169) t(9,199) true(at(3,(4,4)),0) true(at(2,(2,1)),0) true(at(1,(1,1)),0) true(move(1,(1,1),(2,1)),0) true(move(2,(2,1),(2,2)),0) true(move(3,(4,4),(4,3)),1) true(move(1,(2,1),(2,2)),3) true(move(2,(2,2),(2,3)),3) true(move(3,(4,3),(4,2)),3) true(move(2,(2,3),(3,3)),4) true(move(1,(2,2),(2,3)),7) true(move(2,(3,3),(4,3)),7) true(move(3,(4,2),(4,1)),8) true(at(3,(4,4)),1) true(at(3,(4,1)),9) true(at(3,(4,3)),2) true(at(3,(4,3)),3) true(at(3,(4,2)),8) true(at(2,(3,3)),7) true(at(2,(2,3)),4) true(at(2,(4,3)),9) true(at(2,(2,2)),2) true(at(2,(2,2)),3) true(at(1,(2,1)),2) true(at(1,(2,1)),3) true(at(1,(2,3)),8) true(at(1,(2,3)),9) true(at(1,(2,2)),7)
-SATISFIABLE
-
-Models       : 1+
-Calls        : 1
-Time         : 829.347s (Solving: 796.97s 1st Model: 796.90s Unsat: 0.00s)
-CPU Time     : 828.865s
-
-Choices      : 8846766 
-Conflicts    : 92247    (Analyzed: 92247)
-Restarts     : 254      (Average: 363.18 Last: 10631 Blocked: 0)
-Stab. Tests  : 216      (Full: 108 Partial: 108)
-Model-Level  : 499.0   
-Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 147149   (Deleted: 136164)
-  Binary     : 472      (Ratio:   0.32%)
-  Ternary    : 265      (Ratio:   0.18%)
-  Conflict   : 92247    (Average Length: 32128.8 Ratio:  62.69%) 
-  Loop       : 54902    (Average Length:   52.3 Ratio:  37.31%) 
-  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
-Backjumps    : 92247    (Average: 82.98 Max: 199059 Sum: 7654895)
-  Executed   : 92236    (Average: 82.98 Max: 199059 Sum: 7654884 Ratio: 100.00%)
-  Bounded    : 11       (Average:  1.00 Max:   1 Sum:     11 Ratio:   0.00%)
-
-Rules        : 13366432 (Original: 13176999)
-Atoms        : 864350  
-Disjunctions : 2538     (Original: 4295)
-Bodies       : 3139398  (Original: 2935019)
-Equivalences : 421780   (Atom=Atom: 100638 Body=Body: 78229 Other: 242913)
-Tight        : No       (SCCs: 108 Non-Hcfs: 108 Nodes: 64611 Gammas: 14946)
-Variables    : 2156440  (Eliminated:    0 Frozen: 45933)
-Constraints  : 44588432 (Binary:  95.2% Ternary:   4.4% Other:   0.5%)
-
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpjuac9uyy.lp']

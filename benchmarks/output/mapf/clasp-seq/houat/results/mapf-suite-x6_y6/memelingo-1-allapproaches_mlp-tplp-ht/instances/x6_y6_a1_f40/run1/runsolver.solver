@@ -1,35 +1,31 @@
 Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
 Reading from ...xamples/mapf/instances/x6_y6_a1_f40.lp ...
-Solving...
 UNKNOWN
 
 INTERRUPTED  : 1
 Models       : 0+
 Calls        : 1
-Time         : 486.528s (Solving: 176.29s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 486.071s
+Time         : 501.699s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 501.526s
 
-Choices      : 534981  
-Conflicts    : 4779     (Analyzed: 4779)
-Restarts     : 21       (Average: 227.57 Last: 258 Blocked: 0)
-Stab. Tests  : 36       (Full: 0 Partial: 36)
-Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 6112     (Deleted: 3312)
-  Binary     : 38       (Ratio:   0.62%)
-  Ternary    : 34       (Ratio:   0.56%)
-  Conflict   : 4779     (Average Length: 113055.1 Ratio:  78.19%) 
-  Loop       : 1333     (Average Length:   66.2 Ratio:  21.81%) 
+Choices      : 0       
+Conflicts    : 0        (Analyzed: 0)
+Restarts     : 0       
+Problems     : 0        (Average Length: 0.00 Splits: 0)
+Lemmas       : 0        (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 0        (Ratio:   0.00%)
+  Conflict   : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
   Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
-Backjumps    : 4779     (Average: 104.61 Max: 64032 Sum: 499925)
-  Executed   : 4779     (Average: 104.61 Max: 64032 Sum: 499925 Ratio: 100.00%)
-  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
+  Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
 
-Rules        : 89593371 (Original: 88188563)
-Atoms        : 310528  
-Disjunctions : 846      (Original: 5603)
-Bodies       : 16127486 (Original: 14717696)
-Equivalences : 198037   (Atom=Atom: 45087 Body=Body: 33937 Other: 119013)
-Tight        : No       (SCCs: 36 Non-Hcfs: 36 Nodes: 21534 Gammas: 4982)
-Variables    : 15621126 (Eliminated:    0 Frozen: 20208)
-Constraints  : 679284638 (Binary:  97.7% Ternary:   2.1% Other:   0.2%)
+Rules        : 0       
+Atoms        : 0       
+Bodies       : 0       
+Tight        : Yes
+Variables    : 15643727 (Eliminated:    0 Frozen: 5639)
+Constraints  : 0        (Binary:   0.0% Ternary:   0.0% Other:   0.0%)
 

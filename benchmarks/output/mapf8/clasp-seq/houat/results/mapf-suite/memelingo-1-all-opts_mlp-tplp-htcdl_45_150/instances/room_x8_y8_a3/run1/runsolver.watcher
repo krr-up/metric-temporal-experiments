@@ -1,5 +1,5 @@
 [runlim] version:		2.0.0rc12
-[runlim] host:			kr-node10
+[runlim] host:			kr-node4
 [runlim] time limit:		311040000 seconds
 [runlim] real time limit:	1200 seconds
 [runlim] space limit:		20000 MB
@@ -14,23 +14,26 @@
 [runlim] argv[8]:		--stats
 [runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/room_x8_y8_a3.lp
 [runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf_javier.lp
-[runlim] start:			Thu Mar 12 02:22:34 2026
-[runlim] child:			6056
-[runlim] sample:		4.62 time, 10.01 real, 101 MB, 0.89 load
-[runlim] sample:		14.53 time, 20.01 real, 1737 MB, 0.91 load
-[runlim] sample:		24.52 time, 30.01 real, 3001 MB, 0.92 load
-[runlim] sample:		34.52 time, 40.01 real, 4190 MB, 0.94 load
-[runlim] sample:		44.52 time, 50.01 real, 4465 MB, 0.95 load
-[runlim] sample:		54.52 time, 60.01 real, 5418 MB, 0.96 load
-[runlim] sample:		64.52 time, 70.01 real, 5129 MB, 0.96 load
-[runlim] sample:		74.52 time, 80.01 real, 5129 MB, 0.97 load
-[runlim] end:			Thu Mar 12 02:24:03 2026
+[runlim] start:			Thu Mar 12 21:48:05 2026
+[runlim] child:			27297
+[runlim] sample:		3.40 time, 10.01 real, 100 MB, 0.90 load
+[runlim] sample:		13.27 time, 20.01 real, 1537 MB, 0.91 load
+[runlim] sample:		23.27 time, 30.01 real, 2727 MB, 0.93 load
+[runlim] sample:		33.27 time, 40.01 real, 4036 MB, 0.94 load
+[runlim] sample:		43.26 time, 50.01 real, 5079 MB, 0.95 load
+[runlim] sample:		53.25 time, 60.01 real, 5505 MB, 0.96 load
+[runlim] sample:		63.25 time, 70.01 real, 6575 MB, 0.96 load
+[runlim] sample:		73.23 time, 80.01 real, 7486 MB, 0.97 load
+[runlim] sample:		83.23 time, 90.01 real, 7094 MB, 0.97 load
+[runlim] sample:		93.22 time, 100.01 real, 7094 MB, 0.98 load
+[runlim] sample:		103.21 time, 110.01 real, 6806 MB, 0.98 load
+[runlim] end:			Thu Mar 12 21:49:59 2026
 [runlim] status:		ok
 [runlim] result:		10
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			89.72 seconds
-[runlim] time:			84.14 seconds
-[runlim] space:			5583 MB
-[runlim] load:			0.97 maximum
-[runlim] samples:		898
+[runlim] real:			113.93 seconds
+[runlim] time:			107.09 seconds
+[runlim] space:			7587 MB
+[runlim] load:			0.98 maximum
+[runlim] samples:		1140

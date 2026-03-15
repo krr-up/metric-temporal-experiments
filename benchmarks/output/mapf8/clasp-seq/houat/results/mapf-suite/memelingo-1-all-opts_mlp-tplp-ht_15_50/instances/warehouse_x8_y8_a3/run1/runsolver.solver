@@ -1,40 +1,38 @@
 Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
 Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
 Solving...
-Answer: 1 (Time: 11.691s)
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1193.951s (Solving: 1184.76s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1193.591s
+
+Choices      : 409020  
+Conflicts    : 234702   (Analyzed: 234702)
+Restarts     : 602      (Average: 389.87 Last: 616 Blocked: 0)
+Stab. Tests  : 312      (Full: 0 Partial: 312)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 583773   (Deleted: 557128)
+  Binary     : 1476     (Ratio:   0.25%)
+  Ternary    : 1037     (Ratio:   0.18%)
+  Conflict   : 234702   (Average Length:  897.9 Ratio:  40.20%) 
+  Loop       : 349071   (Average Length:   44.1 Ratio:  59.80%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 234702   (Average:  1.73 Max:  70 Sum: 405281)
+  Executed   : 234614   (Average:  1.73 Max:  70 Sum: 405193 Ratio:  99.98%)
+  Bounded    : 88       (Average:  1.00 Max:   1 Sum:     88 Ratio:   0.02%)
+
+Rules        : 2883648  (Original: 2874485)
+Atoms        : 596851  
+Disjunctions : 5544     (Original: 6091)
+Bodies       : 965496   (Original: 909395)
+Equivalences : 612470   (Atom=Atom: 124043 Body=Body: 88445 Other: 399982)
+Tight        : No       (SCCs: 312 Non-Hcfs: 312 Nodes: 183437 Gammas: 46938)
+Variables    : 311098   (Eliminated:    0 Frozen: 121094)
+Constraints  : 3093894  (Binary:  90.1% Ternary:   7.7% Other:   2.2%)
+
 Reifing...
 Saving refication...
-Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmppnv8iam8.lp']
-t(0,0) t(1,1) t(2,2) t(3,4) t(4,6) t(5,7) t(6,8) t(7,9) t(8,10) t(9,11) t(10,13) t(11,14) t(12,15) t(13,16) t(14,19) true(at(3,(1,8)),0) true(at(2,(7,8)),0) true(at(1,(5,7)),0) true(move(1,(5,7),(6,7)),0) true(move(3,(1,8),(1,7)),0) true(move(1,(6,7),(7,7)),1) true(move(2,(7,8),(7,7)),1) true(move(1,(7,7),(7,6)),3) true(move(2,(7,7),(6,7)),4) true(move(3,(1,7),(2,7)),4) true(move(3,(2,7),(3,7)),5) true(move(1,(7,6),(7,5)),7) true(move(3,(3,7),(4,7)),8) true(move(1,(7,5),(7,4)),9) true(move(2,(6,7),(5,7)),10) true(move(3,(4,7),(5,7)),10) true(move(2,(5,7),(4,7)),11) true(move(3,(5,7),(6,7)),12) true(move(1,(7,4),(8,4)),13) true(move(3,(6,7),(7,7)),13) true(at(2,(7,8)),1) true(at(3,(4,7)),9) true(at(3,(4,7)),10) true(at(3,(7,7)),14) true(at(3,(6,7)),13) true(at(3,(5,7)),12) true(at(3,(3,7)),8) true(at(3,(2,7)),5) true(at(3,(1,7)),3) true(at(3,(1,7)),4) true(at(2,(4,7)),12) true(at(2,(4,7)),13) true(at(2,(4,7)),14) true(at(2,(7,7)),4) true(at(2,(6,7)),8) true(at(2,(6,7)),9) true(at(2,(6,7)),10) true(at(2,(5,7)),11) true(at(1,(8,4)),14) true(at(1,(7,7)),3) true(at(1,(7,6)),7) true(at(1,(7,5)),9) true(at(1,(6,7)),1) true(at(1,(7,4)),13)
-SATISFIABLE
-
-Models       : 1+
-Calls        : 1
-Time         : 11.697s (Solving: 6.15s 1st Model: 6.14s Unsat: 0.00s)
-CPU Time     : 11.563s
-
-Choices      : 4988    
-Conflicts    : 2217     (Analyzed: 2217)
-Restarts     : 14       (Average: 158.36 Last: 71 Blocked: 0)
-Stab. Tests  : 204      (Full: 102 Partial: 102)
-Model-Level  : 19.0    
-Problems     : 1        (Average Length: 1.00 Splits: 0)
-Lemmas       : 12116    (Deleted: 5534)
-  Binary     : 48       (Ratio:   0.40%)
-  Ternary    : 39       (Ratio:   0.32%)
-  Conflict   : 2217     (Average Length:  736.1 Ratio:  18.30%) 
-  Loop       : 9899     (Average Length:   41.6 Ratio:  81.70%) 
-  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
-Backjumps    : 2217     (Average:  2.13 Max:  74 Sum:   4716)
-  Executed   : 2211     (Average:  2.12 Max:  74 Sum:   4710 Ratio:  99.87%)
-  Bounded    : 6        (Average:  1.00 Max:   1 Sum:      6 Ratio:   0.13%)
-
-Rules        : 1798165  (Original: 1789002)
-Atoms        : 521422  
-Disjunctions : 2604     (Original: 3151)
-Bodies       : 830666   (Original: 799555)
-Equivalences : 436942   (Atom=Atom: 99246 Body=Body: 76204 Other: 261492)
-Tight        : No       (SCCs: 102 Non-Hcfs: 102 Nodes: 90372 Gammas: 21948)
-Variables    : 226245   (Eliminated:    0 Frozen: 61231)
-Constraints  : 1944214  (Binary:  88.5% Ternary:   9.6% Other:   1.9%)
-
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpfi0mu6po.lp']

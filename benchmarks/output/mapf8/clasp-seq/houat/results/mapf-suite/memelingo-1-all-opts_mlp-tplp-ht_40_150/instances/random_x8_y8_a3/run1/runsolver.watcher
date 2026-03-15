@@ -1,5 +1,5 @@
 [runlim] version:		2.0.0rc12
-[runlim] host:			kr-node8
+[runlim] host:			kr-node2
 [runlim] time limit:		311040000 seconds
 [runlim] real time limit:	1200 seconds
 [runlim] space limit:		20000 MB
@@ -14,57 +14,112 @@
 [runlim] argv[8]:		--stats
 [runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/random_x8_y8_a3.lp
 [runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf_javier.lp
-[runlim] start:			Thu Mar 12 02:53:19 2026
-[runlim] child:			27750
-[runlim] sample:		4.36 time, 10.01 real, 172 MB, 2.04 load
-[runlim] sample:		14.36 time, 20.01 real, 1371 MB, 2.03 load
-[runlim] sample:		24.36 time, 30.01 real, 1751 MB, 2.03 load
-[runlim] sample:		34.36 time, 40.01 real, 2195 MB, 2.02 load
-[runlim] sample:		44.36 time, 50.01 real, 2314 MB, 2.02 load
-[runlim] sample:		54.36 time, 60.01 real, 2352 MB, 2.01 load
-[runlim] sample:		64.36 time, 70.01 real, 2772 MB, 2.01 load
-[runlim] sample:		74.36 time, 80.01 real, 3097 MB, 2.01 load
-[runlim] sample:		84.36 time, 90.01 real, 3488 MB, 2.01 load
-[runlim] sample:		94.36 time, 100.01 real, 3673 MB, 2.01 load
-[runlim] sample:		104.36 time, 110.01 real, 3755 MB, 2.00 load
-[runlim] sample:		114.36 time, 120.01 real, 4871 MB, 2.00 load
-[runlim] sample:		124.36 time, 130.01 real, 5628 MB, 2.00 load
-[runlim] sample:		134.36 time, 140.01 real, 5628 MB, 2.00 load
-[runlim] sample:		144.36 time, 150.01 real, 5628 MB, 2.07 load
-[runlim] sample:		154.36 time, 160.01 real, 5628 MB, 2.06 load
-[runlim] sample:		164.36 time, 170.01 real, 5628 MB, 2.05 load
-[runlim] sample:		174.36 time, 180.01 real, 5628 MB, 2.04 load
-[runlim] sample:		184.36 time, 190.01 real, 5628 MB, 2.04 load
-[runlim] sample:		194.36 time, 200.01 real, 5628 MB, 2.03 load
-[runlim] sample:		204.36 time, 210.01 real, 5628 MB, 2.03 load
-[runlim] sample:		214.36 time, 220.01 real, 5628 MB, 2.02 load
-[runlim] sample:		224.36 time, 230.01 real, 5628 MB, 2.02 load
-[runlim] sample:		234.36 time, 240.01 real, 5628 MB, 2.01 load
-[runlim] sample:		244.35 time, 250.01 real, 5955 MB, 2.01 load
-[runlim] sample:		254.35 time, 260.01 real, 5957 MB, 2.01 load
-[runlim] sample:		264.35 time, 270.01 real, 7807 MB, 2.01 load
-[runlim] sample:		274.36 time, 280.01 real, 8476 MB, 2.01 load
-[runlim] sample:		284.35 time, 290.01 real, 9074 MB, 2.00 load
-[runlim] sample:		294.35 time, 300.01 real, 8937 MB, 2.00 load
-[runlim] sample:		304.35 time, 310.01 real, 8937 MB, 2.00 load
-[runlim] sample:		314.35 time, 320.01 real, 8937 MB, 2.00 load
-[runlim] sample:		324.35 time, 330.01 real, 8937 MB, 2.00 load
-[runlim] sample:		334.35 time, 340.01 real, 8937 MB, 2.00 load
-[runlim] sample:		344.35 time, 350.01 real, 8937 MB, 2.00 load
-[runlim] sample:		354.35 time, 360.01 real, 8937 MB, 2.00 load
-[runlim] sample:		364.35 time, 370.01 real, 8937 MB, 2.00 load
-[runlim] sample:		374.35 time, 380.01 real, 8937 MB, 2.00 load
-[runlim] sample:		384.35 time, 390.01 real, 8937 MB, 2.00 load
-[runlim] sample:		394.35 time, 400.01 real, 8937 MB, 2.00 load
-[runlim] sample:		404.35 time, 410.01 real, 8937 MB, 2.08 load
-[runlim] sample:		414.35 time, 420.01 real, 8937 MB, 2.07 load
-[runlim] end:			Thu Mar 12 03:00:28 2026
+[runlim] start:			Thu Mar 12 22:53:02 2026
+[runlim] child:			2635
+[runlim] sample:		4.22 time, 10.01 real, 290 MB, 1.85 load
+[runlim] sample:		14.22 time, 20.01 real, 1455 MB, 1.88 load
+[runlim] sample:		24.23 time, 30.01 real, 1742 MB, 1.90 load
+[runlim] sample:		34.23 time, 40.01 real, 2237 MB, 1.91 load
+[runlim] sample:		44.22 time, 50.01 real, 2275 MB, 1.93 load
+[runlim] sample:		54.23 time, 60.01 real, 2345 MB, 1.94 load
+[runlim] sample:		64.22 time, 70.01 real, 2388 MB, 1.95 load
+[runlim] sample:		74.23 time, 80.01 real, 2611 MB, 1.96 load
+[runlim] sample:		84.22 time, 90.01 real, 2839 MB, 1.96 load
+[runlim] sample:		94.22 time, 100.01 real, 2886 MB, 1.97 load
+[runlim] sample:		104.23 time, 110.01 real, 3351 MB, 1.97 load
+[runlim] sample:		114.22 time, 120.01 real, 3480 MB, 1.98 load
+[runlim] sample:		124.22 time, 130.01 real, 3954 MB, 1.98 load
+[runlim] sample:		134.23 time, 140.01 real, 3991 MB, 1.99 load
+[runlim] sample:		144.22 time, 150.01 real, 4029 MB, 1.99 load
+[runlim] sample:		154.22 time, 160.01 real, 4070 MB, 1.99 load
+[runlim] sample:		164.22 time, 170.01 real, 4112 MB, 1.99 load
+[runlim] sample:		174.22 time, 180.01 real, 4527 MB, 1.99 load
+[runlim] sample:		184.22 time, 190.01 real, 4639 MB, 2.07 load
+[runlim] sample:		194.22 time, 200.01 real, 5580 MB, 2.06 load
+[runlim] sample:		204.22 time, 210.01 real, 6477 MB, 2.05 load
+[runlim] sample:		214.23 time, 220.01 real, 6541 MB, 2.04 load
+[runlim] sample:		224.22 time, 230.01 real, 6542 MB, 2.03 load
+[runlim] sample:		234.22 time, 240.01 real, 6542 MB, 2.03 load
+[runlim] sample:		244.22 time, 250.01 real, 6542 MB, 2.02 load
+[runlim] sample:		254.22 time, 260.01 real, 6542 MB, 2.02 load
+[runlim] sample:		264.22 time, 270.01 real, 6542 MB, 2.02 load
+[runlim] sample:		274.22 time, 280.01 real, 6542 MB, 2.01 load
+[runlim] sample:		284.22 time, 290.01 real, 6542 MB, 2.01 load
+[runlim] sample:		294.22 time, 300.01 real, 6542 MB, 2.01 load
+[runlim] sample:		304.22 time, 310.01 real, 6542 MB, 2.01 load
+[runlim] sample:		314.22 time, 320.01 real, 6542 MB, 2.00 load
+[runlim] sample:		324.22 time, 330.01 real, 6542 MB, 2.00 load
+[runlim] sample:		334.22 time, 340.01 real, 6542 MB, 2.00 load
+[runlim] sample:		344.22 time, 350.01 real, 6542 MB, 2.00 load
+[runlim] sample:		354.22 time, 360.01 real, 6542 MB, 2.00 load
+[runlim] sample:		364.22 time, 370.01 real, 6542 MB, 2.00 load
+[runlim] sample:		374.22 time, 380.01 real, 6542 MB, 2.00 load
+[runlim] sample:		384.22 time, 390.01 real, 6542 MB, 2.00 load
+[runlim] sample:		394.22 time, 400.01 real, 6542 MB, 2.00 load
+[runlim] sample:		404.22 time, 410.01 real, 6542 MB, 2.00 load
+[runlim] sample:		414.22 time, 420.01 real, 6542 MB, 2.00 load
+[runlim] sample:		424.21 time, 430.01 real, 6840 MB, 2.00 load
+[runlim] sample:		434.22 time, 440.01 real, 6894 MB, 2.00 load
+[runlim] sample:		444.22 time, 450.01 real, 6894 MB, 2.00 load
+[runlim] sample:		454.22 time, 460.01 real, 6710 MB, 2.00 load
+[runlim] sample:		464.22 time, 470.01 real, 9259 MB, 2.00 load
+[runlim] sample:		474.22 time, 480.01 real, 10108 MB, 2.00 load
+[runlim] sample:		484.22 time, 490.01 real, 11091 MB, 2.00 load
+[runlim] sample:		494.21 time, 500.01 real, 11870 MB, 2.00 load
+[runlim] sample:		504.22 time, 510.01 real, 11779 MB, 2.00 load
+[runlim] sample:		514.22 time, 520.01 real, 11779 MB, 2.00 load
+[runlim] sample:		524.22 time, 530.01 real, 11779 MB, 2.00 load
+[runlim] sample:		534.22 time, 540.01 real, 11779 MB, 2.00 load
+[runlim] sample:		544.22 time, 550.01 real, 11779 MB, 2.00 load
+[runlim] sample:		554.22 time, 560.01 real, 11779 MB, 2.00 load
+[runlim] sample:		564.22 time, 570.01 real, 11779 MB, 2.00 load
+[runlim] sample:		574.22 time, 580.01 real, 11779 MB, 2.00 load
+[runlim] sample:		584.21 time, 590.01 real, 11780 MB, 2.00 load
+[runlim] sample:		594.21 time, 600.01 real, 11780 MB, 2.00 load
+[runlim] sample:		604.21 time, 610.01 real, 11780 MB, 2.00 load
+[runlim] sample:		614.19 time, 620.01 real, 11768 MB, 1.92 load
+[runlim] sample:		624.19 time, 630.01 real, 11765 MB, 1.78 load
+[runlim] sample:		634.19 time, 640.01 real, 11766 MB, 1.81 load
+[runlim] sample:		644.19 time, 650.01 real, 11766 MB, 1.84 load
+[runlim] sample:		654.19 time, 660.01 real, 11767 MB, 1.87 load
+[runlim] sample:		664.17 time, 670.01 real, 11767 MB, 1.89 load
+[runlim] sample:		674.17 time, 680.01 real, 11767 MB, 1.83 load
+[runlim] sample:		684.17 time, 690.01 real, 11767 MB, 1.86 load
+[runlim] sample:		694.17 time, 700.01 real, 11767 MB, 1.88 load
+[runlim] sample:		704.17 time, 710.01 real, 11767 MB, 1.90 load
+[runlim] sample:		714.17 time, 720.01 real, 11768 MB, 1.92 load
+[runlim] sample:		724.17 time, 730.01 real, 11768 MB, 1.93 load
+[runlim] sample:		734.17 time, 740.01 real, 11769 MB, 1.94 load
+[runlim] sample:		744.17 time, 750.01 real, 11776 MB, 2.02 load
+[runlim] sample:		754.17 time, 760.01 real, 11776 MB, 2.02 load
+[runlim] sample:		764.17 time, 770.01 real, 11776 MB, 2.02 load
+[runlim] sample:		774.17 time, 780.01 real, 11776 MB, 2.01 load
+[runlim] sample:		784.17 time, 790.01 real, 11776 MB, 2.01 load
+[runlim] sample:		794.17 time, 800.01 real, 11776 MB, 2.01 load
+[runlim] sample:		804.17 time, 810.01 real, 11776 MB, 2.01 load
+[runlim] sample:		814.17 time, 820.01 real, 11776 MB, 2.00 load
+[runlim] sample:		824.17 time, 830.01 real, 11776 MB, 2.00 load
+[runlim] sample:		834.17 time, 840.01 real, 11776 MB, 2.00 load
+[runlim] sample:		844.17 time, 850.01 real, 11776 MB, 2.00 load
+[runlim] sample:		854.17 time, 860.01 real, 11776 MB, 2.00 load
+[runlim] sample:		864.17 time, 870.01 real, 11777 MB, 2.00 load
+[runlim] sample:		874.17 time, 880.01 real, 11777 MB, 2.00 load
+[runlim] sample:		884.17 time, 890.01 real, 11777 MB, 2.00 load
+[runlim] sample:		894.17 time, 900.01 real, 11777 MB, 2.00 load
+[runlim] sample:		904.17 time, 910.01 real, 11777 MB, 2.00 load
+[runlim] sample:		914.17 time, 920.01 real, 11777 MB, 2.00 load
+[runlim] sample:		924.17 time, 930.01 real, 11777 MB, 2.00 load
+[runlim] sample:		934.17 time, 940.01 real, 11777 MB, 2.08 load
+[runlim] sample:		944.17 time, 950.01 real, 11777 MB, 2.07 load
+[runlim] sample:		954.17 time, 960.01 real, 11777 MB, 2.06 load
+[runlim] sample:		964.17 time, 970.01 real, 8065 MB, 2.05 load
+[runlim] end:			Thu Mar 12 23:09:14 2026
 [runlim] status:		ok
 [runlim] result:		10
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			429.76 seconds
-[runlim] time:			424.05 seconds
-[runlim] space:			9161 MB
+[runlim] real:			971.65 seconds
+[runlim] time:			965.76 seconds
+[runlim] space:			12085 MB
 [runlim] load:			2.08 maximum
-[runlim] samples:		4298
+[runlim] samples:		9717

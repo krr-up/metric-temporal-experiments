@@ -1,5 +1,5 @@
 [runlim] version:		2.0.0rc12
-[runlim] host:			kr-node9
+[runlim] host:			kr-node3
 [runlim] time limit:		311040000 seconds
 [runlim] real time limit:	1200 seconds
 [runlim] space limit:		20000 MB
@@ -14,22 +14,30 @@
 [runlim] argv[8]:		--stats
 [runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/random_x8_y8_a3.lp
 [runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf_javier.lp
-[runlim] start:			Thu Mar 12 02:45:31 2026
-[runlim] child:			19658
-[runlim] sample:		4.50 time, 10.01 real, 86 MB, 1.62 load
-[runlim] sample:		14.41 time, 20.01 real, 1564 MB, 1.61 load
-[runlim] sample:		24.41 time, 30.01 real, 2707 MB, 1.67 load
-[runlim] sample:		34.41 time, 40.01 real, 3686 MB, 1.72 load
-[runlim] sample:		44.41 time, 50.01 real, 4108 MB, 1.76 load
-[runlim] sample:		54.40 time, 60.01 real, 4600 MB, 1.80 load
-[runlim] sample:		64.41 time, 70.01 real, 4335 MB, 1.83 load
-[runlim] end:			Thu Mar 12 02:46:46 2026
+[runlim] start:			Thu Mar 12 23:15:06 2026
+[runlim] child:			24587
+[runlim] sample:		3.96 time, 10.01 real, 92 MB, 0.83 load
+[runlim] sample:		13.81 time, 20.01 real, 1533 MB, 0.85 load
+[runlim] sample:		23.81 time, 30.01 real, 2803 MB, 0.88 load
+[runlim] sample:		33.82 time, 40.01 real, 3849 MB, 0.97 load
+[runlim] sample:		43.81 time, 50.01 real, 4524 MB, 0.97 load
+[runlim] sample:		53.81 time, 60.01 real, 5552 MB, 0.98 load
+[runlim] sample:		63.81 time, 70.01 real, 6412 MB, 0.98 load
+[runlim] sample:		73.81 time, 80.01 real, 6069 MB, 0.99 load
+[runlim] sample:		83.81 time, 90.01 real, 6069 MB, 0.99 load
+[runlim] sample:		93.81 time, 100.01 real, 6069 MB, 0.99 load
+[runlim] sample:		103.81 time, 110.01 real, 6069 MB, 0.99 load
+[runlim] sample:		113.81 time, 120.01 real, 6069 MB, 0.99 load
+[runlim] sample:		123.81 time, 130.01 real, 6070 MB, 1.00 load
+[runlim] sample:		133.81 time, 140.01 real, 6070 MB, 1.00 load
+[runlim] sample:		143.81 time, 150.01 real, 6070 MB, 1.00 load
+[runlim] end:			Thu Mar 12 23:17:42 2026
 [runlim] status:		ok
 [runlim] result:		10
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			75.08 seconds
-[runlim] time:			69.40 seconds
-[runlim] space:			4632 MB
-[runlim] load:			1.84 maximum
-[runlim] samples:		751
+[runlim] real:			156.04 seconds
+[runlim] time:			149.79 seconds
+[runlim] space:			6615 MB
+[runlim] load:			1.00 maximum
+[runlim] samples:		1561
