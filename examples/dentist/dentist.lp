@@ -9,12 +9,12 @@
 item(icard). item(cash).
 loc(dentist). loc(office). loc(atm). loc(home).
 
-distance(dentist,home,20*size).
-distance(dentist,office,30*size).
-distance(dentist,atm,40*size).
-distance(home,office,15*size).
-distance(home,atm,15*size).
-distance(office,atm,20*size).
+distance(dentist,home,20).
+distance(dentist,office,30).
+distance(dentist,atm,40).
+distance(home,office,15).
+distance(home,atm,15).
+distance(office,atm,20).
 distance(Y,X,D):-distance(X,Y,D).
 
 %----------
