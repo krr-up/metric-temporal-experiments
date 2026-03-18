@@ -1,0 +1,69 @@
+<runscript output="output/mapf">
+
+	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB" />
+
+	<config name="seq-generic" template="templates/seq-generic.sh" />
+
+
+	<system name="memelingo" version="1" measures="rp_tmp"
+		config="seq-generic"
+		cmdline="">
+		<setting name="allapproaches" tag="allapproaches" cmdline="">
+			<variable cmd="{} --models=1 --project=show --stats -c lambda=10"
+				value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
+		</setting>
+	</system>
+
+	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
+		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
+
+	<benchmark name="mapf-suite-x6_y6">
+		<files path="../examples/mapf">
+			<encoding file="../examples/mapf/mapf_javier.lp" />
+			<add file="instances/x6_y6_a1_f1.lp" cmdline="-c v=15" />
+			<add file="instances/x6_y6_a1_f5.lp" cmdline="-c v=75" />
+			<add file="instances/x6_y6_a1_f10.lp" cmdline="-c v=150" />
+			<add file="instances/x6_y6_a1_f15.lp" cmdline="-c v=225" />
+			<add file="instances/x6_y6_a1_f20.lp" cmdline="-c v=300" />
+			<add file="instances/x6_y6_a1_f25.lp" cmdline="-c v=375" />
+			<add file="instances/x6_y6_a1_f30.lp" cmdline="-c v=450" />
+			<add file="instances/x6_y6_a1_f35.lp" cmdline="-c v=525" />
+			<add file="instances/x6_y6_a1_f40.lp" cmdline="-c v=600" />
+			<add file="instances/x6_y6_a2_f1.lp" cmdline="-c v=15" />
+			<add file="instances/x6_y6_a2_f5.lp" cmdline="-c v=75" />
+			<add file="instances/x6_y6_a2_f10.lp" cmdline="-c v=150" />
+			<add file="instances/x6_y6_a2_f15.lp" cmdline="-c v=225" />
+			<add file="instances/x6_y6_a2_f20.lp" cmdline="-c v=300" />
+			<add file="instances/x6_y6_a2_f25.lp" cmdline="-c v=375" />
+			<add file="instances/x6_y6_a2_f30.lp" cmdline="-c v=450" />
+			<add file="instances/x6_y6_a2_f35.lp" cmdline="-c v=525" />
+			<add file="instances/x6_y6_a2_f40.lp" cmdline="-c v=600" />
+			<add file="instances/x6_y6_a3_f1.lp" cmdline="-c v=15" />
+			<add file="instances/x6_y6_a3_f5.lp" cmdline="-c v=75" />
+			<add file="instances/x6_y6_a3_f10.lp" cmdline="-c v=150" />
+			<add file="instances/x6_y6_a3_f15.lp" cmdline="-c v=225" />
+			<add file="instances/x6_y6_a3_f20.lp" cmdline="-c v=300" />
+			<add file="instances/x6_y6_a3_f25.lp" cmdline="-c v=375" />
+			<add file="instances/x6_y6_a3_f30.lp" cmdline="-c v=450" />
+			<add file="instances/x6_y6_a3_f35.lp" cmdline="-c v=525" />
+			<add file="instances/x6_y6_a3_f40.lp" cmdline="-c v=600" />
+			<add file="instances/x6_y6_a4_f1.lp" cmdline="-c v=15" />
+			<add file="instances/x6_y6_a4_f5.lp" cmdline="-c v=75" />
+			<add file="instances/x6_y6_a4_f10.lp" cmdline="-c v=150" />
+			<add file="instances/x6_y6_a4_f15.lp" cmdline="-c v=225" />
+			<add file="instances/x6_y6_a4_f20.lp" cmdline="-c v=300" />
+			<add file="instances/x6_y6_a4_f25.lp" cmdline="-c v=375" />
+			<add file="instances/x6_y6_a4_f30.lp" cmdline="-c v=450" />
+			<add file="instances/x6_y6_a4_f35.lp" cmdline="-c v=525" />
+			<add file="instances/x6_y6_a4_f40.lp" cmdline="-c v=600" />
+		</files>
+	</benchmark>
+
+
+	<project
+		name="clasp-seq" job="dist-generic">
+		<runtag machine="houat" benchmark="mapf-suite-x6_y6" tag="allapproaches" />
+	</project>
+
+
+</runscript>

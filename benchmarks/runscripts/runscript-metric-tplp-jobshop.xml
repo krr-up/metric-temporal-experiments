@@ -1,0 +1,98 @@
+<runscript output="output/jobshop">
+
+	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB" />
+
+	<config name="seq-generic" template="templates/seq-generic.sh" />
+
+
+	<system name="memelingo" version="1" measures="rp_tmp"
+		config="seq-generic"
+		cmdline="">
+		<setting name="lambda-small" tag="lambdasmall">
+			<variable cmd="{}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
+			<variable cmd="-c lambda={} --models=1 --project=show --stats"
+				value="10;15;20;25;30;35;40;45;50" />
+		</setting>
+		<setting name="lambda-large" tag="lambdalarge">
+			<variable cmd="{}" value="mlp-tplp-htc;mlp-tplp-htcdl" />
+			<variable cmd="-c lambda={} --models=1 --project=show --stats" value="100;150;200" />
+		</setting>
+	</system>
+
+
+	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
+		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
+
+	<benchmark name="jobshop-suite-06">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft06.lp" cmdline="-c v=56" />
+		</files>
+	</benchmark>
+
+	<benchmark name="jobshop-suite-06-relaxed">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft06.lp" cmdline="-c v=110" />
+		</files>
+	</benchmark>
+
+		<benchmark name="jobshop-suite-06-no-limit">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft06.lp" />
+		</files>
+	</benchmark>
+
+	<benchmark name="jobshop-suite-10">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft10.lp" cmdline="-c v=931" />
+		</files>
+	</benchmark>
+
+	<benchmark name="jobshop-suite-10-relaxed">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft10.lp"	 cmdline="-c v=1862" />
+		</files>
+	</benchmark>
+
+
+	<benchmark name="jobshop-suite-10-no-limit">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/ft10.lp"	 />
+		</files>
+	</benchmark>
+
+
+	<benchmark name="jobshop-suite-la1">
+		<files path="../examples/job-shop">
+			<encoding file="../examples/job-shop/job-shop.lp" />
+			<add file="instances/la01.lp" cmdline="-c v=666" />
+			<add file="instances/la02.lp" cmdline="-c v=655" />
+		</files>
+	</benchmark>
+
+
+	<project
+		name="clasp-seq" job="dist-generic">
+		<runtag machine="houat" benchmark="jobshop-suite-06" tag="lambdasmall" />
+		<runtag machine="houat" benchmark="jobshop-suite-10" tag="lambdalarge" />
+	</project>
+
+	<project
+		name="no-limit" job="dist-generic">
+		<runtag machine="houat" benchmark="jobshop-suite-06-no-limit" tag="lambdasmall" />
+		<runtag machine="houat" benchmark="jobshop-suite-10-no-limit" tag="lambdalarge" />
+	</project>
+
+	<project
+		name="relaxed" job="dist-generic">
+		<runtag machine="houat" benchmark="jobshop-suite-06-relaxed" tag="lambdasmall" />
+		<runtag machine="houat" benchmark="jobshop-suite-10-relaxed" tag="lambdalarge" />
+	</project>
+
+
+</runscript>

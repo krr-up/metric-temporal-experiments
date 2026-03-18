@@ -1,6 +1,7 @@
 """
 Visualizer of timmed traces
 """
+
 import logging
 import os
 
@@ -35,8 +36,8 @@ def visualize(
     if view_subformulas:
         ctl.add("base", [], "view_subformulas.")
     log.debug("File")
-    log.debug(os.path.join(ENCODINGS_PATH, "viz_trace.lp"))
-    ctl.load(os.path.join(ENCODINGS_PATH, "viz_trace.lp"))
+    log.debug(os.path.join(ENCODINGS_PATH, "viz/viz-trace.lp"))
+    ctl.load(os.path.join(ENCODINGS_PATH, "viz/viz-trace.lp"))
     enable_python()
 
     ctl.ground([("base", [])], context=ctx)

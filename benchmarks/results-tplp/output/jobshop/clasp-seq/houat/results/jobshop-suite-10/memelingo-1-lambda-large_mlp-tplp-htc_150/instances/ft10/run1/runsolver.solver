@@ -1,0 +1,59 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...../examples/job-shop/instances/ft10.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1194.449s (Solving: 1095.38s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1194.230s
+
+Choices      : 384320  
+Conflicts    : 9851     (Analyzed: 9851)
+Restarts     : 42       (Average: 234.55 Last: 65 Blocked: 0)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 11531858 (Deleted: 340544)
+  Binary     : 1472632  (Ratio:  12.77%)
+  Ternary    : 9515872  (Ratio:  82.52%)
+  Conflict   : 9851     (Average Length: 1738.7 Ratio:   0.09%) 
+  Loop       : 247214   (Average Length:  215.2 Ratio:   2.14%) 
+  Other      : 11274793 (Average Length:    2.9 Ratio:  97.77%) 
+Backjumps    : 9851     (Average: 25.74 Max: 14993 Sum: 253526)
+  Executed   : 9851     (Average: 25.74 Max: 14993 Sum: 253526 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 12901932 (Original: 12872132)
+Atoms        : 6476333 
+Disjunctions : 0        (Original: 15000)
+Bodies       : 6296428  (Original: 6266628)
+Equivalences : 11274428 (Atom=Atom: 1525096 Body=Body: 1249676 Other: 8499656)
+Tight        : No       (SCCs: 200 Non-Hcfs: 0 Nodes: 6149250 Gammas: 0)
+Variables    : 6956627  (Eliminated:    0 Frozen: 6926827)
+Constraints  : 23747923 (Binary:  73.4% Ternary:  17.1% Other:   9.5%)
+
+Clingcon
+  Init time in seconds
+    Total    : 40.7582
+    Simplify : 33.1071
+    Translate: 1.01751
+  Problem
+    Constraints: 2.63457e+06
+    Variables: 150
+    Clauses  : 1.04188e+06
+    Literals : 127276
+  Translate
+    Constraints removed: 60933
+    Constraints added: 0
+    Clauses  : 1.00076e+06
+    Weight constraints: 118
+    Literals : 127276
+  [Thread 0]
+    Time in seconds
+      Total  : 761.854
+      Propagation: 45.3279
+      Check  : 673.998
+      Undo   : 42.5286
+    Refined reason: 7.937e+06
+    Introduced reason: 128
+    Literals introduced: 241

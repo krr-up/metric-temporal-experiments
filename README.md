@@ -30,6 +30,9 @@ Memelingo extends the application class
 ```shell
 memelingo -h
 ```
+
+The direct command line is printed when using `--log info`
+
 #### Traffic lights example
 
 ```shell
@@ -47,6 +50,49 @@ memelingo 1  -c lambda=3 examples/traffic-lights.lp --view
 ```shell
 python -m clingo examples/traffic-lights.lp --output=reify | python -m clingcon 0 - src/encodings/{meta-melingo,meta-clingcon-interval,meta}.lp -c lambda=3
 ```
+
+## Dentist example
+
+### MLP LPMNR paper 2024
+
+No goal condition
+
+#### clingo
+
+```shell
+memelingo 0  -c lambda=4 examples/dentist/dentist.lp --view --log info --approach mlp --timepoint-limit 100
+```
+
+#### clingocon
+
+```shell
+memelingo 0  -c lambda=4 examples/dentist/dentist.lp --view --log info --approach mlp-htc
+```
+
+### MLP extended with evetually and always
+
+To get the single model including the goal
+
+#### clingcon
+
+```shell
+memelingo 0  -c lambda=4 examples/dentist/dentist.lp examples/dentist/dentist-goal-always-body.lp --view --log info --approach mlp-htc-extended
+```
+
+### Full Tseiten
+
+Single model with the goal
+
+#### clingcon
+```shell
+memelingo 0  -c lambda=4 examples/dentist/dentist.lp examples/dentist/dentist-goal-always-body.lp --view --log info
+```
+
+#### clingo
+```shell
+memelingo 0  -c lambda=4 examples/dentist/dentist.lp examples/dentist/dentist-goal-always-body.lp --view --log info --approach asp -c v=100
+```
+
 
 ## Development
 

@@ -1,0 +1,45 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node2
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		mlp-tplp-ht
+[runlim] argv[2]:		-c
+[runlim] argv[3]:		lambda=25
+[runlim] argv[4]:		-c
+[runlim] argv[5]:		v=150
+[runlim] argv[6]:		--models=1
+[runlim] argv[7]:		--project=show
+[runlim] argv[8]:		--stats
+[runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/room_x8_y8_a3.lp
+[runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf_javier.lp
+[runlim] start:			Fri Mar 13 03:02:29 2026
+[runlim] child:			4073
+[runlim] sample:		3.04 time, 10.01 real, 88 MB, 0.84 load
+[runlim] sample:		12.87 time, 20.01 real, 1189 MB, 0.79 load
+[runlim] sample:		22.88 time, 30.01 real, 1457 MB, 0.83 load
+[runlim] sample:		32.88 time, 40.01 real, 1680 MB, 0.85 load
+[runlim] sample:		42.87 time, 50.01 real, 2065 MB, 0.88 load
+[runlim] sample:		52.87 time, 60.01 real, 2168 MB, 0.90 load
+[runlim] sample:		62.88 time, 70.01 real, 2594 MB, 0.91 load
+[runlim] sample:		72.87 time, 80.01 real, 3778 MB, 0.93 load
+[runlim] sample:		82.87 time, 90.01 real, 4037 MB, 0.94 load
+[runlim] sample:		92.87 time, 100.01 real, 4037 MB, 0.95 load
+[runlim] sample:		102.86 time, 110.01 real, 4037 MB, 0.96 load
+[runlim] sample:		112.86 time, 120.01 real, 4037 MB, 0.96 load
+[runlim] sample:		122.86 time, 130.01 real, 4037 MB, 0.97 load
+[runlim] sample:		132.87 time, 140.01 real, 4220 MB, 0.97 load
+[runlim] sample:		142.87 time, 150.01 real, 4242 MB, 0.98 load
+[runlim] sample:		152.86 time, 160.01 real, 5818 MB, 0.98 load
+[runlim] sample:		162.87 time, 170.01 real, 6586 MB, 0.99 load
+[runlim] end:			Fri Mar 13 03:05:24 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			175.46 seconds
+[runlim] time:			168.26 seconds
+[runlim] space:			6792 MB
+[runlim] load:			1.00 maximum
+[runlim] samples:		1755

@@ -1,0 +1,38 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			kr-node4
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1200 seconds
+[runlim] space limit:		20000 MB
+[runlim] argv[0]:		../../../../../../../../../../programs/memelingo-1
+[runlim] argv[1]:		mlp-tplp-htcdl
+[runlim] argv[2]:		-c
+[runlim] argv[3]:		lambda=45
+[runlim] argv[4]:		-c
+[runlim] argv[5]:		v=50
+[runlim] argv[6]:		--models=1
+[runlim] argv[7]:		--project=show
+[runlim] argv[8]:		--stats
+[runlim] argv[9]:		../../../../../../../../../../../examples/mapf/instances/room_x8_y8_a3.lp
+[runlim] argv[10]:		../../../../../../../../../../../examples/mapf/mapf_javier.lp
+[runlim] start:			Thu Mar 12 21:39:41 2026
+[runlim] child:			27215
+[runlim] sample:		3.58 time, 10.01 real, 108 MB, 0.80 load
+[runlim] sample:		13.46 time, 20.01 real, 1482 MB, 0.83 load
+[runlim] sample:		23.45 time, 30.01 real, 2629 MB, 0.86 load
+[runlim] sample:		33.44 time, 40.01 real, 3941 MB, 0.88 load
+[runlim] sample:		43.44 time, 50.01 real, 4991 MB, 0.90 load
+[runlim] sample:		53.43 time, 60.01 real, 5019 MB, 0.91 load
+[runlim] sample:		63.43 time, 70.01 real, 6505 MB, 1.00 load
+[runlim] sample:		73.42 time, 80.01 real, 7509 MB, 1.00 load
+[runlim] sample:		83.40 time, 90.01 real, 7093 MB, 1.00 load
+[runlim] sample:		93.39 time, 100.01 real, 7093 MB, 1.00 load
+[runlim] end:			Thu Mar 12 21:41:27 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			105.97 seconds
+[runlim] time:			99.29 seconds
+[runlim] space:			7589 MB
+[runlim] load:			1.00 maximum
+[runlim] samples:		1060

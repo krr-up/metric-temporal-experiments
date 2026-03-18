@@ -1,0 +1,66 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...../examples/job-shop/instances/ft06.lp ...
+Solving...
+Answer: 1 (Time: 4.303s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htc.lp', '/tmp/tmp5_o6kki2.lp']
+true(start_run(0),0) true(start_run(1),1) true(start_run(2),3) true(start_run(2),6) true(start_run(3),10) true(start_run(3),12) true(start_run(4),17) true(start_run(5),23) true(start_run(6),0) true(start_run(7),3) true(start_run(8),8) true(start_run(9),20) true(start_run(10),36) true(start_run(11),40) true(start_run(12),2) true(start_run(13),5) true(start_run(14),9) true(start_run(15),25) true(start_run(16),35) true(start_run(17),36) true(start_run(18),13) true(start_run(19),18) true(start_run(20),23) true(start_run(21),28) true(start_run(22),31) true(start_run(23),36) true(start_run(24),29) true(start_run(25),36) true(start_run(26),38) true(start_run(27),41) true(start_run(28),45) true(start_run(29),48) true(start_run(30),22) true(start_run(31),25) true(start_run(32),30) true(start_run(33),37) true(start_run(34),44) true(start_run(35),48)
+Assignment:
+t(0)=0 t(1)=1 t(2)=3 t(3)=43 t(4)=44 t(5)=45 t(6)=46 t(7)=47 t(8)=48 t(9)=49 t(10)=50 t(11)=51 t(12)=52 t(13)=53 t(14)=54 t(15)=55 t(16)=56 t(17)=57 t(18)=58 t(19)=59 t(20)=60 t(21)=61 t(22)=62 t(23)=63 t(24)=64 t(25)=65 t(26)=66 t(27)=67 t(28)=68 t(29)=69 t(30)=70 t(31)=71 t(32)=72 t(33)=73 t(34)=74 t(35)=75 t(36)=79 t(37)=89 t(38)=90 t(39)=91 t(40)=92 t(41)=98 t(42)=99 t(43)=100 t(44)=101 t(45)=102 t(46)=103 t(47)=104 t(48)=105 t(49)=106
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 4.314s (Solving: 1.41s 1st Model: 1.39s Unsat: 0.00s)
+CPU Time     : 4.154s
+
+Choices      : 14481   
+Conflicts    : 636      (Analyzed: 636)
+Restarts     : 5        (Average: 127.20 Last: 146 Blocked: 0)
+Model-Level  : 941.0   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 109227   (Deleted: 0)
+  Binary     : 12441    (Ratio:  11.39%)
+  Ternary    : 92686    (Ratio:  84.86%)
+  Conflict   : 636      (Average Length:  242.9 Ratio:   0.58%) 
+  Loop       : 3654     (Average Length:   43.9 Ratio:   3.35%) 
+  Other      : 104937   (Average Length:    2.9 Ratio:  96.07%) 
+Backjumps    : 636      (Average: 11.95 Max: 329 Sum:   7602)
+  Executed   : 635      (Average: 11.95 Max: 329 Sum:   7601 Ratio:  99.99%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.01%)
+
+Rules        : 613448   (Original: 609920)
+Atoms        : 316835  
+Disjunctions : 0        (Original: 1800)
+Bodies       : 287914   (Original: 284386)
+Equivalences : 532694   (Atom=Atom: 116292 Body=Body: 82480 Other: 333922)
+Tight        : No       (SCCs: 72 Non-Hcfs: 0 Nodes: 239994 Gammas: 0)
+Variables    : 257126   (Eliminated:    0 Frozen: 253598)
+Constraints  : 1896903  (Binary:  36.9% Ternary:  58.4% Other:   4.7%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.386543
+    Simplify : 0.0659576
+    Translate: 0.104899
+  Problem
+    Constraints: 31980
+    Variables: 50
+    Clauses  : 1.00314e+06
+    Literals : 4165
+  Translate
+    Constraints removed: 16519
+    Constraints added: 0
+    Clauses  : 1.00007e+06
+    Weight constraints: 16
+    Literals : 4165
+  [Thread 0]
+    Time in seconds
+      Total  : 0.61042
+      Propagation: 0.0638333
+      Check  : 0.513703
+      Undo   : 0.0328838
+    Refined reason: 63955
+    Introduced reason: 0
+    Literals introduced: 0

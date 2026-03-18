@@ -1,0 +1,631 @@
+-e 
+
+****************************************************************************************
+HTC clingcon
+****************************************************************************************
+
+======== Size 1 ============
+clingcon version 5.2.1
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.014s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+Choices      : 59      
+Conflicts    : 26       (Analyzed: 15)
+Restarts     : 0       
+Model-Level  : 4.3     
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 386      (Deleted: 0)
+  Binary     : 33       (Ratio:   8.55%)
+  Ternary    : 166      (Ratio:  43.01%)
+  Conflict   : 15       (Average Length:    4.7 Ratio:   3.89%) 
+  Loop       : 22       (Average Length:    3.5 Ratio:   5.70%) 
+  Other      : 349      (Average Length:    3.4 Ratio:  90.41%) 
+Backjumps    : 15       (Average:  1.87 Max:   7 Sum:     28)
+  Executed   : 13       (Average:  1.47 Max:   7 Sum:     22 Ratio:  78.57%)
+  Bounded    : 2        (Average:  3.00 Max:   5 Sum:      6 Ratio:  21.43%)
+
+Rules        : 2110     (Original: 2086)
+Atoms        : 1893    
+Disjunctions : 0        (Original: 8)
+Bodies       : 880      (Original: 856)
+Equivalences : 2832     (Atom=Atom: 674 Body=Body: 470 Other: 1688)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 391      (Eliminated:    0 Frozen:  367)
+Constraints  : 909      (Binary:  72.5% Ternary:  22.8% Other:   4.7%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.00036
+    Simplify : 1.7291e-05
+    Translate: 3.5917e-05
+  Problem
+    Constraints: 56
+    Variables: 4
+    Clauses  : 95
+    Literals : 24
+  Translate
+    Constraints removed: 126
+    Constraints added: 0
+    Clauses  : 48
+    Weight constraints: 0
+    Literals : 24
+  [Thread 0]
+    Time in seconds
+      Total  : 0.000370583
+      Propagation: 0.000119919
+      Check  : 0.000240082
+      Undo   : 1.0582e-05
+    Refined reason: 99
+    Introduced reason: 37
+    Literals introduced: 83
+
+======== Size 5 ============
+clingcon version 5.2.1
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.011s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.011s
+
+Choices      : 59      
+Conflicts    : 26       (Analyzed: 15)
+Restarts     : 0       
+Model-Level  : 4.3     
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 386      (Deleted: 0)
+  Binary     : 33       (Ratio:   8.55%)
+  Ternary    : 166      (Ratio:  43.01%)
+  Conflict   : 15       (Average Length:    4.7 Ratio:   3.89%) 
+  Loop       : 22       (Average Length:    3.5 Ratio:   5.70%) 
+  Other      : 349      (Average Length:    3.4 Ratio:  90.41%) 
+Backjumps    : 15       (Average:  1.87 Max:   7 Sum:     28)
+  Executed   : 13       (Average:  1.47 Max:   7 Sum:     22 Ratio:  78.57%)
+  Bounded    : 2        (Average:  3.00 Max:   5 Sum:      6 Ratio:  21.43%)
+
+Rules        : 2110     (Original: 2086)
+Atoms        : 1893    
+Disjunctions : 0        (Original: 8)
+Bodies       : 880      (Original: 856)
+Equivalences : 2832     (Atom=Atom: 674 Body=Body: 470 Other: 1688)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 391      (Eliminated:    0 Frozen:  367)
+Constraints  : 909      (Binary:  72.5% Ternary:  22.8% Other:   4.7%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.000286875
+    Simplify : 1.7459e-05
+    Translate: 3.5125e-05
+  Problem
+    Constraints: 56
+    Variables: 4
+    Clauses  : 95
+    Literals : 24
+  Translate
+    Constraints removed: 126
+    Constraints added: 0
+    Clauses  : 48
+    Weight constraints: 0
+    Literals : 24
+  [Thread 0]
+    Time in seconds
+      Total  : 0.000363467
+      Propagation: 0.000119798
+      Check  : 0.000233627
+      Undo   : 1.0042e-05
+    Refined reason: 99
+    Introduced reason: 37
+    Literals introduced: 83
+
+======== Size 7 ============
+clingcon version 5.2.1
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+Choices      : 59      
+Conflicts    : 26       (Analyzed: 15)
+Restarts     : 0       
+Model-Level  : 4.3     
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 386      (Deleted: 0)
+  Binary     : 33       (Ratio:   8.55%)
+  Ternary    : 166      (Ratio:  43.01%)
+  Conflict   : 15       (Average Length:    4.7 Ratio:   3.89%) 
+  Loop       : 22       (Average Length:    3.5 Ratio:   5.70%) 
+  Other      : 349      (Average Length:    3.4 Ratio:  90.41%) 
+Backjumps    : 15       (Average:  1.87 Max:   7 Sum:     28)
+  Executed   : 13       (Average:  1.47 Max:   7 Sum:     22 Ratio:  78.57%)
+  Bounded    : 2        (Average:  3.00 Max:   5 Sum:      6 Ratio:  21.43%)
+
+Rules        : 2110     (Original: 2086)
+Atoms        : 1893    
+Disjunctions : 0        (Original: 8)
+Bodies       : 880      (Original: 856)
+Equivalences : 2832     (Atom=Atom: 674 Body=Body: 470 Other: 1688)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 391      (Eliminated:    0 Frozen:  367)
+Constraints  : 909      (Binary:  72.5% Ternary:  22.8% Other:   4.7%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.000306208
+    Simplify : 1.7917e-05
+    Translate: 3.8125e-05
+  Problem
+    Constraints: 56
+    Variables: 4
+    Clauses  : 95
+    Literals : 24
+  Translate
+    Constraints removed: 126
+    Constraints added: 0
+    Clauses  : 48
+    Weight constraints: 0
+    Literals : 24
+  [Thread 0]
+    Time in seconds
+      Total  : 0.000372163
+      Propagation: 0.000121582
+      Check  : 0.000240494
+      Undo   : 1.0087e-05
+    Refined reason: 99
+    Introduced reason: 37
+    Literals introduced: 83
+
+======== Size 10 ============
+clingcon version 5.2.1
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+Choices      : 59      
+Conflicts    : 26       (Analyzed: 15)
+Restarts     : 0       
+Model-Level  : 4.3     
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 386      (Deleted: 0)
+  Binary     : 33       (Ratio:   8.55%)
+  Ternary    : 166      (Ratio:  43.01%)
+  Conflict   : 15       (Average Length:    4.7 Ratio:   3.89%) 
+  Loop       : 22       (Average Length:    3.5 Ratio:   5.70%) 
+  Other      : 349      (Average Length:    3.4 Ratio:  90.41%) 
+Backjumps    : 15       (Average:  1.87 Max:   7 Sum:     28)
+  Executed   : 13       (Average:  1.47 Max:   7 Sum:     22 Ratio:  78.57%)
+  Bounded    : 2        (Average:  3.00 Max:   5 Sum:      6 Ratio:  21.43%)
+
+Rules        : 2110     (Original: 2086)
+Atoms        : 1893    
+Disjunctions : 0        (Original: 8)
+Bodies       : 880      (Original: 856)
+Equivalences : 2832     (Atom=Atom: 674 Body=Body: 470 Other: 1688)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 391      (Eliminated:    0 Frozen:  367)
+Constraints  : 909      (Binary:  72.5% Ternary:  22.8% Other:   4.7%)
+
+Clingcon
+  Init time in seconds
+    Total    : 0.000311167
+    Simplify : 1.8e-05
+    Translate: 4.0459e-05
+  Problem
+    Constraints: 56
+    Variables: 4
+    Clauses  : 95
+    Literals : 24
+  Translate
+    Constraints removed: 126
+    Constraints added: 0
+    Clauses  : 48
+    Weight constraints: 0
+    Literals : 24
+  [Thread 0]
+    Time in seconds
+      Total  : 0.000365785
+      Propagation: 0.000119369
+      Check  : 0.000236292
+      Undo   : 1.0124e-05
+    Refined reason: 99
+    Introduced reason: 37
+    Literals introduced: 83
+-e 
+
+****************************************************************************************
+HTC clingodl
+****************************************************************************************
+
+======== Size 1 ============
+clingo-dl version 1.5.0
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.014s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+Choices      : 915     
+Conflicts    : 708      (Analyzed: 87)
+Restarts     : 17       (Average: 5.12 Last: 1)
+Model-Level  : 26.9    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 114      (Deleted: 0)
+  Binary     : 44       (Ratio:  38.60%)
+  Ternary    : 48       (Ratio:  42.11%)
+  Conflict   : 87       (Average Length:    3.0 Ratio:  76.32%) 
+  Loop       : 27       (Average Length:    3.7 Ratio:  23.68%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 87       (Average:  3.09 Max:  15 Sum:    269)
+  Executed   : 86       (Average:  3.08 Max:  15 Sum:    268 Ratio:  99.63%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.37%)
+
+Rules        : 2110     (Original: 2086)
+Atoms        : 1893    
+Disjunctions : 0        (Original: 8)
+Bodies       : 880      (Original: 856)
+Equivalences : 2832     (Atom=Atom: 674 Body=Body: 470 Other: 1688)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 367      (Eliminated:    0 Frozen:  343)
+Constraints  : 861      (Binary:  71.0% Ternary:  24.0% Other:   5.0%)
+
+DifferenceLogic
+  Time init(s): 0.000216166
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 112
+  Variables  : 5
+  [Thread 0]
+    Propagation(s): 0.000213976
+    Dijkstra(s): 0
+    Undo(s)  : 2.0205e-05
+    True edges: 0
+    False edges: 0
+    False edges (inverse): 0
+    False edges (partial): 0
+    False edges (partial+): 0
+    Edges added: 2308
+    Edges skipped: 1506
+    Edges propagated: 0
+    Cost consistency: 11077
+    Cost forward: 0
+    Cost backward: 0
+
+======== Size 5 ============
+clingo-dl version 1.5.0
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.011s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.011s
+
+Choices      : 915     
+Conflicts    : 708      (Analyzed: 87)
+Restarts     : 17       (Average: 5.12 Last: 1)
+Model-Level  : 26.9    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 114      (Deleted: 0)
+  Binary     : 44       (Ratio:  38.60%)
+  Ternary    : 48       (Ratio:  42.11%)
+  Conflict   : 87       (Average Length:    3.0 Ratio:  76.32%) 
+  Loop       : 27       (Average Length:    3.7 Ratio:  23.68%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 87       (Average:  3.09 Max:  15 Sum:    269)
+  Executed   : 86       (Average:  3.08 Max:  15 Sum:    268 Ratio:  99.63%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.37%)
+
+Rules        : 2110     (Original: 2086)
+Atoms        : 1893    
+Disjunctions : 0        (Original: 8)
+Bodies       : 880      (Original: 856)
+Equivalences : 2832     (Atom=Atom: 674 Body=Body: 470 Other: 1688)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 367      (Eliminated:    0 Frozen:  343)
+Constraints  : 861      (Binary:  71.0% Ternary:  24.0% Other:   5.0%)
+
+DifferenceLogic
+  Time init(s): 0.000185
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 112
+  Variables  : 5
+  [Thread 0]
+    Propagation(s): 0.000186109
+    Dijkstra(s): 0
+    Undo(s)  : 1.9309e-05
+    True edges: 0
+    False edges: 0
+    False edges (inverse): 0
+    False edges (partial): 0
+    False edges (partial+): 0
+    Edges added: 2308
+    Edges skipped: 1506
+    Edges propagated: 0
+    Cost consistency: 11077
+    Cost forward: 0
+    Cost backward: 0
+
+======== Size 7 ============
+clingo-dl version 1.5.0
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+Choices      : 915     
+Conflicts    : 708      (Analyzed: 87)
+Restarts     : 17       (Average: 5.12 Last: 1)
+Model-Level  : 26.9    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 114      (Deleted: 0)
+  Binary     : 44       (Ratio:  38.60%)
+  Ternary    : 48       (Ratio:  42.11%)
+  Conflict   : 87       (Average Length:    3.0 Ratio:  76.32%) 
+  Loop       : 27       (Average Length:    3.7 Ratio:  23.68%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 87       (Average:  3.09 Max:  15 Sum:    269)
+  Executed   : 86       (Average:  3.08 Max:  15 Sum:    268 Ratio:  99.63%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.37%)
+
+Rules        : 2110     (Original: 2086)
+Atoms        : 1893    
+Disjunctions : 0        (Original: 8)
+Bodies       : 880      (Original: 856)
+Equivalences : 2832     (Atom=Atom: 674 Body=Body: 470 Other: 1688)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 367      (Eliminated:    0 Frozen:  343)
+Constraints  : 861      (Binary:  71.0% Ternary:  24.0% Other:   5.0%)
+
+DifferenceLogic
+  Time init(s): 0.000182625
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 112
+  Variables  : 5
+  [Thread 0]
+    Propagation(s): 0.000212722
+    Dijkstra(s): 0
+    Undo(s)  : 2.2411e-05
+    True edges: 0
+    False edges: 0
+    False edges (inverse): 0
+    False edges (partial): 0
+    False edges (partial+): 0
+    Edges added: 2308
+    Edges skipped: 1506
+    Edges propagated: 0
+    Cost consistency: 11077
+    Cost forward: 0
+    Cost backward: 0
+
+======== Size 10 ============
+clingo-dl version 1.5.0
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+Choices      : 915     
+Conflicts    : 708      (Analyzed: 87)
+Restarts     : 17       (Average: 5.12 Last: 1)
+Model-Level  : 26.9    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 114      (Deleted: 0)
+  Binary     : 44       (Ratio:  38.60%)
+  Ternary    : 48       (Ratio:  42.11%)
+  Conflict   : 87       (Average Length:    3.0 Ratio:  76.32%) 
+  Loop       : 27       (Average Length:    3.7 Ratio:  23.68%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 87       (Average:  3.09 Max:  15 Sum:    269)
+  Executed   : 86       (Average:  3.08 Max:  15 Sum:    268 Ratio:  99.63%)
+  Bounded    : 1        (Average:  1.00 Max:   1 Sum:      1 Ratio:   0.37%)
+
+Rules        : 2110     (Original: 2086)
+Atoms        : 1893    
+Disjunctions : 0        (Original: 8)
+Bodies       : 880      (Original: 856)
+Equivalences : 2832     (Atom=Atom: 674 Body=Body: 470 Other: 1688)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 367      (Eliminated:    0 Frozen:  343)
+Constraints  : 861      (Binary:  71.0% Ternary:  24.0% Other:   5.0%)
+
+DifferenceLogic
+  Time init(s): 0.0001895
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 112
+  Variables  : 5
+  [Thread 0]
+    Propagation(s): 0.000199136
+    Dijkstra(s): 0
+    Undo(s)  : 1.9945e-05
+    True edges: 0
+    False edges: 0
+    False edges (inverse): 0
+    False edges (partial): 0
+    False edges (partial+): 0
+    Edges added: 2308
+    Edges skipped: 1506
+    Edges propagated: 0
+    Cost consistency: 11077
+    Cost forward: 0
+    Cost backward: 0
+-e 
+
+****************************************************************************************
+HT
+****************************************************************************************
+
+======== Size 1 ============
+pyclingo version 5.7.1
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 0.549s (Solving: 0.28s 1st Model: 0.01s Unsat: 0.08s)
+CPU Time     : 0.545s
+
+Choices      : 2895    
+Conflicts    : 925      (Analyzed: 644)
+Restarts     : 30       (Average: 21.47 Last: 206)
+Model-Level  : 50.9    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 670      (Deleted: 0)
+  Binary     : 37       (Ratio:   5.52%)
+  Ternary    : 44       (Ratio:   6.57%)
+  Conflict   : 644      (Average Length: 1883.2 Ratio:  96.12%) 
+  Loop       : 26       (Average Length:    3.8 Ratio:   3.88%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 644      (Average:  5.46 Max: 249 Sum:   3519)
+  Executed   : 634      (Average:  3.96 Max: 249 Sum:   2550 Ratio:  72.46%)
+  Bounded    : 10       (Average: 96.90 Max: 229 Sum:    969 Ratio:  27.54%)
+
+Rules        : 334000   (Original: 322098)
+Atoms        : 2454    
+Disjunctions : 0        (Original: 224)
+Bodies       : 66508    (Original: 54606)
+Equivalences : 4821     (Atom=Atom: 882 Body=Body: 684 Other: 3255)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 64805    (Eliminated:    0 Frozen:  577)
+Constraints  : 1290077  (Binary:  95.0% Ternary:   4.1% Other:   0.9%)
+
+
+======== Size 5 ============
+pyclingo version 5.7.1
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 35.884s (Solving: 21.16s 1st Model: 0.91s Unsat: 19.55s)
+CPU Time     : 35.860s
+
+Choices      : 5213    
+Conflicts    : 607      (Analyzed: 173)
+Restarts     : 1        (Average: 173.00 Last: 147)
+Model-Level  : 291.1   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 204      (Deleted: 0)
+  Binary     : 8        (Ratio:   3.92%)
+  Ternary    : 20       (Ratio:   9.80%)
+  Conflict   : 173      (Average Length: 10635.3 Ratio:  84.80%) 
+  Loop       : 31       (Average Length:    3.7 Ratio:  15.20%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 173      (Average: 20.97 Max: 430 Sum:   3627)
+  Executed   : 168      (Average: 20.94 Max: 430 Sum:   3622 Ratio:  99.86%)
+  Bounded    : 5        (Average:  1.00 Max:   1 Sum:      5 Ratio:   0.14%)
+
+Rules        : 8435280  (Original: 8133858)
+Atoms        : 5094    
+Disjunctions : 0        (Original: 1104)
+Bodies       : 1660408  (Original: 1358986)
+Equivalences : 14061    (Atom=Atom: 1762 Body=Body: 1564 Other: 10735)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 1653865  (Eliminated:    0 Frozen: 1897)
+Constraints  : 121274337 (Binary:  98.6% Ternary:   1.1% Other:   0.2%)
+
+
+======== Size 7 ============
+pyclingo version 5.7.1
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 75.994s (Solving: 37.07s 1st Model: 2.11s Unsat: 20.90s)
+CPU Time     : 75.122s
+
+Choices      : 10840   
+Conflicts    : 911      (Analyzed: 467)
+Restarts     : 30       (Average: 15.57 Last: 214)
+Model-Level  : 182.5   
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 502      (Deleted: 0)
+  Binary     : 56       (Ratio:  11.16%)
+  Ternary    : 29       (Ratio:   5.78%)
+  Conflict   : 467      (Average Length: 3024.9 Ratio:  93.03%) 
+  Loop       : 35       (Average Length:    4.0 Ratio:   6.97%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 467      (Average: 20.24 Max: 883 Sum:   9452)
+  Executed   : 450      (Average: 19.19 Max: 883 Sum:   8964 Ratio:  94.84%)
+  Bounded    : 17       (Average: 28.71 Max: 114 Sum:    488 Ratio:   5.16%)
+
+Rules        : 16551520 (Original: 15960138)
+Atoms        : 6414    
+Disjunctions : 0        (Original: 1544)
+Bodies       : 3255958  (Original: 2664576)
+Equivalences : 18681    (Atom=Atom: 2202 Body=Body: 2004 Other: 14475)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 3246995  (Eliminated:    0 Frozen: 2557)
+Constraints  : 324699867 (Binary:  99.0% Ternary:   0.8% Other:   0.2%)
+
+
+======== Size 10 ============
+pyclingo version 5.7.1
+Reading from - ...
+Solving...
+SATISFIABLE
+
+Models       : 27
+Calls        : 1
+Time         : 528.363s (Solving: 289.92s 1st Model: 55.38s Unsat: 0.49s)
+CPU Time     : 322.863s
+
+Choices      : 24777   
+Conflicts    : 652      (Analyzed: 300)
+Restarts     : 16       (Average: 18.75 Last: 17)
+Model-Level  : 66.5    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 331      (Deleted: 0)
+  Binary     : 28       (Ratio:   8.46%)
+  Ternary    : 22       (Ratio:   6.65%)
+  Conflict   : 300      (Average Length: 33439.1 Ratio:  90.63%) 
+  Loop       : 31       (Average Length:    3.7 Ratio:   9.37%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 300      (Average: 68.89 Max: 1091 Sum:  20668)
+  Executed   : 290      (Average: 67.55 Max: 1091 Sum:  20265 Ratio:  98.05%)
+  Bounded    : 10       (Average: 40.30 Max:  89 Sum:    403 Ratio:   1.95%)
+
+Rules        : 33807880 (Original: 32600058)
+Atoms        : 8394    
+Disjunctions : 0        (Original: 2204)
+Bodies       : 6647533  (Original: 5439711)
+Equivalences : 25611    (Atom=Atom: 2862 Body=Body: 2664 Other: 20085)
+Tight        : No       (SCCs: 8 Non-Hcfs: 0 Nodes: 322 Gammas: 0)
+Variables    : 6634940  (Eliminated:    0 Frozen: 3547)
+Constraints  : 928919912 (Binary:  99.3% Ternary:   0.6% Other:   0.1%)
+

@@ -1,0 +1,60 @@
+#!/bin/bash
+#SBATCH --output=out.%j
+#SBATCH --error=err.%j
+#SBATCH --time=00-23:59:59        # walltime
+#SBATCH --cpus-per-task=4    # number of processor cores (i.e. tasks)
+#SBATCH --partition=kr
+                  # additional dist options (specified via runscript setting)
+
+# Good Idea to stop operation on first error.
+set -e
+
+# Load environment modules for your application here.
+source ~/.bashrc
+source ~/miniconda3/bin/activate
+source activate memelingo
+
+# Run jobs
+jobs="results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_10/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_15/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_20/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_25/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_30/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_35/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_40/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_45/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-ht_50/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_10/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_15/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_20/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_25/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_30/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_35/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_40/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_45/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htc_50/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_10/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_15/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_20/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_25/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_30/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_35/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_40/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_45/instances/ft06/run1/start.sh
+results/jobshop-suite-06-relaxed/memelingo-1-lambda-small_mlp-tplp-htcdl_50/instances/ft06/run1/start.sh
+results/jobshop-suite-10-relaxed/memelingo-1-lambda-large_mlp-tplp-htc_100/instances/ft10/run1/start.sh
+results/jobshop-suite-10-relaxed/memelingo-1-lambda-large_mlp-tplp-htc_150/instances/ft10/run1/start.sh
+results/jobshop-suite-10-relaxed/memelingo-1-lambda-large_mlp-tplp-htc_200/instances/ft10/run1/start.sh
+results/jobshop-suite-10-relaxed/memelingo-1-lambda-large_mlp-tplp-htcdl_100/instances/ft10/run1/start.sh
+results/jobshop-suite-10-relaxed/memelingo-1-lambda-large_mlp-tplp-htcdl_150/instances/ft10/run1/start.sh
+results/jobshop-suite-10-relaxed/memelingo-1-lambda-large_mlp-tplp-htcdl_200/instances/ft10/run1/start.sh
+"
+echo running jobs@$(hostname)...
+echo ""
+echo "jobs:" $jobs
+echo ""
+for i in $jobs
+do
+    echo "running " $i
+    $i
+done

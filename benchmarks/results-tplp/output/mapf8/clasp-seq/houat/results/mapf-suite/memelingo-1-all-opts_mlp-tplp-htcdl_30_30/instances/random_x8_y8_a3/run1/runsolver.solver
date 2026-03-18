@@ -1,0 +1,58 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 41.688s (Solving: 1.64s 1st Model: 0.00s Unsat: 1.64s)
+CPU Time     : 41.514s
+
+Choices      : 399     
+Conflicts    : 197      (Analyzed: 196)
+Restarts     : 2        (Average: 98.00 Last: 57 Blocked: 0)
+Stab. Tests  : 552      (Full: 0 Partial: 552)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 11997    (Deleted: 0)
+  Binary     : 1322     (Ratio:  11.02%)
+  Ternary    : 432      (Ratio:   3.60%)
+  Conflict   : 196      (Average Length:   35.9 Ratio:   1.63%) 
+  Loop       : 5762     (Average Length:   10.1 Ratio:  48.03%) 
+  Other      : 6039     (Average Length:    1.2 Ratio:  50.34%) 
+Backjumps    : 196      (Average:  1.86 Max:  11 Sum:    364)
+  Executed   : 185      (Average:  1.80 Max:  11 Sum:    353 Ratio:  96.98%)
+  Bounded    : 11       (Average:  1.00 Max:   1 Sum:     11 Ratio:   3.02%)
+
+Rules        : 5564381 
+Atoms        : 3608564 
+Disjunctions : 21141    (Original: 21141)
+Bodies       : 5194149  (Original: 4855901)
+Equivalences : 2730901  (Atom=Atom: 447982 Body=Body: 318788 Other: 1964131)
+Tight        : No       (SCCs: 552 Non-Hcfs: 552 Nodes: 1176866 Gammas: 338248)
+Variables    : 1117027  (Eliminated:    0 Frozen: 778779)
+Constraints  : 10372838 (Binary:  90.0% Ternary:   6.3% Other:   3.7%)
+
+DifferenceLogic
+  Time init(s): 0.0293661
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 10501
+  Variables  : 31
+  [Thread 0]
+    Propagation(s): 1.2734
+    Dijkstra(s): 0.00153653
+    Undo(s)  : 0.000275312
+    True edges: 7851
+    False edges: 6114
+    False edges (inverse): 37
+    False edges (partial): 459
+    False edges (partial+): 0
+    Edges added: 252
+    Edges skipped: 167
+    Edges propagated: 233
+    Cost consistency: 843
+    Cost forward: 9666
+    Cost backward: 9329
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmplmqm_ka5.lp']

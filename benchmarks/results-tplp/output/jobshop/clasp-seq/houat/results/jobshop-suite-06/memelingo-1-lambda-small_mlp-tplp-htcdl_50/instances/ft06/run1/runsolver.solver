@@ -1,0 +1,62 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...../examples/job-shop/instances/ft06.lp ...
+Solving...
+Answer: 1 (Time: 29.179s)
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpyd8g22x8.lp']
+true(start_run(0),6) true(start_run(1),11) true(start_run(2),24) true(start_run(2),25) true(start_run(2),26) true(start_run(2),27) true(start_run(2),28) true(start_run(2),29) true(start_run(3),30) true(start_run(3),31) true(start_run(3),32) true(start_run(3),33) true(start_run(3),34) true(start_run(3),35) true(start_run(3),36) true(start_run(4),37) true(start_run(5),43) true(start_run(5),44) true(start_run(5),45) true(start_run(5),46) true(start_run(5),47) true(start_run(5),48) true(start_run(6),0) true(start_run(7),1) true(start_run(8),6) true(start_run(8),7) true(start_run(8),8) true(start_run(8),9) true(start_run(9),22) true(start_run(9),23) true(start_run(10),34) true(start_run(11),44) true(start_run(12),0) true(start_run(13),1) true(start_run(13),2) true(start_run(13),3) true(start_run(13),4) true(start_run(14),5) true(start_run(15),14) true(start_run(16),23) true(start_run(17),24) true(start_run(18),1) true(start_run(19),6) true(start_run(20),16) true(start_run(20),17) true(start_run(20),18) true(start_run(20),19) true(start_run(20),20) true(start_run(21),21) true(start_run(21),22) true(start_run(21),23) true(start_run(22),31) true(start_run(23),40) true(start_run(23),41) true(start_run(23),42) true(start_run(23),43) true(start_run(23),44) true(start_run(23),45) true(start_run(23),46) true(start_run(23),47) true(start_run(23),48) true(start_run(24),7) true(start_run(25),16) true(start_run(25),17) true(start_run(25),18) true(start_run(26),19) true(start_run(27),33) true(start_run(28),44) true(start_run(28),45) true(start_run(28),46) true(start_run(29),48) true(start_run(30),6) true(start_run(30),7) true(start_run(30),8) true(start_run(31),9) true(start_run(31),10) true(start_run(31),11) true(start_run(32),13) true(start_run(33),23) true(start_run(33),24) true(start_run(34),39) true(start_run(35),48)
+Assignment:
+t(0)=0 t(1)=8 t(2)=9 t(3)=10 t(4)=11 t(5)=12 t(6)=13 t(7)=14 t(8)=15 t(9)=16 t(10)=17 t(11)=18 t(12)=19 t(13)=20 t(14)=21 t(15)=22 t(16)=23 t(17)=24 t(18)=25 t(19)=26 t(20)=27 t(21)=28 t(22)=29 t(23)=30 t(24)=31 t(25)=32 t(26)=33 t(27)=34 t(28)=35 t(29)=36 t(30)=37 t(31)=38 t(32)=39 t(33)=40 t(34)=41 t(35)=42 t(36)=43 t(37)=44 t(38)=45 t(39)=46 t(40)=47 t(41)=48 t(42)=49 t(43)=50 t(44)=51 t(45)=52 t(46)=53 t(47)=54 t(48)=55 t(49)=56
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 29.187s (Solving: 26.33s 1st Model: 26.32s Unsat: 0.00s)
+CPU Time     : 29.057s
+
+Choices      : 39241   
+Conflicts    : 14770    (Analyzed: 14770)
+Restarts     : 60       (Average: 246.17 Last: 544 Blocked: 0)
+Model-Level  : 74.0    
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 181963   (Deleted: 65086)
+  Binary     : 43174    (Ratio:  23.73%)
+  Ternary    : 39440    (Ratio:  21.67%)
+  Conflict   : 14770    (Average Length:  168.5 Ratio:   8.12%) 
+  Loop       : 39736    (Average Length:   23.6 Ratio:  21.84%) 
+  Other      : 127457   (Average Length:    2.7 Ratio:  70.05%) 
+Backjumps    : 14770    (Average:  2.56 Max:  69 Sum:  37798)
+  Executed   : 14733    (Average:  2.56 Max:  69 Sum:  37761 Ratio:  99.90%)
+  Bounded    : 37       (Average:  1.00 Max:   1 Sum:     37 Ratio:   0.10%)
+
+Rules        : 613448   (Original: 609920)
+Atoms        : 316835  
+Disjunctions : 0        (Original: 1800)
+Bodies       : 287914   (Original: 284386)
+Equivalences : 532694   (Atom=Atom: 116292 Body=Body: 82480 Other: 333922)
+Tight        : No       (SCCs: 72 Non-Hcfs: 0 Nodes: 239994 Gammas: 0)
+Variables    : 252961   (Eliminated:    0 Frozen: 249433)
+Constraints  : 913414   (Binary:  76.5% Ternary:  13.5% Other:  10.0%)
+
+DifferenceLogic
+  Time init(s): 0.0927928
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 46651
+  Variables  : 51
+  [Thread 0]
+    Propagation(s): 6.01425
+    Dijkstra(s): 2.78993
+    Undo(s)  : 0.0633542
+    True edges: 1.05533e+06
+    False edges: 250681
+    False edges (inverse): 4181
+    False edges (partial): 11168
+    False edges (partial+): 109
+    Edges added: 222121
+    Edges skipped: 215919
+    Edges propagated: 221824
+    Cost consistency: 507511
+    Cost forward: 1.14317e+08
+    Cost backward: 1.16713e+08

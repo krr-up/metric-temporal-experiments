@@ -1,0 +1,36 @@
+<runscript output="output/mapf8">
+
+	<machine name="houat" cpu="8xE5520@2.27GHz" memory="24GB" />
+
+	<config name="seq-generic" template="templates/seq-generic.sh" />
+
+
+	<system name="memelingo" version="1" measures="rp_tmp"
+		config="seq-generic"
+		cmdline="">
+		<setting name="all-opts" tag="all-opts">
+			<variable cmd="{}" value="mlp-tplp-ht;mlp-tplp-htc;mlp-tplp-htcdl" />
+			<variable cmd="-c lambda={}" value="15;20;25;30;35;40;45" />
+			<variable cmd="-c v={} --models=1 --project=show --stats" value="30;50;100;150" />
+		</setting>
+	</system>
+
+	<distjob name="dist-generic" timeout="1200s" runs="1" template_options="--single"
+		script_mode="timeout" walltime="23h 59m 59s" cpt="4" />
+
+	<benchmark name="mapf-suite">
+		<files path="../examples/mapf">
+			<encoding file="../examples/mapf/mapf_javier.lp" />
+			<add file="instances/random_x8_y8_a3.lp" />
+			<add file="instances/room_x8_y8_a3.lp" />
+			<add file="instances/warehouse_x8_y8_a3.lp" />
+		</files>
+	</benchmark>
+
+	<project
+		name="clasp-seq" job="dist-generic">
+		<runtag machine="houat" benchmark="mapf-suite" tag="all-opts" />
+	</project>
+
+
+</runscript>

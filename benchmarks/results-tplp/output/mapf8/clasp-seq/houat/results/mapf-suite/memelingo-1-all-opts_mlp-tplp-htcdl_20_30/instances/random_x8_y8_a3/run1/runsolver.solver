@@ -1,0 +1,58 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...ples/mapf/instances/random_x8_y8_a3.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 505.792s (Solving: 478.78s 1st Model: 0.00s Unsat: 478.78s)
+CPU Time     : 505.555s
+
+Choices      : 106326  
+Conflicts    : 72119    (Analyzed: 72118)
+Restarts     : 235      (Average: 306.89 Last: 352 Blocked: 0)
+Stab. Tests  : 552      (Full: 0 Partial: 552)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 353946   (Deleted: 310365)
+  Binary     : 3516     (Ratio:   0.99%)
+  Ternary    : 3485     (Ratio:   0.98%)
+  Conflict   : 72118    (Average Length:  186.8 Ratio:  20.38%) 
+  Loop       : 230583   (Average Length:   22.0 Ratio:  65.15%) 
+  Other      : 51245    (Average Length:    4.7 Ratio:  14.48%) 
+Backjumps    : 72118    (Average:  1.46 Max:  70 Sum: 105226)
+  Executed   : 71458    (Average:  1.45 Max:  70 Sum: 104566 Ratio:  99.37%)
+  Bounded    : 660      (Average:  1.00 Max:   1 Sum:    660 Ratio:   0.63%)
+
+Rules        : 3467646 
+Atoms        : 2382644 
+Disjunctions : 13851    (Original: 13851)
+Bodies       : 3168559  (Original: 3016206)
+Equivalences : 1593246  (Atom=Atom: 297757 Body=Body: 212008 Other: 1083481)
+Tight        : No       (SCCs: 552 Non-Hcfs: 552 Nodes: 564281 Gammas: 152353)
+Variables    : 523032   (Eliminated:    0 Frozen: 370679)
+Constraints  : 3806393  (Binary:  87.7% Ternary:   7.7% Other:   4.7%)
+
+DifferenceLogic
+  Time init(s): 0.0176779
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 4601
+  Variables  : 21
+  [Thread 0]
+    Propagation(s): 38.057
+    Dijkstra(s): 3.33658
+    Undo(s)  : 0.168316
+    True edges: 1.04373e+06
+    False edges: 121412
+    False edges (inverse): 513
+    False edges (partial): 847
+    False edges (partial+): 35
+    Edges added: 497689
+    Edges skipped: 425250
+    Edges propagated: 496938
+    Cost consistency: 831602
+    Cost forward: 4.54382e+07
+    Cost backward: 5.2115e+07
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmpkmrk9ax3.lp']

@@ -1,146 +1,206 @@
 """
 Clingo application extended to include automata
 """
+
 import logging
 import textwrap
-from typing import Sequence
-
-from clingo import Model, Symbol
+from tkinter import constants
+from typing import Optional, Sequence
+import sys
+from clingo import Model, Symbol, SymbolType
 from clingo.application import Application, ApplicationOptions, Flag
 
+from clingcon.__main__ import ClingconApp
+from clingodl.__main__ import ClingoDLApp
+from clingo.script import enable_python
 from . import reify
-from .approaches.clingcon import ClinconApproach
-from .approaches.fclingo import FclingoApproach
+
+from .approaches.mlp import MLPhtExtended, MLPhtPlain
+from .approaches.mlp_htc import (
+    MLPhtcExtended,
+    MLPhtcExtendedDL,
+    MLPhtcPlain,
+    MLPhtcPlainDL,
+)
 from .utils.logger import setup_logger
 from .utils.visualizer import visualize
+import meta_tools
+import tempfile
+import memelingo
 
 log = logging.getLogger("main")
 
 
-def _sym_to_prg(symbols: Sequence[Symbol]):
-    """
-    Turns symbols into a program
-    """
-    return "\n".join([f"{str(s)}." for s in symbols])
-
-
-class MemelingoApp(Application):
-    """
-    Application class extending clingo
-    """
-
+class ClingoApp(Application):
     def __init__(self, name):
-        """
-        Create application
-        """
         self.program_name = name
-        self._log_level = "WARNING"
-        self._view = Flag()
-        self._view_subformulas = Flag()
-        self._approach_class = ClinconApproach
 
-    def parse_log_level(self, log_level):
-        """
-        Parse log
-        """
-        if log_level is not None:
-            self._log_level = log_level.upper()
-            return self._log_level in ["INFO", "WARNING", "DEBUG", "ERROR"]
+    def print_model(self, model: Model, printer) -> None:
+        model_symbols = " ".join(
+            [str(s).replace("__", "&") for s in model.symbols(shown=True)]
+        )
+        sys.stdout.write(model_symbols + "\n")
 
-        return True
+    def main(self, ctl, files):
+        for f in files:
+            ctl.load(f)
+        if not files:
+            ctl.load("-")
+        ctl.ground([("base", [])])
+        ctl.solve()
 
-    def parse_approach(self, approach):
-        """
-        Parse approach
-        """
-        if approach == "clingcon":
-            self._approach_class = ClinconApproach
-        elif approach == "fclingo":
-            self._approach_class = FclingoApproach
-        else:
+package_dir = memelingo.__path__[0]
+
+APP_INFO = {
+    "mlp-lpnmr-ht": {
+        "application": ClingoApp,
+        "files": [f"{package_dir}/encodings/mlp-lpnmr-ht.lp"],
+    },
+    "mlp-lpnmr-htc": {
+        "application": ClingconApp,
+        "files": [f"{package_dir}/encodings/mlp-lpnmr-htc.lp"],
+    },
+    "mlp-lpnmr-htcdl": {
+        "application": ClingoDLApp,
+        "files": [f"{package_dir}/encodings/mlp-lpnmr-htcdl.lp"],
+    },
+    "mlp-tplp-htc": {
+        "application": ClingconApp,
+        "files": [f"{package_dir}/encodings/mlp-tplp-htc.lp"],
+    },
+    "mlp-tplp-htcdl": {
+        "application": ClingoDLApp,
+        "files": [f"{package_dir}/encodings/mlp-tplp-htcdl.lp"],
+    },
+    "mlp-tplp-ht": {
+        "application": ClingoApp,
+        "files": [f"{package_dir}/encodings/mlp-tplp-ht.lp"],
+    },
+}
+
+
+def get_app_by_name(app_name: str) -> Optional[Application]:
+    """
+    Get the application wrapper for the given name.
+
+    Args:
+        app_name (str): The name of the application.
+    Returns:
+        Optional[ClingoControl]: The application wrapper or None if not found.
+    """
+    if app_name not in APP_INFO:
+        msg = f"Control name '{app_name}' not found. Available options: {list(APP_INFO.keys())}"
+        log.error(msg)
+        raise ValueError(msg)
+    return APP_INFO[app_name]["application"]
+
+
+def make_app(app_name: str) -> Application:
+
+    base_class = get_app_by_name(app_name)
+
+    class MemelingoApp(base_class):
+        def __init__(self, constants=None):
+            """
+            Create application
+
+            Args:
+                config (dict): The configuration dictionary.
+                constants (Optional[dict], optional): The constants required by the system that will become attributes. Defaults to None.
+            """
+            super().__init__(f"Memelingo ({base_class}) {app_name}")
+            self.constants = constants or {}
+            self._log_level = "warning"
+            enable_python()
+
+        @property
+        def name(self):
+            return f"{app_name}"
+
+        def parse_log_level(self, log_level):
+            """
+            Parse log
+
+            Args:
+                log_level (str): The log level to set.
+            Returns:
+                bool: True if the log level is valid, False otherwise.
+            """
+            if log_level is not None:
+                self._log_level = log_level.upper()
+                return self._log_level in ["INFO", "WARNING", "DEBUG", "ERROR"]
+
+            return True
+
+        def parse_system_config(self, name, type="str") -> callable:
+            def parse_option(value):
+                if type == "list":
+                    if name not in self.metasp_config:
+                        self.metasp_config[name] = []
+                    self.metasp_config[name].append(value)
+                else:
+                    self.metasp_config[name] = value
+                return True
+
+            return parse_option
+
+        def parse_config(self, config_file):
+            """
+            Parse configuration file
+
+            Args:
+                config_file (str): The path to the configuration file.
+            Returns:
+                bool: True if the configuration file is valid, False otherwise.
+            """
+            if config_file is not None:
+                self.metasp_config_file = config_file
+                return True
             return False
 
-        return True
+        def register_options(self, options: ApplicationOptions) -> None:
+            """
+            Add custom options
 
-    def register_options(self, options: ApplicationOptions) -> None:
-        """
-        Add custom options
-        """
-        group = "Clingo.Memelingo"
-        # Add an option of the system to run
-        options.add(
-            group,
-            "log",
-            textwrap.dedent(
-                """\
-                Provide logging level.
-                                            <level> ={DEBUG|INFO|ERROR|WARNING}
-                                            (default: WARNING)"""
-            ),
-            self.parse_log_level,
-            argument="<level>",
-        )
-        options.add(
-            group,
-            "approach",
-            textwrap.dedent(
-                """\
-                Metric Approach used for calculating models
-                    <clingcon> """
-            ),
-            self.parse_approach,
-            argument="<approach>",
-        )
-        options.add_flag(
-            group, "view", "Visualize the timed trace using clingraph", self._view
-        )
-        options.add_flag(
-            group,
-            "view-subformulas",
-            "Visualize the timed trace using clingraph and show all the subformulas that hold in each state",
-            self._view_subformulas,
-        )
-
-    def print_model(self, model: Model, _) -> None:
-        """
-        Print a model on the console
-        """
-        log.debug("------- Full model -----")
-        log.debug(
-            "\n".join(
-                [str(s) for s in model.symbols(atoms=True, shown=True, theory=True)]
-            )
-        )
-        s_strings = [
-            str(s)
-            for s in model.symbols(shown=True, theory=True)
-            if s.name in ["", "t"]
-        ]
-        print(" ".join(s_strings))
-        if self._view or self._view_subformulas:
-            visualize(
-                _sym_to_prg(model.symbols(atoms=True, theory=True)),
-                name_format=f"timed_trace_{model.number}",
-                view_subformulas=self._view_subformulas.flag,
-            )
-
-    def main(self, control, files):
-        """
-        Main function ran on call
-        """
-        # pylint: disable=W0201
-        local_log = setup_logger("main", getattr(logging, self._log_level))
-
-        input_lambda = control.get_const("lambda")
-        if input_lambda is None:
-            local_log.warning(
+            Args:
+                options (ApplicationOptions): The application options to register.
+            """
+            group = "Memelingo - " + self.name
+            options.add(
+                group,
+                "log",
                 textwrap.dedent(
-                    """The constant `lambda` is required for the metric meta-encoding.
-                Provided with the argument `-c lambda=X` By default is set to 10 (9 steps)."""
-                )
+                    """\
+                    Logging level.
+                                                <level> ={debug|info|error|warning}
+                                                (default: warning)"""
+                ),
+                self.parse_log_level,
+                argument="<level>",
             )
-        reified_prg = reify(files=files)
-        app = self._approach_class(control)
-        app.load(reified_prg)
-        app.ground()
-        app.solve(on_model=None)
+            super().register_options(options)
+
+        def main(self, control, files):
+            """
+            Main entry point for the application.
+            """
+            print("Reifing...")
+            rsymbols = meta_tools.classic_reify(
+                ["--preserve-facts=symtab"]
+                + [f"-c {k}={v}" for k, v in self.constants.items()],
+                "",
+                programs=[("base", [])],
+                files=files,
+            )
+            simple_reified_prg = "\n".join([f"{str(s)}." for s in rsymbols])
+            print("Saving refication...")
+            with tempfile.NamedTemporaryFile(
+                "w", delete=False, suffix=".lp"
+            ) as tmp_file:
+                tmp_file.write(simple_reified_prg)
+                reified_path = tmp_file.name
+            files = APP_INFO[app_name]["files"] + [reified_path]
+            print("Running application... with files ", files)
+            super().main(control, files)
+
+    return MemelingoApp

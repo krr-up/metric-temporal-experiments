@@ -1,0 +1,59 @@
+Memelingo (<class 'clingcon.__main__.ClingconApp'>) mlp-tplp-htc version 5.2.1
+Reading from ...../examples/job-shop/instances/ft10.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1194.255s (Solving: 974.23s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1194.025s
+
+Choices      : 60603   
+Conflicts    : 0        (Analyzed: 0)
+Restarts     : 0       
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 260767   (Deleted: 0)
+  Binary     : 1695     (Ratio:   0.65%)
+  Ternary    : 257779   (Ratio:  98.85%)
+  Conflict   : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Loop       : 110      (Average Length:    2.9 Ratio:   0.04%) 
+  Other      : 260657   (Average Length:    3.0 Ratio:  99.96%) 
+Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
+  Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
+
+Rules        : 22083907 (Original: 22044107)
+Atoms        : 10816408
+Disjunctions : 0        (Original: 20000)
+Bodies       : 10580203 (Original: 10540403)
+Equivalences : 18589653 (Atom=Atom: 2328821 Body=Body: 1961601 Other: 14299231)
+Tight        : No       (SCCs: 200 Non-Hcfs: 0 Nodes: 10789700 Gammas: 0)
+Variables    : 11999195 (Eliminated:    0 Frozen: 11959395)
+Constraints  : 40211095 (Binary:  76.6% Ternary:  13.4% Other:  10.0%)
+
+Clingcon
+  Init time in seconds
+    Total    : 102.185
+    Simplify : 86.533
+    Translate: 2.13539
+  Problem
+    Constraints: 4.68904e+06
+    Variables: 200
+    Clauses  : 73053
+    Literals : 2894
+  Translate
+    Constraints removed: 94963
+    Constraints added: 0
+    Clauses  : 11458
+    Weight constraints: 118
+    Literals : 2894
+  [Thread 0]
+    Time in seconds
+      Total  : 973.207
+      Propagation: 0.0662435
+      Check  : 973
+      Undo   : 0.140573
+    Refined reason: 0
+    Introduced reason: 0
+    Literals introduced: 257763

@@ -1,0 +1,58 @@
+Memelingo (<class 'clingodl.__main__.ClingoDLApp'>) mlp-tplp-htcdl version 1.5.0
+Reading from ...amples/mapf/instances/room_x8_y8_a3.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 63.499s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 63.307s
+
+Choices      : 0       
+Conflicts    : 1        (Analyzed: 0)
+Restarts     : 0       
+Stab. Tests  : 627      (Full: 0 Partial: 627)
+Problems     : 0        (Average Length: 0.00 Splits: 0)
+Lemmas       : 8419     (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 0        (Ratio:   0.00%)
+  Conflict   : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Loop       : 4        (Average Length:    1.0 Ratio:   0.05%) 
+  Other      : 8415     (Average Length:    1.0 Ratio:  99.95%) 
+Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
+  Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
+
+Rules        : 9891166 
+Atoms        : 6210369 
+Disjunctions : 32643    (Original: 32643)
+Bodies       : 9363937  (Original: 8678446)
+Equivalences : 4681775  (Atom=Atom: 683948 Body=Body: 486827 Other: 3511000)
+Tight        : No       (SCCs: 627 Non-Hcfs: 627 Nodes: 2304470 Gammas: 685491)
+Variables    : 2214514  (Eliminated:    0 Frozen: 1529023)
+Constraints  : 25358525 (Binary:  91.8% Ternary:   5.3% Other:   3.0%)
+
+DifferenceLogic
+  Time init(s): 0.0340412
+  CCs        : 1
+  Mutexes    : 0
+  Edges      : 18801
+  Variables  : 41
+  [Thread 0]
+    Propagation(s): 0.894394
+    Dijkstra(s): 9.7637e-05
+    Undo(s)  : 0
+    True edges: 8416
+    False edges: 4783
+    False edges (inverse): 0
+    False edges (partial): 3633
+    False edges (partial+): 0
+    Edges added: 41
+    Edges skipped: 2
+    Edges propagated: 41
+    Cost consistency: 336
+    Cost forward: 456
+    Cost backward: 75
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-htcdl.lp', '/tmp/tmp7rorb8bh.lp']

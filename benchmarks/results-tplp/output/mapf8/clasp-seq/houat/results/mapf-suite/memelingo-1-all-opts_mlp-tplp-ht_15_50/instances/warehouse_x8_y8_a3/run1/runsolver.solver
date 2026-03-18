@@ -1,0 +1,38 @@
+Memelingo (<class 'memelingo.application.ClingoApp'>) mlp-tplp-ht version 5.8.0
+Reading from ...s/mapf/instances/warehouse_x8_y8_a3.lp ...
+Solving...
+UNKNOWN
+
+INTERRUPTED  : 1
+Models       : 0+
+Calls        : 1
+Time         : 1193.951s (Solving: 1184.76s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1193.591s
+
+Choices      : 409020  
+Conflicts    : 234702   (Analyzed: 234702)
+Restarts     : 602      (Average: 389.87 Last: 616 Blocked: 0)
+Stab. Tests  : 312      (Full: 0 Partial: 312)
+Problems     : 1        (Average Length: 1.00 Splits: 0)
+Lemmas       : 583773   (Deleted: 557128)
+  Binary     : 1476     (Ratio:   0.25%)
+  Ternary    : 1037     (Ratio:   0.18%)
+  Conflict   : 234702   (Average Length:  897.9 Ratio:  40.20%) 
+  Loop       : 349071   (Average Length:   44.1 Ratio:  59.80%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 234702   (Average:  1.73 Max:  70 Sum: 405281)
+  Executed   : 234614   (Average:  1.73 Max:  70 Sum: 405193 Ratio:  99.98%)
+  Bounded    : 88       (Average:  1.00 Max:   1 Sum:     88 Ratio:   0.02%)
+
+Rules        : 2883648  (Original: 2874485)
+Atoms        : 596851  
+Disjunctions : 5544     (Original: 6091)
+Bodies       : 965496   (Original: 909395)
+Equivalences : 612470   (Atom=Atom: 124043 Body=Body: 88445 Other: 399982)
+Tight        : No       (SCCs: 312 Non-Hcfs: 312 Nodes: 183437 Gammas: 46938)
+Variables    : 311098   (Eliminated:    0 Frozen: 121094)
+Constraints  : 3093894  (Binary:  90.1% Ternary:   7.7% Other:   2.2%)
+
+Reifing...
+Saving refication...
+Running application... with files  ['/mnt/beegfs/home/hahnmartinlu/potassco/metric-temporal-experiments/src/memelingo/encodings/mlp-tplp-ht.lp', '/tmp/tmpfi0mu6po.lp']
